@@ -58,7 +58,7 @@ extension MultipleDelegating {
 //                if let _delegate = weakDelegate.delegate, (_delegate as? GenericDelegateType) != nil {
 //                    return true
 //                }
-//                QLog("MultipleDelegating protocol problem - delegate within weak wrapping class does not exist or it cannot be cast to GenericDelegateType", onLevel: .error)
+//                print("MultipleDelegating protocol problem - delegate within weak wrapping class does not exist or it cannot be cast to GenericDelegateType")
 //                return false
 //            }).map { (_, weakDelegate) -> GenericDelegateType in
 //                // swiftlint:disable:next force_cast

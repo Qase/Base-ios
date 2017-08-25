@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import QuantiLogger
 import SnapKit
 
 open class WebViewController: QBaseViewController {
@@ -63,7 +62,7 @@ open class WebViewController: QBaseViewController {
 
 extension WebViewController: UIWebViewDelegate {
     public func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        QLog("Webview fail with error \(error)", onLevel: .error)
+        print("Webview fail with error \(error)")
     }
 
     public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
@@ -71,11 +70,11 @@ extension WebViewController: UIWebViewDelegate {
     }
 
     public func webViewDidStartLoad(_ webView: UIWebView) {
-        QLog("Webview started Loading", onLevel: .info)
+        print("Webview started Loading")
     }
 
     public func webViewDidFinishLoad(_ webView: UIWebView) {
-        QLog("Webview did finish load", onLevel: .info)
+        print("Webview did finish load")
     }
     
 }
