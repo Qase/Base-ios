@@ -48,7 +48,20 @@
 		63C3388D1F474D7700DA8957 /* QConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3388C1F474D7700DA8957 /* QConstants.swift */; };
 		63C338911F4751E900DA8957 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338901F4751E900DA8957 /* Encodable.swift */; };
 		63C338941F47530800DA8957 /* ParagraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338931F47530800DA8957 /* ParagraphViewController.swift */; };
+		D3ACC8371F50CBD800CAC22F /* QuantiBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ACC8361F50CBD800CAC22F /* QuantiBaseTests.swift */; };
+		D3ACC8391F50CBD800CAC22F /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
+		D3ACC8411F50CC5B00CAC22F /* UIImage+ResizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ACC8401F50CC5B00CAC22F /* UIImage+ResizeExtension.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3ACC83A1F50CBD800CAC22F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 630AF64F1F44791E009CEA24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 630AF6571F44791E009CEA24;
+			remoteInfo = QuantiBase;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		630AF6581F44791E009CEA24 /* QuantiBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuantiBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +107,10 @@
 		63C3388C1F474D7700DA8957 /* QConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QConstants.swift; sourceTree = "<group>"; };
 		63C338901F4751E900DA8957 /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		63C338931F47530800DA8957 /* ParagraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphViewController.swift; sourceTree = "<group>"; };
+		D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuantiBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3ACC8361F50CBD800CAC22F /* QuantiBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantiBaseTests.swift; sourceTree = "<group>"; };
+		D3ACC8381F50CBD800CAC22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3ACC8401F50CC5B00CAC22F /* UIImage+ResizeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ResizeExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +123,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3ACC8311F50CBD800CAC22F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3ACC8391F50CBD800CAC22F /* QuantiBase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -113,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				630AF65A1F44791E009CEA24 /* QuantiBase */,
+				D3ACC8351F50CBD800CAC22F /* QuantiBaseTests */,
 				630AF6591F44791E009CEA24 /* Products */,
 				638A2EE21F458CB100256FC3 /* Frameworks */,
 			);
@@ -122,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				630AF6581F44791E009CEA24 /* QuantiBase.framework */,
+				D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -270,6 +297,16 @@
 			name = ParagraphViewController;
 			sourceTree = "<group>";
 		};
+		D3ACC8351F50CBD800CAC22F /* QuantiBaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3ACC8361F50CBD800CAC22F /* QuantiBaseTests.swift */,
+				D3ACC8381F50CBD800CAC22F /* Info.plist */,
+				D3ACC8401F50CC5B00CAC22F /* UIImage+ResizeExtension.swift */,
+			);
+			path = QuantiBaseTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -303,12 +340,31 @@
 			productReference = 630AF6581F44791E009CEA24 /* QuantiBase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D3ACC8331F50CBD800CAC22F /* QuantiBaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3ACC83F1F50CBD800CAC22F /* Build configuration list for PBXNativeTarget "QuantiBaseTests" */;
+			buildPhases = (
+				D3ACC8301F50CBD800CAC22F /* Sources */,
+				D3ACC8311F50CBD800CAC22F /* Frameworks */,
+				D3ACC8321F50CBD800CAC22F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3ACC83B1F50CBD800CAC22F /* PBXTargetDependency */,
+			);
+			name = QuantiBaseTests;
+			productName = QuantiBaseTests;
+			productReference = D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		630AF64F1F44791E009CEA24 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "David Nemec";
 				TargetAttributes = {
@@ -316,6 +372,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 2PY9RKK8A7;
 						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					D3ACC8331F50CBD800CAC22F = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = X9BLYWRC6A;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -333,6 +394,7 @@
 			projectRoot = "";
 			targets = (
 				630AF6571F44791E009CEA24 /* QuantiBase */,
+				D3ACC8331F50CBD800CAC22F /* QuantiBaseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -343,6 +405,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				63B0A8AD1F50785C00F94CDF /* QAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3ACC8321F50CBD800CAC22F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +461,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3ACC8301F50CBD800CAC22F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3ACC8371F50CBD800CAC22F /* QuantiBaseTests.swift in Sources */,
+				D3ACC8411F50CC5B00CAC22F /* UIImage+ResizeExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3ACC83B1F50CBD800CAC22F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 630AF6571F44791E009CEA24 /* QuantiBase */;
+			targetProxy = D3ACC83A1F50CBD800CAC22F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		630AF65E1F44791E009CEA24 /* Debug */ = {
@@ -622,6 +708,42 @@
 			};
 			name = "Release-Adhoc";
 		};
+		D3ACC83C1F50CBD800CAC22F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = X9BLYWRC6A;
+				INFOPLIST_FILE = QuantiBaseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D3ACC83D1F50CBD800CAC22F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = X9BLYWRC6A;
+				INFOPLIST_FILE = QuantiBaseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D3ACC83E1F50CBD800CAC22F /* Release-Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = X9BLYWRC6A;
+				INFOPLIST_FILE = QuantiBaseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = "Release-Adhoc";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -644,6 +766,15 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D3ACC83F1F50CBD800CAC22F /* Build configuration list for PBXNativeTarget "QuantiBaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3ACC83C1F50CBD800CAC22F /* Debug */,
+				D3ACC83D1F50CBD800CAC22F /* Release */,
+				D3ACC83E1F50CBD800CAC22F /* Release-Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
