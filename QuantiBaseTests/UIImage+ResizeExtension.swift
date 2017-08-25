@@ -7,7 +7,8 @@
 //
 
 import XCTest
-import Q
+@testable import QuantiBase
+
 class UIImage_ResizeExtension: XCTestCase {
     
     override func setUp() {
