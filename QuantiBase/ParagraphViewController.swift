@@ -31,9 +31,13 @@ open class ParagraphViewController: UIViewController {
         //ScrollView
         view.addSubview(scrollView)
         scrollView.backgroundColor = .white
-        scrollView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
+
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor)
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+
 
         //Close button
         let closeButton = BaseButton()
@@ -48,10 +52,11 @@ open class ParagraphViewController: UIViewController {
 
         closeButtonView.addSubview(closeButton)
 
-        closeButton.snp.makeConstraints { (make) in
-            make.left.top.equalToSuperview().offset(padding)
-            make.bottom.equalToSuperview().offset(-padding)
-        }
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        closeButton.topAnchor.constraint(equalTo: closeButtonView.topAnchor, constant: padding)
+        closeButton.leftAnchor.constraint(equalTo: closeButtonView.leftAnchor, constant: padding)
+        closeButton.bottomAnchor.constraint(equalTo: closeButtonView.bottomAnchor, constant: -padding)
+        closeButton.rightAnchor.constraint(equalTo: closeButtonView.rightAnchor, constant: -padding)
 
         //Stackview
         stackView.alignment = .fill
@@ -59,11 +64,13 @@ open class ParagraphViewController: UIViewController {
         stackView.spacing = padding
 
         scrollView.addSubview(stackView)
-        stackView.snp.makeConstraints { (make) in
-            make.top.left.equalToSuperview().offset(padding)
-            make.bottom.right.equalToSuperview().offset(-padding)
-            make.width.equalToSuperview().offset(-2*padding)
-        }
+
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: padding)
+        stackView.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: padding)
+        stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -padding)
+        stackView.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -padding)
+        stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -2*padding)
 
         stackView.addArrangedSubview(closeButtonView)
     }

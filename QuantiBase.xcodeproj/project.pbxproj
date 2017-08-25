@@ -29,8 +29,6 @@
 		636599431F46006300979BBA /* Notifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599421F46006300979BBA /* Notifying.swift */; };
 		636599481F46EAC400979BBA /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599471F46EAC400979BBA /* GlobalFunctions.swift */; };
 		6365994A1F46EAE100979BBA /* BackgroundMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599491F46EAE100979BBA /* BackgroundMonitor.swift */; };
-		638A2EE41F458CB200256FC3 /* QuantiLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638A2EE31F458CB200256FC3 /* QuantiLogger.framework */; };
-		638A2EE61F458CC100256FC3 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638A2EE51F458CC100256FC3 /* SnapKit.framework */; };
 		638A2EE81F458D1400256FC3 /* QBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A2EE71F458D1400256FC3 /* QBaseViewController.swift */; };
 		6392952D1F4ADB8600F707A5 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392952C1F4ADB8600F707A5 /* BaseButton.swift */; };
 		6392952F1F4ADBFA00F707A5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392952E1F4ADBFA00F707A5 /* RoundedButton.swift */; };
@@ -118,8 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				638A2EE61F458CC100256FC3 /* SnapKit.framework in Frameworks */,
-				638A2EE41F458CB200256FC3 /* QuantiLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,10 +588,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = QuantiBase/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -619,10 +612,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = QuantiBase/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -692,10 +682,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = QuantiBase/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

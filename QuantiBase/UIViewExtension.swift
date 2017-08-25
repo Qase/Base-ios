@@ -45,25 +45,25 @@ extension UIView {
 
     public static func dummyViewWith(height: Int) -> UIView {
         let view = UIView()
-        view.snp.makeConstraints { (make) in
-            make.height.equalTo(height)
-        }
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.heightAnchor.constraint(equalToConstant: CGFloat(height))
+
         return view
     }
 
     public static func dummyViewWith(width: Int) -> UIView {
         let view = UIView()
-        view.snp.makeConstraints { (make) in
-            make.width.equalTo(width)
-        }
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.widthAnchor.constraint(equalToConstant: CGFloat(width))
+
         return view
     }
 
     public func dummyViewWith(priority: Int) -> UIView {
         let view = UIView()
-        view.snp.makeConstraints { (make) in
-            make.width.equalTo(1).priority(priority)
-        }
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.widthAnchor.constraint(equalToConstant: 1).priority = Float(priority)
+        
         return view
     }
 

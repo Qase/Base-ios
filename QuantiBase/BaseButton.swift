@@ -56,10 +56,10 @@ open class BaseButton: UIButton {
 
     convenience init(ofSize size: CGFloat) {
         self.init()
-
-        self.snp.makeConstraints { (make) in
-            make.size.equalTo(size)
-        }
+        
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.heightAnchor.constraint(equalToConstant: size)
+        self.widthAnchor.constraint(equalToConstant: size)
     }
 
     public convenience init(with image: UIImage? = nil) {

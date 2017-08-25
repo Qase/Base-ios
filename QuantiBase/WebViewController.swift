@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 open class WebViewController: QBaseViewController {
 
@@ -30,9 +29,11 @@ open class WebViewController: QBaseViewController {
 
         view.addSubview(webView)
 
-        webView.snp.makeConstraints { (make) in
-            make.edges.equalTo(view)
-        }
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        webView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        webView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        webView.topAnchor.constraint(equalTo: view.topAnchor)
+        webView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
 
         webView.loadRequest(URLRequest(url: url))
     }

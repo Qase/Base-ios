@@ -39,14 +39,19 @@ open class ParagrafView: BaseView {
         contentLabel.font = QConstants.Design.smallestFont
 
         self.addSubview(headerLabel)
-        headerLabel.snp.makeConstraints { (make) in
-            make.left.right.top.equalToSuperview()
-        }
+
+        headerLabel.translatesAutoresizingMaskIntoConstraints = false
+        headerLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+        headerLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+        headerLabel.topAnchor.constraint(equalTo: self.topAnchor)
+        headerLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
 
         self.addSubview(contentLabel)
-        contentLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(headerLabel.snp.bottom).offset(8)
-            make.left.right.bottom.equalToSuperview()
-        }
+
+        contentLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentLabel.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 8)
+        contentLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+        contentLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+        contentLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
     }
 }

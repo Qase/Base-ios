@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import QuantiLogger
 
 public protocol BasicDelegate: class {}
 

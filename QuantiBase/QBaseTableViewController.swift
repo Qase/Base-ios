@@ -21,11 +21,13 @@ open class QBaseTableViewController: QBaseViewController, UITableViewDelegate {
         super.viewDidLoad()
 
         self.view.addSubview(tableView)
-        tableView.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview()
-            make.top.equalTo(self.topLayoutGuide.snp.bottom)
-            make.bottom.equalTo(self.bottomLayoutGuide.snp.top)
-        }
+
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        tableView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor)
+        tableView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor)
+
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: QConstants.TableCells.defaultCell)
         tableView.dataSource = self
         tableView.delegate = self
