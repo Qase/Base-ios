@@ -42,6 +42,8 @@
 		639295461F4B03EC00F707A5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639295451F4B03EC00F707A5 /* BaseView.swift */; };
 		63AB5F381F472AD200E74C9F /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB5F361F472AD200E74C9F /* Base32.swift */; };
 		63AB5F391F472AD200E74C9F /* Crc32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB5F371F472AD200E74C9F /* Crc32.swift */; };
+		63B0A8AB1F50782F00F94CDF /* QuantiBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B0A8AA1F50782F00F94CDF /* QuantiBase.swift */; };
+		63B0A8AD1F50785C00F94CDF /* QAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */; };
 		63C3388B1F474D1500DA8957 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3388A1F474D1500DA8957 /* TableModel.swift */; };
 		63C3388D1F474D7700DA8957 /* QConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3388C1F474D7700DA8957 /* QConstants.swift */; };
 		63C338911F4751E900DA8957 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338901F4751E900DA8957 /* Encodable.swift */; };
@@ -86,6 +88,8 @@
 		639295451F4B03EC00F707A5 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		63AB5F361F472AD200E74C9F /* Base32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base32.swift; sourceTree = "<group>"; };
 		63AB5F371F472AD200E74C9F /* Crc32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crc32.swift; sourceTree = "<group>"; };
+		63B0A8AA1F50782F00F94CDF /* QuantiBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantiBase.swift; sourceTree = SOURCE_ROOT; };
+		63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = QAssets.xcassets; sourceTree = "<group>"; };
 		63C3388A1F474D1500DA8957 /* TableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
 		63C3388C1F474D7700DA8957 /* QConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QConstants.swift; sourceTree = "<group>"; };
 		63C338901F4751E900DA8957 /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
@@ -133,7 +137,9 @@
 				636599231F45D64100979BBA /* Views */,
 				630AF65B1F44791E009CEA24 /* QuantiBase.h */,
 				630AF65C1F44791E009CEA24 /* Info.plist */,
+				63B0A8AA1F50782F00F94CDF /* QuantiBase.swift */,
 				63C3388C1F474D7700DA8957 /* QConstants.swift */,
+				63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */,
 			);
 			path = QuantiBase;
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B0A8AD1F50785C00F94CDF /* QAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +373,7 @@
 				638A2EE81F458D1400256FC3 /* QBaseViewController.swift in Sources */,
 				63AB5F391F472AD200E74C9F /* Crc32.swift in Sources */,
 				639295441F4B02DB00F707A5 /* ParagraphView.swift in Sources */,
+				63B0A8AB1F50782F00F94CDF /* QuantiBase.swift in Sources */,
 				63C338911F4751E900DA8957 /* Encodable.swift in Sources */,
 				636599431F46006300979BBA /* Notifying.swift in Sources */,
 				6365992B1F45DA1A00979BBA /* UIViewExtension.swift in Sources */,

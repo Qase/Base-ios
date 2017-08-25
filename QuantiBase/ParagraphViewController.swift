@@ -37,7 +37,7 @@ open class ParagraphViewController: UIViewController {
 
         //Close button
         let closeButton = BaseButton()
-        closeButton.setImage(#imageLiteral(resourceName: "close"), for: .normal)
+        closeButton.setImage(UIImage(named: "close", in: Bundle(for: QuantiBase.self), compatibleWith: nil), for: .normal)
 
         let offset = CGFloat(15).scaled
         closeButton.contentEdgeInsets = UIEdgeInsets.init(top: offset, left: offset, bottom: offset, right: offset)
