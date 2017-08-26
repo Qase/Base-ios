@@ -11,7 +11,7 @@
 		630AF66C1F44876A009CEA24 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630AF66B1F44876A009CEA24 /* WebViewController.swift */; };
 		6365991C1F45D2A300979BBA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365991B1F45D2A300979BBA /* UIViewControllerExtension.swift */; };
 		6365991E1F45D46000979BBA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365991D1F45D46000979BBA /* StringExtension.swift */; };
-		636599201F45D5D300979BBA /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365991F1F45D5D300979BBA /* DoubleExtension.swift */; };
+		636599201F45D5D300979BBA /* TimeInterval+IntervalAsStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365991F1F45D5D300979BBA /* TimeInterval+IntervalAsStringExtension.swift */; };
 		636599221F45D60500979BBA /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599211F45D60500979BBA /* DateExtension.swift */; };
 		636599271F45D6A100979BBA /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599261F45D6A100979BBA /* RoundedImageView.swift */; };
 		636599291F45D9D900979BBA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599281F45D9D900979BBA /* UIColorExtension.swift */; };
@@ -46,6 +46,7 @@
 		63C3388D1F474D7700DA8957 /* QConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3388C1F474D7700DA8957 /* QConstants.swift */; };
 		63C338911F4751E900DA8957 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338901F4751E900DA8957 /* Encodable.swift */; };
 		63C338941F47530800DA8957 /* ParagraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338931F47530800DA8957 /* ParagraphViewController.swift */; };
+		D397CEB41F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */; };
 		D3ACC8371F50CBD800CAC22F /* QuantiBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ACC8361F50CBD800CAC22F /* QuantiBaseTests.swift */; };
 		D3ACC8391F50CBD800CAC22F /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
 		D3ACC8411F50CC5B00CAC22F /* UIImage+ResizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ACC8401F50CC5B00CAC22F /* UIImage+ResizeExtension.swift */; };
@@ -68,7 +69,7 @@
 		630AF66B1F44876A009CEA24 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		6365991B1F45D2A300979BBA /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		6365991D1F45D46000979BBA /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		6365991F1F45D5D300979BBA /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		6365991F1F45D5D300979BBA /* TimeInterval+IntervalAsStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+IntervalAsStringExtension.swift"; sourceTree = "<group>"; };
 		636599211F45D60500979BBA /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		636599261F45D6A100979BBA /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		636599281F45D9D900979BBA /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		63C3388C1F474D7700DA8957 /* QConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QConstants.swift; sourceTree = "<group>"; };
 		63C338901F4751E900DA8957 /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		63C338931F47530800DA8957 /* ParagraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphViewController.swift; sourceTree = "<group>"; };
+		D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+IntervalAsStringExtension.swift"; sourceTree = "<group>"; };
 		D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuantiBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3ACC8361F50CBD800CAC22F /* QuantiBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantiBaseTests.swift; sourceTree = "<group>"; };
 		D3ACC8381F50CBD800CAC22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -236,7 +238,7 @@
 				6365992C1F45DBA100979BBA /* ArrayExtension.swift */,
 				636599341F45DCDF00979BBA /* CGFloatExtension.swift */,
 				636599211F45D60500979BBA /* DateExtension.swift */,
-				6365991F1F45D5D300979BBA /* DoubleExtension.swift */,
+				6365991F1F45D5D300979BBA /* TimeInterval+IntervalAsStringExtension.swift */,
 				6365991D1F45D46000979BBA /* StringExtension.swift */,
 				636599281F45D9D900979BBA /* UIColorExtension.swift */,
 				636599321F45DCB500979BBA /* UIDeviceExtension.swift */,
@@ -299,6 +301,7 @@
 				D3ACC8361F50CBD800CAC22F /* QuantiBaseTests.swift */,
 				D3ACC8381F50CBD800CAC22F /* Info.plist */,
 				D3ACC8401F50CC5B00CAC22F /* UIImage+ResizeExtension.swift */,
+				D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */,
 			);
 			path = QuantiBaseTests;
 			sourceTree = "<group>";
@@ -418,7 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				636599201F45D5D300979BBA /* DoubleExtension.swift in Sources */,
+				636599201F45D5D300979BBA /* TimeInterval+IntervalAsStringExtension.swift in Sources */,
 				636599331F45DCB500979BBA /* UIDeviceExtension.swift in Sources */,
 				636599481F46EAC400979BBA /* GlobalFunctions.swift in Sources */,
 				636599221F45D60500979BBA /* DateExtension.swift in Sources */,
@@ -461,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D397CEB41F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift in Sources */,
 				D3ACC8371F50CBD800CAC22F /* QuantiBaseTests.swift in Sources */,
 				D3ACC8411F50CC5B00CAC22F /* UIImage+ResizeExtension.swift in Sources */,
 			);
@@ -762,6 +766,7 @@
 				D3ACC83E1F50CBD800CAC22F /* Release-Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
