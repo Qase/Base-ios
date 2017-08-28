@@ -46,6 +46,7 @@
 		63C3388D1F474D7700DA8957 /* QConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3388C1F474D7700DA8957 /* QConstants.swift */; };
 		63C338911F4751E900DA8957 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338901F4751E900DA8957 /* Encodable.swift */; };
 		63C338941F47530800DA8957 /* ParagraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338931F47530800DA8957 /* ParagraphViewController.swift */; };
+		D32D96FD1F544853006A635E /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D96FC1F544853006A635E /* LoremSwiftum.swift */; };
 		D397CEB41F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */; };
 		D397CEB61F520E5100CCD70E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB51F520E5100CCD70E /* ArrayExtension.swift */; };
 		D397CEB81F520E8700CCD70E /* Collection+ReduceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB71F520E8700CCD70E /* Collection+ReduceExtension.swift */; };
@@ -108,6 +109,7 @@
 		63C3388C1F474D7700DA8957 /* QConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QConstants.swift; sourceTree = "<group>"; };
 		63C338901F4751E900DA8957 /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		63C338931F47530800DA8957 /* ParagraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphViewController.swift; sourceTree = "<group>"; };
+		D32D96FC1F544853006A635E /* LoremSwiftum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
 		D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+IntervalAsStringExtension.swift"; sourceTree = "<group>"; };
 		D397CEB51F520E5100CCD70E /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		D397CEB71F520E8700CCD70E /* Collection+ReduceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+ReduceExtension.swift"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		630AF65A1F44791E009CEA24 /* QuantiBase */ = {
 			isa = PBXGroup;
 			children = (
+				D32D96FB1F544846006A635E /* 3rd party */,
 				63C3388F1F4751B300DA8957 /* Functions */,
 				636599381F45EB3F00979BBA /* Mini Frameworks */,
 				636599451F46EA1500979BBA /* Controllers */,
@@ -298,6 +301,14 @@
 				63C338931F47530800DA8957 /* ParagraphViewController.swift */,
 			);
 			name = ParagraphViewController;
+			sourceTree = "<group>";
+		};
+		D32D96FB1F544846006A635E /* 3rd party */ = {
+			isa = PBXGroup;
+			children = (
+				D32D96FC1F544853006A635E /* LoremSwiftum.swift */,
+			);
+			name = "3rd party";
 			sourceTree = "<group>";
 		};
 		D3ACC8351F50CBD800CAC22F /* QuantiBaseTests */ = {
@@ -444,6 +455,7 @@
 				6365992F1F45DBD500979BBA /* UIImageViewExtension.swift in Sources */,
 				639295311F4AF71500F707A5 /* QBaseTableViewController.swift in Sources */,
 				63AB5F381F472AD200E74C9F /* Base32.swift in Sources */,
+				D32D96FD1F544853006A635E /* LoremSwiftum.swift in Sources */,
 				63C3388D1F474D7700DA8957 /* QConstants.swift in Sources */,
 				638A2EE81F458D1400256FC3 /* QBaseViewController.swift in Sources */,
 				63AB5F391F472AD200E74C9F /* Crc32.swift in Sources */,
