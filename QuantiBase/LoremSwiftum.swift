@@ -72,7 +72,7 @@ open class Lorem {
     }
     
     open static var URL: Foundation.URL {
-        return Foundation.URL(string: "http://\(domains.randomElement)/")!
+        return Foundation.URL(string: "https://\(domains.randomElement)/")!
     }
     
     open static var tweet: String {
@@ -136,7 +136,7 @@ open class Lorem {
     
     fileprivate static let emailDelimiters = ["", ".", "-", "_"]
     
-    fileprivate static let domains = "twitter.com google.com youtube.com wordpress.org adobe.com blogspot.com godaddy.com wikipedia.org wordpress.com yahoo.com linkedin.com amazon.com flickr.com w3.org apple.com myspace.com tumblr.com digg.com microsoft.com vimeo.com pinterest.com qq.com stumbleupon.com youtu.be addthis.com miibeian.gov.cn delicious.com baidu.com feedburner.com bit.ly".components(separatedBy: " ")
+    fileprivate static let domains = "twitter.com google.com youtube.com wordpress.org adobe.com blogspot.com godaddy.com wikipedia.org wordpress.com yahoo.com linkedin.com amazon.com flickr.com w3.org apple.com myspace.com tumblr.com digg.com microsoft.com vimeo.com pinterest.com stumbleupon.com youtu.be miibeian.gov.cn feedburner.com bit.ly".components(separatedBy: " ")
     
     // Source: http://www.kevadamson.com/talking-of-design/article/140-alternative-characters-to-lorem-ipsum
     fileprivate static let tweets = ["Far away, in a forest next to a river beneath the mountains, there lived a small purple otter called Philip. Philip likes sausages. The End.", "He liked the quality sausages from Marks & Spencer but due to the recession he had been forced to shop in a less desirable supermarket. End.", "He awoke one day to find his pile of sausages missing. Roger the greedy boar with human eyes, had skateboarded into the forest & eaten them!"]
