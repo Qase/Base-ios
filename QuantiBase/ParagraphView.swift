@@ -41,17 +41,17 @@ open class ParagrafView: BaseView {
         self.addSubview(headerLabel)
 
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
-        headerLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor)
-        headerLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-        headerLabel.topAnchor.constraint(equalTo: self.topAnchor)
-        headerLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        headerLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive=true
+        headerLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive=true
+        headerLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive=true
+        headerLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive=true
 
         self.addSubview(contentLabel)
 
         contentLabel.translatesAutoresizingMaskIntoConstraints = false
-        contentLabel.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 8)
-        contentLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-        contentLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor)
-        contentLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        contentLabel.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 8).isActive=true
+        contentLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive=true
+        contentLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive=true
+        contentLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive=true
     }
 }

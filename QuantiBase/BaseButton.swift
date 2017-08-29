@@ -58,8 +58,8 @@ open class BaseButton: UIButton {
         self.init()
         
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.heightAnchor.constraint(equalToConstant: size)
-        self.widthAnchor.constraint(equalToConstant: size)
+        self.heightAnchor.constraint(equalToConstant: size).isActive=true
+        self.widthAnchor.constraint(equalToConstant: size).isActive=true
     }
 
     public convenience init(with image: UIImage? = nil) {

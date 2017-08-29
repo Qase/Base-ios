@@ -46,7 +46,7 @@ extension UIView {
     public static func dummyViewWith(height: Int) -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(equalToConstant: CGFloat(height))
+        view.heightAnchor.constraint(equalToConstant: CGFloat(height)).isActive=true
 
         return view
     }
@@ -54,7 +54,7 @@ extension UIView {
     public static func dummyViewWith(width: Int) -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.widthAnchor.constraint(equalToConstant: CGFloat(width))
+        view.widthAnchor.constraint(equalToConstant: CGFloat(width)).isActive=true
 
         return view
     }
@@ -62,8 +62,11 @@ extension UIView {
     public func dummyViewWith(priority: Int) -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.widthAnchor.constraint(equalToConstant: 1).priority = Float(priority)
-        
+        let constrain = view.widthAnchor.constraint(equalToConstant: 1)
+        constrain.priority = Float(priority)
+        constrain.isActive=true
+
+
         return view
     }
 

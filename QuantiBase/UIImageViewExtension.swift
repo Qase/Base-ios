@@ -17,9 +17,9 @@ extension UIImageView {
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
         self.addSubview(blurEffectView)
 
-        blurEffectView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
-        blurEffectView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-        blurEffectView.topAnchor.constraint(equalTo: self.topAnchor)
-        blurEffectView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        blurEffectView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive=true
+        blurEffectView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive=true
+        blurEffectView.topAnchor.constraint(equalTo: self.topAnchor).isActive=true
+        blurEffectView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive=true
     }
 }

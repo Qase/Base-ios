@@ -23,10 +23,10 @@ open class QBaseTableViewController: QBaseViewController, UITableViewDelegate {
         self.view.addSubview(tableView)
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
-        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        tableView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor)
-        tableView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor)
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive=true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive=true
+        tableView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive=true
+        tableView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive=true
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: QConstants.TableCells.defaultCell)
         tableView.dataSource = self
