@@ -47,6 +47,12 @@
 		63C338911F4751E900DA8957 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338901F4751E900DA8957 /* Encodable.swift */; };
 		63C338941F47530800DA8957 /* ParagraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338931F47530800DA8957 /* ParagraphViewController.swift */; };
 		D32D96FD1F544853006A635E /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D96FC1F544853006A635E /* LoremSwiftum.swift */; };
+		D32D97051F5449CF006A635E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D97041F5449CF006A635E /* AppDelegate.swift */; };
+		D32D97071F5449CF006A635E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D97061F5449CF006A635E /* MasterViewController.swift */; };
+		D32D970E1F5449CF006A635E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D32D970D1F5449CF006A635E /* Assets.xcassets */; };
+		D32D97111F5449CF006A635E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32D970F1F5449CF006A635E /* LaunchScreen.storyboard */; };
+		D32D971C1F5449D0006A635E /* QuantiBaseExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D971B1F5449D0006A635E /* QuantiBaseExampleUITests.swift */; };
+		D34CECC31F545A1B008C952F /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
 		D397CEB41F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */; };
 		D397CEB61F520E5100CCD70E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB51F520E5100CCD70E /* ArrayExtension.swift */; };
 		D397CEB81F520E8700CCD70E /* Collection+ReduceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB71F520E8700CCD70E /* Collection+ReduceExtension.swift */; };
@@ -56,6 +62,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D32D97181F5449CF006A635E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 630AF64F1F44791E009CEA24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D32D97011F5449CF006A635E;
+			remoteInfo = QuantiBaseExample;
+		};
 		D3ACC83A1F50CBD800CAC22F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 630AF64F1F44791E009CEA24 /* Project object */;
@@ -110,6 +123,15 @@
 		63C338901F4751E900DA8957 /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		63C338931F47530800DA8957 /* ParagraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphViewController.swift; sourceTree = "<group>"; };
 		D32D96FC1F544853006A635E /* LoremSwiftum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
+		D32D97021F5449CF006A635E /* QuantiBaseExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuantiBaseExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32D97041F5449CF006A635E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D32D97061F5449CF006A635E /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		D32D970D1F5449CF006A635E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D32D97101F5449CF006A635E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D32D97121F5449CF006A635E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D32D97171F5449CF006A635E /* QuantiBaseExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuantiBaseExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32D971B1F5449D0006A635E /* QuantiBaseExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantiBaseExampleUITests.swift; sourceTree = "<group>"; };
+		D32D971D1F5449D0006A635E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+IntervalAsStringExtension.swift"; sourceTree = "<group>"; };
 		D397CEB51F520E5100CCD70E /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		D397CEB71F520E8700CCD70E /* Collection+ReduceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+ReduceExtension.swift"; sourceTree = "<group>"; };
@@ -121,6 +143,21 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		630AF6541F44791E009CEA24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D32D96FF1F5449CF006A635E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34CECC31F545A1B008C952F /* QuantiBase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D32D97141F5449CF006A635E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -143,6 +180,8 @@
 			children = (
 				630AF65A1F44791E009CEA24 /* QuantiBase */,
 				D3ACC8351F50CBD800CAC22F /* QuantiBaseTests */,
+				D32D97031F5449CF006A635E /* QuantiBaseExample */,
+				D32D971A1F5449D0006A635E /* QuantiBaseExampleUITests */,
 				630AF6591F44791E009CEA24 /* Products */,
 				638A2EE21F458CB100256FC3 /* Frameworks */,
 			);
@@ -153,6 +192,8 @@
 			children = (
 				630AF6581F44791E009CEA24 /* QuantiBase.framework */,
 				D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */,
+				D32D97021F5449CF006A635E /* QuantiBaseExample.app */,
+				D32D97171F5449CF006A635E /* QuantiBaseExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -311,6 +352,27 @@
 			name = "3rd party";
 			sourceTree = "<group>";
 		};
+		D32D97031F5449CF006A635E /* QuantiBaseExample */ = {
+			isa = PBXGroup;
+			children = (
+				D32D97041F5449CF006A635E /* AppDelegate.swift */,
+				D32D97061F5449CF006A635E /* MasterViewController.swift */,
+				D32D970D1F5449CF006A635E /* Assets.xcassets */,
+				D32D970F1F5449CF006A635E /* LaunchScreen.storyboard */,
+				D32D97121F5449CF006A635E /* Info.plist */,
+			);
+			path = QuantiBaseExample;
+			sourceTree = "<group>";
+		};
+		D32D971A1F5449D0006A635E /* QuantiBaseExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D32D971B1F5449D0006A635E /* QuantiBaseExampleUITests.swift */,
+				D32D971D1F5449D0006A635E /* Info.plist */,
+			);
+			path = QuantiBaseExampleUITests;
+			sourceTree = "<group>";
+		};
 		D3ACC8351F50CBD800CAC22F /* QuantiBaseTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +418,41 @@
 			productReference = 630AF6581F44791E009CEA24 /* QuantiBase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D32D97011F5449CF006A635E /* QuantiBaseExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D32D971E1F5449D0006A635E /* Build configuration list for PBXNativeTarget "QuantiBaseExample" */;
+			buildPhases = (
+				D32D96FE1F5449CF006A635E /* Sources */,
+				D32D96FF1F5449CF006A635E /* Frameworks */,
+				D32D97001F5449CF006A635E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuantiBaseExample;
+			productName = QuantiBaseExample;
+			productReference = D32D97021F5449CF006A635E /* QuantiBaseExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D32D97161F5449CF006A635E /* QuantiBaseExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D32D97221F5449D0006A635E /* Build configuration list for PBXNativeTarget "QuantiBaseExampleUITests" */;
+			buildPhases = (
+				D32D97131F5449CF006A635E /* Sources */,
+				D32D97141F5449CF006A635E /* Frameworks */,
+				D32D97151F5449CF006A635E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D32D97191F5449CF006A635E /* PBXTargetDependency */,
+			);
+			name = QuantiBaseExampleUITests;
+			productName = QuantiBaseExampleUITests;
+			productReference = D32D97171F5449CF006A635E /* QuantiBaseExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D3ACC8331F50CBD800CAC22F /* QuantiBaseTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3ACC83F1F50CBD800CAC22F /* Build configuration list for PBXNativeTarget "QuantiBaseTests" */;
@@ -390,6 +487,17 @@
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
+					D32D97011F5449CF006A635E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2PY9RKK8A7;
+						ProvisioningStyle = Automatic;
+					};
+					D32D97161F5449CF006A635E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2PY9RKK8A7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D32D97011F5449CF006A635E;
+					};
 					D3ACC8331F50CBD800CAC22F = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = X9BLYWRC6A;
@@ -403,6 +511,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 630AF64E1F44791E009CEA24;
 			productRefGroup = 630AF6591F44791E009CEA24 /* Products */;
@@ -411,6 +520,8 @@
 			targets = (
 				630AF6571F44791E009CEA24 /* QuantiBase */,
 				D3ACC8331F50CBD800CAC22F /* QuantiBaseTests */,
+				D32D97011F5449CF006A635E /* QuantiBaseExample */,
+				D32D97161F5449CF006A635E /* QuantiBaseExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -421,6 +532,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				63B0A8AD1F50785C00F94CDF /* QAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D32D97001F5449CF006A635E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D32D97111F5449CF006A635E /* LaunchScreen.storyboard in Resources */,
+				D32D970E1F5449CF006A635E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D32D97151F5449CF006A635E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +606,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D32D96FE1F5449CF006A635E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D32D97071F5449CF006A635E /* MasterViewController.swift in Sources */,
+				D32D97051F5449CF006A635E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D32D97131F5449CF006A635E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D32D971C1F5449D0006A635E /* QuantiBaseExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3ACC8301F50CBD800CAC22F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,12 +637,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D32D97191F5449CF006A635E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D32D97011F5449CF006A635E /* QuantiBaseExample */;
+			targetProxy = D32D97181F5449CF006A635E /* PBXContainerItemProxy */;
+		};
 		D3ACC83B1F50CBD800CAC22F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 630AF6571F44791E009CEA24 /* QuantiBase */;
 			targetProxy = D3ACC83A1F50CBD800CAC22F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D32D970F1F5449CF006A635E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D32D97101F5449CF006A635E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		630AF65E1F44791E009CEA24 /* Debug */ = {
@@ -719,6 +879,87 @@
 			};
 			name = "Release-Adhoc";
 		};
+		D32D971F1F5449D0006A635E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				INFOPLIST_FILE = QuantiBaseExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D32D97201F5449D0006A635E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				INFOPLIST_FILE = QuantiBaseExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D32D97211F5449D0006A635E /* Release-Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				INFOPLIST_FILE = QuantiBaseExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = "Release-Adhoc";
+		};
+		D32D97231F5449D0006A635E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				INFOPLIST_FILE = QuantiBaseExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = QuantiBaseExample;
+			};
+			name = Debug;
+		};
+		D32D97241F5449D0006A635E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				INFOPLIST_FILE = QuantiBaseExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = QuantiBaseExample;
+			};
+			name = Release;
+		};
+		D32D97251F5449D0006A635E /* Release-Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				INFOPLIST_FILE = QuantiBaseExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = QuantiBaseExample;
+			};
+			name = "Release-Adhoc";
+		};
 		D3ACC83C1F50CBD800CAC22F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -774,6 +1015,26 @@
 				630AF6611F44791F009CEA24 /* Debug */,
 				630AF6621F44791F009CEA24 /* Release */,
 				6365991A1F45CDA000979BBA /* Release-Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D32D971E1F5449D0006A635E /* Build configuration list for PBXNativeTarget "QuantiBaseExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D32D971F1F5449D0006A635E /* Debug */,
+				D32D97201F5449D0006A635E /* Release */,
+				D32D97211F5449D0006A635E /* Release-Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D32D97221F5449D0006A635E /* Build configuration list for PBXNativeTarget "QuantiBaseExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D32D97231F5449D0006A635E /* Debug */,
+				D32D97241F5449D0006A635E /* Release */,
+				D32D97251F5449D0006A635E /* Release-Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
