@@ -12,6 +12,7 @@ open class WebViewController: QBaseViewController {
 
     fileprivate var url: URL
     fileprivate let webView = UIWebView()
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 
     public init(withURL url: URL){
         self.url = url
@@ -30,11 +31,17 @@ open class WebViewController: QBaseViewController {
         view.addSubview(webView)
 
         webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
-        webView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        webView.topAnchor.constraint(equalTo: view.topAnchor)
-        webView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        webView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        webView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        webView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        webView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 
+        webView.addSubview(activityIndicator)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.centerXAnchor.constraint(equalTo: webView.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: webView.centerYAnchor).isActive = true
+
+        activityIndicator.startAnimating()
         webView.loadRequest(URLRequest(url: url))
     }
 
@@ -71,11 +78,12 @@ extension WebViewController: UIWebViewDelegate {
     }
 
     public func webViewDidStartLoad(_ webView: UIWebView) {
-        print("Webview started Loading")
+        print("Webview started Loading: \(String(describing: webView.request))")
     }
 
     public func webViewDidFinishLoad(_ webView: UIWebView) {
-        print("Webview did finish load")
+        print("Webview did finish load: \(String(describing: webView.request))")
+        activityIndicator.stopAnimating()
     }
     
 }
