@@ -27,6 +27,11 @@ open class WebViewController: QBaseViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
 
+        if isModal() {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.dissmiss))
+        }
+
+
         webView.delegate = self
 
         view.addSubview(webView)
@@ -36,6 +41,10 @@ open class WebViewController: QBaseViewController {
         }
 
         webView.loadRequest(URLRequest(url: url))
+    }
+
+    func dissmiss() {
+        self.dismiss(animated: true, completion: nil)
     }
 
     /// Override default implementation in case of HIPMC-631

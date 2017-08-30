@@ -48,6 +48,7 @@
 		63C3388D1F474D7700DA8957 /* QConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3388C1F474D7700DA8957 /* QConstants.swift */; };
 		63C338911F4751E900DA8957 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338901F4751E900DA8957 /* Encodable.swift */; };
 		63C338941F47530800DA8957 /* ParagraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338931F47530800DA8957 /* ParagraphViewController.swift */; };
+		D37B3EBB1F56E5FF008EB765 /* UIViewController+isModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B3EBA1F56E5FF008EB765 /* UIViewController+isModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		63C3388C1F474D7700DA8957 /* QConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QConstants.swift; sourceTree = "<group>"; };
 		63C338901F4751E900DA8957 /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		63C338931F47530800DA8957 /* ParagraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphViewController.swift; sourceTree = "<group>"; };
+		D37B3EBA1F56E5FF008EB765 /* UIViewController+isModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+isModal.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 		638A2EE91F45954F00256FC3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D37B3EBA1F56E5FF008EB765 /* UIViewController+isModal.swift */,
 				6365992C1F45DBA100979BBA /* ArrayExtension.swift */,
 				636599341F45DCDF00979BBA /* CGFloatExtension.swift */,
 				636599211F45D60500979BBA /* DateExtension.swift */,
@@ -361,6 +364,7 @@
 				636599291F45D9D900979BBA /* UIColorExtension.swift in Sources */,
 				630AF66C1F44876A009CEA24 /* WebViewController.swift in Sources */,
 				6365992D1F45DBA100979BBA /* ArrayExtension.swift in Sources */,
+				D37B3EBB1F56E5FF008EB765 /* UIViewController+isModal.swift in Sources */,
 				636599411F45FFE500979BBA /* MultipleDelegating.swift in Sources */,
 				6365993F1F45FAA000979BBA /* ConnectivityManager.swift in Sources */,
 				6392952D1F4ADB8600F707A5 /* BaseButton.swift in Sources */,
