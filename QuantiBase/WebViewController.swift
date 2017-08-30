@@ -68,6 +68,11 @@ open class WebViewController: QBaseViewController {
         navigationController?.popViewController(animated: animated)
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.default
+    }
+
+
 }
 
 extension WebViewController: UIWebViewDelegate {
