@@ -53,6 +53,7 @@
 		D32D97111F5449CF006A635E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32D970F1F5449CF006A635E /* LaunchScreen.storyboard */; };
 		D32D971C1F5449D0006A635E /* QuantiBaseExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D971B1F5449D0006A635E /* QuantiBaseExampleUITests.swift */; };
 		D34CECC31F545A1B008C952F /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
+		D37B3EB91F56E356008EB765 /* UIViewController+isModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B3EB81F56E356008EB765 /* UIViewController+isModal.swift */; };
 		D397CEB41F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */; };
 		D397CEB61F520E5100CCD70E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB51F520E5100CCD70E /* ArrayExtension.swift */; };
 		D397CEB81F520E8700CCD70E /* Collection+ReduceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB71F520E8700CCD70E /* Collection+ReduceExtension.swift */; };
@@ -132,6 +133,7 @@
 		D32D97171F5449CF006A635E /* QuantiBaseExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuantiBaseExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32D971B1F5449D0006A635E /* QuantiBaseExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantiBaseExampleUITests.swift; sourceTree = "<group>"; };
 		D32D971D1F5449D0006A635E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D37B3EB81F56E356008EB765 /* UIViewController+isModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+isModal.swift"; sourceTree = "<group>"; };
 		D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+IntervalAsStringExtension.swift"; sourceTree = "<group>"; };
 		D397CEB51F520E5100CCD70E /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		D397CEB71F520E8700CCD70E /* Collection+ReduceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+ReduceExtension.swift"; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				6365991B1F45D2A300979BBA /* UIViewControllerExtension.swift */,
 				6365992A1F45DA1A00979BBA /* UIViewExtension.swift */,
 				D397CEB71F520E8700CCD70E /* Collection+ReduceExtension.swift */,
+				D37B3EB81F56E356008EB765 /* UIViewController+isModal.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				6365994A1F46EAE100979BBA /* BackgroundMonitor.swift in Sources */,
 				6392953D1F4AFED900F707A5 /* JSONparser.swift in Sources */,
 				6392952F1F4ADBFA00F707A5 /* RoundedButton.swift in Sources */,
+				D37B3EB91F56E356008EB765 /* UIViewController+isModal.swift in Sources */,
 				639295461F4B03EC00F707A5 /* BaseView.swift in Sources */,
 				6365991C1F45D2A300979BBA /* UIViewControllerExtension.swift in Sources */,
 				636599311F45DC9200979BBA /* UIImage+ResizeExtension.swift in Sources */,
