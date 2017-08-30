@@ -12,7 +12,7 @@ public enum DeviceType {
     case iPodTouch5, iPodTouch6, iPhone4, iPhone4S, iPhone5, iPhone5C, iPhone5S,
          iPhone6, iPhone6Plus, iPhone6S, iPhone6SPlus, iPhone7, iPhone7Plus, iPhoneSE,
          iPad2, iPad3, iPad4, iPadAir, iPadAir2, iPadMini, iPadMini2, iPadMini3, iPadMini4,
-         iPadPro, appleTV, simulator, other
+         iPadPro, appleTV, simulator, other, iPad2017
 
     // swiftlint:disable:next cyclomatic_complexity
     public static func from(_ deviceTypeString: String) -> DeviceType {
@@ -34,6 +34,7 @@ public enum DeviceType {
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return iPad2
         case "iPad3,1", "iPad3,2", "iPad3,3":           return iPad3
         case "iPad3,4", "iPad3,5", "iPad3,6":           return iPad4
+        case "iPad6,11" :                               return iPad2017
         case "iPad4,1", "iPad4,2", "iPad4,3":           return iPadAir
         case "iPad5,3", "iPad5,4":                      return iPadAir2
         case "iPad2,5", "iPad2,6", "iPad2,7":           return iPadMini
@@ -57,13 +58,16 @@ public enum DeviceType {
             return .lr414x736
         case .iPadMini, .iPadMini2, .iPadMini3, .iPadMini4:
             return .lr768x1024
-        case .iPad2, .iPad3, .iPad4, .iPadAir, .iPadAir2:
+        case .iPad2, .iPad3, .iPad4, .iPadAir, .iPadAir2, .iPad2017:
             return .lr768x1024
         case .iPadPro:
             return .lr1024x1366
         case .simulator:
             return isiPhone() ? .lr320x568 : .lr768x1024
         default:
+            if isiPad() {
+                return .lr768x1024
+            }
             return .lr320x568
         }
     }
