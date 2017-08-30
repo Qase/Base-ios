@@ -78,6 +78,8 @@ extension MasterViewController {
     }
 
     func presentWebViewController() {
+
+//        present(UINavigationController(rootViewController: WebViewController(withURL: Lorem.URL)), animated: true)
         navigationController?.pushViewController(WebViewController(withURL: Lorem.URL), animated: true)
     }
 
