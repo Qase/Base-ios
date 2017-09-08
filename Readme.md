@@ -1,2 +1,2 @@
-# Scheme of project
+# Project scheme
 ![Repository](Documentation/scheme.png)
