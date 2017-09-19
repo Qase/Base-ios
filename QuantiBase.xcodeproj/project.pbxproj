@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BC1EB0F1F71748100BA1081 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1EB0E1F71748100BA1081 /* DateExtension.swift */; };
 		630AF65D1F44791E009CEA24 /* QuantiBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AF65B1F44791E009CEA24 /* QuantiBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		630AF66C1F44876A009CEA24 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630AF66B1F44876A009CEA24 /* WebViewController.swift */; };
 		6365991C1F45D2A300979BBA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365991B1F45D2A300979BBA /* UIViewControllerExtension.swift */; };
@@ -78,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5BC1EB0E1F71748100BA1081 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		630AF6581F44791E009CEA24 /* QuantiBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuantiBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		630AF65B1F44791E009CEA24 /* QuantiBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuantiBase.h; sourceTree = "<group>"; };
 		630AF65C1F44791E009CEA24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -225,8 +227,8 @@
 				638A2EE91F45954F00256FC3 /* Extensions */,
 				63C3388E1F47514D00DA8957 /* Models */,
 				636599231F45D64100979BBA /* Views */,
-				63B0A8AA1F50782F00F94CDF /* QuantiBase.swift */,
 				636599471F46EAC400979BBA /* GlobalVariables.swift */,
+				63B0A8AA1F50782F00F94CDF /* QuantiBase.swift */,
 				63C3388C1F474D7700DA8957 /* QConstants.swift */,
 				5BC1EB0D1F716BF500BA1081 /* Supporting Files */,
 			);
@@ -394,6 +396,7 @@
 				D3ACC8401F50CC5B00CAC22F /* UIImage+ResizeExtension.swift */,
 				D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */,
 				D397CEB51F520E5100CCD70E /* ArrayExtension.swift */,
+				5BC1EB0E1F71748100BA1081 /* DateExtension.swift */,
 			);
 			path = QuantiBaseTests;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D397CEB41F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift in Sources */,
+				5BC1EB0F1F71748100BA1081 /* DateExtension.swift in Sources */,
 				D3ACC8371F50CBD800CAC22F /* QuantiBaseTests.swift in Sources */,
 				D3ACC8411F50CC5B00CAC22F /* UIImage+ResizeExtension.swift in Sources */,
 				D397CEB61F520E5100CCD70E /* ArrayExtension.swift in Sources */,

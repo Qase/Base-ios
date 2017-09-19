@@ -8,31 +8,25 @@
 
 import Foundation
 
-extension NSDate {
+extension Date {
+    public var toDateTimeString: String {
+        return toString(as: "dd MMMM, HH:mm")
+    }
 
-    /// Method to transform Data -> String in Hex representation.
+
+    public var toTimeString: String {
+        return toString(as: "HH:mm:ss")
+    }
+
+
+    /// Method to convert Date -> String
     ///
-    /// - returns: String in Hex representation
-    public func customFormatedAsString() -> String {
+    /// - Parameter format: Format of the Date instance to be represented in
+    /// - Returns: String representation of Date instance in format set in parameter
+    public func toString(`as` format: String = "yyyy-MM-dd hh:mm:ss:sss") -> String {
         let formatter = DateFormatter()
+        formatter.dateFormat = format
 
-        //formater.dateFormat = ""
-        formatter.dateStyle = .long
-        formatter.timeStyle = .medium
-        return formatter.string(from: self as Date)
-    }
-
-    public func customFormatedAsStringDateTime() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd MMMM, HH:mm"
-
-        return formatter.string(from: self as Date)
-    }
-
-    public func customFormatedAsStringTime() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss"
-
-        return formatter.string(from: self as Date)
+        return formatter.string(from: self)
     }
 }
