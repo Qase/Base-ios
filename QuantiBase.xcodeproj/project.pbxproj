@@ -182,6 +182,16 @@
 			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		5BC1EB0D1F716BF500BA1081 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */,
+				630AF65C1F44791E009CEA24 /* Info.plist */,
+				630AF65B1F44791E009CEA24 /* QuantiBase.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		630AF64E1F44791E009CEA24 = {
 			isa = PBXGroup;
 			children = (
@@ -215,12 +225,10 @@
 				638A2EE91F45954F00256FC3 /* Extensions */,
 				63C3388E1F47514D00DA8957 /* Models */,
 				636599231F45D64100979BBA /* Views */,
-				630AF65B1F44791E009CEA24 /* QuantiBase.h */,
-				630AF65C1F44791E009CEA24 /* Info.plist */,
 				63B0A8AA1F50782F00F94CDF /* QuantiBase.swift */,
 				636599471F46EAC400979BBA /* GlobalVariables.swift */,
 				63C3388C1F474D7700DA8957 /* QConstants.swift */,
-				63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */,
+				5BC1EB0D1F716BF500BA1081 /* Supporting Files */,
 			);
 			path = QuantiBase;
 			sourceTree = "<group>";

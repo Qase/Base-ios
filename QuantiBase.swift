@@ -10,5 +10,4 @@ import Foundation
 
 
 class QuantiBase {
-    static let test = "QuantiBase is working"
 }
