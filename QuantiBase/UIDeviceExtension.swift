@@ -62,7 +62,7 @@ public enum DeviceType {
         case .iPadPro:
             return .lr1024x1366
         case .simulator:
-            return isiPhone() ? .lr320x568 : .lr768x1024
+            return isiPhone ? .lr320x568 : .lr768x1024
         default:
             return .lr320x568
         }

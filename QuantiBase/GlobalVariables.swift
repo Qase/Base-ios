@@ -8,6 +8,14 @@
 
 import Foundation
 
-public func isSimulator() -> Bool {
+public var isSimulator: Bool {
     return TARGET_OS_SIMULATOR != 0
+}
+
+public var isiPhone: Bool {
+    return UIDevice.current.userInterfaceIdiom == .phone
+}
+
+public var isiPad: Bool {
+    return UIDevice.current.userInterfaceIdiom == .pad
 }
