@@ -33,7 +33,7 @@ extension String {
         let startIndex = self.index(self.startIndex, offsetBy: range.lowerBound)
         let endIndex = self.index(self.startIndex, offsetBy: range.count)
 
-        return self[startIndex..<endIndex]
+        return String(self[startIndex..<endIndex])
     }
 
     /// Method to tranform String representation of JSON to Any representation of JSON, thus String -> Any.
@@ -57,11 +57,11 @@ extension String {
         return nil
     }
 
-    public func trunscated(width: CGFloat, fontAttributes: [String : Any]?) -> String {
+    public func trunscated(width: CGFloat, fontAttributes: [NSAttributedStringKey : Any]?) -> String {
         let string = self
         let nstext = string as NSString
 
-        let ratio = nstext.size(attributes: fontAttributes).width/width
+        let ratio = nstext.size(withAttributes: fontAttributes).width/width
 
         if ratio <= 1 {
             return string
@@ -71,7 +71,7 @@ extension String {
             let start = string.startIndex
             let end = string.index(start, offsetBy: stringLength)
             let range = start..<end
-            let retString = string.substring(with: range)
+            let retString = String(string[range])
             return "\(retString)..."
         }
     }

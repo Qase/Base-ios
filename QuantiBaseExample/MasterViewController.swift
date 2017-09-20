@@ -80,7 +80,9 @@ extension MasterViewController {
     func presentWebViewController() {
 
 //        present(UINavigationController(rootViewController: WebViewController(withURL: Lorem.URL)), animated: true)
-        navigationController?.pushViewController(WebViewController(withURL: Lorem.URL), animated: true)
+        guard let _url = URL(string: Lorem.url) else { return }
+
+        navigationController?.pushViewController(WebViewController(withURL: _url), animated: true)
     }
 
     func presentParagraphViewController() {

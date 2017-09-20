@@ -50,7 +50,7 @@ open class WebViewController: QBaseViewController {
         webView.loadRequest(URLRequest(url: url))
     }
 
-    func dissmiss() {
+    @objc func dissmiss() {
         self.dismiss(animated: true, completion: nil)
     }
 
