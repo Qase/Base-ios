@@ -11,7 +11,7 @@ import Foundation
 extension Array where Element: Equatable {
 
     // Remove first collection element that is equal to the given `object`:
-    public mutating func remove(object: Element) {
+    public mutating func removeFirst(object: Element) {
         if let index = index(of: object) {
             remove(at: index)
         }

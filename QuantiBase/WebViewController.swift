@@ -26,7 +26,7 @@ open class WebViewController: QBaseViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
 
-        if isModal() {
+        if isModal {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.dissmiss))
         }
 

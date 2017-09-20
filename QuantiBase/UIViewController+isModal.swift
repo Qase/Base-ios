@@ -8,11 +8,10 @@
 
 import Foundation
 
-extension UIViewController{
-    func isModal() -> Bool {
-
-        if let navigationController = self.navigationController{
-            if navigationController.viewControllers.first != self{
+extension UIViewController {
+    var isModal: Bool {
+        if let navigationController = self.navigationController {
+            if navigationController.viewControllers.first != self {
                 return false
             }
         }

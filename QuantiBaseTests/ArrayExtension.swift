@@ -13,19 +13,19 @@ class ArrayExtension: XCTestCase {
     func testArrayRemove() {
         var array = ["AAA", "bbb", "cCc", "DdD"]
 
-        array.remove(object: "AAA")
+        array.removeFirst(object: "AAA")
         XCTAssertEqual(array,  ["bbb", "cCc", "DdD"], "Error removed failed")
 
-        array.remove(object: "AAA")
+        array.removeFirst(object: "AAA")
         XCTAssertEqual(array,  ["bbb", "cCc", "DdD"], "Error removed failed")
 
-        array.remove(object: "bbb")
+        array.removeFirst(object: "bbb")
         XCTAssertEqual(array,  ["cCc", "DdD"], "Error removed failed")
 
-        array.remove(object: "DdD")
+        array.removeFirst(object: "DdD")
         XCTAssertEqual(array,  ["cCc"], "Error removed failed")
 
-        array.remove(object: "cCc")
+        array.removeFirst(object: "cCc")
         XCTAssertEqual(array,  [], "Error removed failed")
     }
     

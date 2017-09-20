@@ -28,18 +28,10 @@ extension String {
         return self[charIndex]
     }
 
-    /// Subscript to get substring: "Hello"[1..3] -> "ell"
-    public subscript (range: CountableRange<Int>) -> String {
-        let startIndex = self.index(self.startIndex, offsetBy: range.lowerBound)
-        let endIndex = self.index(self.startIndex, offsetBy: range.count)
-
-        return String(self[startIndex..<endIndex])
-    }
-
     /// Method to tranform String representation of JSON to Any representation of JSON, thus String -> Any.
     ///
     /// - returns: JSON data within Any instance
-    public func toJSONobject() -> Any {
+    public var JSON: Any {
         do {
             return try JSONSerialization.jsonObject(with: self.data(using: .utf8)!)
         } catch let JSONError {
@@ -50,7 +42,7 @@ extension String {
     /// Method to tranform String -> Data.
     ///
     /// - returns: String within Data instance
-    public func toData() -> Data? {
+    public var data: Data? {
         if let dataValue = self.data(using: .utf8) {
             return dataValue
         }
@@ -79,7 +71,7 @@ extension String {
     /// Method to return an index of character if found in String instance.
     ///
     /// - returns: Position of character if found, nil otherwise.
-    public func index(of char: Character) -> Int? {
+    public func firstIndex(of char: Character) -> Int? {
         if let idx = characters.index(of: char) {
             return characters.distance(from: startIndex, to: idx)
         }

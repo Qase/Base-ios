@@ -10,12 +10,12 @@ import Foundation
 
 extension Date {
     public var dateTimeString: String {
-        return toString(as: "dd MMMM, HH:mm")
+        return format("dd MMMM, HH:mm")
     }
 
 
     public var timeString: String {
-        return toString(as: "HH:mm:ss")
+        return format("HH:mm:ss")
     }
 
 
@@ -23,7 +23,7 @@ extension Date {
     ///
     /// - Parameter format: Format of the Date instance to be represented in
     /// - Returns: String representation of Date instance in format set in parameter
-    public func toString(`as` format: String = "yyyy-MM-dd hh:mm:ss:sss") -> String {
+    public func format(_ format: String = "yyyy-MM-dd hh:mm:ss:sss") -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
 

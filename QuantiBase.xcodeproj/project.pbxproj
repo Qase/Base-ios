@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B7BC4E81F72C5EE00C5046A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC4E71F72C5EE00C5046A /* StringExtension.swift */; };
+		5B7BC4EA1F72CCB200C5046A /* Collection+ReduceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC4E91F72CCB200C5046A /* Collection+ReduceExtension.swift */; };
 		5BC1EB0F1F71748100BA1081 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1EB0E1F71748100BA1081 /* DateExtension.swift */; };
 		630AF65D1F44791E009CEA24 /* QuantiBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AF65B1F44791E009CEA24 /* QuantiBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		630AF66C1F44876A009CEA24 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630AF66B1F44876A009CEA24 /* WebViewController.swift */; };
@@ -56,7 +58,6 @@
 		D397CEB41F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */; };
 		D397CEB61F520E5100CCD70E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB51F520E5100CCD70E /* ArrayExtension.swift */; };
 		D397CEB81F520E8700CCD70E /* Collection+ReduceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB71F520E8700CCD70E /* Collection+ReduceExtension.swift */; };
-		D3ACC8371F50CBD800CAC22F /* QuantiBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ACC8361F50CBD800CAC22F /* QuantiBaseTests.swift */; };
 		D3ACC8391F50CBD800CAC22F /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
 		D3ACC8411F50CC5B00CAC22F /* UIImage+ResizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ACC8401F50CC5B00CAC22F /* UIImage+ResizeExtension.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B7BC4E71F72C5EE00C5046A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		5B7BC4E91F72CCB200C5046A /* Collection+ReduceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+ReduceExtension.swift"; sourceTree = "<group>"; };
 		5BC1EB0E1F71748100BA1081 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		630AF6581F44791E009CEA24 /* QuantiBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuantiBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		630AF65B1F44791E009CEA24 /* QuantiBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuantiBase.h; sourceTree = "<group>"; };
@@ -136,7 +139,6 @@
 		D397CEB51F520E5100CCD70E /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		D397CEB71F520E8700CCD70E /* Collection+ReduceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+ReduceExtension.swift"; sourceTree = "<group>"; };
 		D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuantiBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3ACC8361F50CBD800CAC22F /* QuantiBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantiBaseTests.swift; sourceTree = "<group>"; };
 		D3ACC8381F50CBD800CAC22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3ACC8401F50CC5B00CAC22F /* UIImage+ResizeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ResizeExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -392,11 +394,12 @@
 			isa = PBXGroup;
 			children = (
 				D3ACC8381F50CBD800CAC22F /* Info.plist */,
-				D3ACC8361F50CBD800CAC22F /* QuantiBaseTests.swift */,
 				D3ACC8401F50CC5B00CAC22F /* UIImage+ResizeExtension.swift */,
 				D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */,
 				D397CEB51F520E5100CCD70E /* ArrayExtension.swift */,
 				5BC1EB0E1F71748100BA1081 /* DateExtension.swift */,
+				5B7BC4E71F72C5EE00C5046A /* StringExtension.swift */,
+				5B7BC4E91F72CCB200C5046A /* Collection+ReduceExtension.swift */,
 			);
 			path = QuantiBaseTests;
 			sourceTree = "<group>";
@@ -647,7 +650,8 @@
 			files = (
 				D397CEB41F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift in Sources */,
 				5BC1EB0F1F71748100BA1081 /* DateExtension.swift in Sources */,
-				D3ACC8371F50CBD800CAC22F /* QuantiBaseTests.swift in Sources */,
+				5B7BC4EA1F72CCB200C5046A /* Collection+ReduceExtension.swift in Sources */,
+				5B7BC4E81F72C5EE00C5046A /* StringExtension.swift in Sources */,
 				D3ACC8411F50CC5B00CAC22F /* UIImage+ResizeExtension.swift in Sources */,
 				D397CEB61F520E5100CCD70E /* ArrayExtension.swift in Sources */,
 			);

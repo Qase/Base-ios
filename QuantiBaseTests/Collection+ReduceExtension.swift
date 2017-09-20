@@ -1,14 +1,14 @@
 //
-//  QuantiBaseTests.swift
+//  Collection+ReduceExtension.swift
 //  QuantiBaseTests
 //
-//  Created by Jakub Prusa on 8/25/17.
+//  Created by Martin Troup on 20/09/2017.
 //  Copyright © 2017 David Nemec. All rights reserved.
 //
 
 import XCTest
 
-class QuantiBaseTests: XCTestCase {
+class Collection_ReduceExtension: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -20,16 +20,11 @@ class QuantiBaseTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testReduce() {
+        let averageNumber = [1, 2, 4, 3, 5, 17, 39].reduce(0) { (count, avg, next) -> Double in
+            avg + (Double(next) / Double(count))
         }
+        XCTAssertEqual(round(1000 * averageNumber) / 1000, 10.143)
     }
     
 }
