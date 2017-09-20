@@ -8,7 +8,7 @@
 
 
 extension UIViewController {
-    open func embeddedInNavigationController() -> Bool {
+    @objc dynamic open func embeddedInNavigationController() -> Bool {
         return false
     }
 }
