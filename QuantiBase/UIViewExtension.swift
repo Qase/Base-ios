@@ -62,9 +62,11 @@ extension UIView {
     public func dummyViewWith(priority: Int) -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = view.widthAnchor.constraint(equalToConstant: 1)
-        constraint.priority = UILayoutPriority(rawValue: Float(priority))
-        constraint.isActive = true
+        let constrain = view.widthAnchor.constraint(equalToConstant: 1)
+        constrain.priority = Float(priority)
+        constrain.isActive=true
+
+
         return view
     }
 
