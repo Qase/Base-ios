@@ -10,7 +10,7 @@ import Foundation
 
 extension CGFloat {
     public var scaled: CGFloat {
-        switch UIDevice.type.getResolutionGroup()! {
+        switch UIDevice.type.resolutionGroup! {
         case .lr320x568:
             return self
         case .lr375x667:

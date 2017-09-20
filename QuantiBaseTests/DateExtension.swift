@@ -27,25 +27,25 @@ class DateExtension: XCTestCase {
         XCTAssertTrue(fullDateTimePredicate.evaluate(with: now.toString()))
     }
 
-    func testToStringWithParameter() {
+    func testtoTimeStringWithParameter() {
         let now = Date()
         let fullDateTimeRegex = "^[0-9]{2}.[0-9]{2}.[0-9]{2}$"
         let fullDateTimePredicate = NSPredicate(format: "SELF MATCHES %@", fullDateTimeRegex)
         XCTAssertTrue(fullDateTimePredicate.evaluate(with: now.toString(as: "hh.mm.ss")))
     }
 
-    func testToDateTimeStringVariable() {
+    func testOfDateTimeStringVariable() {
         let now = Date()
         let fullDateTimeRegex = "^[0-9]{2}:[0-9]{2}:[0-9]{2}$"
         let fullDateTimePredicate = NSPredicate(format: "SELF MATCHES %@", fullDateTimeRegex)
-        XCTAssertTrue(fullDateTimePredicate.evaluate(with: now.toTimeString))
+        XCTAssertTrue(fullDateTimePredicate.evaluate(with: now.timeString))
     }
 
-    func testToTimeStringVariable() {
+    func testOfTimeStringVariable() {
         let now = Date()
         let fullDateTimeRegex = "^[0-9]{2} [A-Z][a-z]{1,}, [0-9]{2}:[0-9]{2}$"
         let fullDateTimePredicate = NSPredicate(format: "SELF MATCHES %@", fullDateTimeRegex)
-        XCTAssertTrue(fullDateTimePredicate.evaluate(with: now.toDateTimeString))
+        XCTAssertTrue(fullDateTimePredicate.evaluate(with: now.dateTimeString))
     }
     
 }

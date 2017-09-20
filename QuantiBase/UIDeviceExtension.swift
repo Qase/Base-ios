@@ -47,7 +47,7 @@ public enum DeviceType {
         }
     }
 
-    public func getResolutionGroup() -> ResolutionGroup? {
+    public var resolutionGroup: ResolutionGroup? {
         switch self {
         case .iPhone5, .iPhone5C, .iPhone5S, .iPhoneSE, .iPodTouch5, .iPodTouch6:
             return .lr320x568
