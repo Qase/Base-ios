@@ -27,7 +27,7 @@ extension Collection {
     public func reduce<U>(seed: U, combiner: (Int, U, Iterator.Element) -> U) -> U {
         var current = seed
         for item in self {
-            current = combiner(Int(count.toIntMax()), current, item)
+            current = combiner(Int(count), current, item)
         }
         return current
     }

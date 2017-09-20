@@ -63,7 +63,7 @@ extension UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         let constrain = view.widthAnchor.constraint(equalToConstant: 1)
-        constrain.priority = Float(priority)
+        constrain.priority = UILayoutPriority(rawValue: Float(priority))
         constrain.isActive=true
 
 
