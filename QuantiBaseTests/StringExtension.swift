@@ -24,8 +24,12 @@ class StringExtension: XCTestCase {
         XCTAssertEqual("Testyng functyon".replace("y", replacement: "i"), "Testing function")
     }
 
-    func testIndex() {
+    func testSubscript() {
         XCTAssertEqual("Hello"[1], "e")
+    }
+
+    func testSubscriptRange() {
+        XCTAssertEqual("Hello"[1..<4], "ell")
     }
     
     func testToJSONobject() {

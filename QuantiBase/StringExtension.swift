@@ -28,6 +28,15 @@ extension String {
         return self[charIndex]
     }
 
+    /// Subscript to get substring: "Hello"[1..<4] -> "ell"
+    public subscript (range: CountableRange<Int>) -> String {
+        let startIndex = self.index(self.startIndex, offsetBy: range.lowerBound)
+        let endIndex = self.index(self.startIndex, offsetBy: range.count + 1)
+
+        return String(self[startIndex..<endIndex])
+    }
+
+
     /// Method to tranform String representation of JSON to Any representation of JSON, thus String -> Any.
     ///
     /// - returns: JSON data within Any instance
