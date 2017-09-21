@@ -31,7 +31,7 @@ extension String {
     /// Subscript to get substring: "Hello"[1..<4] -> "ell"
     public subscript (range: CountableRange<Int>) -> String? {
         guard range.lowerBound < range.upperBound else { return nil }
-        guard range.lowerBound > 0 else { return nil }
+        guard range.lowerBound >= 0 else { return nil }
         guard range.lowerBound < self.count, range.upperBound <= self.count else { return nil }
 
         return range.sorted { $0 < $1 }
