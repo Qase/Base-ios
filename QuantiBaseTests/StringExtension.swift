@@ -28,8 +28,20 @@ class StringExtension: XCTestCase {
         XCTAssertEqual("Hello"[1], "e")
     }
 
-    func testSubscriptRange() {
-        XCTAssertEqual("Hello"[1..<4], "ell")
+    func testSubscriptRange1() {
+        XCTAssertEqual("Good Morning"[3..<3], nil)
+    }
+
+    func testSubscriptRange2() {
+        XCTAssertEqual("Good Morning"[-1..<3], nil)
+    }
+
+    func testSubscriptRange3() {
+        XCTAssertEqual("Good Morning"[10..<14], nil)
+    }
+
+    func testSubscriptRange4() {
+        XCTAssertEqual("Good Morning"[3..<6], "d M")
     }
     
     func testToJSONobject() {

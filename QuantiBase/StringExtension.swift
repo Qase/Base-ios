@@ -29,11 +29,14 @@ extension String {
     }
 
     /// Subscript to get substring: "Hello"[1..<4] -> "ell"
-    public subscript (range: CountableRange<Int>) -> String {
-        let startIndex = self.index(self.startIndex, offsetBy: range.lowerBound)
-        let endIndex = self.index(self.startIndex, offsetBy: range.count + 1)
+    public subscript (range: CountableRange<Int>) -> String? {
+        guard range.lowerBound < range.upperBound else { return nil }
+        guard range.lowerBound > 0 else { return nil }
+        guard range.lowerBound < self.count, range.upperBound <= self.count else { return nil }
 
-        return String(self[startIndex..<endIndex])
+        return range.sorted { $0 < $1 }
+                    .map { self[$0] }
+                    .reduce("") { String($0) + String($1) }
     }
 
 
