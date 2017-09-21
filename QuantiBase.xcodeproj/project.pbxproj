@@ -10,6 +10,8 @@
 		5B7BC4E81F72C5EE00C5046A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC4E71F72C5EE00C5046A /* StringExtension.swift */; };
 		5B7BC4EA1F72CCB200C5046A /* Collection+ReduceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC4E91F72CCB200C5046A /* Collection+ReduceExtension.swift */; };
 		5BC1EB0F1F71748100BA1081 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1EB0E1F71748100BA1081 /* DateExtension.swift */; };
+		5BF8E9581F73E97F00B7334B /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
+		5BF8E9591F73E97F00B7334B /* QuantiBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		630AF65D1F44791E009CEA24 /* QuantiBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AF65B1F44791E009CEA24 /* QuantiBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		630AF66C1F44876A009CEA24 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630AF66B1F44876A009CEA24 /* WebViewController.swift */; };
 		6365991C1F45D2A300979BBA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365991B1F45D2A300979BBA /* UIViewControllerExtension.swift */; };
@@ -53,7 +55,6 @@
 		D32D97071F5449CF006A635E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D97061F5449CF006A635E /* MasterViewController.swift */; };
 		D32D970E1F5449CF006A635E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D32D970D1F5449CF006A635E /* Assets.xcassets */; };
 		D32D971C1F5449D0006A635E /* QuantiBaseExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D971B1F5449D0006A635E /* QuantiBaseExampleUITests.swift */; };
-		D34CECC31F545A1B008C952F /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
 		D37B3EB91F56E356008EB765 /* UIViewController+isModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B3EB81F56E356008EB765 /* UIViewController+isModal.swift */; };
 		D397CEB41F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB31F520A7C00CCD70E /* TimeInterval+IntervalAsStringExtension.swift */; };
 		D397CEB61F520E5100CCD70E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB51F520E5100CCD70E /* ArrayExtension.swift */; };
@@ -63,6 +64,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5BF8E95A1F73E97F00B7334B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 630AF64F1F44791E009CEA24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 630AF6571F44791E009CEA24;
+			remoteInfo = QuantiBase;
+		};
 		D32D97181F5449CF006A635E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 630AF64F1F44791E009CEA24 /* Project object */;
@@ -78,6 +86,20 @@
 			remoteInfo = QuantiBase;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BF8E95C1F73E97F00B7334B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5BF8E9591F73E97F00B7334B /* QuantiBase.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5B7BC4E71F72C5EE00C5046A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -155,7 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D34CECC31F545A1B008C952F /* QuantiBase.framework in Frameworks */,
+				5BF8E9581F73E97F00B7334B /* QuantiBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,10 +466,12 @@
 				D32D96FE1F5449CF006A635E /* Sources */,
 				D32D96FF1F5449CF006A635E /* Frameworks */,
 				D32D97001F5449CF006A635E /* Resources */,
+				5BF8E95C1F73E97F00B7334B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5BF8E95B1F73E97F00B7334B /* PBXTargetDependency */,
 			);
 			name = QuantiBaseExample;
 			productName = QuantiBaseExample;
@@ -660,6 +684,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5BF8E95B1F73E97F00B7334B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 630AF6571F44791E009CEA24 /* QuantiBase */;
+			targetProxy = 5BF8E95A1F73E97F00B7334B /* PBXContainerItemProxy */;
+		};
 		D32D97191F5449CF006A635E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D32D97011F5449CF006A635E /* QuantiBaseExample */;
@@ -897,6 +926,7 @@
 		D32D971F1F5449D0006A635E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2PY9RKK8A7;
 				INFOPLIST_FILE = QuantiBaseExample/Info.plist;
@@ -911,6 +941,7 @@
 		D32D97201F5449D0006A635E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2PY9RKK8A7;
 				INFOPLIST_FILE = QuantiBaseExample/Info.plist;
@@ -925,6 +956,7 @@
 		D32D97211F5449D0006A635E /* Release-Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2PY9RKK8A7;
 				INFOPLIST_FILE = QuantiBaseExample/Info.plist;
