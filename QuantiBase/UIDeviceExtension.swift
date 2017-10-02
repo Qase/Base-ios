@@ -12,7 +12,7 @@ public enum DeviceType {
     case iPodTouch5, iPodTouch6, iPhone4, iPhone4S, iPhone5, iPhone5C, iPhone5S,
          iPhone6, iPhone6Plus, iPhone6S, iPhone6SPlus, iPhone7, iPhone7Plus, iPhoneSE,
          iPad2, iPad3, iPad4, iPadAir, iPadAir2, iPadMini, iPadMini2, iPadMini3, iPadMini4,
-         iPadPro, appleTV, simulator, other
+         iPadPro, appleTV, simulator, other, iPad2017
 
     // swiftlint:disable:next cyclomatic_complexity
     public static func from(_ deviceTypeString: String) -> DeviceType {
