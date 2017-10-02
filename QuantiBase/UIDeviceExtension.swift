@@ -11,14 +11,14 @@ import Foundation
 public enum DeviceType {
     case iPodTouch5, iPodTouch6, iPhone4, iPhone4S, iPhone5, iPhone5C, iPhone5S,
          iPhone6, iPhone6Plus, iPhone6S, iPhone6SPlus, iPhone7, iPhone7Plus, iPhoneSE,
+         iPhone8, iPhone8Plus, iPhoneX,
          iPad2, iPad3, iPad4, iPadAir, iPadAir2, iPadMini, iPadMini2, iPadMini3, iPadMini4,
-         iPadPro, appleTV, simulator, other, iPad2017
+         iPadPro,
+         appleTV, simulator, other, iPad2017
 
     // swiftlint:disable:next cyclomatic_complexity
     public static func from(_ deviceTypeString: String) -> DeviceType {
         switch deviceTypeString {
-        case "iPod5,1":                                 return iPodTouch5
-        case "iPod7,1":                                 return iPodTouch6
         case "iPhone3,1", "iPhone3,2", "iPhone3,3":     return iPhone4
         case "iPhone4,1":                               return iPhone4S
         case "iPhone5,1", "iPhone5,2":                  return iPhone5
@@ -31,6 +31,13 @@ public enum DeviceType {
         case "iPhone9,1", "iPhone9,3":                  return iPhone7
         case "iPhone9,2", "iPhone9,4":                  return iPhone7Plus
         case "iPhone8,4":                               return iPhoneSE
+        case "iPhone10,1", "iPhone10,4":                return iPhone8
+        case "iPhone10,2", "iPhone10,5":                return iPhone8Plus
+        case "iPhone10,3", "iPhone10,6":                return iPhoneX
+
+        case "iPod5,1":                                 return iPodTouch5
+        case "iPod7,1":                                 return iPodTouch6
+
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return iPad2
         case "iPad3,1", "iPad3,2", "iPad3,3":           return iPad3
         case "iPad3,4", "iPad3,5", "iPad3,6":           return iPad4
@@ -42,6 +49,7 @@ public enum DeviceType {
         case "iPad4,7", "iPad4,8", "iPad4,9":           return iPadMini3
         case "iPad5,1", "iPad5,2":                      return iPadMini4
         case "iPad6,3", "iPad6,4", "iPad6,7", "iPad6,8":return iPadPro
+
         case "AppleTV5,3":                              return appleTV
         case "i386", "x86_64":                          return simulator
         default:                                        return other
@@ -52,9 +60,9 @@ public enum DeviceType {
         switch self {
         case .iPhone5, .iPhone5C, .iPhone5S, .iPhoneSE, .iPodTouch5, .iPodTouch6:
             return .lr320x568
-        case .iPhone6, .iPhone6S, .iPhone7:
+        case .iPhone6, .iPhone6S, .iPhone7, .iPhone8, .iPhoneX:
             return .lr375x667
-        case .iPhone6Plus, .iPhone6SPlus, .iPhone7Plus:
+        case .iPhone6Plus, .iPhone6SPlus, .iPhone7Plus, .iPhone8Plus:
             return .lr414x736
         case .iPadMini, .iPadMini2, .iPadMini3, .iPadMini4:
             return .lr768x1024
