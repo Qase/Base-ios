@@ -44,7 +44,6 @@ open class ParagrafView: BaseView {
         headerLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive=true
         headerLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive=true
         headerLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive=true
-        headerLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive=true
 
         self.addSubview(contentLabel)
 
