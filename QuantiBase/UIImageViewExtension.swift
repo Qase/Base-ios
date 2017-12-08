@@ -13,13 +13,19 @@ extension UIImageView {
     public func addBlurEffect() {
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
+		blurEffectView.frame = self.bounds
 
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
         self.addSubview(blurEffectView)
 
-        blurEffectView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive=true
-        blurEffectView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive=true
-        blurEffectView.topAnchor.constraint(equalTo: self.topAnchor).isActive=true
-        blurEffectView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive=true
+//        blurEffectView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive=true
+//        blurEffectView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive=true
+//        blurEffectView.topAnchor.constraint(equalTo: self.topAnchor).isActive=true
+//        blurEffectView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive=true
     }
+
+	public func removeBlurEffect() {
+		self.subviews.flatMap { $0 as? UIVisualEffectView }
+			.forEach { $0.removeFromSuperview() }
+	}
 }
