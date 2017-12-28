@@ -43,7 +43,6 @@ public class ConnectivityManager: Notifying, MultipleDelegating {
     }
 
     deinit {
-        removeNotifications()
         reachability?.stopNotifier()
     }
 

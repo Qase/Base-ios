@@ -36,9 +36,6 @@ public class BackgroundMonitor: NSObject {
         registerForNotifications()
     }
 
-    deinit {
-        removeNotifications()
-    }
 }
 
 extension BackgroundMonitor: Notifying {
