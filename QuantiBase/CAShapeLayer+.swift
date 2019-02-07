@@ -23,14 +23,14 @@ extension CAShapeLayer {
 	}
 
 	/// Method to pause all animations added to self (layer).
-	func pauseAnimations() {
+	public func pauseAnimations() {
 		let pausedTime = self.convertTime(CACurrentMediaTime(), from: nil)
 		self.speed = 0.0
 		self.timeOffset = pausedTime
 	}
 
 	/// Method to resume all animations added to self (layer).
-	func resumeAnimations() {
+	public func resumeAnimations() {
 		let pausedTime = self.timeOffset
 		self.speed = 1.0
 		self.timeOffset = 0.0

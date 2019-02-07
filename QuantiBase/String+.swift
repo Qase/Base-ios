@@ -126,4 +126,14 @@ extension String {
 
 		return false
 	}
+
+	// Returns [UInt8] representation of self
+	public var byteArray: [UInt8] {
+		return self.utf8.reduce([UInt8](), { (uInt8Array, uInt8) -> [UInt8] in
+			var _uInt8Array = uInt8Array
+			_uInt8Array += [uInt8]
+
+			return _uInt8Array
+		})
+	}
 }

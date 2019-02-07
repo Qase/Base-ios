@@ -11,7 +11,7 @@ import Foundation
 extension UIScrollView {
 
 	/// Detects if it is scrolled over the contentSize of the scrollView.
-	var scrolledOverBottomLine: Bool {
+	public var scrolledOverBottomLine: Bool {
 		self.setNeedsLayout()
 		self.layoutIfNeeded()
 
@@ -23,7 +23,7 @@ extension UIScrollView {
 	/// - Parameters:
 	///   - view: to scroll to, if nil -> scroll to the bottom of the screen
 	///   - animated: if the scrolling should be animated
-	func scrollToBottom(of view: UIView? = nil, animated: Bool = true) {
+	public func scrollToBottom(of view: UIView? = nil, animated: Bool = true) {
 		self.setNeedsLayout()
 		self.layoutIfNeeded()
 
@@ -41,7 +41,7 @@ extension UIScrollView {
 	///   - view: to scroll to, if nil -> scroll to the top of the screen
 	///   - topOffset: top offset, in case the user does not want to scroll directly to the top but keep some offset
 	///   - animated: if the scrolling should be animated
-	func scrollToTop(of view: UIView? = nil, withTopOfsset topOffset: CGFloat = 0, animated: Bool = true) {
+	public func scrollToTop(of view: UIView? = nil, withTopOfsset topOffset: CGFloat = 0, animated: Bool = true) {
 		self.setNeedsLayout()
 		self.layoutIfNeeded()
 

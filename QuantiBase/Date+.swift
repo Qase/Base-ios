@@ -23,7 +23,7 @@ extension Date {
     ///
     /// - Parameter format: Format of the Date instance to be represented in
     /// - Returns: String representation of Date instance in format set in parameter
-    public func format(_ format: String = "yyyy-MM-dd hh:mm:ss:sss") -> String {
+    public func asString(_ format: String = "yyyy-MM-dd hh:mm:ss:sss") -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
 
