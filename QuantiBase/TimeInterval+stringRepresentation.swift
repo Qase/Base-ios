@@ -1,5 +1,5 @@
 //
-//  TimeInervalFormatter.swift
+//  TimeInterval+stringRepresentation.swift
 //  2N-mobile-communicator
 //
 //  Created by Jakub Prusa on 24.11.16.
@@ -9,7 +9,6 @@
 import Foundation
 
 extension Double {
-
     /// Format NSTimeInterval to nice format.
     /// Custom function which is similar to NSDateFormatter
     /// Default format is hh:mm:ss:sss

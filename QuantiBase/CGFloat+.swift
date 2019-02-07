@@ -1,5 +1,5 @@
 //
-//  CGFloat+scaled.swift
+//  CGFloat+.swift
 //  2N-mobile-communicator
 //
 //  Created by Martin Troup on 13.02.17.
@@ -9,6 +9,8 @@
 import Foundation
 
 extension CGFloat {
+
+    /// Scaling system for different screen resolutions
     public var scaled: CGFloat {
         switch UIDevice.type.resolutionGroup! {
         case .lr320x568:
@@ -24,4 +26,10 @@ extension CGFloat {
             return self * 1.3
         }
     }
+
+
+	/// Radians representation of self
+	public var radians: CGFloat {
+		return self * CGFloat(Double.pi) / 180.0
+	}
 }

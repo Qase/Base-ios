@@ -22,7 +22,7 @@ extension Array {
 	/// - Parameter indexSet: indices of objects to be returned
 	/// - Returns: subarray of the original array
 	public func objects(at indexSet: IndexSet) -> [Element] {
-		return indexSet.compactMap { return self.indices.contains($0) ? self[$0] : nil }
+		return indexSet.compactMap { self.indices.contains($0) ? self[$0] : nil }
 	}
 }
 

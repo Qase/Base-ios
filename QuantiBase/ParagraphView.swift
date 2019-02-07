@@ -29,7 +29,7 @@ open class ParagraphView: UIView {
         self.headerLabel.text = paragraph.header
         self.contentLabel.text = paragraph.content
 
-		contentLabel.textColor = .grayText
+		contentLabel.textColor = UIColor(red: 164/255.0, green: 164/255.0, blue: 167/255.0, alpha: 1) // Gray color
 		contentLabel.font = UIFont.systemFont(ofSize: 10)
 
 		self.addSubview(headerLabel)

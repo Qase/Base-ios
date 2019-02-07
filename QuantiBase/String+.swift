@@ -1,5 +1,5 @@
 //
-//  StringExtension.swift
+//  String+.swift
 //  QuantiBase
 //
 //  Created by David Nemec on 17/08/2017.
@@ -9,7 +9,6 @@
 import Foundation
 
 extension String {
-
     /// Replaces all occurances from string with replacement
     /// No rocket science here, just wraping existing code into shorter method :)
     ///
@@ -43,7 +42,7 @@ extension String {
     /// Method to tranform String representation of JSON to Any representation of JSON, thus String -> Any.
     ///
     /// - returns: JSON data within Any instance
-    public var JSON: Any {
+    public var json: Any {
         do {
             return try JSONSerialization.jsonObject(with: self.data(using: .utf8)!)
         } catch let JSONError {
@@ -61,33 +60,70 @@ extension String {
         return nil
     }
 
-	public func trunscated(width: CGFloat, fontAttributes: [NSAttributedString.Key : Any]?) -> String {
-        let string = self
-        let nstext = string as NSString
+	/// Method to get String.Index instance from Int.
+	///
+	/// - Parameter intIndex: index value represented as Int.
+	/// - Returns: index value represented as String.Index.
+	public func index(at intIndex: Int) -> String.Index {
+		return index(self.startIndex, offsetBy: intIndex)
+	}
 
-        let ratio = nstext.size(withAttributes: fontAttributes).width/width
-
-        if ratio <= 1 {
-            return string
-        } else {
-            let stringLength = Int(CGFloat(nstext.length)/ratio) - 4
-
-            let start = string.startIndex
-            let end = string.index(start, offsetBy: stringLength)
-            let range = start..<end
-            let retString = String(string[range])
-            return "\(retString)..."
-        }
-    }
+	/// Method to return a number of occurences of given substring within the string.
+	///
+	/// - Parameter substring: to be found
+	/// - Returns: number of substring's occurences
+	public func numberOfOcurrences(ofSubstring substring: String) -> Int {
+		return indices(ofSubstring: substring).count
+	}
 
     /// Method to return an index of character if found in String instance.
     ///
     /// - returns: Position of character if found, nil otherwise.
     public func firstIndex(of char: Character) -> Int? {
-        if let idx = index(of: char) {
-            return distance(from: startIndex, to: idx)
-        }
-        return nil
+		return indices(ofSubstring: String(char)).first
     }
-    
+
+	/// Method to return an array of indices of all occurences of given substring.
+	///
+	/// - Parameter string: substring to be found
+	/// - Returns: array of indices of all substring occurences.
+	public func indices(ofSubstring substring: String) -> [Int] {
+		var indices = [Int]()
+		var searchStartIndex = self.startIndex
+
+		while searchStartIndex < self.endIndex,
+			let range = self.range(of: substring, range: searchStartIndex..<self.endIndex),
+			!range.isEmpty {
+				let index = distance(from: self.startIndex, to: range.lowerBound)
+				indices.append(index)
+				searchStartIndex = range.upperBound
+		}
+
+		return indices
+	}
+
+	/// Method to convert String instance to Date with custom date time format.
+	///
+	/// - Parameter format: format of Date
+	/// - Returns: Date instance
+	public func asDate(withFormat format: String = "yyyy-MM-dd hh:mm:ss:sss") -> Date? {
+		let formatter = DateFormatter()
+		formatter.dateFormat = format
+		//formatter.locale = Locale(identifier: "en_US")
+
+		return formatter.date(from: self)
+	}
+
+	/// Check if string contains only numbers. This function work also for number greater then 2^32 because doesn't use Int casting
+	///
+	/// - Returns: true if contains only number
+	public var isNumeric: Bool {
+		if !self.isEmpty {
+			let numberCharacters = CharacterSet.decimalDigits.inverted
+
+			return self.rangeOfCharacter(from: numberCharacters) == nil
+		}
+
+		return false
+	}
 }

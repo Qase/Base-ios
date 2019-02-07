@@ -1,5 +1,5 @@
 //
-//  DateExtension.swift
+//  Date+.swift
 //  2N-mobile-communicator
 //
 //  Created by David Nemec on 08/11/2016.
