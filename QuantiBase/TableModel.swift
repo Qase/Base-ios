@@ -9,6 +9,7 @@
 import UIKit
 
 public class TableRow {
+	public static let defaultIdentifier = "defaultCellIdentifier"
     public var identifier: String?
     public var name = "RowName"
     public var hidden = false
@@ -73,14 +74,14 @@ public class TableModel {
 
     public func cellIdentifierFor(indexPath: IndexPath) -> String {
         guard let type = self.rowForIndexPath(indexPath: indexPath)?.type else {
-            return QConstants.TableCells.defaultCell
+            return TableRow.defaultIdentifier
         }
 
         let ret = cells.first(where: { (cellReg) -> Bool in
             return cellReg.cellType == type
         })
 
-        return ret?.cellIdentifier ?? QConstants.TableCells.defaultCell
+        return ret?.cellIdentifier ?? TableRow.defaultIdentifier
     }
 
     public func cellFor(identifier: String) -> TableRow? {

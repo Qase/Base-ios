@@ -1,5 +1,5 @@
 //
-//  CGFloatExtension.swift
+//  CGFloat+scaled.swift
 //  2N-mobile-communicator
 //
 //  Created by Martin Troup on 13.02.17.

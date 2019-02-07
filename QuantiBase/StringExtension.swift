@@ -61,7 +61,7 @@ extension String {
         return nil
     }
 
-    public func trunscated(width: CGFloat, fontAttributes: [NSAttributedStringKey : Any]?) -> String {
+	public func trunscated(width: CGFloat, fontAttributes: [NSAttributedString.Key : Any]?) -> String {
         let string = self
         let nstext = string as NSString
 

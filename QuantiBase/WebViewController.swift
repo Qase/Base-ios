@@ -8,15 +8,15 @@
 
 import UIKit
 
-open class WebViewController: QBaseViewController {
-
+open class WebViewController: UIViewController {
     fileprivate var url: URL
     fileprivate let webView = UIWebView()
-    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+	let activityIndicator = UIActivityIndicatorView(style: .gray)
 
-    public init(withURL url: URL){
+    public init(withURL url: URL) {
         self.url = url
-        super.init()
+		
+        super.init(nibName: nil, bundle: nil)
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -25,11 +25,6 @@ open class WebViewController: QBaseViewController {
 
     override open func viewDidLoad() {
         super.viewDidLoad()
-
-        if isModal {
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.dissmiss))
-        }
-
 
         webView.delegate = self
 
@@ -50,10 +45,6 @@ open class WebViewController: QBaseViewController {
         webView.loadRequest(URLRequest(url: url))
     }
 
-    @objc func dissmiss() {
-        self.dismiss(animated: true, completion: nil)
-    }
-
     /// Override default implementation in case of HIPMC-631
     /// Potencional bugfix
     ///
@@ -62,7 +53,6 @@ open class WebViewController: QBaseViewController {
         super.viewWillDisappear(animated)
 
         webView.stopLoading()
-        webView.delegate = nil
     }
 
     /// Override default implementation in case of HIPMC-631
@@ -71,10 +61,7 @@ open class WebViewController: QBaseViewController {
     /// - Parameter animated: should be animated?
     override open func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-
-        navigationController?.popViewController(animated: animated)
     }
-
 }
 
 extension WebViewController: UIWebViewDelegate {
@@ -82,7 +69,7 @@ extension WebViewController: UIWebViewDelegate {
         print("Webview fail with error \(error)")
     }
 
-    public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+	public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
         return true
     }
 

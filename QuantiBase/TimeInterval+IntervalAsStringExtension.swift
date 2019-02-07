@@ -17,7 +17,6 @@ extension Double {
     /// - Parameter format: desired format
     /// - Returns: format NSTimeInterval as String
     public func format(_ format: String = "hh:mm:ss:sss") -> String {
-
         let ms      = Int(self.truncatingRemainder(dividingBy: 1.0) * 1000)
         let asInt   = NSInteger(self)
         let s       = asInt % 60

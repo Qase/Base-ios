@@ -9,26 +9,26 @@
 import Foundation
 
 public protocol BackgroundMonitorDelegate: class {
-    func applicationDidEnterBackground(_ sender: BackgroundMonitor)
-    func applicationWillEnterForeground(_ sender: BackgroundMonitor)
-    func applicationDidFinishLaunching(_ sender: BackgroundMonitor)
-    func applicationDidBecomeActive(_ sender: BackgroundMonitor)
-    func applicationWillResignActive(_ sender: BackgroundMonitor)
-    func applicationDidReceiveMemoryWarning(_ sender: BackgroundMonitor)
-    func applicationWillTerminate(_ sender: BackgroundMonitor)
+    func applicationDidEnterBackground(_ sender: BackgroundMonitorService)
+    func applicationWillEnterForeground(_ sender: BackgroundMonitorService)
+    func applicationDidFinishLaunching(_ sender: BackgroundMonitorService)
+    func applicationDidBecomeActive(_ sender: BackgroundMonitorService)
+    func applicationWillResignActive(_ sender: BackgroundMonitorService)
+    func applicationDidReceiveMemoryWarning(_ sender: BackgroundMonitorService)
+    func applicationWillTerminate(_ sender: BackgroundMonitorService)
 }
 
 extension BackgroundMonitorDelegate {
-    public func applicationDidEnterBackground(_ sender: BackgroundMonitor) {}
-    public func applicationWillEnterForeground(_ sender: BackgroundMonitor) {}
-    public func applicationDidFinishLaunching(_ sender: BackgroundMonitor) {}
-    public func applicationDidBecomeActive(_ sender: BackgroundMonitor) {}
-    public func applicationWillResignActive(_ sender: BackgroundMonitor) {}
-    public func applicationDidReceiveMemoryWarning(_ sender: BackgroundMonitor) {}
-    public func applicationWillTerminate(_ sender: BackgroundMonitor) {}
+    public func applicationDidEnterBackground(_ sender: BackgroundMonitorService) {}
+    public func applicationWillEnterForeground(_ sender: BackgroundMonitorService) {}
+    public func applicationDidFinishLaunching(_ sender: BackgroundMonitorService) {}
+    public func applicationDidBecomeActive(_ sender: BackgroundMonitorService) {}
+    public func applicationWillResignActive(_ sender: BackgroundMonitorService) {}
+    public func applicationDidReceiveMemoryWarning(_ sender: BackgroundMonitorService) {}
+    public func applicationWillTerminate(_ sender: BackgroundMonitorService) {}
 }
 
-public class BackgroundMonitor: NSObject {
+public class BackgroundMonitorService: NSObject {
     public weak var delegate: BackgroundMonitorDelegate?
 
     public required override init() {
@@ -38,7 +38,7 @@ public class BackgroundMonitor: NSObject {
 
 }
 
-extension BackgroundMonitor: Notifying {
+extension BackgroundMonitorService: Notifying {
     public func registerForNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.applicationDidEnterBackground),
                                                name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
