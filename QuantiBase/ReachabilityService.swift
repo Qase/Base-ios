@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreTelephony
+import RxSwift
 
 public enum ConnectivityState {
     case notReachable
@@ -17,15 +18,13 @@ public enum ConnectivityState {
     case reachableViaWWAN4G
 }
 
-public protocol ConnectivityManagerDelegate: BasicDelegate {
-    func connectivityDidChange()
-}
-
-public class ReachabilityService: MultipleDelegating {
+public class ReachabilityService {
     public static let shared = ReachabilityService()
 
-    public typealias GenericDelegateType = ConnectivityManagerDelegate
-    public var delegates = [String: WeakDelegate]()
+	private let _connectivityChanged = PublishSubject<ConnectivityState>()
+	var connectivityChanged: Observable<ConnectivityState> {
+		return _connectivityChanged.asObservable()
+	}
 
     private let reachability = Reachability.forInternetConnection()
 
@@ -65,25 +64,21 @@ public class ReachabilityService: MultipleDelegating {
 		return connectivityState == .notReachable ? false : true
 	}
 
+	private let bag = DisposeBag()
+
     private init() {
         reachability?.startNotifier()
 
-		registerForNotifications()
+		let center = NotificationCenter.default
+
+		center.rx.notification(NSNotification.Name.reachabilityChanged)
+			.map { [weak self] _ in self?.connectivityState }
+			.filterNil()
+			.bind(to: _connectivityChanged)
+			.disposed(by: bag)
     }
 
     deinit {
         reachability?.stopNotifier()
     }
-}
-
-extension ReachabilityService: Notified {
-	public func registerForNotifications() {
-		NotificationCenter.default.addObserver(self,
-											   selector: #selector(connectivityDidChange),
-											   name: NSNotification.Name.reachabilityChanged, object: nil)
-	}
-
-	@objc private func connectivityDidChange() {
-		unwrappedDelegates.forEach { $0.connectivityDidChange() }
-	}
 }

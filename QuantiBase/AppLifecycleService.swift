@@ -1,94 +1,85 @@
 //
 //  AppLifecycleService.swift
-//  2N-mobile-communicator
+//  2NLock
 //
-//  Created by Martin Troup on 04.01.17.
-//  Copyright © 2017 quanti. All rights reserved.
+//  Created by Martin Troup on 11/01/2019.
+//  Copyright © 2019 Quanti. All rights reserved.
 //
 
 import Foundation
 
-public protocol AppLifecycleServiceDelegate: class {
-    func applicationDidEnterBackground()
-    func applicationWillEnterForeground()
-    func applicationDidFinishLaunching()
-    func applicationDidBecomeActive()
-    func applicationWillResignActive()
-    func applicationDidReceiveMemoryWarning()
-    func applicationWillTerminate()
-}
+import UIKit
+import RxSwift
 
-extension AppLifecycleServiceDelegate {
-    public func applicationDidEnterBackground() {}
-    public func applicationWillEnterForeground() {}
-    public func applicationDidFinishLaunching() {}
-    public func applicationDidBecomeActive() {}
-    public func applicationWillResignActive() {}
-    public func applicationDidReceiveMemoryWarning() {}
-    public func applicationWillTerminate() {}
-}
-
-public class AppLifecycleService: MultipleDelegating {
+public class AppLifecycleService {
 	public static let shared = AppLifecycleService()
 
-	public typealias GenericDelegateType = AppLifecycleServiceDelegate
-	public var delegates = [String : WeakDelegate]()
+	private let _willEnterForeground = PublishSubject<Notification>()
+	public var willEnterForeground: Observable<Notification> {
+		return _willEnterForeground.asObservable()
+	}
 
-    private init() {
-        registerForNotifications()
-    }
+	private let _didEnterBackground = PublishSubject<Notification>()
+	public var didEnterBackground: Observable<Notification> {
+		return _didEnterBackground.asObservable()
+	}
 
-}
+	private let _didFinishLaunching = PublishSubject<Notification>()
+	public var didFinishLaunching: Observable<Notification> {
+		return _didFinishLaunching.asObservable()
+	}
 
-extension AppLifecycleService: Notified {
-    public func registerForNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationDidEnterBackground),
-											   name: UIApplication.didEnterBackgroundNotification, object: nil)
+	private let _didBecomeActive = PublishSubject<Notification>()
+	public var didBecomeActive: Observable<Notification> {
+		return _didBecomeActive.asObservable()
+	}
 
-        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillEnterForeground),
-                                               name: UIApplication.willEnterForegroundNotification, object: nil)
+	private let _willResignActive = PublishSubject<Notification>()
+	public var willResignActive: Observable<Notification> {
+		return _willResignActive.asObservable()
+	}
 
-        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationDidFinishLaunching),
-                                               name: UIApplication.didFinishLaunchingNotification, object: nil)
+	private let _didReceiveMemoryWarning = PublishSubject<Notification>()
+	public var didReceiveMemoryWarning: Observable<Notification> {
+		return _didReceiveMemoryWarning.asObservable()
+	}
 
-        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationDidBecomeActive),
-                                               name: UIApplication.didBecomeActiveNotification, object: nil)
+	private let _willTerminate = PublishSubject<Notification>()
+	public var willTerminate: Observable<Notification> {
+		return _willTerminate.asObservable()
+	}
 
-        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillResignActive),
-                                               name: UIApplication.willResignActiveNotification, object: nil)
+	private let bag = DisposeBag()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationDidReceiveMemoryWarning),
-                                               name: UIApplication.didReceiveMemoryWarningNotification, object: nil)
+	private init() {
+		let center = NotificationCenter.default
 
-        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillTerminate),
-                                               name: UIApplication.willTerminateNotification, object: nil)
-    }
+		center.rx.notification(UIApplication.willEnterForegroundNotification)
+			.bind(to: _willEnterForeground)
+			.disposed(by: bag)
 
-	@objc fileprivate func applicationDidEnterBackground() {
-		unwrappedDelegates.forEach { $0.applicationDidEnterBackground() }
-    }
+		center.rx.notification(UIApplication.didEnterBackgroundNotification)
+			.bind(to: _didEnterBackground)
+			.disposed(by: bag)
 
-    @objc fileprivate func applicationWillEnterForeground() {
-		unwrappedDelegates.forEach { $0.applicationWillEnterForeground() }
-    }
+		center.rx.notification(UIApplication.didFinishLaunchingNotification)
+			.bind(to: _didFinishLaunching)
+			.disposed(by: bag)
 
-    @objc fileprivate func applicationDidFinishLaunching() {
-		unwrappedDelegates.forEach { $0.applicationDidFinishLaunching() }
-    }
+		center.rx.notification(UIApplication.didBecomeActiveNotification)
+			.bind(to: _didBecomeActive)
+			.disposed(by: bag)
 
-    @objc fileprivate func applicationDidBecomeActive() {
-		unwrappedDelegates.forEach { $0.applicationDidBecomeActive() }
-    }
+		center.rx.notification(UIApplication.willResignActiveNotification)
+			.bind(to: _willResignActive)
+			.disposed(by: bag)
 
-    @objc fileprivate func applicationWillResignActive() {
-		unwrappedDelegates.forEach { $0.applicationWillResignActive() }
-    }
+		center.rx.notification(UIApplication.didReceiveMemoryWarningNotification)
+			.bind(to: _didReceiveMemoryWarning)
+			.disposed(by: bag)
 
-    @objc fileprivate func applicationDidReceiveMemoryWarning() {
-		unwrappedDelegates.forEach { $0.applicationDidReceiveMemoryWarning() }
-    }
-
-    @objc fileprivate func applicationWillTerminate() {
-		unwrappedDelegates.forEach { $0.applicationWillTerminate() }
-    }
+		center.rx.notification(UIApplication.willTerminateNotification)
+			.bind(to: _willTerminate)
+			.disposed(by: bag)
+	}
 }
