@@ -1,2 +1,44 @@
-# Project scheme
-![Repository](Documentation/scheme.png)
+<!-- Todo add travis-->
+<!-- Todo add codebeat-->
+<!-- Todo add ios cartridge/pot whatever-->
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Maintainer: troupmar](https://img.shields.io/badge/Maintainer-troupmar-blue.svg)](mailto:martin.troup@quanti.cz)
+[![Qase: base-ios](https://img.shields.io/badge/Qase-base_ios-ff69b4.svg)](https://github.com/Qase/base-ios)
+
+
+## Base-ios
+
+Base-ios repository consists of useful extensions, general classes and protocols that we gather and use while working on our projects. The main goal is to create a central point of such snippets that can be reused within other projects. We constantly review and enrich the repository aiming to reach maximum reusability. We take full advantage of reactive programming features and incorporate it within our projects. For that purpose we use external libraries RxSwift, Action and RxDataSources as dependencies for the base-ios library.
+
+## Features
+- **Services**:
+    - AppLifecycleService: providing app lifecycle callbacks (such as “didFinishLaunchingNotification”) via reactive observables instead of using global notifications
+    - KeyboardService: providing keyboard callbacks (such as “keyboardWillShow”) via reactive observables instead of using global notifications
+    - ReachabilityService: providing reachability status (such as “ReachableViaWiFi”) via reactive observables
+    - BluetoothService: wrapper around CoreBluetooth’s CBPeripheralManager providing its callbacks via reactive observables
+- **JSONParser**: our own implementation of JSON parsing & serialization
+- **HTTPNetworking**: our own reactive implementation of REST network communication that fully supports our JSONParser
+- **UserDefaultsStorable protocol**: used to group models that support UserDefaults storing 
+- **ViewModelBindable protocol**: used by classes and structs that bind viewModels (useful for MVVM architecture)
+- **BinaryCodable protocol**: used to group models that support Binary encoding & decoding
+- **Queue**: implementation of queue using array
+- **TableModel class**: used when creating table views aiming to encapsulate the data structure of the table (will be soon obsolete since it is mostly replaced by RxDataSources external library)
+- **MultipleDelegating protocol**: extending the highly used Delegate pattern that supports multiple delegates (will be soon obsolete since it is mostly replaces by reactive observables)
+- 3rd party:
+    - **LoremSwiftum**: helpful class providing random strings of variable length
+- Useful subclasses of UIViewController & UIView
+- Binary extensions for basic data types
+- Other useful extensions for basic data types, reactive types and UIKit classes
+- Other
+
+## Installation
+
+<!-- Todo -->
+
+## Future development
+
+Code base is still under active development and it is going to grow steadily. You can send requests for other usefull snippets, that can be integrated into library.
+
+## License
+[MIT](https://github.com/nishanths/license/blob/master/LICENSE)
