@@ -1,5 +1,5 @@
 //
-//  Data+.swift
+//  Data+binary.swift
 //  BleFramework
 //
 //  Created by Martin Troup on 04/09/2018.

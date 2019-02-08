@@ -1,5 +1,5 @@
 //
-//  ArrayUInt8+.swift
+//  ArrayUInt8+binary.swift
 //  BleFramework
 //
 //  Created by Martin Troup on 17/09/2018.

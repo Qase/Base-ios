@@ -71,9 +71,9 @@ public enum DeviceType {
         case .iPadPro:
             return .lr1024x1366
         case .simulator:
-            return isiPhone ? .lr320x568 : .lr768x1024
+            return UIDevice.isiPhone ? .lr320x568 : .lr768x1024
         default:
-            if isiPad {
+            if UIDevice.isiPad {
                 return .lr768x1024
             }
             return .lr320x568
@@ -107,4 +107,16 @@ extension UIDevice {
 
         return DeviceType.from(deviceTypeString)
     }
+
+	public static var isSimulator: Bool {
+		return TARGET_OS_SIMULATOR != 0
+	}
+
+	public static var isiPhone: Bool {
+		return UIDevice.current.userInterfaceIdiom == .phone
+	}
+
+	public static var isiPad: Bool {
+		return UIDevice.current.userInterfaceIdiom == .pad
+	}
 }

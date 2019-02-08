@@ -10,7 +10,8 @@ import Foundation
 
 extension UIScrollView {
 
-	/// Detects if it is scrolled over the contentSize of the scrollView.
+	/// Detects if it is scrolled over the contentSize of the scrollView (over bounds).
+	/// - sometimes the scrollView is made to scroll even lower than its contentSize bottom
 	public var scrolledOverBottomLine: Bool {
 		self.setNeedsLayout()
 		self.layoutIfNeeded()

@@ -10,12 +10,12 @@ import Foundation
 
 extension Date {
     public var dateTimeString: String {
-        return format("dd MMMM, HH:mm")
+        return asString("dd MMMM, HH:mm")
     }
 
 
     public var timeString: String {
-        return format("HH:mm:ss")
+        return asString("HH:mm:ss")
     }
 
 
