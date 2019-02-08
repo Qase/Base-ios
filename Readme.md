@@ -1,11 +1,11 @@
+![Platform](https://img.shields.io/cocoapods/p/PagingKit.svg?style=flat)
+![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)
 <!-- Todo add travis-->
 <!-- Todo add codebeat-->
 <!-- Todo add ios cartridge/pot whatever-->
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Maintainer: troupmar](https://img.shields.io/badge/Maintainer-troupmar-blue.svg)](mailto:martin.troup@quanti.cz)
 [![Qase: base-ios](https://img.shields.io/badge/Qase-base_ios-ff69b4.svg)](https://github.com/Qase/base-ios)
-
 
 ## Base-ios
 
