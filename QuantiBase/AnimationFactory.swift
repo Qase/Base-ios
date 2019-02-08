@@ -6,7 +6,7 @@
 //  Copyright © 2019 David Nemec. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct AnimationFactory {
 	public enum RotationDirection {
@@ -14,27 +14,53 @@ struct AnimationFactory {
 		case right
 	}
 
-	/// Infinite rotation.
-	///
-	/// - Parameters:
-	///   - duration: duration of a single 360° rotation
-	///   - direction: direction of the rotation
-	/// - Returns: desired rotation animation that can be added to a view
-	static func infiniteRotation(withDuration duration: CFTimeInterval, withDirection direction: RotationDirection) -> CABasicAnimation {
-		let infiniteRotation = CABasicAnimation(keyPath: "transform.rotation")
+	static func rotation(toDirection direction: RotationDirection = .right, withDuration duration: CFTimeInterval = 1.5, repeatCount: Float = Float.infinity) -> CAAnimation {
+		let animationGroup = CAAnimationGroup()
+		animationGroup.duration =  1.5
+		animationGroup.beginTime = 0.0
+		animationGroup.repeatCount = Float.infinity
+		animationGroup.isRemovedOnCompletion = false
 
-		infiniteRotation.fromValue = 0.0
+		let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
+
+		rotateAnimation.fromValue = CGFloat(0.0).radians
 		switch direction {
 		case .right:
-			infiniteRotation.toValue = Float(Double.pi * 2.0)
+			rotateAnimation.toValue = CGFloat(360).radians
 		case .left:
-			infiniteRotation.toValue = -Float(Double.pi * 2.0)
+			rotateAnimation.toValue = -CGFloat(360).radians
 		}
 
-		infiniteRotation.duration = duration
-		infiniteRotation.repeatCount = Float.infinity
-		infiniteRotation.isRemovedOnCompletion = false
+		animationGroup.animations = [rotateAnimation]
 
-		return infiniteRotation
+		return animationGroup
+	}
+
+	static func progress(from: CGFloat, to: CGFloat, withDuration duration: CFTimeInterval = 0.5) -> CAAnimation {
+		let animation = CABasicAnimation(keyPath: "strokeEnd")
+		animation.duration = duration
+		animation.fromValue = from
+		animation.toValue = to
+		animation.isRemovedOnCompletion = false
+		animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+
+		return animation
+	}
+
+	static func colorPulsing(fromColor: UIColor, toColor: UIColor) -> CAAnimation {
+		let animation = CAKeyframeAnimation(keyPath: "strokeColor")
+		animation.duration = 2.0
+		animation.beginTime = 0.0
+		animation.repeatCount = Float.infinity
+		animation.isRemovedOnCompletion = false
+
+		animation.keyTimes = [0.0, 0.5, 1.0]
+		animation.values = [
+			fromColor.cgColor,
+			toColor.cgColor,
+			fromColor.cgColor
+		]
+
+		return animation
 	}
 }
