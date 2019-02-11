@@ -27,7 +27,6 @@ extension CGFloat {
         }
     }
 
-
 	/// Radians representation of self
 	public var radians: CGFloat {
 		return self * CGFloat(Double.pi) / 180.0

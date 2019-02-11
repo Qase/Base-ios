@@ -56,7 +56,7 @@ open class BaseButton: UIButton {
 
     convenience init(ofSize size: CGFloat) {
         self.init()
-        
+
         self.translatesAutoresizingMaskIntoConstraints = false
         self.heightAnchor.constraint(equalToConstant: size).isActive=true
         self.widthAnchor.constraint(equalToConstant: size).isActive=true

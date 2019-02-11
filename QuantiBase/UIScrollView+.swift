@@ -35,7 +35,6 @@ extension UIScrollView {
 		setContentOffset(bottomOffset, animated: animated)
 	}
 
-
 	/// Scroll to the top of a view specified within a parameter.
 	///
 	/// - Parameters:

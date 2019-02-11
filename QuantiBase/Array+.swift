@@ -16,7 +16,6 @@ extension Array {
 		}
 	}
 
-
 	/// Returns subarray containing objects on indices passed as parameter.
 	///
 	/// - Parameter indexSet: indices of objects to be returned

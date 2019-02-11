@@ -14,4 +14,3 @@ extension ArraySlice {
 		return Array(self)
 	}
 }
-

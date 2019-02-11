@@ -33,7 +33,7 @@ public enum JSONValue {
     case JSONBool(Bool)
     case JSONNull
 
-    public var object: [String:JSONValue]? {
+    public var object: [String: JSONValue]? {
         switch self {
         case .JSONObject(let value):
             return value
@@ -91,25 +91,21 @@ public enum JSONValue {
 
     // swiftlint:disable:next identifier_name
     public subscript(i: Int) -> JSONValue? {
-        get {
-            switch self {
-            case .JSONArray(let value):
-                return value[i]
-            default:
-                return nil
-            }
-        }
+		switch self {
+		case .JSONArray(let value):
+			return value[i]
+		default:
+			return nil
+		}
     }
 
     public subscript(key: String) -> JSONValue? {
-        get {
-            switch self {
-            case .JSONObject(let value):
-                return value[key]
-            default:
-                return nil
-            }
-        }
+		switch self {
+		case .JSONObject(let value):
+			return value[key]
+		default:
+			return nil
+		}
     }
 // swiftlint:disable:next cyclomatic_complexity
     public static func fromObject(object: Any) -> JSONValue? {
@@ -121,7 +117,7 @@ public enum JSONValue {
         case _ as NSNull:
             return JSONValue.JSONNull
         case let value as NSDictionary:
-            var jsonObject: [String:JSONValue] = [:]
+            var jsonObject: [String: JSONValue] = [:]
             for (_key, _value) in value {
                 if let _key = _key as? String {
                     if let _value = JSONValue.fromObject(object: _value) {

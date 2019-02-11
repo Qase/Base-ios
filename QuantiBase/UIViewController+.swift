@@ -52,7 +52,7 @@ extension UIViewController {
 		removeAllChildViewControllers(from: self)
 	}
 
-	private func removeAllChildViewControllers(from viewController: UIViewController)  {
+	private func removeAllChildViewControllers(from viewController: UIViewController) {
 		viewController.children.forEach { childViewController in
 			removeAllChildViewControllers(from: childViewController)
 			childViewController.removeFromParent()
@@ -68,8 +68,7 @@ extension UIViewController {
 	///   - timeInterval: how long the UIAlertController is being presented
 	///   - animated: if should be presented in animation
 	///   - onCompleted: closure being called after the UIAlertController is presented and hidden again
-	public func presentTemporaryAlertController(withTitle title: String, andSubtitle subtitle: String? = nil,
-												forTime timeInterval: TimeInterval = 1.0, animated: Bool = true, onCompleted: (() -> Void)? = nil) {
+	public func presentTemporaryAlertController(withTitle title: String, andSubtitle subtitle: String? = nil, forTime timeInterval: TimeInterval = 1.0, animated: Bool = true, onCompleted: (() -> Void)? = nil) {
 		let alertController = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
 		self.present(alertController, animated: animated) {
 			DispatchQueue.main.asyncAfter(deadline: .now() + timeInterval, execute: {

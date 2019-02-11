@@ -77,9 +77,7 @@ public class TableModel {
             return TableRow.defaultIdentifier
         }
 
-        let ret = cells.first(where: { (cellReg) -> Bool in
-            return cellReg.cellType == type
-        })
+		let ret = cells.first(where: { $0.cellType == type })
 
         return ret?.cellIdentifier ?? TableRow.defaultIdentifier
     }

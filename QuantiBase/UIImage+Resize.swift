@@ -16,7 +16,7 @@ extension UIImage {
     /// - Parameter newSize: CGSize aka new resolution
     /// - Returns: resized image
     public func resized(toSize newSize: CGSize) -> UIImage {
-        let renderer = UIGraphicsImageRenderer(size:newSize)
+        let renderer = UIGraphicsImageRenderer(size: newSize)
         let image = renderer.image {_ in
             self.draw(in: CGRect.init(origin: CGPoint.zero, size: newSize))
         }

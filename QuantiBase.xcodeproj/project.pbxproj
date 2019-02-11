@@ -525,6 +525,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 630AF6601F44791F009CEA24 /* Build configuration list for PBXNativeTarget "QuantiBase" */;
 			buildPhases = (
+				5B9BCD9622118CED00ED940C /* ShellScript */,
 				630AF6531F44791E009CEA24 /* Sources */,
 				630AF6541F44791E009CEA24 /* Frameworks */,
 				630AF6551F44791E009CEA24 /* Headers */,
@@ -687,6 +688,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5B9BCD9622118CED00ED940C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		5BA79E08220DBBC900C0F81D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

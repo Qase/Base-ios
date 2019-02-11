@@ -29,7 +29,6 @@ open class ParagraphViewController: UIViewController {
         scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive=true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive=true
 
-
         //Stackview
         stackView.alignment = .fill
         stackView.axis = .vertical

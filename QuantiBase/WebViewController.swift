@@ -15,7 +15,7 @@ open class WebViewController: UIViewController {
 
     public init(withURL url: URL) {
         self.url = url
-		
+
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -81,5 +81,4 @@ extension WebViewController: UIWebViewDelegate {
         print("Webview did finish load: \(String(describing: webView.request))")
         activityIndicator.stopAnimating()
     }
-    
 }

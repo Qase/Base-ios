@@ -20,7 +20,6 @@ extension String {
         return self.replacingOccurrences(of: string, with: replacement, options: .literal, range: nil)
     }
 
-
     /// Subscript to get char on specific index: "Hello"[1] -> "e"
     public subscript (index: Int) -> Character {
         let charIndex = self.index(self.startIndex, offsetBy: index)
@@ -37,7 +36,6 @@ extension String {
                     .map { self[$0] }
                     .reduce("") { String($0) + String($1) }
     }
-
 
     /// Method to tranform String representation of JSON to Any representation of JSON, thus String -> Any.
     ///

@@ -24,7 +24,6 @@ extension UInt16 {
 		return byteArray.reversed()
 	}
 
-
 	/// Returns Int representation of self.
 	public var int: Int {
 		return Int(self)

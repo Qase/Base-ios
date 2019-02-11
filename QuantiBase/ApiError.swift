@@ -30,7 +30,7 @@ enum ApiError: Error {
 			 (.unauthorized, .unauthorized),
 			 (.notFound, .notFound),
 			 (.serverFailure, .serverFailure),
-			 (.unspecified(_), .unspecified(_)),
+			 (.unspecified, .unspecified),
 			 (.parsingJsonFailure, .parsingJsonFailure),
 			 (.invalidRequest, .invalidRequest):
 			return true

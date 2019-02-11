@@ -13,11 +13,9 @@ extension Date {
         return asString("dd MMMM, HH:mm")
     }
 
-
     public var timeString: String {
         return asString("HH:mm:ss")
     }
-
 
     /// Method to convert Date -> String
     ///
