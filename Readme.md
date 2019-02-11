@@ -8,7 +8,7 @@
 [![Maintainer: troupmar](https://img.shields.io/badge/Maintainer-troupmar-blue.svg)](mailto:martin.troup@quanti.cz)
 [![Qase: base-ios](https://img.shields.io/badge/Qase-base_ios-ff69b4.svg)](https://github.com/Qase/base-ios)
 
-## base-ios
+## QuantiBase
 
 Base-ios repository consists of useful extensions, general classes and protocols that we gather and use while working on our projects. The main goal is to create a central point of such snippets that can be reused within other projects. We constantly review and enrich the repository aiming to reach maximum reusability. We take full advantage of reactive programming features and incorporate it within our projects. For that purpose we use external libraries RxSwift, Action and RxDataSources as dependencies for the base-ios library.
 
