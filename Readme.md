@@ -33,8 +33,39 @@ Base-ios repository consists of useful extensions, general classes and protocols
 - Other
 
 ## Installation
+### Carthage
 
-<!-- Todo -->
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. You can install Carthage with [Homebrew](https://brew.sh) using the following command:
+```
+$ brew update
+$ brew install carthage
+```
+To integrate QuantiLogger into your Xcode project using Carthage, specify it in your `Cartfile`:
+```
+github "Qase/base-ios" ~> 0.0.1
+``` 
+Run `carthage update` to build the framework and drag the built `QuantiBase.framework` and its dependencies into your Xcode project.
+
+### CocoaPods
+
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+```
+$ gem install cocoapods
+```
+To integrate QuantiLogger into your Xcode project using CocoaPods, specify it in your Podfile:
+```
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+  pod 'QuantiBase', '~> 0.0.1'
+end
+```
+Then, run the following command:
+```
+$ pod install
+```
 
 ## Future development
 
