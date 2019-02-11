@@ -1,6 +1,6 @@
 ![Platform](https://img.shields.io/cocoapods/p/PagingKit.svg?style=flat)
 ![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)
-<!-- Todo add travis-->
+[![travis badge](https://travis-ci.org/Qase/base-ios.svg?branch=master)](https://travis-ci.org/Qase/base-ios)
 <!-- Todo add codebeat-->
 <!-- Todo add ios cartridge/pot whatever-->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
