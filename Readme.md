@@ -2,7 +2,8 @@
 ![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)
 [![travis badge](https://travis-ci.org/Qase/base-ios.svg?branch=master)](https://travis-ci.org/Qase/base-ios)
 <!-- Todo add codebeat-->
-<!-- Todo add ios cartridge/pot whatever-->
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Pod compatible](https://cocoapod-badges.herokuapp.com/v/QuantiBase/badge.png)](https://cocoapods.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Maintainer: troupmar](https://img.shields.io/badge/Maintainer-troupmar-blue.svg)](mailto:martin.troup@quanti.cz)
 [![Qase: base-ios](https://img.shields.io/badge/Qase-base_ios-ff69b4.svg)](https://github.com/Qase/base-ios)
