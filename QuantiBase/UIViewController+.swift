@@ -31,20 +31,20 @@ extension UIViewController {
 	///   - childViewController: a viewController to be added
 	///   - view: a view where the new childViewController's view should be added as subview, should be self.view by default
 	public func add(childViewController: UIViewController, andDisplayIn view: UIView) {
-		addChild(childViewController)
+		addChildViewController(childViewController)
 		if let _stackView = view as? UIStackView {
 			_stackView.addArrangedSubview(childViewController.view)
 		} else {
 			view.addSubview(childViewController.view)
 		}
-		childViewController.didMove(toParent: self)
+		childViewController.didMove(toParentViewController: self)
 	}
 
 	/// Method remove the viewController from its parent viewController.
-	public func removeFromParentViewController() {
-		willMove(toParent: nil)
+	public func removeFromParent() {
+		willMove(toParentViewController: nil)
 		view.removeFromSuperview()
-		removeFromParent()
+		removeFromParentViewController()
 	}
 
 	/// Method to remove all childViewControllers from THE viewController.
@@ -53,7 +53,7 @@ extension UIViewController {
 	}
 
 	private func removeAllChildViewControllers(from viewController: UIViewController) {
-		viewController.children.forEach { childViewController in
+		viewController.childViewControllers.forEach { childViewController in
 			removeAllChildViewControllers(from: childViewController)
 			childViewController.removeFromParent()
 		}

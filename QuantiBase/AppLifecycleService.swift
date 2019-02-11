@@ -54,31 +54,31 @@ public class AppLifecycleService {
 	private init() {
 		let center = NotificationCenter.default
 
-		center.rx.notification(UIApplication.willEnterForegroundNotification)
+		center.rx.notification(NSNotification.Name.UIApplicationWillEnterForeground)
 			.bind(to: _willEnterForeground)
 			.disposed(by: bag)
 
-		center.rx.notification(UIApplication.didEnterBackgroundNotification)
+		center.rx.notification(NSNotification.Name.UIApplicationDidEnterBackground)
 			.bind(to: _didEnterBackground)
 			.disposed(by: bag)
 
-		center.rx.notification(UIApplication.didFinishLaunchingNotification)
+		center.rx.notification(NSNotification.Name.UIApplicationDidFinishLaunching)
 			.bind(to: _didFinishLaunching)
 			.disposed(by: bag)
 
-		center.rx.notification(UIApplication.didBecomeActiveNotification)
+		center.rx.notification(NSNotification.Name.UIApplicationDidBecomeActive)
 			.bind(to: _didBecomeActive)
 			.disposed(by: bag)
 
-		center.rx.notification(UIApplication.willResignActiveNotification)
+		center.rx.notification(NSNotification.Name.UIApplicationWillResignActive)
 			.bind(to: _willResignActive)
 			.disposed(by: bag)
 
-		center.rx.notification(UIApplication.didReceiveMemoryWarningNotification)
+		center.rx.notification(NSNotification.Name.UIApplicationDidReceiveMemoryWarning)
 			.bind(to: _didReceiveMemoryWarning)
 			.disposed(by: bag)
 
-		center.rx.notification(UIApplication.willTerminateNotification)
+		center.rx.notification(NSNotification.Name.UIApplicationWillTerminate)
 			.bind(to: _willTerminate)
 			.disposed(by: bag)
 	}
