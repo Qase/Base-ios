@@ -2,7 +2,6 @@ import Foundation
 
 /// A leightweight lorem ipsum generator.
 public final class Lorem {
-
     /// Generates a single word.
     public static var word: String {
         return allWords.random
