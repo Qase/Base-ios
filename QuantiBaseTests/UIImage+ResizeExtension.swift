@@ -25,7 +25,7 @@ class UIImage_ResizeExtension: XCTestCase {
         func testImageResize() {
             let originalImage = #imageLiteral(resourceName: "close")
 
-            let scaledImage = originalImage.with(newSize: CGSize.init(width: 200, height: 200))
+			let scaledImage = originalImage.resized(toSize: CGSize.init(width: 200, height: 200))
 
             XCTAssertEqual(scaledImage.size.width, 200)
             XCTAssertEqual(scaledImage.size.height, 200)

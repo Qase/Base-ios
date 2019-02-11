@@ -45,12 +45,12 @@ class StringExtension: XCTestCase {
     }
     
     func testToJSONobject() {
-        let dict = ("{\"name\": \"Test\"}".JSON) as! [String: String]
+        let dict = ("{\"name\": \"Test\"}".json) as! [String: String]
         XCTAssertEqual(dict["name"], "Test")
     }
 
     func testToJSONarray() {
-        let array = ("[1, 2, 3, 4]".JSON) as! [Int]
+        let array = ("[1, 2, 3, 4]".json) as! [Int]
         XCTAssertEqual(array.count, 4)
         XCTAssertEqual(array[2], 3)
     }
