@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol JSONParseable {
+public protocol JSONParseable {
 	associatedtype Object
 
 	static func parse(from json: Any) -> Object?
@@ -17,7 +17,7 @@ protocol JSONParseable {
 }
 
 extension JSONParseable {
-	static func parse(from json: Any) -> Object? {
+	public static func parse(from json: Any) -> Object? {
 		guard let _jsonValue = JSONValue.fromObject(object: json) else {
 			print("\(#function) - failed to parse Object data from JSON.")
 			return nil
@@ -26,7 +26,7 @@ extension JSONParseable {
 		return parse(fromJSONValue: _jsonValue)
 	}
 
-	static func parseMany(from json: Any) -> [Object]? {
+	public static func parseMany(from json: Any) -> [Object]? {
 		guard let _jsonValue = JSONValue.fromObject(object: json) else {
 			print("\(#function) - failed to parse array of [Object] data from JSON.")
 			return nil

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ApiError: Error {
+public enum ApiError: Error {
 	case unknownSession
 	// 400
 	case badRequest
@@ -23,7 +23,7 @@ enum ApiError: Error {
 	case parsingJsonFailure
 	case invalidRequest
 
-	static func == (lhs: ApiError, rhs: ApiError) -> Bool {
+	public static func == (lhs: ApiError, rhs: ApiError) -> Bool {
 		switch (lhs, rhs) {
 		case (.unknownSession, .unknownSession),
 			 (.badRequest, .badRequest),
@@ -39,7 +39,7 @@ enum ApiError: Error {
 		}
 	}
 
-	static func === (lhs: ApiError, rhs: ApiError) -> Bool {
+	public static func === (lhs: ApiError, rhs: ApiError) -> Bool {
 		switch (lhs, rhs) {
 		case (.unspecified(let a), .unspecified(let b)):
 			return a == b

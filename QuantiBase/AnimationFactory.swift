@@ -8,13 +8,13 @@
 
 import UIKit
 
-struct AnimationFactory {
+public struct AnimationFactory {
 	public enum RotationDirection {
 		case left
 		case right
 	}
 
-	static func rotation(toDirection direction: RotationDirection = .right, withDuration duration: CFTimeInterval = 1.5, repeatCount: Float = Float.infinity) -> CAAnimation {
+	public static func rotation(toDirection direction: RotationDirection = .right, withDuration duration: CFTimeInterval = 1.5, repeatCount: Float = Float.infinity) -> CAAnimation {
 		let animationGroup = CAAnimationGroup()
 		animationGroup.duration =  1.5
 		animationGroup.beginTime = 0.0
@@ -36,7 +36,7 @@ struct AnimationFactory {
 		return animationGroup
 	}
 
-	static func progress(from: CGFloat, to: CGFloat, withDuration duration: CFTimeInterval = 0.5) -> CAAnimation {
+	public static func progress(from: CGFloat, to: CGFloat, withDuration duration: CFTimeInterval = 0.5) -> CAAnimation {
 		let animation = CABasicAnimation(keyPath: "strokeEnd")
 		animation.duration = duration
 		animation.fromValue = from
@@ -47,7 +47,7 @@ struct AnimationFactory {
 		return animation
 	}
 
-	static func colorPulsing(fromColor: UIColor, toColor: UIColor) -> CAAnimation {
+	public static func colorPulsing(fromColor: UIColor, toColor: UIColor) -> CAAnimation {
 		let animation = CAKeyframeAnimation(keyPath: "strokeColor")
 		animation.duration = 2.0
 		animation.beginTime = 0.0

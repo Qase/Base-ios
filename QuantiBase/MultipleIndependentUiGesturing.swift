@@ -15,14 +15,14 @@ import Foundation
 // -> setIndependency(for:) makes these similar gestures independent from each other.
 
 // Tap gestures
-protocol MultipleIndependentUiTapGesturing {
-    var uiTapGestureRecognizers: [UITapGestureRecognizer] { get }
+public protocol MultipleIndependentUiTapGesturing {
+	var uiTapGestureRecognizers: [UITapGestureRecognizer] { get }
 
-    func setIndependency(for recognizers: [UITapGestureRecognizer])
+	func setIndependency(for recognizers: [UITapGestureRecognizer])
 }
 
 extension MultipleIndependentUiTapGesturing {
-    func setIndependency(fof recognizers: [UITapGestureRecognizer]) {
+    public func setIndependency(fof recognizers: [UITapGestureRecognizer]) {
         recognizers.forEach { outerGestureRecognizer in
                 recognizers.filter { $0.numberOfTapsRequired > outerGestureRecognizer.numberOfTapsRequired }
                     .forEach { innerGestureRecognizer in
@@ -33,14 +33,14 @@ extension MultipleIndependentUiTapGesturing {
 }
 
 // Press gestures
-protocol MultipleIndependentUiPressGesturing {
+public protocol MultipleIndependentUiPressGesturing {
     var uiPressGestureRecognizers: [UILongPressGestureRecognizer] { get }
 
     func setIndependency(for recognizers: [UILongPressGestureRecognizer])
 }
 
 extension MultipleIndependentUiPressGesturing {
-    func setIndependency(for recognizers: [UILongPressGestureRecognizer]) {
+    public func setIndependency(for recognizers: [UILongPressGestureRecognizer]) {
         recognizers.forEach { (outerGestureRecognizer) in
             recognizers.filter { $0.minimumPressDuration > outerGestureRecognizer.minimumPressDuration }
                 .forEach({ (innerGestureRecognizer) in
