@@ -116,7 +116,6 @@
 		D39AD2B1221BF2EE00C95FCA /* Observable+filterNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+filterNil.swift */; };
 		D39AD2BC221BF2EE00C95FCA /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 6365993B1F45FA9A00979BBA /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D39AD2BE221BF2EE00C95FCA /* QAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */; };
-		D39AD2CB221BF56700C95FCA /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C6221BF56700C95FCA /* RxBlocking.framework */; };
 		D39AD2CC221BF56700C95FCA /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C7221BF56700C95FCA /* Action.framework */; };
 		D39AD2CD221BF56700C95FCA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C8221BF56700C95FCA /* RxCocoa.framework */; };
 		D39AD2CE221BF56700C95FCA /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C9221BF56700C95FCA /* RxAtomic.framework */; };
@@ -126,6 +125,8 @@
 		D39AD2DB221C0A3D00C95FCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AD2DA221C0A3D00C95FCA /* ViewController.swift */; };
 		D39AD2DD221C0A3E00C95FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D39AD2DC221C0A3E00C95FCA /* Assets.xcassets */; };
 		D39AD2E0221C0A3E00C95FCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D39AD2DE221C0A3E00C95FCA /* Main.storyboard */; };
+		D39AD2EE221C180F00C95FCA /* QuantiBaseTests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AD2ED221C180F00C95FCA /* QuantiBaseTests_macOS.swift */; };
+		D39AD2F0221C180F00C95FCA /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */; };
 		D3ACC8391F50CBD800CAC22F /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
 		D3ACC8411F50CC5B00CAC22F /* UIImage+ResizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ACC8401F50CC5B00CAC22F /* UIImage+ResizeExtension.swift */; };
 /* End PBXBuildFile section */
@@ -144,6 +145,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D32D97011F5449CF006A635E;
 			remoteInfo = QuantiBaseExample;
+		};
+		D39AD2F1221C180F00C95FCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 630AF64F1F44791E009CEA24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D39AD276221BF2EE00C95FCA;
+			remoteInfo = "QuantiBase macOS";
 		};
 		D3ACC83A1F50CBD800CAC22F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -267,6 +275,9 @@
 		D39AD2DF221C0A3E00C95FCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D39AD2E1221C0A3E00C95FCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D39AD2E2221C0A3E00C95FCA /* QuantiBaseExample_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuantiBaseExample_macOS.entitlements; sourceTree = "<group>"; };
+		D39AD2EB221C180F00C95FCA /* QuantiBaseTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QuantiBaseTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39AD2ED221C180F00C95FCA /* QuantiBaseTests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantiBaseTests_macOS.swift; sourceTree = "<group>"; };
+		D39AD2EF221C180F00C95FCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuantiBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3ACC8381F50CBD800CAC22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3ACC8401F50CC5B00CAC22F /* UIImage+ResizeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ResizeExtension.swift"; sourceTree = "<group>"; };
@@ -305,7 +316,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39AD2CB221BF56700C95FCA /* RxBlocking.framework in Frameworks */,
 				D39AD2CC221BF56700C95FCA /* Action.framework in Frameworks */,
 				D39AD2CD221BF56700C95FCA /* RxCocoa.framework in Frameworks */,
 				D39AD2CE221BF56700C95FCA /* RxAtomic.framework in Frameworks */,
@@ -317,6 +327,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39AD2E8221C180F00C95FCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39AD2F0221C180F00C95FCA /* QuantiBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +432,7 @@
 				D32D971A1F5449D0006A635E /* QuantiBaseExampleUITests */,
 				D39AD26E221BF26300C95FCA /* QuantiBase macOS */,
 				D39AD2D7221C0A3D00C95FCA /* QuantiBaseExample macOS */,
+				D39AD2EC221C180F00C95FCA /* QuantiBaseTests macOS */,
 				630AF6591F44791E009CEA24 /* Products */,
 				638A2EE21F458CB100256FC3 /* Frameworks */,
 				D39AD2C5221BF2EF00C95FCA /* QuantiBase copy-Info.plist */,
@@ -429,6 +448,7 @@
 				D32D97171F5449CF006A635E /* QuantiBaseExampleUITests.xctest */,
 				D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */,
 				D39AD2D6221C0A3D00C95FCA /* QuantiBaseExample macOS.app */,
+				D39AD2EB221C180F00C95FCA /* QuantiBaseTests macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -600,6 +620,15 @@
 			path = "QuantiBaseExample macOS";
 			sourceTree = "<group>";
 		};
+		D39AD2EC221C180F00C95FCA /* QuantiBaseTests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				D39AD2ED221C180F00C95FCA /* QuantiBaseTests_macOS.swift */,
+				D39AD2EF221C180F00C95FCA /* Info.plist */,
+			);
+			path = "QuantiBaseTests macOS";
+			sourceTree = "<group>";
+		};
 		D3ACC8351F50CBD800CAC22F /* QuantiBaseTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,6 +760,24 @@
 			productReference = D39AD2D6221C0A3D00C95FCA /* QuantiBaseExample macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D39AD2EA221C180F00C95FCA /* QuantiBaseTests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D39AD2F3221C180F00C95FCA /* Build configuration list for PBXNativeTarget "QuantiBaseTests macOS" */;
+			buildPhases = (
+				D39AD2E7221C180F00C95FCA /* Sources */,
+				D39AD2E8221C180F00C95FCA /* Frameworks */,
+				D39AD2E9221C180F00C95FCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D39AD2F2221C180F00C95FCA /* PBXTargetDependency */,
+			);
+			name = "QuantiBaseTests macOS";
+			productName = "QuantiBaseTests macOS";
+			productReference = D39AD2EB221C180F00C95FCA /* QuantiBaseTests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D3ACC8331F50CBD800CAC22F /* QuantiBaseTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3ACC83F1F50CBD800CAC22F /* Build configuration list for PBXNativeTarget "QuantiBaseTests" */;
@@ -786,6 +833,11 @@
 						DevelopmentTeam = F43V5ZEQU4;
 						ProvisioningStyle = Automatic;
 					};
+					D39AD2EA221C180F00C95FCA = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = F43V5ZEQU4;
+						ProvisioningStyle = Automatic;
+					};
 					D3ACC8331F50CBD800CAC22F = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = X9BLYWRC6A;
@@ -813,6 +865,7 @@
 				D32D97161F5449CF006A635E /* QuantiBaseExampleUITests */,
 				D39AD276221BF2EE00C95FCA /* QuantiBase macOS */,
 				D39AD2D5221C0A3D00C95FCA /* QuantiBaseExample macOS */,
+				D39AD2EA221C180F00C95FCA /* QuantiBaseTests macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -855,6 +908,13 @@
 			files = (
 				D39AD2DD221C0A3E00C95FCA /* Assets.xcassets in Resources */,
 				D39AD2E0221C0A3E00C95FCA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39AD2E9221C180F00C95FCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1089,6 +1149,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D39AD2E7221C180F00C95FCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39AD2EE221C180F00C95FCA /* QuantiBaseTests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3ACC8301F50CBD800CAC22F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1114,6 +1182,11 @@
 			isa = PBXTargetDependency;
 			target = D32D97011F5449CF006A635E /* QuantiBaseExample */;
 			targetProxy = D32D97181F5449CF006A635E /* PBXContainerItemProxy */;
+		};
+		D39AD2F2221C180F00C95FCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D39AD276221BF2EE00C95FCA /* QuantiBase macOS */;
+			targetProxy = D39AD2F1221C180F00C95FCA /* PBXContainerItemProxy */;
 		};
 		D3ACC83B1F50CBD800CAC22F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1639,6 +1712,73 @@
 			};
 			name = "Release-Adhoc";
 		};
+		D39AD2F4221C180F00C95FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F43V5ZEQU4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "QuantiBaseTests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quanti.QuantiBaseTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		D39AD2F5221C180F00C95FCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F43V5ZEQU4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "QuantiBaseTests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quanti.QuantiBaseTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		D39AD2F6221C180F00C95FCA /* Release-Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F43V5ZEQU4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "QuantiBaseTests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quanti.QuantiBaseTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = "Release-Adhoc";
+		};
 		D3ACC83C1F50CBD800CAC22F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1734,6 +1874,16 @@
 				D39AD2E4221C0A3E00C95FCA /* Debug */,
 				D39AD2E5221C0A3E00C95FCA /* Release */,
 				D39AD2E6221C0A3E00C95FCA /* Release-Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D39AD2F3221C180F00C95FCA /* Build configuration list for PBXNativeTarget "QuantiBaseTests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D39AD2F4221C180F00C95FCA /* Debug */,
+				D39AD2F5221C180F00C95FCA /* Release */,
+				D39AD2F6221C180F00C95FCA /* Release-Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
