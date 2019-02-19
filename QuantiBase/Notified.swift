@@ -6,7 +6,7 @@
 //  Copyright © 2016 Martin Troup. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 /// Notified protocol should be implemented by every class that registeres some Notification observers. 
 public protocol Notified {
