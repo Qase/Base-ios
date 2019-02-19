@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum HTTPHeaderFieldKey: String {
+public enum HTTPHeaderFieldKey: String {
 	case authorization = "Authorization"
 }

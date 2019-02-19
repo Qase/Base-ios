@@ -10,11 +10,11 @@ import Foundation
 
 typealias BinaryCodable = BinarySerializable & BinaryDeserializable
 
-protocol BinarySerializable {
+public protocol BinarySerializable {
 	var binary: [UInt8]? { get }
 }
 
-protocol BinaryDeserializable {
+public protocol BinaryDeserializable {
 	associatedtype Object
 
 	static func deserialize(from data: [UInt8]) -> Object?

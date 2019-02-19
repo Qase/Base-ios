@@ -19,7 +19,7 @@ extension Optional: OptionalType {
 
 // Unfortunately the extra type annotations are required, otherwise the compiler gives an incomprehensible error.
 extension Observable where Element: OptionalType {
-    func filterNil() -> Observable<Element.Wrapped> {
+    public func filterNil() -> Observable<Element.Wrapped> {
         return flatMap { value in
             value.optional.map { Observable<Element.Wrapped>.just($0) } ?? Observable<Element.Wrapped>.empty()
         }

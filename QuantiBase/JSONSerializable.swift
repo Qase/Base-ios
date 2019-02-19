@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol JSONRepresentable {
+public protocol JSONRepresentable {
 	var jsonRepresentation: AnyObject { get }
 }
 
-protocol JSONSerializable: JSONRepresentable {}
+public protocol JSONSerializable: JSONRepresentable {}
 
 extension JSONSerializable {
-	var jsonRepresentation: AnyObject {
+	public var jsonRepresentation: AnyObject {
 		var representation = [String: AnyObject]()
 
 		for case let (label?, value) in Mirror(reflecting: self).children {
@@ -54,7 +54,7 @@ extension JSONSerializable {
 }
 
 extension JSONSerializable {
-	var jsonData: Data? {
+	public var jsonData: Data? {
 		do {
 			return try JSONSerialization.data(withJSONObject: jsonRepresentation, options: [])
 		} catch {
@@ -63,7 +63,7 @@ extension JSONSerializable {
 		}
 	}
 
-	var jsonString: String? {
+	public var jsonString: String? {
 		guard let _jsonData = jsonData else { return nil }
 
 		return String(data: _jsonData, encoding: .utf8)
@@ -75,7 +75,7 @@ extension JSONSerializable {
 // Considering Array, it only enables to serialize basic arrays such as [Int], [Double], [Float]... but IT DOES NOT
 // enables to serialize [JSONSerializable]. This method does so!
 extension Array: JSONSerializable {
-	var jsonRepresentation: AnyObject {
+	public var jsonRepresentation: AnyObject {
 		return self.map { (element) -> AnyObject in
 			if let _element = element as? JSONRepresentable {
 				return _element.jsonRepresentation
@@ -91,7 +91,7 @@ extension Array: JSONSerializable {
 // Considering Dictionary, it only enables to serialize basic dictionaries such as [AnyHashable: Int], [AnyHashable: Double],
 // [AnyHashable: Float]... but IT DOES NOT enables to serialize [AnyHashable: JSONSerializable]. This method does so!
 extension Dictionary: JSONSerializable {
-	var jsonRepresentation: AnyObject {
+	public var jsonRepresentation: AnyObject {
 		let ret = self.reduce([AnyHashable: AnyObject]()) { (aggregate, keyValue) in
 			var _aggregate = aggregate
 

@@ -10,9 +10,9 @@ import Foundation
 
 import RxSwift
 
-class BaseApi: NSObject {
-	let session: URLSession = URLSession(configuration: URLSessionConfiguration.default)
-	let url: URL
+public class BaseApi: NSObject {
+	public let session: URLSession = URLSession(configuration: URLSessionConfiguration.default)
+	public let url: URL
 
 	required init?(url: String) {
 		guard let _url = URL(string: url) else {

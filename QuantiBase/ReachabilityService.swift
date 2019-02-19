@@ -22,7 +22,7 @@ public class ReachabilityService {
     public static let shared = ReachabilityService()
 
 	private let _connectivityChanged = PublishSubject<ConnectivityState>()
-	var connectivityChanged: Observable<ConnectivityState> {
+	public var connectivityChanged: Observable<ConnectivityState> {
 		return _connectivityChanged.asObservable()
 	}
 

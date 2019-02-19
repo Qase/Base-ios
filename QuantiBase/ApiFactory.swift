@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 
 /// A class that provides static methods that make API request/response communication easier.
-class ApiFactory {
+public class ApiFactory {
 }
 
 // MARK: - Set of static methods that enable building URLRequest instances.
@@ -24,7 +24,7 @@ extension ApiFactory {
 	///   - method: HTTP method of the request.
 	///   - params: Dictionary with parameters that should be added to the URL.
 	/// - Returns: URLRequest instance if the method succeeds to create it, nil otherwise.
-	static func buildRequest(baseUrl: URL, pathComponent: String, method: HttpMethod, withUrlParams params: [(String, String)]) -> URLRequest? {
+	public static func buildRequest(baseUrl: URL, pathComponent: String, method: HttpMethod, withUrlParams params: [(String, String)]) -> URLRequest? {
 		let urlRequest = buildRequest(baseUrl: baseUrl, pathComponent: pathComponent, method: method)
 
 		guard var _urlRequest = urlRequest else {
@@ -59,7 +59,7 @@ extension ApiFactory {
 	///   - method: HTTP method of the request.
 	///   - data: JSON data to be added to the body of the request.
 	/// - Returns: URLRequest instance if the method succeeds to create it, nil otherwise.
-	static func buildRequest(baseUrl: URL, pathComponent: String, method: HttpMethod, withJSONBody data: Data?) -> URLRequest? {
+	public static func buildRequest(baseUrl: URL, pathComponent: String, method: HttpMethod, withJSONBody data: Data?) -> URLRequest? {
 		let urlRequest = buildRequest(baseUrl: baseUrl, pathComponent: pathComponent, method: method)
 
 		guard var _urlRequest = urlRequest else {
@@ -79,7 +79,7 @@ extension ApiFactory {
 	///   - pathComponent: Specific path compoment that gets appended to the base URL.
 	///   - method: HTTP method of the request.
 	/// - Returns: URLRequest instance if the method succeeds to create it, nil otherwise.
-	static func buildRequest(baseUrl: URL, pathComponent: String, method: HttpMethod) -> URLRequest? {
+	public static func buildRequest(baseUrl: URL, pathComponent: String, method: HttpMethod) -> URLRequest? {
 		let url = baseUrl.appendingPathComponent(pathComponent)
 
 		var urlRequest = URLRequest(url: url)
@@ -102,7 +102,7 @@ extension ApiFactory {
 	///   - request: URL request.
 	///   - session: Session in which the request should be sent.
 	/// - Returns: Data instance if received as a part of HTTP body, nil if not, ApiError instance otherwise.
-	static func data(`for` request: URLRequest?, `in` session: URLSession) -> Observable<Data> {
+	public static func data(`for` request: URLRequest?, `in` session: URLSession) -> Observable<Data> {
 		guard let _request = request else {
 			return Observable.error(ApiError.invalidRequest)
 		}
@@ -144,7 +144,7 @@ extension ApiFactory {
 	///   - request: URL request.
 	///   - session: Session in which the request should be sent.
 	/// - Returns: .completed if request success, ApiError otherwise.
-	static func noData(`for` request: URLRequest?, `in` session: URLSession) -> Observable<Void> {
+	public static func noData(`for` request: URLRequest?, `in` session: URLSession) -> Observable<Void> {
 		return data(for: request, in: session).flatMap { _ in Observable.just(()) }
 	}
 
@@ -154,7 +154,7 @@ extension ApiFactory {
 	///   - request: URL request.
 	///   - session: Session in which the request should be sent.
 	/// - Returns: JSON data if received and parsed successfully, ApiError instance otherwise.
-	static func json<T: JSONParseable>(`for` request: URLRequest?, `in` session: URLSession) -> Observable<T> {
+	public static func json<T: JSONParseable>(`for` request: URLRequest?, `in` session: URLSession) -> Observable<T> {
 		return data(for: request, in: session)
 			.flatMap { data -> Observable<T> in
 				Observable.create { observer in
@@ -182,7 +182,7 @@ extension ApiFactory {
 	///   - request: URL request.
 	///   - session: Session in which the request should be sent.
 	/// - Returns: JSON data if received and parsed successfully, ApiError instance otherwise.
-	static func json<T: JSONParseable>(`for` request: URLRequest?, `in` session: URLSession) -> Observable<[T]> {
+	public static func json<T: JSONParseable>(`for` request: URLRequest?, `in` session: URLSession) -> Observable<[T]> {
 		return data(for: request, in: session)
 			.flatMap { data -> Observable<[T]> in
 				Observable.create { observer in

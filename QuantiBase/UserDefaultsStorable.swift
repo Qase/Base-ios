@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol UserDefaultsStorable {
+public protocol UserDefaultsStorable {
 	associatedtype Object
 
 	static var key: String { get }
