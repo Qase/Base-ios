@@ -77,6 +77,8 @@
 		63B0A8AD1F50785C00F94CDF /* QAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */; };
 		63C3388B1F474D1500DA8957 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3388A1F474D1500DA8957 /* TableModel.swift */; };
 		63C338941F47530800DA8957 /* ParagraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338931F47530800DA8957 /* ParagraphViewController.swift */; };
+		6C6074BA2236CFA5006C6B14 /* AuthorizedBaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */; };
+		6C6074BC2236D0D8006C6B14 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6074BB2236D0D8006C6B14 /* UserCredentials.swift */; };
 		D32D96FD1F544853006A635E /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D96FC1F544853006A635E /* LoremSwiftum.swift */; };
 		D32D97051F5449CF006A635E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D97041F5449CF006A635E /* AppDelegate.swift */; };
 		D32D97071F5449CF006A635E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D97061F5449CF006A635E /* MasterViewController.swift */; };
@@ -198,6 +200,8 @@
 		63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = QAssets.xcassets; sourceTree = "<group>"; };
 		63C3388A1F474D1500DA8957 /* TableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
 		63C338931F47530800DA8957 /* ParagraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphViewController.swift; sourceTree = "<group>"; };
+		6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedBaseApi.swift; sourceTree = "<group>"; };
+		6C6074BB2236D0D8006C6B14 /* UserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
 		D32D96FC1F544853006A635E /* LoremSwiftum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
 		D32D97021F5449CF006A635E /* QuantiBaseExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuantiBaseExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32D97041F5449CF006A635E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 				5BA79E1B220DBF9100C0F81D /* HTTPMethod.swift */,
 				5BA79E1D220DBF9800C0F81D /* ApiError.swift */,
 				5BA79E1F220DBFA200C0F81D /* HTTPHeaderFieldKey.swift */,
+				6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */,
+				6C6074BB2236D0D8006C6B14 /* UserCredentials.swift */,
 			);
 			name = HTTPNetworking;
 			sourceTree = "<group>";
@@ -770,6 +776,7 @@
 				6365993F1F45FAA000979BBA /* ReachabilityService.swift in Sources */,
 				5BA79E0F220DBD0D00C0F81D /* BluetoothService.swift in Sources */,
 				5BA79E1A220DBF8A00C0F81D /* URLRequest+logDescription.swift in Sources */,
+				6C6074BC2236D0D8006C6B14 /* UserCredentials.swift in Sources */,
 				6392952D1F4ADB8600F707A5 /* BaseButton.swift in Sources */,
 				639295421F4B02D700F707A5 /* ParagraphLabel.swift in Sources */,
 				5B1C1D2D220C7DB700C40C54 /* UITextField+.swift in Sources */,
@@ -785,6 +792,7 @@
 				6365993C1F45FA9A00979BBA /* Reachability.m in Sources */,
 				5B1C1D41220CA41600C40C54 /* ArraySlice+.swift in Sources */,
 				63C338941F47530800DA8957 /* ParagraphViewController.swift in Sources */,
+				6C6074BA2236CFA5006C6B14 /* AuthorizedBaseApi.swift in Sources */,
 				5B1C1D37220C816D00C40C54 /* UITextFieldWithNoCursor.swift in Sources */,
 				5BA79E1C220DBF9100C0F81D /* HTTPMethod.swift in Sources */,
 				636599351F45DCDF00979BBA /* CGFloat+.swift in Sources */,

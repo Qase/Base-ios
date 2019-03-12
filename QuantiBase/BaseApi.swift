@@ -11,7 +11,11 @@ import Foundation
 import RxSwift
 
 public class BaseApi: NSObject {
-	public let session: URLSession = URLSession(configuration: URLSessionConfiguration.default)
+    public var _session: URLSession {
+        return URLSession(configuration: URLSessionConfiguration.default)
+    }
+
+    public lazy var session: URLSession = {_session}()
 	public let url: URL
 
 	required init?(url: String) {
