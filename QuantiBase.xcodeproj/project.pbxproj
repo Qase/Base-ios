@@ -36,6 +36,7 @@
 		5B1C1D6A220DBAE700C40C54 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1C1D69220DBAE700C40C54 /* RxCocoa.framework */; };
 		5B7BC4E81F72C5EE00C5046A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC4E71F72C5EE00C5046A /* StringExtension.swift */; };
 		5B7BC4EA1F72CCB200C5046A /* Collection+ReduceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC4E91F72CCB200C5046A /* Collection+ReduceExtension.swift */; };
+		5B871D68223AD67100B3243E /* UITextViewWithZeroPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B871D67223AD67100B3243E /* UITextViewWithZeroPadding.swift */; };
 		5BA79E0B220DBCBF00C0F81D /* Observable+filterNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+filterNil.swift */; };
 		5BA79E0D220DBD0900C0F81D /* AppLifecycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0C220DBD0900C0F81D /* AppLifecycleService.swift */; };
 		5BA79E0F220DBD0D00C0F81D /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0E220DBD0D00C0F81D /* BluetoothService.swift */; };
@@ -159,6 +160,7 @@
 		5B1C1D69220DBAE700C40C54 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		5B7BC4E71F72C5EE00C5046A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		5B7BC4E91F72CCB200C5046A /* Collection+ReduceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+ReduceExtension.swift"; sourceTree = "<group>"; };
+		5B871D67223AD67100B3243E /* UITextViewWithZeroPadding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewWithZeroPadding.swift; sourceTree = "<group>"; };
 		5BA79E0A220DBCBF00C0F81D /* Observable+filterNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+filterNil.swift"; sourceTree = "<group>"; };
 		5BA79E0C220DBD0900C0F81D /* AppLifecycleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLifecycleService.swift; sourceTree = "<group>"; };
 		5BA79E0E220DBD0D00C0F81D /* BluetoothService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 		636599231F45D64100979BBA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B871D67223AD67100B3243E /* UITextViewWithZeroPadding.swift */,
 				5B1C1D36220C816D00C40C54 /* UITextFieldWithNoCursor.swift */,
 				5B1C1D32220C80D500C40C54 /* NumberedPageControl.swift */,
 				5B1C1D38220C85E300C40C54 /* UIToolbarForPicker.swift */,
@@ -769,6 +772,7 @@
 				5B1C1D31220C7ED300C40C54 /* NSAttributedString+copyrightSuperscripted.swift in Sources */,
 				D397CEB81F520E8700CCD70E /* Collection+reduce.swift in Sources */,
 				6365992D1F45DBA100979BBA /* Array+.swift in Sources */,
+				5B871D68223AD67100B3243E /* UITextViewWithZeroPadding.swift in Sources */,
 				5B1C1D27220C595300C40C54 /* AnimationFactory.swift in Sources */,
 				5B1C1D3F220CA0AE00C40C54 /* UIScrollView+.swift in Sources */,
 				5B1C1D54220D955800C40C54 /* BinaryCodable.swift in Sources */,
