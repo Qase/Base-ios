@@ -2,8 +2,8 @@
 //  AuthorizedBaseApi.swift
 //  2N-mobile-communicator
 //
-//  Created by Martin Troup on 23/04/2018.
-//  Copyright © 2018 quanti. All rights reserved.
+//  Created by Dagy Tran on 16/04/2019.
+//  Copyright © 2019 quanti. All rights reserved.
 //
 
 import Foundation
@@ -14,6 +14,11 @@ open class AuthorizedBaseApi: BaseApi {
     }
 
     private let urlCredential: URLCredential
+
+    public var didReceiveDataCompletionHandler: ((URLSession, URLSessionDataTask, Data) -> Void)?
+    public var didReceiveResponseCompletionHandler: ((URLSession, URLSessionDataTask, URLResponse, (URLSession.ResponseDisposition) -> Void) -> Void)?
+
+    // MARK: - Initializers
 
     public init?(url: String, urlCredential: URLCredential) {
         self.urlCredential = urlCredential
@@ -63,5 +68,15 @@ extension AuthorizedBaseApi: URLSessionDelegate {
 extension AuthorizedBaseApi: URLSessionTaskDelegate {
     public func urlSession(_ session: URLSession, task: URLSessionTask, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         urlSession(session, didReceive: challenge, completionHandler: completionHandler)
+    }
+}
+
+extension AuthorizedBaseApi: URLSessionDataDelegate {
+    public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+        self.didReceiveDataCompletionHandler?(session, dataTask, data)
+    }
+
+    public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
+        self.didReceiveResponseCompletionHandler?(session, dataTask, response, completionHandler)
     }
 }
