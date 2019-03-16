@@ -22,7 +22,8 @@ platform :ios do
   lane :test do
       
     scan(
-      scheme: "QuantiBase macOS"
+      scheme: "QuantiBase macOS",
+      xcargs: "CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED='NO'"
     )
 
     scan(
