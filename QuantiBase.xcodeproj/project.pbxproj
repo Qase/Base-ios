@@ -261,12 +261,6 @@
 		63C338931F47530800DA8957 /* ParagraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphViewController.swift; sourceTree = "<group>"; };
 		6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedBaseApi.swift; sourceTree = "<group>"; };
 		6CD4CBBC223DA00D00A6F42E /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
-		6CD4CBBE223DA03700A6F42E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
-		6CD4CBBF223DA03700A6F42E /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
-		6CD4CBC0223DA03700A6F42E /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/Mac/RxAtomic.framework; sourceTree = "<group>"; };
-		6CD4CBC1223DA03700A6F42E /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
-		6CD4CBC2223DA03700A6F42E /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
-		6CD4CBC3223DA03800A6F42E /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/Mac/Action.framework; sourceTree = "<group>"; };
 		D32D96FC1F544853006A635E /* LoremSwiftum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
 		D32D97021F5449CF006A635E /* QuantiBaseExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuantiBaseExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32D97041F5449CF006A635E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -448,12 +442,6 @@
 		630AF64E1F44791E009CEA24 = {
 			isa = PBXGroup;
 			children = (
-				6CD4CBC3223DA03800A6F42E /* Action.framework */,
-				6CD4CBC0223DA03700A6F42E /* RxAtomic.framework */,
-				6CD4CBBF223DA03700A6F42E /* RxBlocking.framework */,
-				6CD4CBC1223DA03700A6F42E /* RxCocoa.framework */,
-				6CD4CBBE223DA03700A6F42E /* RxSwift.framework */,
-				6CD4CBC2223DA03700A6F42E /* RxTest.framework */,
 				630AF65A1F44791E009CEA24 /* QuantiBase */,
 				D3ACC8351F50CBD800CAC22F /* QuantiBaseTests */,
 				D32D97031F5449CF006A635E /* QuantiBaseExample */,
