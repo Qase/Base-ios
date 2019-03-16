@@ -13,7 +13,7 @@ open class AuthorizedBaseApi: BaseApi {
         return URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
     }
 
-    let credentials: UserCredentials
+    public let credentials: UserCredentials
 
     public init?(url: String, userCredentials: UserCredentials) {
         self.credentials = userCredentials
