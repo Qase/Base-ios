@@ -13,24 +13,26 @@ open class AuthorizedBaseApi: BaseApi {
         return URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
     }
 
-    public let credentials: UserCredentials
+    private let urlCredential: URLCredential
 
-    public init?(url: String, userCredentials: UserCredentials) {
-        self.credentials = userCredentials
+    public init?(url: String, urlCredential: URLCredential) {
+        self.urlCredential = urlCredential
         super.init(url: url)
     }
 
-    public convenience init?(url: String, username: String, password: String) {
-        self.init(url: url, userCredentials: UserCredentials(username: username, password: password))
+    public convenience init?(url: String, username: String, password: String, persistance: URLCredential.Persistence = .none) {
+        guard let baseURL = URL(string: url) else { return nil}
+
+        self.init(with: baseURL, authorizeUsing: URLCredential(user: username, password: password, persistence: persistance))
     }
 
-    public init(with baseURL: URL, authorizeUsing credentials: UserCredentials) {
-        self.credentials = credentials
+    public init(with baseURL: URL, authorizeUsing urlCredential: URLCredential) {
+        self.urlCredential = urlCredential
         super.init(url: baseURL)
     }
 
     required public init?(url: String) {
-        self.credentials = UserCredentials(username: "", password: "")
+        self.urlCredential = URLCredential(user: "", password: "", persistence: .none)
         super.init(url: url)
     }
 }
@@ -53,7 +55,7 @@ extension AuthorizedBaseApi: URLSessionDelegate {
             return
         }
 
-        completionHandler(.useCredential, URLCredential(user: credentials.username, password: credentials.password, persistence: .forSession))
+        completionHandler(.useCredential, urlCredential)
     }
 }
 
