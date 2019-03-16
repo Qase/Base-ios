@@ -24,8 +24,9 @@ open class AuthorizedBaseApi: BaseApi {
         self.init(url: url, userCredentials: UserCredentials(username: username, password: password))
     }
 
-    public convenience init?(with baseURL: URL, authorizeUsing credentials: UserCredentials) {
-        self.init(url: baseURL.absoluteString, userCredentials: credentials)
+    public init(with baseURL: URL, authorizeUsing credentials: UserCredentials) {
+        self.credentials = credentials
+        super.init(url: baseURL)
     }
 
     required public init?(url: String) {

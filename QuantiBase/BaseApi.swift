@@ -26,4 +26,8 @@ open class BaseApi: NSObject {
 
 		self.url = _url
 	}
+
+    public init(url: URL) {
+        self.url = url
+    }
 }
