@@ -47,6 +47,8 @@ playground.xcworkspace
 Carthage/Build/*
 !Carthage/Build/iOS
 !Carthage/Build/iOS/*
+!Carthage/Build/Mac
+!Carthage/Build/Mac/*
 
 Carthage/Checkouts
 *.bcsymbolmap

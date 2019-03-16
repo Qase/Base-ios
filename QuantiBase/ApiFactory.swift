@@ -203,4 +203,26 @@ extension ApiFactory {
 				}
 		}
 	}
+
+    /// Method to receive a JSON response (array of instances) based on a provided URL request.
+    ///
+    /// - Parameters:
+    ///   - request: URL request.
+    ///   - session: Session in which the request should be sent.
+    /// - Returns: Object of type `T : Codable` if data received and parsed successfully, ApiError instance otherwise.
+    public static func object<T>(for request: URLRequest?, in session: URLSession) -> Observable<T> where T: Codable {
+        return data(for: request, in: session)
+            .flatMap({ (data) -> Observable<T> in
+                Observable.create { (observer) -> Disposable in
+                    do {
+                        let object = try JSONDecoder().decode(T.self, from: data)
+                        observer.onNext(object)
+                        observer.onCompleted()
+                    } catch {
+                        observer.onError(ApiError.parsingJsonFailure)
+                    }
+                    return Disposables.create()
+                }
+            })
+    }
 }
