@@ -10,7 +10,7 @@ import Foundation
 
 import RxSwift
 
-public class BaseApi: NSObject {
+open class BaseApi: NSObject {
     public var _session: URLSession {
         return URLSession(configuration: URLSessionConfiguration.default)
     }
@@ -18,7 +18,7 @@ public class BaseApi: NSObject {
     public lazy var session: URLSession = {_session}()
 	public let url: URL
 
-	required init?(url: String) {
+    required public init?(url: String) {
 		guard let _url = URL(string: url) else {
 			print("\(#function) - could not create an URL instance out of provided URL string.")
 			return nil

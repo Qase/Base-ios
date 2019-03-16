@@ -8,15 +8,15 @@
 
 import Foundation
 
-public class AuthorizedBaseApi: BaseApi {
+open class AuthorizedBaseApi: BaseApi {
     override public var _session: URLSession {
         return URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
     }
 
-    private let urlCredential: URLCredential
+    let credentials: UserCredentials
 
     public init?(url: String, userCredentials: UserCredentials) {
-        self.urlCredential = URLCredential(user: userCredentials.username, password: userCredentials.password, persistence: .none)
+        self.credentials = userCredentials
         super.init(url: url)
     }
 
@@ -28,8 +28,8 @@ public class AuthorizedBaseApi: BaseApi {
         self.init(url: baseURL.absoluteString, userCredentials: credentials)
     }
 
-    required init?(url: String) {
-        self.urlCredential = URLCredential(user: "", password: "", persistence: .none)
+    required public init?(url: String) {
+        self.credentials = UserCredentials(username: "", password: "")
         super.init(url: url)
     }
 }
@@ -52,7 +52,7 @@ extension AuthorizedBaseApi: URLSessionDelegate {
             return
         }
 
-        completionHandler(.useCredential, urlCredential)
+        completionHandler(.useCredential, URLCredential(user: credentials.username, password: credentials.password, persistence: .forSession))
     }
 }
 
