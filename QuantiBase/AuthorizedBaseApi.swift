@@ -25,12 +25,6 @@ open class AuthorizedBaseApi: BaseApi {
         super.init(url: url)
     }
 
-    public convenience init?(url: String, username: String, password: String, persistance: URLCredential.Persistence = .none) {
-        guard let baseURL = URL(string: url) else { return nil}
-
-        self.init(with: baseURL, authorizeUsing: URLCredential(user: username, password: password, persistence: persistance))
-    }
-
     public init(with baseURL: URL, authorizeUsing urlCredential: URLCredential) {
         self.urlCredential = urlCredential
         super.init(url: baseURL)

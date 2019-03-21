@@ -78,6 +78,12 @@
 		63B0A8AD1F50785C00F94CDF /* QAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */; };
 		63C3388B1F474D1500DA8957 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3388A1F474D1500DA8957 /* TableModel.swift */; };
 		63C338941F47530800DA8957 /* ParagraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338931F47530800DA8957 /* ParagraphViewController.swift */; };
+		6C0E33E7224387630093DC12 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C0E33E1224387620093DC12 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C0E33E8224387630093DC12 /* RxAtomic.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C0E33E2224387620093DC12 /* RxAtomic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C0E33E9224387630093DC12 /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C0E33E3224387620093DC12 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C0E33EA224387630093DC12 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C0E33E4224387620093DC12 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C0E33EB224387630093DC12 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C0E33E5224387630093DC12 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C0E33EC224387630093DC12 /* Action.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C0E33E6224387630093DC12 /* Action.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6C19992D223D64EC005511FC /* AuthorizedBaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */; };
 		6C19992F223D66CA005511FC /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C6221BF56700C95FCA /* RxBlocking.framework */; };
 		6C199930223D66E2005511FC /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2CA221BF56700C95FCA /* RxSwift.framework */; };
@@ -184,6 +190,21 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C0E33E0224387100093DC12 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6C0E33E7224387630093DC12 /* RxSwift.framework in CopyFiles */,
+				6C0E33E8224387630093DC12 /* RxAtomic.framework in CopyFiles */,
+				6C0E33E9224387630093DC12 /* RxBlocking.framework in CopyFiles */,
+				6C0E33EA224387630093DC12 /* RxCocoa.framework in CopyFiles */,
+				6C0E33EB224387630093DC12 /* RxTest.framework in CopyFiles */,
+				6C0E33EC224387630093DC12 /* Action.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -259,6 +280,12 @@
 		63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = QAssets.xcassets; sourceTree = "<group>"; };
 		63C3388A1F474D1500DA8957 /* TableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
 		63C338931F47530800DA8957 /* ParagraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphViewController.swift; sourceTree = "<group>"; };
+		6C0E33E1224387620093DC12 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		6C0E33E2224387620093DC12 /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/Mac/RxAtomic.framework; sourceTree = "<group>"; };
+		6C0E33E3224387620093DC12 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
+		6C0E33E4224387620093DC12 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
+		6C0E33E5224387630093DC12 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
+		6C0E33E6224387630093DC12 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/Mac/Action.framework; sourceTree = "<group>"; };
 		6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedBaseApi.swift; sourceTree = "<group>"; };
 		6CD4CBBC223DA00D00A6F42E /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
 		D32D96FC1F544853006A635E /* LoremSwiftum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
@@ -330,8 +357,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C199933223D6708005511FC /* RxAtomic.framework in Frameworks */,
 				6C199932223D66FE005511FC /* RxCocoa.framework in Frameworks */,
+				6C199933223D6708005511FC /* RxAtomic.framework in Frameworks */,
 				6C199931223D66F1005511FC /* Action.framework in Frameworks */,
 				6C199930223D66E2005511FC /* RxSwift.framework in Frameworks */,
 				6C19992F223D66CA005511FC /* RxBlocking.framework in Frameworks */,
@@ -442,6 +469,12 @@
 		630AF64E1F44791E009CEA24 = {
 			isa = PBXGroup;
 			children = (
+				6C0E33E6224387630093DC12 /* Action.framework */,
+				6C0E33E2224387620093DC12 /* RxAtomic.framework */,
+				6C0E33E3224387620093DC12 /* RxBlocking.framework */,
+				6C0E33E4224387620093DC12 /* RxCocoa.framework */,
+				6C0E33E1224387620093DC12 /* RxSwift.framework */,
+				6C0E33E5224387630093DC12 /* RxTest.framework */,
 				630AF65A1F44791E009CEA24 /* QuantiBase */,
 				D3ACC8351F50CBD800CAC22F /* QuantiBaseTests */,
 				D32D97031F5449CF006A635E /* QuantiBaseExample */,
@@ -751,7 +784,7 @@
 				D39AD2B3221BF2EE00C95FCA /* Frameworks */,
 				D39AD2BA221BF2EE00C95FCA /* Headers */,
 				D39AD2BD221BF2EE00C95FCA /* Resources */,
-				6CD4CBCA223DA07800A6F42E /* ShellScript */,
+				6C0E33E0224387100093DC12 /* CopyFiles */,
 			);
 			buildRules = (
 			);
