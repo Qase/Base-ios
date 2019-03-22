@@ -54,9 +54,7 @@ extension AppVersion: UserDefaultsStorable {
 	}
 
 	init?(using userDefaultsBundle: UserDefaultsBundle) {
-		let restored: AppVersion? = userDefaultsBundle.storage.object(forKey: userDefaultsBundle.key)
-
-		guard let _restored = restored else {
+		guard let _restored: AppVersion = userDefaultsBundle.storage.object(forKey: userDefaultsBundle.key) else {
 			print("\(#function) - failed to restore AppVersion instance from UserDefaults.")
 			return nil
 		}
