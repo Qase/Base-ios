@@ -30,7 +30,7 @@ class AppVersionTests: XCTestCase {
 		let isStored = appVersion.store(using: userDefaultsBundle)
 		XCTAssertEqual(isStored, true)
 
-		let restoredAppVersion: AppVersion? = AppVersion(using: userDefaultsBundle)
+		let restoredAppVersion: AppVersion? = AppVersion.restore(using: userDefaultsBundle)
 		XCTAssertEqual(appVersion, restoredAppVersion)
 		XCTAssertTrue(userDefaultsBundle.storage.object(forKey: userDefaultsBundle.key) != nil)
 

@@ -49,17 +49,5 @@ extension AppVersion: Comparable {
 
 // MARK: - UserDefaultsStorable implementation
 extension AppVersion: UserDefaultsStorable {
-	func store(using userDefaultsBundle: UserDefaultsBundle) -> Bool {
-		return userDefaultsBundle.storage.set(object: self, forKey: userDefaultsBundle.key)
-	}
-
-	init?(using userDefaultsBundle: UserDefaultsBundle) {
-		guard let _restored: AppVersion = userDefaultsBundle.storage.object(forKey: userDefaultsBundle.key) else {
-			print("\(#function) - failed to restore AppVersion instance from UserDefaults.")
-			return nil
-		}
-
-		self = _restored
-	}
-
+	var storableObject: AppVersion { return self }
 }
