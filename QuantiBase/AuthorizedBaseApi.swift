@@ -30,7 +30,7 @@ open class AuthorizedBaseApi: BaseApi {
     private let urlCredential: URLCredential
     public let sessionEventsSubject = PublishSubject<SessionDataEvents>()
 
-    var sessionEvents: Observable<SessionDataEvents> {
+    public var sessionEvents: Observable<SessionDataEvents> {
         return sessionEventsSubject
     }
 
