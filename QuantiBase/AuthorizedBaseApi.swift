@@ -7,16 +7,32 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+
+public enum SessionDataEvents {
+    case didReceiveResponse(session: URLSession,
+        dataTask: URLSessionDataTask,
+        response: URLResponse,
+        completion: (URLSession.ResponseDisposition) -> Void)
+    case didReceiveData(session: URLSession, dataTask: URLSessionDataTask, data: Data)
+    case didCompleteWithError(session: URLSession, dataTask: URLSessionTask, error: Error?)
+    case didBecomeInvalidWithError(session: URLSession, error: Error?)
+}
 
 open class AuthorizedBaseApi: BaseApi {
     override public var _session: URLSession {
-        return URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 5
+        return URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
     }
 
     private let urlCredential: URLCredential
+    public let sessionEventsSubject = PublishSubject<SessionDataEvents>()
 
-    public var didReceiveDataCompletionHandler: ((URLSession, URLSessionDataTask, Data) -> Void)?
-    public var didReceiveResponseCompletionHandler: ((URLSession, URLSessionDataTask, URLResponse, (URLSession.ResponseDisposition) -> Void) -> Void)?
+    var sessionEvents: Observable<SessionDataEvents> {
+        return sessionEventsSubject
+    }
 
     // MARK: - Initializers
 
@@ -58,19 +74,30 @@ extension AuthorizedBaseApi: URLSessionDelegate {
     }
 }
 
-// MARK: - URLSessionTaskDelegate methods to handle HTTP authentication.
+// MARK: - URLSessionTaskDelegate methods
 extension AuthorizedBaseApi: URLSessionTaskDelegate {
-    public func urlSession(_ session: URLSession, task: URLSessionTask, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+    //  Handle HTTP authentication.
+    public func urlSession(_ session: URLSession,
+                           task: URLSessionTask,
+                           didReceive challenge: URLAuthenticationChallenge,
+                           completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         urlSession(session, didReceive: challenge, completionHandler: completionHandler)
+    }
+
+    public func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        sessionEventsSubject.onNext(.didCompleteWithError(session: session, dataTask: task, error: error))
     }
 }
 
 extension AuthorizedBaseApi: URLSessionDataDelegate {
     public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
-        self.didReceiveDataCompletionHandler?(session, dataTask, data)
+        sessionEventsSubject.onNext(.didReceiveData(session: session, dataTask: dataTask, data: data))
     }
 
     public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
-        self.didReceiveResponseCompletionHandler?(session, dataTask, response, completionHandler)
+        sessionEventsSubject.onNext(.didReceiveResponse(session: session,
+                                                        dataTask: dataTask,
+                                                        response: response,
+                                                        completion: completionHandler))
     }
 }
