@@ -875,7 +875,7 @@
 						TestTargetID = D32D97011F5449CF006A635E;
 					};
 					D39AD276221BF2EE00C95FCA = {
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					D39AD2D5221C0A3D00C95FCA = {
@@ -884,7 +884,6 @@
 					};
 					D39AD2EA221C180F00C95FCA = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					D3ACC8331F50CBD800CAC22F = {
@@ -1591,7 +1590,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
