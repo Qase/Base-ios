@@ -102,38 +102,31 @@ extension ApiFactory {
 	///   - request: URL request.
 	///   - session: Session in which the request should be sent.
 	/// - Returns: Data instance if received as a part of HTTP body, nil if not, ApiError instance otherwise.
-	public static func data(`for` request: URLRequest?, `in` session: URLSession) -> Observable<Data> {
-		guard let _request = request else {
-			return Observable.error(ApiError.invalidRequest)
-		}
+	public static func data(`for` request: URLRequest, `in` session: URLSession) -> Observable<Data> {
+		print("\(#function) - \(request.logDescription)")
 
-		print("\(#function) - \(_request.logDescription)")
-
-		return session.rx.response(request: _request)
+		return session.rx.response(request: request)
 			.do(onNext: { (response, data) in
 				print("\(#function) - \(response.logDescription) + data: \(data)")
 			}, onError: { (error) in
 				print("\(#function) - error occured: \(error).")
 			})
 			.flatMap { (response, data) -> Observable<Data> in
-				Observable.create { observer in
+				Observable.deferred {
 					switch response.statusCode {
 					case 200..<300:
-						observer.onNext(data)
-						observer.onCompleted()
+						return .just(data)
 					case 400:
-						observer.onError(ApiError.badRequest)
+						return .error(ApiError.badRequest(data))
 					case 401:
-						observer.onError(ApiError.unauthorized)
+						return .error(ApiError.unauthorized(data))
 					case 404:
-						observer.onError(ApiError.notFound)
+						return .error(ApiError.notFound(data))
 					case 500..<600:
-						observer.onError(ApiError.serverFailure)
+						return .error(ApiError.serverFailure(data))
 					default:
-						observer.onError(ApiError.unspecified(response.statusCode))
+						return .error(ApiError.unspecified(response.statusCode, data))
 					}
-
-					return Disposables.create()
 				}
 		}
 	}
@@ -144,62 +137,25 @@ extension ApiFactory {
 	///   - request: URL request.
 	///   - session: Session in which the request should be sent.
 	/// - Returns: .completed if request success, ApiError otherwise.
-	public static func noData(`for` request: URLRequest?, `in` session: URLSession) -> Observable<Void> {
+	public static func noData(`for` request: URLRequest, `in` session: URLSession) -> Observable<Void> {
 		return data(for: request, in: session).flatMap { _ in Observable.just(()) }
 	}
 
-	/// Method to receive a JSON response (single instance) based on a provided URL request.
+	/// Method to receive a JSON response based on a provided URL request.
 	///
 	/// - Parameters:
 	///   - request: URL request.
 	///   - session: Session in which the request should be sent.
 	/// - Returns: JSON data if received and parsed successfully, ApiError instance otherwise.
-	public static func json<T: JSONParseable>(`for` request: URLRequest?, `in` session: URLSession) -> Observable<T> {
+	public static func json<T: Decodable>(`for` request: URLRequest, `in` session: URLSession, using jsonDecoder: JSONDecoder? = nil) -> Observable<T> {
 		return data(for: request, in: session)
 			.flatMap { data -> Observable<T> in
-				Observable.create { observer in
+				Observable.deferred {
 					do {
-						let json = try JSONSerialization.jsonObject(with: data, options: [])
-
-						if let _parsedObject = T.parse(from: json) as? T {
-							observer.onNext(_parsedObject)
-							observer.onCompleted()
-						} else {
-							observer.onError(ApiError.parsingJsonFailure)
-						}
-					} catch {
-						observer.onError(ApiError.parsingJsonFailure)
+						return try .just((jsonDecoder ?? JSONDecoder()).decode(T.self, from: data))
+					} catch let error {
+						return .error(ApiError.parsingJsonFailure(error))
 					}
-
-					return Disposables.create()
-				}
-		}
-	}
-
-	/// Method to receive a JSON response (array of instances) based on a provided URL request.
-	///
-	/// - Parameters:
-	///   - request: URL request.
-	///   - session: Session in which the request should be sent.
-	/// - Returns: JSON data if received and parsed successfully, ApiError instance otherwise.
-	public static func json<T: JSONParseable>(`for` request: URLRequest?, `in` session: URLSession) -> Observable<[T]> {
-		return data(for: request, in: session)
-			.flatMap { data -> Observable<[T]> in
-				Observable.create { observer in
-					do {
-						let json = try JSONSerialization.jsonObject(with: data, options: [])
-
-						if let _parsedArray = T.parseMany(from: json) as? [T] {
-							observer.onNext(_parsedArray)
-							observer.onCompleted()
-						} else {
-							observer.onError(ApiError.parsingJsonFailure)
-						}
-					} catch {
-						observer.onError(ApiError.parsingJsonFailure)
-					}
-
-					return Disposables.create()
 				}
 		}
 	}

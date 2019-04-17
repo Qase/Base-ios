@@ -1,12 +1,12 @@
 //
-//  UIImage+Resize.swift
+//  UIImage+.swift
 //  2N-mobile-communicator
 //
 //  Created by Jakub Prusa on 29.11.16.
 //  Copyright © 2016 quanti. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - Extension with resizing of image
 extension UIImage {
