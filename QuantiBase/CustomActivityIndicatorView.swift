@@ -9,23 +9,23 @@
 import UIKit
 import RxSwift
 
-enum AppearanceStatus {
+public enum AppearanceStatus {
 	case shown
 	case hidden
 }
 
-class CustomActivityIndicatorView: UIView {
-	let size: CGFloat = 100.0
-	let appearanceAnimation: TimeInterval = 0.3
+open class CustomActivityIndicatorView: UIView {
+	public let size: CGFloat = 100.0
+	public let appearanceAnimation: TimeInterval = 0.3
 
 	private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)//UIActivityIndicatorView(style: .whiteLarge)
 
 	private let _appearanceDidChange = PublishSubject<AppearanceStatus>()
-	var appearanceDidChange: Observable<AppearanceStatus> {
+	public var appearanceDidChange: Observable<AppearanceStatus> {
 		return _appearanceDidChange.asObservable()
 	}
 
-	override init(frame: CGRect) {
+	public override init(frame: CGRect) {
 		super.init(frame: frame)
 
 		backgroundColor = UIColor.black.withAlphaComponent(0.7)
@@ -44,7 +44,7 @@ class CustomActivityIndicatorView: UIView {
 		activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
 	}
 
-	required init?(coder aDecoder: NSCoder) {
+	public required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
 
@@ -69,7 +69,7 @@ class CustomActivityIndicatorView: UIView {
 		})
 	}
 
-	func show(animated: Bool = true) {
+	public func show(animated: Bool = true) {
 		guard alpha == 0 else {
 			print("\(#function) - customActivityIndicatorView is already shown.")
 			return
@@ -78,7 +78,7 @@ class CustomActivityIndicatorView: UIView {
 		changeAppearance(to: .shown, animated: animated)
 	}
 
-	func hide(animated: Bool = true) {
+	public func hide(animated: Bool = true) {
 		guard alpha == 1 else {
 			print("\(#function) - customActivityIndicatorView is already hidden.")
 			return

@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct AppVersion: Codable {
-	let major: Int
-	let minor: Int
-	let bug: Int
+public struct AppVersion: Codable {
+	public let major: Int
+	public let minor: Int
+	public let bug: Int
 
-	init?(from string: String) {
+	public init?(from string: String) {
 		let elements = string.split(separator: ".")
 		guard elements.count == 3,
 			let major = Int(elements[0]),
@@ -27,7 +27,7 @@ struct AppVersion: Codable {
 		self.bug = bug
 	}
 
-	init(major: Int, minor: Int, bug: Int) {
+	public init(major: Int, minor: Int, bug: Int) {
 		self.major = major
 		self.minor = minor
 		self.bug = bug
@@ -36,18 +36,18 @@ struct AppVersion: Codable {
 
 // MARK: - Comparable implementation
 extension AppVersion: Comparable {
-	static func < (lhs: AppVersion, rhs: AppVersion) -> Bool {
+	public static func < (lhs: AppVersion, rhs: AppVersion) -> Bool {
 		return  (lhs.major < rhs.major) ||
 			(lhs.major == rhs.major && lhs.minor < rhs.minor) ||
 			(lhs.major == rhs.major && lhs.minor == rhs.minor && lhs.bug < rhs.bug)
 	}
 
-	static func == (lhs: AppVersion, rhs: AppVersion) -> Bool {
+	public static func == (lhs: AppVersion, rhs: AppVersion) -> Bool {
 		return lhs.major == rhs.major && lhs.minor == rhs.minor && lhs.bug == rhs.bug
 	}
 }
 
 // MARK: - UserDefaultsStorable implementation
 extension AppVersion: UserDefaultsStorable {
-	var storableObject: AppVersion { return self }
+	public var storableObject: AppVersion { return self }
 }

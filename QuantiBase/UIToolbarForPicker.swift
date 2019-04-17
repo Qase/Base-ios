@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class UIToolbarForPicker: UIToolbar {
+open class UIToolbarForPicker: UIToolbar {
 	public var leftButton: UIBarButtonItem? {
 		didSet {
 			reassignButtons()
@@ -40,7 +40,7 @@ public class UIToolbarForPicker: UIToolbar {
 		setItems(newButtons, animated: false)
 	}
 
-	required init?(coder aDecoder: NSCoder) {
+	public required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
 }

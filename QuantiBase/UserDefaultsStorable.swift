@@ -24,11 +24,11 @@ public protocol UserDefaultsStorable {
 }
 
 extension UserDefaultsStorable {
-	func store(using userDefaultsBundle: UserDefaultsBundle) -> Bool {
+	public func store(using userDefaultsBundle: UserDefaultsBundle) -> Bool {
 		return userDefaultsBundle.storage.set(object: Wrapper(value: storableObject), forKey: userDefaultsBundle.key)
 	}
 
-	static func restore(using userDefaultsBundle: UserDefaultsBundle) -> StorableObject? {
+	public static func restore(using userDefaultsBundle: UserDefaultsBundle) -> StorableObject? {
 		guard let restored: Wrapper<StorableObject> = userDefaultsBundle.storage.object(forKey: userDefaultsBundle.key) else {
 			print("\(#function) - failed to restore StorableObject instance from UserDefaults.")
 			return nil
@@ -37,20 +37,20 @@ extension UserDefaultsStorable {
 		return restored.value
 	}
 
-	func remove(using userDefaultsBundle: UserDefaultsBundle) {
+	public func remove(using userDefaultsBundle: UserDefaultsBundle) {
 		userDefaultsBundle.storage.removeObject(forKey: userDefaultsBundle.key)
 	}
 }
 
 // Generic structure being used to wrap primitive types since these cannot be encoded using JSONEncoder or any other Swift native encoder.
 // - known Swift bug: https://bugs.swift.org/browse/SR-6163
-struct Wrapper<T: Codable>: Codable {
-	let value: T
+public struct Wrapper<T: Codable>: Codable {
+	public let value: T
 }
 
 // MARK: - Extension for UserDefaults providing functionality of storing / restoring data as JSON using JSONEncoder.
 extension UserDefaults {
-	func set<T: Codable>(object: T, forKey key: String) -> Bool {
+	public func set<T: Codable>(object: T, forKey key: String) -> Bool {
 		do {
 			let jsonEncoder = JSONEncoder()
 			let data = try jsonEncoder.encode(object)
@@ -62,7 +62,7 @@ extension UserDefaults {
 		}
 	}
 
-	func object<T: Codable>(forKey key: String) -> T? {
+	public func object<T: Codable>(forKey key: String) -> T? {
 		do {
 			guard let data = self.data(forKey: key) else {
 				print("\(#function) - could not retrieve data from UserDefaults.")

@@ -10,7 +10,7 @@ import Foundation
 
 public typealias ReturnCode = Int
 
-enum ApiError: Error {
+public enum ApiError: Error {
 	// 400
 	case badRequest(Data)
 	// 401
@@ -23,7 +23,7 @@ enum ApiError: Error {
 	case unspecified(ReturnCode, Data)
 	case parsingJsonFailure(Error)
 
-	static func == (lhs: ApiError, rhs: ApiError) -> Bool {
+	public static func == (lhs: ApiError, rhs: ApiError) -> Bool {
 		switch (lhs, rhs) {
 		case (.badRequest, .badRequest),
 			 (.unauthorized, .unauthorized),
@@ -37,7 +37,7 @@ enum ApiError: Error {
 		}
 	}
 
-	static func === (lhs: ApiError, rhs: ApiError) -> Bool {
+	public static func === (lhs: ApiError, rhs: ApiError) -> Bool {
 		switch (lhs, rhs) {
 		case (.badRequest(let a), .badRequest(let b)):
 			return a == b

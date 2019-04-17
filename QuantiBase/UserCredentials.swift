@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct UserCredentials {
-    let username: String
-    let password: String
+public struct UserCredentials {
+    public let username: String
+    public let password: String
 }
 
 extension UserCredentials: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         return "UserCredentials: {username: \(username), password: \(password)}"
     }
 }
