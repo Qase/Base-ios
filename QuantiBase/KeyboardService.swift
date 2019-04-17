@@ -54,34 +54,34 @@ public class KeyboardService {
 	private init() {
 		let center = NotificationCenter.default
 
-		center.rx.notification(NSNotification.Name.UIKeyboardWillShow)
+		center.rx.notification(UIResponder.keyboardWillShowNotification)
 			.map { notification in
 				let userInfo = notification.userInfo!
-				let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
-				let animationSpeed = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double) ?? 0
+				let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
+				let animationSpeed = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double) ?? 0
 
 				return (keyboardFrame, animationSpeed)
 			}
 			.bind(to: _keyboardWillShow)
 			.disposed(by: bag)
 
-		center.rx.notification(NSNotification.Name.UIKeyboardDidShow)
+		center.rx.notification(UIResponder.keyboardDidShowNotification)
 			.map { _ in }
 			.bind(to: _keyboardDidShow)
 			.disposed(by: bag)
 
-		center.rx.notification(NSNotification.Name.UIKeyboardWillHide)
+		center.rx.notification(UIResponder.keyboardWillHideNotification)
 			.map { notification in
 				let userInfo = notification.userInfo!
-				let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
-				let animationSpeed = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double) ?? 0
+				let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
+				let animationSpeed = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double) ?? 0
 
 				return (keyboardFrame, animationSpeed)
 			}
 			.bind(to: _keyboardWillHide)
 			.disposed(by: bag)
 
-		center.rx.notification(NSNotification.Name.UIKeyboardDidHide)
+		center.rx.notification(UIResponder.keyboardDidHideNotification)
 			.map { _ in }
 			.bind(to: _keyboardDidHide)
 			.disposed(by: bag)

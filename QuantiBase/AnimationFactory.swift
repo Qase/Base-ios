@@ -42,7 +42,7 @@ public struct AnimationFactory {
 		animation.fromValue = from
 		animation.toValue = to
 		animation.isRemovedOnCompletion = false
-		animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+		animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
 
 		return animation
 	}

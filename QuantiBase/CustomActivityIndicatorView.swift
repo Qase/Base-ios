@@ -18,7 +18,7 @@ open class CustomActivityIndicatorView: UIView {
 	public let size: CGFloat = 100.0
 	public let appearanceAnimation: TimeInterval = 0.3
 
-	private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)//UIActivityIndicatorView(style: .whiteLarge)
+	private let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)//UIActivityIndicatorView(style: .whiteLarge)
 
 	private let _appearanceDidChange = PublishSubject<AppearanceStatus>()
 	public var appearanceDidChange: Observable<AppearanceStatus> {
