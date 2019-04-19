@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 ---
 ## Master
 
+## [4.5.0](https://github.com/ReactiveX/RxSwift/releases/tag/4.5.0)
+
+* Compatibility with Xcode 10.2.
+* Adds missing `UISearchBar.setDelegate()`.
+
+## [4.4.2](https://github.com/ReactiveX/RxSwift/releases/tag/4.4.2)
+
+* Adds `UIView.rx.backgroundColor` Binder. #1888
+
+### Anomalies
+
+* Fix multiple disposes on ScheduledDisposables. #1892
+* Fix `DelegateProxy` main thread validation. #1882
+* Bring back the `first` operator to `ObservableType`. #1886
+
 ## [4.4.1](https://github.com/ReactiveX/RxSwift/releases/tag/4.4.1)
 
 * Adds `takeUntil(_ behavior:predicate:)`.
