@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class AuthorizedBaseApi: BaseApi {
+open class AuthorizedBaseApi: BaseApi {
     public override var _session: URLSession {
         return URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
     }

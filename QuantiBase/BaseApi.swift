@@ -10,7 +10,7 @@ import Foundation
 
 import RxSwift
 
-public class BaseApi: NSObject {
+open class BaseApi: NSObject {
     public var _session: URLSession {
         return URLSession(configuration: URLSessionConfiguration.default)
     }
