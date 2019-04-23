@@ -1,5 +1,5 @@
 //
-//  AppVersionTests.swift
+//  AppVersion.swift
 //  QuantiBaseTests
 //
 //  Created by Martin Troup on 21/03/2019.

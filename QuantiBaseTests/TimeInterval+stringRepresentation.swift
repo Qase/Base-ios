@@ -1,5 +1,5 @@
 //
-//  TimeInterval+stringRepresentation.swift
+//  TimeInterval+IntervalAsStringExtension.swift
 //  QuantiBase
 //
 //  Created by Jakub Prusa on 26.08.17.

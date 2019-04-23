@@ -32,7 +32,7 @@ public class AuthorizedBaseApi: BaseApi {
 
 // MARK: - URLSessionDelegate methods to handle HTTP authentication.
 extension AuthorizedBaseApi: URLSessionDelegate {
-	private func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+    public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
             if let serverTrust = challenge.protectionSpace.serverTrust {
                 completionHandler(.useCredential, URLCredential(trust: serverTrust))
@@ -54,7 +54,7 @@ extension AuthorizedBaseApi: URLSessionDelegate {
 
 // MARK: - URLSessionTaskDelegate methods to handle HTTP authentication.
 extension AuthorizedBaseApi: URLSessionTaskDelegate {
-	private func urlSession(_ session: URLSession, task: URLSessionTask, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+    public func urlSession(_ session: URLSession, task: URLSessionTask, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         urlSession(session, didReceive: challenge, completionHandler: completionHandler)
     }
 }
