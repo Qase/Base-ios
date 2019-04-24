@@ -11,6 +11,11 @@ import Foundation
 public struct UserDefaultsBundle {
 	let key: String
 	let storage: UserDefaults
+    
+    public init(key: String, storage: UserDefaults) {
+        self.key = key
+        self.storage = storage
+    }
 }
 
 public protocol UserDefaultsStorable {
