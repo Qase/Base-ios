@@ -78,4 +78,10 @@ extension UIViewController {
 			})
 		}
 	}
+    
+    /// Computed property that returns the controller wrapped in a UINavigationController instance, thus it returns UINavigationController.
+    public var wrappedInNavigationController: UINavigationController {
+        return UINavigationController(rootViewController: self)
+    }
+
 }
