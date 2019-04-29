@@ -16,7 +16,7 @@
 		5B1C1D35220C812500C40C54 /* MultipleIndependentUiGesturing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D34220C812500C40C54 /* MultipleIndependentUiGesturing.swift */; };
 		5B1C1D37220C816D00C40C54 /* UITextFieldWithNoCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D36220C816D00C40C54 /* UITextFieldWithNoCursor.swift */; };
 		5B1C1D39220C85E300C40C54 /* UIToolbarForPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D38220C85E300C40C54 /* UIToolbarForPicker.swift */; };
-		5B1C1D3D220CA05400C40C54 /* CAShapeLayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D3C220CA05400C40C54 /* CAShapeLayer+.swift */; };
+		5B1C1D3D220CA05400C40C54 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D3C220CA05400C40C54 /* CALayer+.swift */; };
 		5B1C1D3F220CA0AE00C40C54 /* UIScrollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D3E220CA0AE00C40C54 /* UIScrollView+.swift */; };
 		5B1C1D41220CA41600C40C54 /* ArraySlice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D40220CA41600C40C54 /* ArraySlice+.swift */; };
 		5B1C1D43220CA43900C40C54 /* UInt16+binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D42220CA43900C40C54 /* UInt16+binary.swift */; };
@@ -141,7 +141,7 @@
 		5B1C1D34220C812500C40C54 /* MultipleIndependentUiGesturing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleIndependentUiGesturing.swift; sourceTree = "<group>"; };
 		5B1C1D36220C816D00C40C54 /* UITextFieldWithNoCursor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldWithNoCursor.swift; sourceTree = "<group>"; };
 		5B1C1D38220C85E300C40C54 /* UIToolbarForPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIToolbarForPicker.swift; sourceTree = "<group>"; };
-		5B1C1D3C220CA05400C40C54 /* CAShapeLayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+.swift"; sourceTree = "<group>"; };
+		5B1C1D3C220CA05400C40C54 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		5B1C1D3E220CA0AE00C40C54 /* UIScrollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+.swift"; sourceTree = "<group>"; };
 		5B1C1D40220CA41600C40C54 /* ArraySlice+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArraySlice+.swift"; sourceTree = "<group>"; };
 		5B1C1D42220CA43900C40C54 /* UInt16+binary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt16+binary.swift"; sourceTree = "<group>"; };
@@ -442,7 +442,7 @@
 				5B1C1D2C220C7DB700C40C54 /* UITextField+.swift */,
 				5B1C1D2E220C7E3300C40C54 /* URL+content.swift */,
 				5B1C1D30220C7ED300C40C54 /* NSAttributedString+copyrightSuperscripted.swift */,
-				5B1C1D3C220CA05400C40C54 /* CAShapeLayer+.swift */,
+				5B1C1D3C220CA05400C40C54 /* CALayer+.swift */,
 				5B1C1D3E220CA0AE00C40C54 /* UIScrollView+.swift */,
 				5B1C1D40220CA41600C40C54 /* ArraySlice+.swift */,
 				5BA6AAC3226F191700FBB047 /* Data+.swift */,
@@ -737,6 +737,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -750,7 +751,7 @@
 				5B1C1D39220C85E300C40C54 /* UIToolbarForPicker.swift in Sources */,
 				5BA79E20220DBFA200C0F81D /* HTTPHeaderFieldKey.swift in Sources */,
 				5BA6AAC4226F191700FBB047 /* Data+.swift in Sources */,
-				5B1C1D3D220CA05400C40C54 /* CAShapeLayer+.swift in Sources */,
+				5B1C1D3D220CA05400C40C54 /* CALayer+.swift in Sources */,
 				5BA79E18220DBF8400C0F81D /* HTTPURLResponse+logDescription.swift in Sources */,
 				5B1C1D52220D943F00C40C54 /* String+binary.swift in Sources */,
 				636599331F45DCB500979BBA /* UIDevice+.swift in Sources */,
