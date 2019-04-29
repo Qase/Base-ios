@@ -57,20 +57,32 @@ extension ApiFactory {
 	///   - baseUrl: Base URL of the request.
 	///   - pathComponent: Specific path compoment that gets appended to the base URL.
 	///   - method: HTTP method of the request.
-	///   - data: JSON data to be added to the body of the request.
+	///   - data: JSON data (Data instance) to be added to the body of the request.
 	/// - Returns: URLRequest instance if the method succeeds to create it, nil otherwise.
-	public static func buildRequest(baseUrl: URL, pathComponent: String, method: HttpMethod, withJSONBody data: Data?) -> URLRequest? {
-		let urlRequest = buildRequest(baseUrl: baseUrl, pathComponent: pathComponent, method: method)
+	public static func buildRequest(baseUrl: URL, pathComponent: String, method: HttpMethod, withJsonBody data: Data) -> URLRequest? {
+		var urlRequest = buildRequest(baseUrl: baseUrl, pathComponent: pathComponent, method: method)
+		urlRequest?.httpBody = data
 
-		guard var _urlRequest = urlRequest else {
-			print("\(#function) - urlRequest is nil.")
-			return nil
-		}
-
-		_urlRequest.httpBody = data
-
-		return _urlRequest
+		return urlRequest
 	}
+
+    /// Method to build a specific URL request with JSON data within the body of the request.
+    ///
+    /// - Parameters:
+    ///   - baseUrl: Base URL of the request.
+    ///   - pathComponent: Specific path compoment that gets appended to the base URL.
+    ///   - method: HTTP method of the request.
+    ///   - encodable: JSON data (Anything that implements Encodable protocol) to be added to the body of the request.
+    /// - Returns: URLRequest instance if the method succeeds to create it, nil otherwise.
+    public static func buildRequest<Object: Encodable>(baseUrl: URL, pathComponent: String, method: HttpMethod, withJsonBody encodable: Object) -> URLRequest? {
+        do {
+            let jsonData = try JSONEncoder().encode(encodable)
+            return buildRequest(baseUrl: baseUrl, pathComponent: pathComponent, method: method, withJsonBody: jsonData)
+        } catch let error {
+            print("\(#function) - failed to encode Encodable instance to JSON: \(error).")
+            return nil
+        }
+    }
 
 	/// Method to build a specific URL request.
 	///
