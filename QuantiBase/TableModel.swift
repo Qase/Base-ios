@@ -11,11 +11,12 @@ import UIKit
 public class TableRow {
 	public static let defaultIdentifier = "defaultCellIdentifier"
     public var identifier: String?
-    public var name = "RowName"
+    public var name: String
     public var hidden = false
-    public var type: UITableViewCell.Type = UITableViewCell.self
+    public var type: UITableViewCell.Type
+    public var size = 1
 
-    public init(identifier: String? = nil, name: String = "", type: UITableViewCell.Type = UITableViewCell.self) {
+    public init(identifier: String? = nil, name: String = "rowName", type: UITableViewCell.Type = UITableViewCell.self) {
         self.identifier = identifier
         self.name = name
         self.type = type
@@ -24,10 +25,10 @@ public class TableRow {
 
 public class TableSection {
     public var identifier: String?
-    public var name = ""
+    public var name: String
     public var rows: [TableRow] = []
 
-    public init(identifier: String? = nil, name: String = "RowName") {
+    public init(identifier: String? = nil, name: String = "sectionName") {
         self.identifier = identifier
         self.name = name
     }
@@ -38,10 +39,10 @@ public class TableSection {
 }
 
 public class CellRegister {
-    public var cellType: UITableViewCell.Type = UITableViewCell.self
-    public var cellIdentifier = ""
+    public var cellType: UITableViewCell.Type
+    public var cellIdentifier: String
 
-    public init(cellType: UITableViewCell.Type = UITableViewCell.self, cellIdentifier: String = "") {
+    public init(cellType: UITableViewCell.Type = UITableViewCell.self, cellIdentifier: String = "cellIdentifier") {
         self.cellType = cellType
         self.cellIdentifier = cellIdentifier
     }
@@ -50,30 +51,46 @@ public class CellRegister {
 public class TableModel {
     public var sections: [TableSection] = []
     public var cells: [CellRegister] = []
-
-    public init() {
-    }
-
-    public func rowForIndexPath(indexPath: IndexPath) -> TableRow? {
-        return sections[indexPath.section].rows[indexPath.row]
-    }
-
-    public func registerCellsFor(tableView: UITableView) {
-        for cell in cells {
-            tableView.register(cell.cellType, forCellReuseIdentifier: cell.cellIdentifier)
-        }
+    
+    public func registerCells(for tableView: UITableView) {
+        cells.forEach { tableView.register($0.cellType, forCellReuseIdentifier: $0.cellIdentifier) }
     }
 
     public func add(section: TableSection) {
-        self.sections.append(section)
+        sections.append(section)
     }
-
+    
+    func remove(section: TableSection) {
+        sections = sections.filter { $0 !== section }
+    }
+    
     public var sectionCount: Int {
         return sections.count
     }
 
-    public func cellIdentifierFor(indexPath: IndexPath) -> String {
-        guard let type = self.rowForIndexPath(indexPath: indexPath)?.type else {
+    public func titleForHeader(in section: Int) -> String {
+        return sections[section].name
+    }
+    
+    public func rows(in section: Int) -> Int {
+        return sections[section].rows.reduce(0, { $0 + $1.size })
+    }
+
+    public func cell(with identifier: String) -> TableRow? {
+        //TO-DO
+        //        let ret = sections[0].rows.first(where: { (cellReg) -> Bool in
+        //            return cellReg.identifier == identifier
+        //        })
+        //        return ret
+        return nil
+    }
+    
+    public func cellType(on indexPath: IndexPath) -> UITableViewCell.Type {
+        return self.row(on: indexPath)?.type ?? UITableViewCell.self
+    }
+
+    public func cellIdentifier(on indexPath: IndexPath) -> String {
+        guard let type = self.row(on: indexPath)?.type else {
             return TableRow.defaultIdentifier
         }
 
@@ -81,25 +98,34 @@ public class TableModel {
 
         return ret?.cellIdentifier ?? TableRow.defaultIdentifier
     }
-
-    public func cellFor(identifier: String) -> TableRow? {
-        //TO-DO
-//        let ret = sections[0].rows.first(where: { (cellReg) -> Bool in
-//            return cellReg.identifier == identifier
-//        })
-//        return ret
-        return nil
+    
+    func row(on indexPath: IndexPath) -> TableRow? {
+        return sections[indexPath.section].rows[absoluteRowIndex(on: indexPath)]
     }
 
-    public func cellTypeFor(indexPath: IndexPath) -> UITableViewCell.Type {
-        return self.rowForIndexPath(indexPath: indexPath)?.type ?? UITableViewCell.self
+    func relativeRowIndex(on indexPath: IndexPath) -> Int {
+        var rowIndex = 0
+        for  element in sections[indexPath.section].rows {
+            if (rowIndex + element.size) > indexPath.row && element.size != 0 {
+                break
+            }
+            
+            rowIndex += element.size
+        }
+        return indexPath.row - rowIndex
     }
-
-    public func rowsIn(section: Int) -> Int {
-        return self.sections[section].rows.count
-    }
-
-    public func titleForHeader(section: Int) -> String {
-        return sections[section].name
+    
+    private func absoluteRowIndex(on indexPath: IndexPath) -> Int {
+        var rowIndex = 0
+        var ret = 0
+        for (index, element) in sections[indexPath.section].rows.enumerated() {
+            ret = index
+            rowIndex += element.size
+            if rowIndex > indexPath.row && element.size != 0 {
+                break
+            }
+            
+        }
+        return ret
     }
 }
