@@ -51,7 +51,7 @@ public class CellRegister {
 public class TableModel {
     public var sections: [TableSection] = []
     public var cells: [CellRegister] = []
-    
+
     public func registerCells(for tableView: UITableView) {
         cells.forEach { tableView.register($0.cellType, forCellReuseIdentifier: $0.cellIdentifier) }
     }
@@ -59,11 +59,11 @@ public class TableModel {
     public func add(section: TableSection) {
         sections.append(section)
     }
-    
+
     func remove(section: TableSection) {
         sections = sections.filter { $0 !== section }
     }
-    
+
     public var sectionCount: Int {
         return sections.count
     }
@@ -71,7 +71,7 @@ public class TableModel {
     public func titleForHeader(in section: Int) -> String {
         return sections[section].name
     }
-    
+
     public func rows(in section: Int) -> Int {
         return sections[section].rows.reduce(0, { $0 + $1.size })
     }
@@ -84,7 +84,7 @@ public class TableModel {
         //        return ret
         return nil
     }
-    
+
     public func cellType(on indexPath: IndexPath) -> UITableViewCell.Type {
         return self.row(on: indexPath)?.type ?? UITableViewCell.self
     }
@@ -98,7 +98,7 @@ public class TableModel {
 
         return ret?.cellIdentifier ?? TableRow.defaultIdentifier
     }
-    
+
     func row(on indexPath: IndexPath) -> TableRow? {
         return sections[indexPath.section].rows[absoluteRowIndex(on: indexPath)]
     }
@@ -109,12 +109,12 @@ public class TableModel {
             if (rowIndex + element.size) > indexPath.row && element.size != 0 {
                 break
             }
-            
+
             rowIndex += element.size
         }
         return indexPath.row - rowIndex
     }
-    
+
     private func absoluteRowIndex(on indexPath: IndexPath) -> Int {
         var rowIndex = 0
         var ret = 0
@@ -124,7 +124,7 @@ public class TableModel {
             if rowIndex > indexPath.row && element.size != 0 {
                 break
             }
-            
+
         }
         return ret
     }
