@@ -60,7 +60,7 @@ public class TableModel {
         sections.append(section)
     }
 
-    func remove(section: TableSection) {
+    public func remove(section: TableSection) {
         sections = sections.filter { $0 !== section }
     }
 
@@ -99,11 +99,11 @@ public class TableModel {
         return ret?.cellIdentifier ?? TableRow.defaultIdentifier
     }
 
-    func row(on indexPath: IndexPath) -> TableRow? {
+    public func row(on indexPath: IndexPath) -> TableRow? {
         return sections[indexPath.section].rows[absoluteRowIndex(on: indexPath)]
     }
 
-    func relativeRowIndex(on indexPath: IndexPath) -> Int {
+    public func relativeRowIndex(on indexPath: IndexPath) -> Int {
         var rowIndex = 0
         for  element in sections[indexPath.section].rows {
             if (rowIndex + element.size) > indexPath.row && element.size != 0 {
