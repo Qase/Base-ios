@@ -51,6 +51,8 @@ public class CellRegister {
 public class TableModel {
     public var sections: [TableSection] = []
     public var cells: [CellRegister] = []
+    
+    public init() {}
 
     public func registerCells(for tableView: UITableView) {
         cells.forEach { tableView.register($0.cellType, forCellReuseIdentifier: $0.cellIdentifier) }
