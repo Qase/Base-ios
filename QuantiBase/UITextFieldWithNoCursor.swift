@@ -8,8 +8,8 @@
 
 import UIKit
 
-public class UITextFieldWithNoCursor: UITextField {
-	override public func caretRect(for position: UITextPosition) -> CGRect {
+open class UITextFieldWithNoCursor: UITextField {
+	override open func caretRect(for position: UITextPosition) -> CGRect {
 		return CGRect.zero
 	}
 }

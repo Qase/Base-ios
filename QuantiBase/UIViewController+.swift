@@ -31,20 +31,20 @@ extension UIViewController {
 	///   - childViewController: a viewController to be added
 	///   - view: a view where the new childViewController's view should be added as subview, should be self.view by default
 	public func add(childViewController: UIViewController, andDisplayIn view: UIView) {
-		addChildViewController(childViewController)
+		addChild(childViewController)
 		if let _stackView = view as? UIStackView {
 			_stackView.addArrangedSubview(childViewController.view)
 		} else {
 			view.addSubview(childViewController.view)
 		}
-		childViewController.didMove(toParentViewController: self)
+		childViewController.didMove(toParent: self)
 	}
 
 	/// Method remove the viewController from its parent viewController.
-	public func removeFromParent() {
-		willMove(toParentViewController: nil)
+	public func completelyRemoveFromParent() {
+		willMove(toParent: nil)
 		view.removeFromSuperview()
-		removeFromParentViewController()
+		removeFromParent()
 	}
 
 	/// Method to remove all childViewControllers from THE viewController.
@@ -53,7 +53,7 @@ extension UIViewController {
 	}
 
 	private func removeAllChildViewControllers(from viewController: UIViewController) {
-		viewController.childViewControllers.forEach { childViewController in
+		viewController.children.forEach { childViewController in
 			removeAllChildViewControllers(from: childViewController)
 			childViewController.removeFromParent()
 		}
@@ -78,4 +78,10 @@ extension UIViewController {
 			})
 		}
 	}
+
+    /// Computed property that returns the controller wrapped in a UINavigationController instance, thus it returns UINavigationController.
+    public var wrappedInNavigationController: UINavigationController {
+        return UINavigationController(rootViewController: self)
+    }
+
 }

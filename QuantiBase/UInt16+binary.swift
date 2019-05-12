@@ -11,7 +11,7 @@ import Foundation
 extension UInt16 {
 	// Returns Data representation of self.
 	public var data: Data {
-		return Data(bytes: self.byteArray)
+		return Data(self.byteArray)
 	}
 
 	/// Returns [UInt8] representation of self (native big-endian).

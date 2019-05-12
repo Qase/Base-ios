@@ -52,10 +52,7 @@ extension String {
     ///
     /// - returns: String within Data instance
     public var data: Data? {
-        if let dataValue = self.data(using: .utf8) {
-            return dataValue
-        }
-        return nil
+        return self.data(using: .utf8)
     }
 
 	/// Method to get String.Index instance from Int.

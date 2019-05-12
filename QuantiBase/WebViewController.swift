@@ -11,7 +11,7 @@ import UIKit
 open class WebViewController: UIViewController {
     fileprivate var url: URL
     fileprivate let webView = UIWebView()
-	let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+	let activityIndicator = UIActivityIndicatorView(style: .gray)
 
     public init(withURL url: URL) {
         self.url = url

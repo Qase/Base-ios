@@ -2,8 +2,8 @@
 //  AuthorizedBaseApi.swift
 //  2N-mobile-communicator
 //
-//  Created by Dagy Tran on 16/04/2019.
-//  Copyright © 2019 quanti. All rights reserved.
+//  Created by Martin Troup on 23/04/2018.
+//  Copyright © 2018 quanti. All rights reserved.
 //
 
 import Foundation
@@ -21,7 +21,7 @@ public enum SessionDataEvents {
 }
 
 open class AuthorizedBaseApi: BaseApi {
-    override public var _session: URLSession {
+    public override var _session: URLSession {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 5
         return URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
@@ -41,12 +41,21 @@ open class AuthorizedBaseApi: BaseApi {
         super.init(url: url)
     }
 
+    public init?(url: String, userCredentials: UserCredentials) {
+        self.urlCredential = URLCredential(user: userCredentials.username, password: userCredentials.password, persistence: .none)
+        super.init(url: url)
+    }
+
+    public convenience init?(url: String, username: String, password: String) {
+        self.init(url: url, userCredentials: UserCredentials(username: username, password: password))
+    }
+
     public init(with baseURL: URL, authorizeUsing urlCredential: URLCredential) {
         self.urlCredential = urlCredential
         super.init(url: baseURL)
     }
 
-    required public init?(url: String) {
+    public required init?(url: String) {
         self.urlCredential = URLCredential(user: "", password: "", persistence: .none)
         super.init(url: url)
     }
@@ -74,7 +83,7 @@ extension AuthorizedBaseApi: URLSessionDelegate {
     }
 }
 
-// MARK: - URLSessionTaskDelegate methods
+// MARK: - URLSessionTaskDelegate methods to handle HTTP authentication.
 extension AuthorizedBaseApi: URLSessionTaskDelegate {
     //  Handle HTTP authentication.
     public func urlSession(_ session: URLSession,

@@ -22,7 +22,7 @@ public protocol MultipleIndependentUiTapGesturing {
 }
 
 extension MultipleIndependentUiTapGesturing {
-    public func setIndependency(fof recognizers: [UITapGestureRecognizer]) {
+    public func setIndependency(for recognizers: [UITapGestureRecognizer]) {
         recognizers.forEach { outerGestureRecognizer in
                 recognizers.filter { $0.numberOfTapsRequired > outerGestureRecognizer.numberOfTapsRequired }
                     .forEach { innerGestureRecognizer in
