@@ -12,7 +12,7 @@ extension Array where Element == UInt8 {
 
 	/// Returns Data representation of self.
 	public var data: Data {
-		return Data(bytes: self)
+		return Data(self)
 	}
 
 	/// Converts self = [UInt8] consisting of 2xUInt8 to UInt16 (native big-endian).

@@ -1,5 +1,5 @@
 //
-//  CAShapeLayer+.swift
+//  CALayer+.swift
 //  QuantiBase
 //
 //  Created by Martin Troup on 07/02/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension CAShapeLayer {
+extension CALayer {
 
 	/// Method to add a unique animation to self (layer).
 	/// Thus it gets removed first it if exists, and re-added after.

@@ -56,8 +56,10 @@ class StringExtension: XCTestCase {
     }
 
     func testToData() {
-        XCTAssertEqual("Test".data!.hashValue, 371876)
-        XCTAssertEqual("Test".data!.count, 4)
+        let data = "Test".data!
+    
+        XCTAssertEqual(data.count, 4)
+        XCTAssertEqual(data.string!, "Test")
     }
 
     func testIndexOf() {
