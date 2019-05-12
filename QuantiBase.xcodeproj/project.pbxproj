@@ -185,7 +185,7 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolderSpec = 16;
 			files = (
 				6C4809882288CB1F00D08719 /* Action.framework in CopyFiles */,
 				6C3082692288BDA9001A9726 /* RxAtomic.framework in CopyFiles */,
