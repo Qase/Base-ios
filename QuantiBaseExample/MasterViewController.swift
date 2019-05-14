@@ -61,7 +61,7 @@ class MasterViewController: UIViewController {
 		viewControllersSection.add(row: webViewControllerRow)
 		viewControllersSection.add(row: paragraphViewControllerRow)
 
-		tableModel.registerCellsFor(tableView: self.tableView)
+        tableModel.registerCells(for: self.tableView)
 	}
 
 }
@@ -73,13 +73,13 @@ extension MasterViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableModel.rowsIn(section: section)
+        return tableModel.rows(in: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: tableModel.cellIdentifierFor(indexPath: indexPath), for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: tableModel.cellIdentifier(on: indexPath), for: indexPath)
 
-        let row = tableModel.rowForIndexPath(indexPath: indexPath)
+        let row = tableModel.row(on: indexPath)
 
         cell.textLabel?.text = row?.identifier
 
@@ -91,7 +91,7 @@ extension MasterViewController: UITableViewDataSource {
 extension MasterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let row = tableModel.rowForIndexPath(indexPath: indexPath)
+        let row = tableModel.row(on: indexPath)
         if let rowIdentifier = RowsIdentifiers(rawValue: (row?.identifier)!) {
             switch rowIdentifier {
             case .webViewController:

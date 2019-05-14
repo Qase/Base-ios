@@ -8,8 +8,8 @@
 
 import UIKit
 
-class UITextViewWithZeroPadding: UITextView {
-	override func layoutSubviews() {
+open class UITextViewWithZeroPadding: UITextView {
+	override open func layoutSubviews() {
 		super.layoutSubviews()
 
 		textContainerInset = UIEdgeInsets.zero

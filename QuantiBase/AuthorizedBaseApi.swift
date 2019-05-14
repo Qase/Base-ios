@@ -2,8 +2,8 @@
 //  AuthorizedBaseApi.swift
 //  2N-mobile-communicator
 //
-//  Created by Dagy Tran on 16/04/2019.
-//  Copyright © 2019 quanti. All rights reserved.
+//  Created by Martin Troup on 23/04/2018.
+//  Copyright © 2018 quanti. All rights reserved.
 //
 
 import Foundation
@@ -41,12 +41,21 @@ open class AuthorizedBaseApi: BaseApi {
         super.init(url: url)
     }
 
+    public init?(url: String, userCredentials: UserCredentials) {
+        self.urlCredential = URLCredential(user: userCredentials.username, password: userCredentials.password, persistence: .none)
+        super.init(url: url)
+    }
+
     public init(with baseURL: URL, authorizeUsing urlCredential: URLCredential) {
         self.urlCredential = urlCredential
         super.init(url: baseURL)
     }
 
-    required public init?(url: String) {
+    public convenience init?(url: String, username: String, password: String) {
+        self.init(url: url, userCredentials: UserCredentials(username: username, password: password))
+    }
+
+    public required init?(url: String) {
         self.urlCredential = URLCredential(user: "", password: "", persistence: .none)
         super.init(url: url)
     }

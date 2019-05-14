@@ -9,8 +9,8 @@
 import UIKit
 
 open class BaseButton: UIButton {
-    public typealias Action = ((_ sender: UIButton) -> Void)?
-    public var actionBlock: Action
+    public typealias Action = ((_ sender: UIButton) -> Void)
+    public var actionBlock: Action?
 
     public var baseColor: UIColor = .clear {
         didSet {

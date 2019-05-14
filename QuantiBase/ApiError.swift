@@ -8,31 +8,29 @@
 
 import Foundation
 
+public typealias ReturnCode = Int
+
 public enum ApiError: Error {
-	case unknownSession
 	// 400
-	case badRequest
+	case badRequest(Data)
 	// 401
-	case unauthorized
+	case unauthorized(Data)
 	// 404
-	case notFound
+	case notFound(Data)
 	// 5xx
-	case serverFailure
+	case serverFailure(Data)
 	// any other status code
-	case unspecified(Int)
-	case parsingJsonFailure
-	case invalidRequest
+	case unspecified(ReturnCode, Data)
+	case parsingJsonFailure(Error)
 
 	public static func == (lhs: ApiError, rhs: ApiError) -> Bool {
 		switch (lhs, rhs) {
-		case (.unknownSession, .unknownSession),
-			 (.badRequest, .badRequest),
+		case (.badRequest, .badRequest),
 			 (.unauthorized, .unauthorized),
 			 (.notFound, .notFound),
 			 (.serverFailure, .serverFailure),
 			 (.unspecified, .unspecified),
-			 (.parsingJsonFailure, .parsingJsonFailure),
-			 (.invalidRequest, .invalidRequest):
+			 (.parsingJsonFailure, .parsingJsonFailure):
 			return true
 		default:
 			return false
@@ -41,15 +39,17 @@ public enum ApiError: Error {
 
 	public static func === (lhs: ApiError, rhs: ApiError) -> Bool {
 		switch (lhs, rhs) {
+		case (.badRequest(let a), .badRequest(let b)):
+			return a == b
+		case (.unauthorized(let a), .unauthorized(let b)):
+			return a == b
+		case (.notFound(let a), .notFound(let b)):
+			return a == b
+		case (.serverFailure(let a), .serverFailure(let b)):
+			return a == b
 		case (.unspecified(let a), .unspecified(let b)):
 			return a == b
-		case (.unknownSession, .unknownSession),
-			 (.badRequest, .badRequest),
-			 (.unauthorized, .unauthorized),
-			 (.notFound, .notFound),
-			 (.serverFailure, .serverFailure),
-			 (.parsingJsonFailure, .parsingJsonFailure),
-			 (.invalidRequest, .invalidRequest):
+		case (.parsingJsonFailure, .parsingJsonFailure):
 			return true
 		default:
 			return false
