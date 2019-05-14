@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1A0E24228AE6FD00B649BF /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A0E23228AE6FD00B649BF /* UserCredentials.swift */; };
+		5B1A0E25228AE6FD00B649BF /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A0E23228AE6FD00B649BF /* UserCredentials.swift */; };
+		5B1A0E26228AE83100B649BF /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6AAC3226F191700FBB047 /* Data+.swift */; };
 		5B1C1D27220C595300C40C54 /* AnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D26220C595300C40C54 /* AnimationFactory.swift */; };
 		5B1C1D29220C7B2600C40C54 /* UIBarButtonItem+activityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D28220C7B2600C40C54 /* UIBarButtonItem+activityViewController.swift */; };
 		5B1C1D2D220C7DB700C40C54 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D2C220C7DB700C40C54 /* UITextField+.swift */; };
@@ -44,7 +47,6 @@
 		5BA79E0F220DBD0D00C0F81D /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0E220DBD0D00C0F81D /* BluetoothService.swift */; };
 		5BA79E11220DBD1200C0F81D /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E10220DBD1100C0F81D /* KeyboardService.swift */; };
 		5BA79E14220DBF7200C0F81D /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E13220DBF7200C0F81D /* BaseApi.swift */; };
-		5BA79E16220DBF7E00C0F81D /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E15220DBF7E00C0F81D /* ApiFactory.swift */; };
 		5BA79E18220DBF8400C0F81D /* HTTPURLResponse+logDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E17220DBF8400C0F81D /* HTTPURLResponse+logDescription.swift */; };
 		5BA79E1A220DBF8A00C0F81D /* URLRequest+logDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E19220DBF8A00C0F81D /* URLRequest+logDescription.swift */; };
 		5BA79E1C220DBF9100C0F81D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E1B220DBF9100C0F81D /* HTTPMethod.swift */; };
@@ -79,8 +81,13 @@
 		63B0A8AD1F50785C00F94CDF /* QAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */; };
 		63C3388B1F474D1500DA8957 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3388A1F474D1500DA8957 /* TableModel.swift */; };
 		63C338941F47530800DA8957 /* ParagraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338931F47530800DA8957 /* ParagraphViewController.swift */; };
+		6C19992D223D64EC005511FC /* AuthorizedBaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */; };
+		6C19992F223D66CA005511FC /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C6221BF56700C95FCA /* RxBlocking.framework */; };
+		6C199930223D66E2005511FC /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2CA221BF56700C95FCA /* RxSwift.framework */; };
+		6C199931223D66F1005511FC /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C7221BF56700C95FCA /* Action.framework */; };
+		6C199932223D66FE005511FC /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C8221BF56700C95FCA /* RxCocoa.framework */; };
+		6C199933223D6708005511FC /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C9221BF56700C95FCA /* RxAtomic.framework */; };
 		6C6074BA2236CFA5006C6B14 /* AuthorizedBaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */; };
-		6C6074BC2236D0D8006C6B14 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6074BB2236D0D8006C6B14 /* UserCredentials.swift */; };
 		D32D96FD1F544853006A635E /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D96FC1F544853006A635E /* LoremSwiftum.swift */; };
 		D32D97051F5449CF006A635E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D97041F5449CF006A635E /* AppDelegate.swift */; };
 		D32D97071F5449CF006A635E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D97061F5449CF006A635E /* MasterViewController.swift */; };
@@ -89,6 +96,39 @@
 		D397CEB41F520A7C00CCD70E /* TimeInterval+stringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB31F520A7C00CCD70E /* TimeInterval+stringRepresentation.swift */; };
 		D397CEB61F520E5100CCD70E /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB51F520E5100CCD70E /* Array+.swift */; };
 		D397CEB81F520E8700CCD70E /* Collection+reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB71F520E8700CCD70E /* Collection+reduce.swift */; };
+		D39AD27A221BF2EE00C95FCA /* TimeInterval+stringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365991F1F45D5D300979BBA /* TimeInterval+stringRepresentation.swift */; };
+		D39AD27C221BF2EE00C95FCA /* HTTPHeaderFieldKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E1F220DBFA200C0F81D /* HTTPHeaderFieldKey.swift */; };
+		D39AD27E221BF2EE00C95FCA /* HTTPURLResponse+logDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E17220DBF8400C0F81D /* HTTPURLResponse+logDescription.swift */; };
+		D39AD27F221BF2EE00C95FCA /* String+binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D51220D943F00C40C54 /* String+binary.swift */; };
+		D39AD281221BF2EE00C95FCA /* URL+content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D2E220C7E3300C40C54 /* URL+content.swift */; };
+		D39AD282221BF2EE00C95FCA /* UInt8+binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D48220CA57200C40C54 /* UInt8+binary.swift */; };
+		D39AD283221BF2EE00C95FCA /* Data+binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D44220CA51900C40C54 /* Data+binary.swift */; };
+		D39AD284221BF2EE00C95FCA /* (null) in Sources */ = {isa = PBXBuildFile; };
+		D39AD285221BF2EE00C95FCA /* ArrayUInt8+binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D46220CA54600C40C54 /* ArrayUInt8+binary.swift */; };
+		D39AD286221BF2EE00C95FCA /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E15220DBF7E00C0F81D /* ApiFactory.swift */; };
+		D39AD287221BF2EE00C95FCA /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599211F45D60500979BBA /* Date+.swift */; };
+		D39AD288221BF2EE00C95FCA /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365991D1F45D46000979BBA /* String+.swift */; };
+		D39AD28D221BF2EE00C95FCA /* Collection+reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB71F520E8700CCD70E /* Collection+reduce.swift */; };
+		D39AD28E221BF2EE00C95FCA /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365992C1F45DBA100979BBA /* Array+.swift */; };
+		D39AD291221BF2EE00C95FCA /* BinaryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D53220D955800C40C54 /* BinaryCodable.swift */; };
+		D39AD292221BF2EE00C95FCA /* MultipleDelegating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599401F45FFE500979BBA /* MultipleDelegating.swift */; };
+		D39AD294221BF2EE00C95FCA /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0E220DBD0D00C0F81D /* BluetoothService.swift */; };
+		D39AD295221BF2EE00C95FCA /* URLRequest+logDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E19220DBF8A00C0F81D /* URLRequest+logDescription.swift */; };
+		D39AD299221BF2EE00C95FCA /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392953E1F4B020E00F707A5 /* Queue.swift */; };
+		D39AD29A221BF2EE00C95FCA /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D96FC1F544853006A635E /* LoremSwiftum.swift */; };
+		D39AD29B221BF2EE00C95FCA /* UserDefaultsStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D4A220CA8DE00C40C54 /* UserDefaultsStorable.swift */; };
+		D39AD29F221BF2EE00C95FCA /* Notified.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599421F46006300979BBA /* Notified.swift */; };
+		D39AD2A3221BF2EE00C95FCA /* ArraySlice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D40220CA41600C40C54 /* ArraySlice+.swift */; };
+		D39AD2A6221BF2EE00C95FCA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E1B220DBF9100C0F81D /* HTTPMethod.swift */; };
+		D39AD2A9221BF2EE00C95FCA /* (null) in Sources */ = {isa = PBXBuildFile; };
+		D39AD2AC221BF2EE00C95FCA /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E1D220DBF9800C0F81D /* ApiError.swift */; };
+		D39AD2AD221BF2EE00C95FCA /* (null) in Sources */ = {isa = PBXBuildFile; };
+		D39AD2AF221BF2EE00C95FCA /* UInt16+binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D42220CA43900C40C54 /* UInt16+binary.swift */; };
+		D39AD2B0221BF2EE00C95FCA /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E13220DBF7200C0F81D /* BaseApi.swift */; };
+		D39AD2B1221BF2EE00C95FCA /* Observable+filterNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+filterNil.swift */; };
+		D39AD2BC221BF2EE00C95FCA /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 6365993B1F45FA9A00979BBA /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D39AD2BE221BF2EE00C95FCA /* QAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */; };
+		D39AD2D0221C091800C95FCA /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E15220DBF7E00C0F81D /* ApiFactory.swift */; };
 		D3ACC8391F50CBD800CAC22F /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
 		D3ACC8411F50CC5B00CAC22F /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ACC8401F50CC5B00CAC22F /* UIImage+.swift */; };
 /* End PBXBuildFile section */
@@ -129,9 +169,19 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C0E33E0224387100093DC12 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B1A0E23228AE6FD00B649BF /* UserCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
 		5B1C1D26220C595300C40C54 /* AnimationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationFactory.swift; sourceTree = "<group>"; };
 		5B1C1D28220C7B2600C40C54 /* UIBarButtonItem+activityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+activityViewController.swift"; sourceTree = "<group>"; };
 		5B1C1D2C220C7DB700C40C54 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
@@ -205,7 +255,7 @@
 		63C3388A1F474D1500DA8957 /* TableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
 		63C338931F47530800DA8957 /* ParagraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphViewController.swift; sourceTree = "<group>"; };
 		6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedBaseApi.swift; sourceTree = "<group>"; };
-		6C6074BB2236D0D8006C6B14 /* UserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
+		6CD4CBBC223DA00D00A6F42E /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
 		D32D96FC1F544853006A635E /* LoremSwiftum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
 		D32D97021F5449CF006A635E /* QuantiBaseExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuantiBaseExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32D97041F5449CF006A635E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -218,6 +268,14 @@
 		D397CEB31F520A7C00CCD70E /* TimeInterval+stringRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+stringRepresentation.swift"; sourceTree = "<group>"; };
 		D397CEB51F520E5100CCD70E /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		D397CEB71F520E8700CCD70E /* Collection+reduce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+reduce.swift"; sourceTree = "<group>"; };
+		D39AD26F221BF26300C95FCA /* QuantiBase_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuantiBase_macOS.h; sourceTree = "<group>"; };
+		D39AD270221BF26300C95FCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuantiBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39AD2C6221BF56700C95FCA /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
+		D39AD2C7221BF56700C95FCA /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/Mac/Action.framework; sourceTree = "<group>"; };
+		D39AD2C8221BF56700C95FCA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
+		D39AD2C9221BF56700C95FCA /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/Mac/RxAtomic.framework; sourceTree = "<group>"; };
+		D39AD2CA221BF56700C95FCA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
 		D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuantiBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3ACC8381F50CBD800CAC22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3ACC8401F50CC5B00CAC22F /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
@@ -249,6 +307,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39AD2B3221BF2EE00C95FCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C199932223D66FE005511FC /* RxCocoa.framework in Frameworks */,
+				6C199933223D6708005511FC /* RxAtomic.framework in Frameworks */,
+				6C199931223D66F1005511FC /* Action.framework in Frameworks */,
+				6C199930223D66E2005511FC /* RxSwift.framework in Frameworks */,
+				6C19992F223D66CA005511FC /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +375,6 @@
 				5BA79E1D220DBF9800C0F81D /* ApiError.swift */,
 				5BA79E1F220DBFA200C0F81D /* HTTPHeaderFieldKey.swift */,
 				6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */,
-				6C6074BB2236D0D8006C6B14 /* UserCredentials.swift */,
 			);
 			name = HTTPNetworking;
 			sourceTree = "<group>";
@@ -336,6 +405,7 @@
 				D3ACC8351F50CBD800CAC22F /* QuantiBaseTests */,
 				D32D97031F5449CF006A635E /* QuantiBaseExample */,
 				D32D971A1F5449D0006A635E /* QuantiBaseExampleUITests */,
+				D39AD26E221BF26300C95FCA /* QuantiBase macOS */,
 				630AF6591F44791E009CEA24 /* Products */,
 				638A2EE21F458CB100256FC3 /* Frameworks */,
 			);
@@ -348,6 +418,7 @@
 				D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */,
 				D32D97021F5449CF006A635E /* QuantiBaseExample.app */,
 				D32D97171F5449CF006A635E /* QuantiBaseExampleUITests.xctest */,
+				D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -355,6 +426,7 @@
 		630AF65A1F44791E009CEA24 /* QuantiBase */ = {
 			isa = PBXGroup;
 			children = (
+				5B1A0E23228AE6FD00B649BF /* UserCredentials.swift */,
 				6392953E1F4B020E00F707A5 /* Queue.swift */,
 				63C3388A1F474D1500DA8957 /* TableModel.swift */,
 				636599421F46006300979BBA /* Notified.swift */,
@@ -411,8 +483,14 @@
 		638A2EE21F458CB100256FC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CD4CBBC223DA00D00A6F42E /* RxTest.framework */,
 				5B1C1D69220DBAE700C40C54 /* RxCocoa.framework */,
 				5B1C1D67220DBAE200C40C54 /* RxSwift.framework */,
+				D39AD2C7221BF56700C95FCA /* Action.framework */,
+				D39AD2C9221BF56700C95FCA /* RxAtomic.framework */,
+				D39AD2C6221BF56700C95FCA /* RxBlocking.framework */,
+				D39AD2C8221BF56700C95FCA /* RxCocoa.framework */,
+				D39AD2CA221BF56700C95FCA /* RxSwift.framework */,
 				5B1C1D65220DBADF00C40C54 /* RxDataSources.framework */,
 				5B1C1D63220DBAD900C40C54 /* RxAtomic.framework */,
 				5B1C1D61220DBAD500C40C54 /* Differentiator.framework */,
@@ -495,6 +573,15 @@
 			path = QuantiBaseExampleUITests;
 			sourceTree = "<group>";
 		};
+		D39AD26E221BF26300C95FCA /* QuantiBase macOS */ = {
+			isa = PBXGroup;
+			children = (
+				D39AD26F221BF26300C95FCA /* QuantiBase_macOS.h */,
+				D39AD270221BF26300C95FCA /* Info.plist */,
+			);
+			path = "QuantiBase macOS";
+			sourceTree = "<group>";
+		};
 		D3ACC8351F50CBD800CAC22F /* QuantiBaseTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,6 +606,14 @@
 			files = (
 				630AF65D1F44791E009CEA24 /* QuantiBase.h in Headers */,
 				6365993D1F45FA9A00979BBA /* Reachability.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39AD2BA221BF2EE00C95FCA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39AD2BC221BF2EE00C95FCA /* Reachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +677,26 @@
 			productReference = D32D97171F5449CF006A635E /* QuantiBaseExampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D39AD276221BF2EE00C95FCA /* QuantiBase macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D39AD2C0221BF2EE00C95FCA /* Build configuration list for PBXNativeTarget "QuantiBase macOS" */;
+			buildPhases = (
+				D39AD277221BF2EE00C95FCA /* ShellScript */,
+				D39AD278221BF2EE00C95FCA /* Sources */,
+				D39AD2B3221BF2EE00C95FCA /* Frameworks */,
+				D39AD2BA221BF2EE00C95FCA /* Headers */,
+				D39AD2BD221BF2EE00C95FCA /* Resources */,
+				6C0E33E0224387100093DC12 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "QuantiBase macOS";
+			productName = QuantiBase;
+			productReference = D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		D3ACC8331F50CBD800CAC22F /* QuantiBaseTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3ACC83F1F50CBD800CAC22F /* Build configuration list for PBXNativeTarget "QuantiBaseTests" */;
@@ -612,22 +727,23 @@
 				TargetAttributes = {
 					630AF6571F44791E009CEA24 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2PY9RKK8A7;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					D32D97011F5449CF006A635E = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2PY9RKK8A7;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					D32D97161F5449CF006A635E = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2PY9RKK8A7;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D32D97011F5449CF006A635E;
+					};
+					D39AD276221BF2EE00C95FCA = {
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
 					};
 					D3ACC8331F50CBD800CAC22F = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -654,6 +770,7 @@
 				D3ACC8331F50CBD800CAC22F /* QuantiBaseTests */,
 				D32D97011F5449CF006A635E /* QuantiBaseExample */,
 				D32D97161F5449CF006A635E /* QuantiBaseExampleUITests */,
+				D39AD276221BF2EE00C95FCA /* QuantiBase macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -679,6 +796,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39AD2BD221BF2EE00C95FCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39AD2BE221BF2EE00C95FCA /* QAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +864,23 @@
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
 			showEnvVarsInLog = 0;
 		};
+		D39AD277221BF2EE00C95FCA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -759,7 +901,6 @@
 				5B1C1D49220CA57200C40C54 /* UInt8+binary.swift in Sources */,
 				5B1C1D45220CA51900C40C54 /* Data+binary.swift in Sources */,
 				5B1C1D47220CA54600C40C54 /* ArrayUInt8+binary.swift in Sources */,
-				5BA79E16220DBF7E00C0F81D /* ApiFactory.swift in Sources */,
 				636599221F45D60500979BBA /* Date+.swift in Sources */,
 				6365991E1F45D46000979BBA /* String+.swift in Sources */,
 				636599291F45D9D900979BBA /* UIColor+.swift in Sources */,
@@ -776,7 +917,6 @@
 				6365993F1F45FAA000979BBA /* ReachabilityService.swift in Sources */,
 				5BA79E0F220DBD0D00C0F81D /* BluetoothService.swift in Sources */,
 				5BA79E1A220DBF8A00C0F81D /* URLRequest+logDescription.swift in Sources */,
-				6C6074BC2236D0D8006C6B14 /* UserCredentials.swift in Sources */,
 				6392952D1F4ADB8600F707A5 /* BaseButton.swift in Sources */,
 				639295421F4B02D700F707A5 /* ParagraphLabel.swift in Sources */,
 				5B1C1D2D220C7DB700C40C54 /* UITextField+.swift in Sources */,
@@ -796,6 +936,8 @@
 				5B1C1D37220C816D00C40C54 /* UITextFieldWithNoCursor.swift in Sources */,
 				5BC740C52242446A00E8F899 /* AppVersion.swift in Sources */,
 				5BA79E1C220DBF9100C0F81D /* HTTPMethod.swift in Sources */,
+				5B1A0E24228AE6FD00B649BF /* UserCredentials.swift in Sources */,
+				D39AD2D0221C091800C95FCA /* ApiFactory.swift in Sources */,
 				636599351F45DCDF00979BBA /* CGFloat+.swift in Sources */,
 				63C3388B1F474D1500DA8957 /* TableModel.swift in Sources */,
 				5B1C1D29220C7B2600C40C54 /* UIBarButtonItem+activityViewController.swift in Sources */,
@@ -824,6 +966,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				D32D971C1F5449D0006A635E /* QuantiBaseExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39AD278221BF2EE00C95FCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39AD27A221BF2EE00C95FCA /* TimeInterval+stringRepresentation.swift in Sources */,
+				D39AD27C221BF2EE00C95FCA /* HTTPHeaderFieldKey.swift in Sources */,
+				D39AD27E221BF2EE00C95FCA /* HTTPURLResponse+logDescription.swift in Sources */,
+				D39AD27F221BF2EE00C95FCA /* String+binary.swift in Sources */,
+				D39AD281221BF2EE00C95FCA /* URL+content.swift in Sources */,
+				D39AD282221BF2EE00C95FCA /* UInt8+binary.swift in Sources */,
+				D39AD283221BF2EE00C95FCA /* Data+binary.swift in Sources */,
+				D39AD284221BF2EE00C95FCA /* (null) in Sources */,
+				D39AD285221BF2EE00C95FCA /* ArrayUInt8+binary.swift in Sources */,
+				5B1A0E26228AE83100B649BF /* Data+.swift in Sources */,
+				D39AD286221BF2EE00C95FCA /* ApiFactory.swift in Sources */,
+				D39AD287221BF2EE00C95FCA /* Date+.swift in Sources */,
+				D39AD288221BF2EE00C95FCA /* String+.swift in Sources */,
+				D39AD28D221BF2EE00C95FCA /* Collection+reduce.swift in Sources */,
+				D39AD28E221BF2EE00C95FCA /* Array+.swift in Sources */,
+				D39AD291221BF2EE00C95FCA /* BinaryCodable.swift in Sources */,
+				D39AD292221BF2EE00C95FCA /* MultipleDelegating.swift in Sources */,
+				D39AD294221BF2EE00C95FCA /* BluetoothService.swift in Sources */,
+				D39AD295221BF2EE00C95FCA /* URLRequest+logDescription.swift in Sources */,
+				D39AD299221BF2EE00C95FCA /* Queue.swift in Sources */,
+				D39AD29A221BF2EE00C95FCA /* LoremSwiftum.swift in Sources */,
+				D39AD29B221BF2EE00C95FCA /* UserDefaultsStorable.swift in Sources */,
+				D39AD29F221BF2EE00C95FCA /* Notified.swift in Sources */,
+				D39AD2A3221BF2EE00C95FCA /* ArraySlice+.swift in Sources */,
+				D39AD2A6221BF2EE00C95FCA /* HTTPMethod.swift in Sources */,
+				D39AD2A9221BF2EE00C95FCA /* (null) in Sources */,
+				D39AD2AC221BF2EE00C95FCA /* ApiError.swift in Sources */,
+				D39AD2AD221BF2EE00C95FCA /* (null) in Sources */,
+				D39AD2AF221BF2EE00C95FCA /* UInt16+binary.swift in Sources */,
+				D39AD2B0221BF2EE00C95FCA /* BaseApi.swift in Sources */,
+				5B1A0E25228AE6FD00B649BF /* UserCredentials.swift in Sources */,
+				6C19992D223D64EC005511FC /* AuthorizedBaseApi.swift in Sources */,
+				D39AD2B1221BF2EE00C95FCA /* Observable+filterNil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,6 +1096,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -972,6 +1155,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -989,7 +1173,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1017,7 +1201,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1084,6 +1268,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1101,7 +1286,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1127,7 +1312,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuantiBaseExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBaseExample;
@@ -1142,7 +1327,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuantiBaseExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBaseExample;
@@ -1157,7 +1342,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuantiBaseExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBaseExample;
@@ -1171,7 +1356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuantiBaseExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExampleUITests;
@@ -1186,7 +1371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuantiBaseExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExampleUITests;
@@ -1201,7 +1386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 2PY9RKK8A7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuantiBaseExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExampleUITests;
@@ -1212,10 +1397,101 @@
 			};
 			name = "Release-Adhoc";
 		};
+		D39AD2C1221BF2EE00C95FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = "QuantiBase copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBase;
+				PRODUCT_NAME = QuantiBase;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D39AD2C2221BF2EE00C95FCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = "QuantiBase copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBase;
+				PRODUCT_NAME = QuantiBase;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D39AD2C3221BF2EE00C95FCA /* Release-Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = "QuantiBase copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBase;
+				PRODUCT_NAME = QuantiBase;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = "Release-Adhoc";
+		};
 		D3ACC83C1F50CBD800CAC22F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = X9BLYWRC6A;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuantiBaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseTests;
@@ -1227,7 +1503,7 @@
 		D3ACC83D1F50CBD800CAC22F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = X9BLYWRC6A;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuantiBaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseTests;
@@ -1239,7 +1515,7 @@
 		D3ACC83E1F50CBD800CAC22F /* Release-Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = X9BLYWRC6A;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuantiBaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseTests;
@@ -1287,6 +1563,16 @@
 				D32D97231F5449D0006A635E /* Debug */,
 				D32D97241F5449D0006A635E /* Release */,
 				D32D97251F5449D0006A635E /* Release-Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D39AD2C0221BF2EE00C95FCA /* Build configuration list for PBXNativeTarget "QuantiBase macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D39AD2C1221BF2EE00C95FCA /* Debug */,
+				D39AD2C2221BF2EE00C95FCA /* Release */,
+				D39AD2C3221BF2EE00C95FCA /* Release-Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

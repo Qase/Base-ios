@@ -1,5 +1,5 @@
-![Platform](https://img.shields.io/cocoapods/p/PagingKit.svg?style=flat)
-![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)
+![Platform](https://img.shields.io/cocoapods/p/QuantiBase.svg)
+![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)
 [![travis badge](https://travis-ci.org/Qase/base-ios.svg?branch=master)](https://travis-ci.org/Qase/base-ios)
 [![codebeat badge](https://codebeat.co/badges/14d7c0b8-7dce-4d5a-a0fa-37a3fb047351)](https://codebeat.co/projects/github-com-qase-base-ios-master)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
