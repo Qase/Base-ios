@@ -6,8 +6,6 @@
 //  Copyright © 2019 Quanti. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 import RxSwift
 
