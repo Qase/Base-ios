@@ -104,6 +104,8 @@ Pod::Spec.new do |s|
   s.dependency "RxCocoa", "~> 4.0"
   s.dependency "Action"
 
+  s.ios.dependency "RxDataSources"
+
   # s.public_header_files = "Classes/**/*.h"
 
 
