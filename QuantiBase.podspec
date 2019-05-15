@@ -70,11 +70,12 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios, "11.0"
+  # s.platform     = :ios, "11.0"
+  # s.platform     = :osx, "10.13"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
+  s.ios.deployment_target = "11.0"
+  s.osx.deployment_target = "10.13"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
 
@@ -96,8 +97,9 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
-  s.source_files  = "QuantiBase", "QuantiBase/**/*.{h,m,swift}"
+  s.source_files  = "QuantiBase/common/*.{h,m,swift}"
+  s.ios.source_files = "QuantiBase/ios/*.{h,m,swift}"
+  s.osx.source_files = "QuantiBase/macos/*.{h,m,swift}"
   s.dependency "RxSwift", "~> 4.0"
   s.dependency "RxCocoa", "~> 4.0"
   s.dependency "Action"
