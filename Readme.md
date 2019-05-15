@@ -68,6 +68,33 @@ Then, run the following command:
 $ pod install
 ```
 
+### Swift Package Manager
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. The Package Manager is included in Swift 3.0 and above.
+
+It doesn't support iOS, macOS, tvOS or watchOS projects. It only compiles for host platforms (macOS/linux). It is usefull for commanline apps. To create a commandline app using SPM please read [this great RayWenderlich article](https://www.raywenderlich.com/750-an-introduction-to-the-swift-package-manager).
+In file `Package.swift` in the dependencies parameter add the following: 
+
+`.package(url: "https://github.com/Qase/Base-ios", from: "0.0.1)`
+
+so it should look something like this: 
+```
+let package = Package(
+    name: "YOUR_APP_NAME",
+    dependencies: [
+        .package(url: "https://github.com/Qase/Base-ios", from: "0.0.1"),
+    ]
+)
+```
+then run 
+`$ swift build`
+and 
+`$ 
+swift package generate-xcodeproj`
+
+For updating use
+`$ swift pacckage update`
+
+
 ## Future development
 
 Code base is still under active development and it is going to grow steadily. You can send requests for other usefull snippets, that can be integrated into library.
