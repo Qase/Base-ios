@@ -43,7 +43,7 @@ $ brew install carthage
 ```
 To integrate QuantiLogger into your Xcode project using Carthage, specify it in your `Cartfile`:
 ```
-github "Qase/base-ios" ~> 0.0.1
+github "Qase/base-ios" ~> 0.0.2
 ``` 
 Run `carthage update` to build the framework and drag the built `QuantiBase.framework` and its dependencies into your Xcode project.
 
@@ -60,7 +60,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-  pod 'QuantiBase', '~> 0.0.1'
+  pod 'QuantiBase', '~> 0.0.2'
 end
 ```
 Then, run the following command:
@@ -74,14 +74,14 @@ The [Swift Package Manager](https://swift.org/package-manager/) is a tool for ma
 It doesn't support iOS, macOS, tvOS or watchOS projects. It only compiles for host platforms (macOS/linux). It is usefull for commanline apps. To create a commandline app using SPM please read [this great RayWenderlich article](https://www.raywenderlich.com/750-an-introduction-to-the-swift-package-manager).
 In file `Package.swift` in the dependencies parameter add the following: 
 
-`.package(url: "https://github.com/Qase/Base-ios", from: "0.0.1)`
+`.package(url: "https://github.com/Qase/Base-ios", from: "0.0.2)`
 
 so it should look something like this: 
 ```
 let package = Package(
     name: "YOUR_APP_NAME",
     dependencies: [
-        .package(url: "https://github.com/Qase/Base-ios", from: "0.0.1"),
+        .package(url: "https://github.com/Qase/Base-ios", from: "0.0.2"),
     ]
 )
 ```
