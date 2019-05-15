@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "QuantiBase"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Base-ios repository consists of useful extensions, general classes 
   and protocols that we gather and use while working on our projects."
 
