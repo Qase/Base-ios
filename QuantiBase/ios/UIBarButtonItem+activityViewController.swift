@@ -6,7 +6,7 @@
 //  Copyright © 2019 David Nemec. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIBarButtonItem {
 	/// Binds given activityViewController to the bar button item.

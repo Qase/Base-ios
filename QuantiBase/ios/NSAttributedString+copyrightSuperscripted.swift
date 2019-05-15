@@ -6,7 +6,7 @@
 //  Copyright © 2019 David Nemec. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UILabel {
 	/// Method that goes through attributedText of a label (if available) and makes all occurences of Ⓡ superscripted.

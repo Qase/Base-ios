@@ -6,7 +6,7 @@
 //  Copyright © 2017 quanti. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public enum DeviceType {
     case iPodTouch5, iPodTouch6, iPhone4, iPhone4S, iPhone5, iPhone5C, iPhone5S,

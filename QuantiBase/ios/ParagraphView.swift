@@ -6,7 +6,7 @@
 //  Copyright © 2017 quanti. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public struct ParagraphContent {
     public let header: String

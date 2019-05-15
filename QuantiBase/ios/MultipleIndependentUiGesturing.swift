@@ -6,7 +6,7 @@
 //  Copyright © 2017 quanti. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // Hidden tap and press gestures may be used to evoke states of application that are not possible to induce during UI tests (i.e. no internet connection).
 // Such gestures can be hidden away from regular users by assigning them to hidden views or making them almost imposible for users to induce (i.e. 7x tap or press for 10s).
