@@ -26,7 +26,7 @@ public final class Lorem {
                        count: numberOfWords,
                        joinBy: .space,
                        endWith: .dot,
-                       decorate: { $0.firstLetterCapitalized() })
+                       decorate: { $0.firstLetterCapitalized })
     }
 
     /// Generates multiple sentences whose count is defined by the given value.
@@ -193,15 +193,6 @@ fileprivate extension Int {
     static func random(min: Int = 0, max: Int) -> Int {
         precondition(min >= 0 && min < max)
         return Int(arc4random_uniform(UInt32((max - min) + 1))) + min
-    }
-
-}
-
-fileprivate extension String {
-
-    func firstLetterCapitalized() -> String {
-        guard !isEmpty else { return self }
-        return self[startIndex...startIndex].uppercased() + self[index(after: startIndex)..<endIndex]
     }
 
 }
