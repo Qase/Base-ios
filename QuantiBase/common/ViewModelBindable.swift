@@ -6,7 +6,7 @@
 //  Copyright © 2018 ciggytime.com. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 /// Protocol that should be implemented by a class or struct that is in charge of binding a viewModel.
 public protocol ViewModelBindable {
@@ -15,10 +15,4 @@ public protocol ViewModelBindable {
 	var viewModel: ViewModelType { get set }
 }
 
-extension ViewModelBindable where Self: UIViewController {
-	public static func instantiate<ViewModelType> (withViewModel viewModel: ViewModelType) -> Self where ViewModelType == Self.ViewModelType {
-		var viewController = Self()
-		viewController.viewModel = viewModel
-		return viewController
-	}
-}
+
