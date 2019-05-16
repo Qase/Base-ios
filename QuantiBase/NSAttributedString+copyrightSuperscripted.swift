@@ -1,5 +1,5 @@
 //
-//  UILabel+copyrightSuperscripted.swift
+//  NSAttributedString+copyrightSuperscripted.swift
 //  QuantiBase
 //
 //  Created by Martin Troup on 07/02/2019.

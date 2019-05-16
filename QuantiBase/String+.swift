@@ -121,17 +121,4 @@ extension String {
 
 		return false
 	}
-
-    /// First letter of the string gets Capitalized.
-    /// Note:
-    ///     - "hello world".capitalized = "Hello World"
-    ///     - "hello world".firstLetterCapitalized = "Hello world"
-    var firstLetterCapitalized: String {
-        return prefix(1).uppercased() + self.dropFirst()
-    }
-
-    /// Wrapper around NSLocalizedString(_:comment)
-    var localized: String {
-        return NSLocalizedString(self, comment: self)
-    }
 }
