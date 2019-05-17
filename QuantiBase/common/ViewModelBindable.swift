@@ -14,5 +14,3 @@ public protocol ViewModelBindable {
 
 	var viewModel: ViewModelType { get set }
 }
-
-
