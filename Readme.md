@@ -64,12 +64,13 @@ target '<Your Target Name>' do
 end
 ```
 
-or 
+or for macOS
 
 ```
+source 'https://github.com/CocoaPods/Specs.git'
+platform :osx, '10.13'
 use_frameworks!
 
-platform :osx, '10.13'
 target '<Your Target Name>' do
   pod 'QuantiBase', '~> 0.0.2'
 end
