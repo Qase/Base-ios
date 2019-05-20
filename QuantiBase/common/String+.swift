@@ -126,12 +126,12 @@ extension String {
     /// Note:
     ///     - "hello world".capitalized = "Hello World"
     ///     - "hello world".firstLetterCapitalized = "Hello world"
-    var firstLetterCapitalized: String {
+    public var firstLetterCapitalized: String {
         return prefix(1).uppercased() + self.dropFirst()
     }
 
     /// Wrapper around NSLocalizedString(_:comment)
-    var localized: String {
+    public var localized: String {
         return NSLocalizedString(self, comment: self)
     }
 }
