@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct UserCredentials {
+public struct UserCredentials: Codable {
     public let username: String
     public let password: String
 
@@ -16,3 +16,5 @@ public struct UserCredentials {
         self.password = password
     }
 }
+
+extension UserCredentials: Equatable {}
