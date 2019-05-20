@@ -63,6 +63,16 @@ target '<Your Target Name>' do
   pod 'QuantiBase', '~> 0.0.2'
 end
 ```
+
+or 
+
+```
+use_frameworks!
+platform :osx, '10.13'
+target '<Your Target Name>' do
+  pod 'QuantiBase', '~> 0.0.2'
+end
+```
 Then, run the following command:
 ```
 $ pod install
@@ -71,7 +81,7 @@ $ pod install
 ### Swift Package Manager
 The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. The Package Manager is included in Swift 3.0 and above.
 
-It doesn't support iOS, macOS, tvOS or watchOS projects. It only compiles for host platforms (macOS/linux). It is usefull for commanline apps. To create a commandline app using SPM please read [this great RayWenderlich article](https://www.raywenderlich.com/750-an-introduction-to-the-swift-package-manager).
+It doesn't support iOS, macOS, tvOS or watchOS projects. It only compiles for host platforms (macOS/linux). It is useful for commanline apps. To create a commandline app using SPM please read [this great RayWenderlich article](https://www.raywenderlich.com/750-an-introduction-to-the-swift-package-manager).
 In file `Package.swift` in the dependencies parameter add the following: 
 
 `.package(url: "https://github.com/Qase/Base-ios", from: "0.0.2)`
@@ -92,7 +102,7 @@ and
 swift package generate-xcodeproj`
 
 For updating use
-`$ swift pacckage update`
+`$ swift package update`
 
 
 ## Future development
