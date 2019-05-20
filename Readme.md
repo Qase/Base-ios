@@ -68,6 +68,7 @@ or
 
 ```
 use_frameworks!
+
 platform :osx, '10.13'
 target '<Your Target Name>' do
   pod 'QuantiBase', '~> 0.0.2'
