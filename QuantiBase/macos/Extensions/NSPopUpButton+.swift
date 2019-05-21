@@ -9,7 +9,7 @@
 import Cocoa
 
 extension NSPopUpButton {
-    func itemTitle(withTag: Int) -> String {
+    public func itemTitle(withTag: Int) -> String {
         return itemTitles[indexOfItem(withTag: withTag)]
     }
 }

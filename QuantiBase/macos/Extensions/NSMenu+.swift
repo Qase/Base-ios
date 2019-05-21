@@ -9,7 +9,7 @@
 import Cocoa
 
 extension NSMenu {
-    func performActionForItem(withTag: Int) {
+    public func performActionForItem(withTag: Int) {
         performActionForItem(at: indexOfItem(withTag: withTag))
     }
 }

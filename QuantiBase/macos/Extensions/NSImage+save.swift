@@ -9,7 +9,7 @@
 import Cocoa
 
 extension NSImage {
-    func save(to path: URL) {
+    public func save(to path: URL) {
         guard let cgImage = cgImage(forProposedRect: nil, context: nil, hints: nil) else { return }
         let bitmap = NSBitmapImageRep(cgImage: cgImage)
         bitmap.size = size

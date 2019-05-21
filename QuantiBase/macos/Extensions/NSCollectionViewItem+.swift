@@ -9,7 +9,7 @@
 import Cocoa
 
 extension NSCollectionViewItem {
-    static var userInterfaceItemIdentifier: NSUserInterfaceItemIdentifier {
+    public static var userInterfaceItemIdentifier: NSUserInterfaceItemIdentifier {
         return NSUserInterfaceItemIdentifier(String(describing: self))
     }
 }

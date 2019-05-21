@@ -9,7 +9,7 @@
 import Cocoa
 
 extension ViewModelBindable where Self: NSWindowController {
-    static func instantiate<ViewModelType> (with viewModel: ViewModelType) -> Self where ViewModelType == Self.ViewModelType {
+    public static func instantiate<ViewModelType> (with viewModel: ViewModelType) -> Self where ViewModelType == Self.ViewModelType {
         var viewController = Self()
         viewController.viewModel = viewModel
         return viewController
