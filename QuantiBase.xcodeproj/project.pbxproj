@@ -75,10 +75,7 @@
 		63C3388B1F474D1500DA8957 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3388A1F474D1500DA8957 /* TableModel.swift */; };
 		6C19992D223D64EC005511FC /* AuthorizedBaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */; };
 		6C19992F223D66CA005511FC /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C6221BF56700C95FCA /* RxBlocking.framework */; };
-		6C199930223D66E2005511FC /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2CA221BF56700C95FCA /* RxSwift.framework */; };
 		6C199931223D66F1005511FC /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C7221BF56700C95FCA /* Action.framework */; };
-		6C199932223D66FE005511FC /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C8221BF56700C95FCA /* RxCocoa.framework */; };
-		6C199933223D6708005511FC /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C9221BF56700C95FCA /* RxAtomic.framework */; };
 		6C1F816D228C008100362D3F /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC740C42242446A00E8F899 /* AppVersion.swift */; };
 		6C1F816E228C00B300362D3F /* UserDefaultsStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D4A220CA8DE00C40C54 /* UserDefaultsStorable.swift */; };
 		6C1F817D228C06AD00362D3F /* Data+binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F817C228C06AD00362D3F /* Data+binary.swift */; };
@@ -211,9 +208,7 @@
 		5B1C1D4E220CA99D00C40C54 /* ViewModelBindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
 		5B1C1D53220D955800C40C54 /* BinaryCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryCodable.swift; sourceTree = "<group>"; };
 		5B1C1D5F220DBAD300C40C54 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
-		5B1C1D61220DBAD500C40C54 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
 		5B1C1D63220DBAD900C40C54 /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
-		5B1C1D65220DBADF00C40C54 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		5B1C1D67220DBAE200C40C54 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		5B1C1D69220DBAE700C40C54 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		5B7BC4E71F72C5EE00C5046A /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
@@ -285,9 +280,6 @@
 		D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuantiBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39AD2C6221BF56700C95FCA /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
 		D39AD2C7221BF56700C95FCA /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/Mac/Action.framework; sourceTree = "<group>"; };
-		D39AD2C8221BF56700C95FCA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
-		D39AD2C9221BF56700C95FCA /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/Mac/RxAtomic.framework; sourceTree = "<group>"; };
-		D39AD2CA221BF56700C95FCA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
 		D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuantiBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3ACC8381F50CBD800CAC22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3ACC8401F50CC5B00CAC22F /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
@@ -324,10 +316,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C199932223D66FE005511FC /* RxCocoa.framework in Frameworks */,
-				6C199933223D6708005511FC /* RxAtomic.framework in Frameworks */,
 				6C199931223D66F1005511FC /* Action.framework in Frameworks */,
-				6C199930223D66E2005511FC /* RxSwift.framework in Frameworks */,
 				6C19992F223D66CA005511FC /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,13 +419,8 @@
 				5B1C1D69220DBAE700C40C54 /* RxCocoa.framework */,
 				5B1C1D67220DBAE200C40C54 /* RxSwift.framework */,
 				D39AD2C7221BF56700C95FCA /* Action.framework */,
-				D39AD2C9221BF56700C95FCA /* RxAtomic.framework */,
 				D39AD2C6221BF56700C95FCA /* RxBlocking.framework */,
-				D39AD2C8221BF56700C95FCA /* RxCocoa.framework */,
-				D39AD2CA221BF56700C95FCA /* RxSwift.framework */,
-				5B1C1D65220DBADF00C40C54 /* RxDataSources.framework */,
 				5B1C1D63220DBAD900C40C54 /* RxAtomic.framework */,
-				5B1C1D61220DBAD500C40C54 /* Differentiator.framework */,
 				5B1C1D5F220DBAD300C40C54 /* Action.framework */,
 			);
 			name = Frameworks;
@@ -901,8 +885,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Action.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -911,8 +893,6 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Action.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAtomic.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
