@@ -1,5 +1,5 @@
 //
-//  RemoveOptionals.swift
+//  Observable+.swift
 //  2N-mobile-communicator
 //
 //  Created by David Nemec on 01/02/2018.
@@ -23,5 +23,11 @@ extension Observable where Element: OptionalType {
         return flatMap { value in
             value.optional.map { Observable<Element.Wrapped>.just($0) } ?? Observable<Element.Wrapped>.empty()
         }
+    }
+}
+
+extension Observable where Element == Bool {
+    public func not() -> Observable<Bool> {
+        return self.map { !$0 }
     }
 }

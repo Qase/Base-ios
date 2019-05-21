@@ -40,7 +40,7 @@
 		5B7BC4E81F72C5EE00C5046A /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC4E71F72C5EE00C5046A /* String+.swift */; };
 		5B7BC4EA1F72CCB200C5046A /* Collection+reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC4E91F72CCB200C5046A /* Collection+reduce.swift */; };
 		5BA6AAC4226F191700FBB047 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6AAC3226F191700FBB047 /* Data+.swift */; };
-		5BA79E0B220DBCBF00C0F81D /* Observable+filterNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+filterNil.swift */; };
+		5BA79E0B220DBCBF00C0F81D /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+.swift */; };
 		5BA79E0F220DBD0D00C0F81D /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0E220DBD0D00C0F81D /* BluetoothService.swift */; };
 		5BA79E11220DBD1200C0F81D /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E10220DBD1100C0F81D /* KeyboardService.swift */; };
 		5BA79E14220DBF7200C0F81D /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E13220DBF7200C0F81D /* BaseApi.swift */; };
@@ -131,7 +131,7 @@
 		D39AD2AC221BF2EE00C95FCA /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E1D220DBF9800C0F81D /* ApiError.swift */; };
 		D39AD2AD221BF2EE00C95FCA /* (null) in Sources */ = {isa = PBXBuildFile; };
 		D39AD2B0221BF2EE00C95FCA /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E13220DBF7200C0F81D /* BaseApi.swift */; };
-		D39AD2B1221BF2EE00C95FCA /* Observable+filterNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+filterNil.swift */; };
+		D39AD2B1221BF2EE00C95FCA /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+.swift */; };
 		D39AD2BE221BF2EE00C95FCA /* QAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */; };
 		D39AD2D0221C091800C95FCA /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E15220DBF7E00C0F81D /* ApiFactory.swift */; };
 		D3ACC8391F50CBD800CAC22F /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
@@ -216,7 +216,7 @@
 		5B7BC4E71F72C5EE00C5046A /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		5B7BC4E91F72CCB200C5046A /* Collection+reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+reduce.swift"; sourceTree = "<group>"; };
 		5BA6AAC3226F191700FBB047 /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
-		5BA79E0A220DBCBF00C0F81D /* Observable+filterNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+filterNil.swift"; sourceTree = "<group>"; };
+		5BA79E0A220DBCBF00C0F81D /* Observable+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+.swift"; sourceTree = "<group>"; };
 		5BA79E0E220DBD0D00C0F81D /* BluetoothService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
 		5BA79E10220DBD1100C0F81D /* KeyboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardService.swift; sourceTree = "<group>"; };
 		5BA79E13220DBF7200C0F81D /* BaseApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApi.swift; sourceTree = "<group>"; };
@@ -435,7 +435,7 @@
 			children = (
 				5B1C1D50220D865D00C40C54 /* Binary */,
 				6365992C1F45DBA100979BBA /* Array+.swift */,
-				5BA79E0A220DBCBF00C0F81D /* Observable+filterNil.swift */,
+				5BA79E0A220DBCBF00C0F81D /* Observable+.swift */,
 				636599211F45D60500979BBA /* Date+.swift */,
 				6365991F1F45D5D300979BBA /* TimeInterval+stringRepresentation.swift */,
 				6365991D1F45D46000979BBA /* String+.swift */,
@@ -981,7 +981,7 @@
 				5BA79E1E220DBF9800C0F81D /* ApiError.swift in Sources */,
 				6365991C1F45D2A300979BBA /* UIViewController+.swift in Sources */,
 				5BA79E14220DBF7200C0F81D /* BaseApi.swift in Sources */,
-				5BA79E0B220DBCBF00C0F81D /* Observable+filterNil.swift in Sources */,
+				5BA79E0B220DBCBF00C0F81D /* Observable+.swift in Sources */,
 				636599311F45DC9200979BBA /* UIImage+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1049,7 +1049,7 @@
 				5B1A0E54228DB32D00B649BF /* NSPopUpButton+rx.swift in Sources */,
 				5B1A0E57228DB32D00B649BF /* NSImage+save.swift in Sources */,
 				6C19992D223D64EC005511FC /* AuthorizedBaseApi.swift in Sources */,
-				D39AD2B1221BF2EE00C95FCA /* Observable+filterNil.swift in Sources */,
+				D39AD2B1221BF2EE00C95FCA /* Observable+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
