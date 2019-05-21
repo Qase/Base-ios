@@ -100,8 +100,6 @@
 		6C1F819F228C089900362D3F /* ParagraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F819D228C089900362D3F /* ParagraphView.swift */; };
 		6C1F81A1228C08A800362D3F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F81A0228C08A800362D3F /* WebViewController.swift */; };
 		6C1F81A5228C1E9A00362D3F /* AppLifecycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F81A4228C1E9A00362D3F /* AppLifecycleService.swift */; };
-		6C1F81A8228C2A6900362D3F /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1C1D61220DBAD500C40C54 /* Differentiator.framework */; };
-		6C1F81A9228C2A6900362D3F /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1C1D65220DBADF00C40C54 /* RxDataSources.framework */; };
 		6C6074BA2236CFA5006C6B14 /* AuthorizedBaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */; };
 		D32D96FD1F544853006A635E /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D96FC1F544853006A635E /* LoremSwiftum.swift */; };
 		D32D97051F5449CF006A635E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D97041F5449CF006A635E /* AppDelegate.swift */; };
@@ -303,8 +301,6 @@
 				5B1C1D60220DBAD300C40C54 /* Action.framework in Frameworks */,
 				5B1C1D64220DBAD900C40C54 /* RxAtomic.framework in Frameworks */,
 				5B1C1D68220DBAE200C40C54 /* RxSwift.framework in Frameworks */,
-				6C1F81A8228C2A6900362D3F /* Differentiator.framework in Frameworks */,
-				6C1F81A9228C2A6900362D3F /* RxDataSources.framework in Frameworks */,
 				5B1C1D6A220DBAE700C40C54 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
