@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B04BDD022955C0B001BC7C8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04BDCF22955C0B001BC7C8 /* Double+.swift */; };
+		5B04BDD122955C0B001BC7C8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04BDCF22955C0B001BC7C8 /* Double+.swift */; };
+		5B04BDD322955C3E001BC7C8 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04BDD222955C3E001BC7C8 /* Dictionary+.swift */; };
+		5B04BDD422955C3E001BC7C8 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04BDD222955C3E001BC7C8 /* Dictionary+.swift */; };
 		5B1A0E24228AE6FD00B649BF /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A0E23228AE6FD00B649BF /* UserCredentials.swift */; };
 		5B1A0E25228AE6FD00B649BF /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A0E23228AE6FD00B649BF /* UserCredentials.swift */; };
 		5B1A0E26228AE83100B649BF /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6AAC3226F191700FBB047 /* Data+.swift */; };
@@ -186,6 +190,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B04BDCF22955C0B001BC7C8 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
+		5B04BDD222955C3E001BC7C8 /* Dictionary+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 		5B1A0E23228AE6FD00B649BF /* UserCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
 		5B1A0E47228DB25A00B649BF /* ViewModelBindable+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModelBindable+UIKit.swift"; sourceTree = "<group>"; };
 		5B1A0E4B228DB31200B649BF /* NSCollectionViewItem+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCollectionViewItem+.swift"; sourceTree = "<group>"; };
@@ -443,6 +449,8 @@
 				5B1C1D2E220C7E3300C40C54 /* URL+content.swift */,
 				5B1C1D40220CA41600C40C54 /* ArraySlice+.swift */,
 				5BA6AAC3226F191700FBB047 /* Data+.swift */,
+				5B04BDCF22955C0B001BC7C8 /* Double+.swift */,
+				5B04BDD222955C3E001BC7C8 /* Dictionary+.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -922,6 +930,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C1F81A1228C08A800362D3F /* WebViewController.swift in Sources */,
+				5B04BDD022955C0B001BC7C8 /* Double+.swift in Sources */,
 				6C1F819B228C089000362D3F /* ParagraphViewController.swift in Sources */,
 				636599201F45D5D300979BBA /* TimeInterval+stringRepresentation.swift in Sources */,
 				5BA79E20220DBFA200C0F81D /* HTTPHeaderFieldKey.swift in Sources */,
@@ -965,6 +974,7 @@
 				636599431F46006300979BBA /* Notified.swift in Sources */,
 				6365992B1F45DA1A00979BBA /* UIView+.swift in Sources */,
 				5B1C1D4D220CA91000C40C54 /* UIScreen+.swift in Sources */,
+				5B04BDD322955C3E001BC7C8 /* Dictionary+.swift in Sources */,
 				6365993C1F45FA9A00979BBA /* Reachability.m in Sources */,
 				5B1C1D41220CA41600C40C54 /* ArraySlice+.swift in Sources */,
 				6C6074BA2236CFA5006C6B14 /* AuthorizedBaseApi.swift in Sources */,
@@ -1018,6 +1028,7 @@
 				D39AD284221BF2EE00C95FCA /* (null) in Sources */,
 				6C1F8184228C06D700362D3F /* UInt16+binary.swift in Sources */,
 				5B1A0E26228AE83100B649BF /* Data+.swift in Sources */,
+				5B04BDD422955C3E001BC7C8 /* Dictionary+.swift in Sources */,
 				D39AD286221BF2EE00C95FCA /* ApiFactory.swift in Sources */,
 				D39AD287221BF2EE00C95FCA /* Date+.swift in Sources */,
 				D39AD288221BF2EE00C95FCA /* String+.swift in Sources */,
@@ -1033,6 +1044,7 @@
 				6C1F816D228C008100362D3F /* AppVersion.swift in Sources */,
 				6C1F816E228C00B300362D3F /* UserDefaultsStorable.swift in Sources */,
 				D39AD29F221BF2EE00C95FCA /* Notified.swift in Sources */,
+				5B04BDD122955C0B001BC7C8 /* Double+.swift in Sources */,
 				6C1F8187228C06E800362D3F /* String+binary.swift in Sources */,
 				5B1A0E56228DB32D00B649BF /* NSWindow+rx.swift in Sources */,
 				5B1A0E49228DB26E00B649BF /* ViewModelBindable.swift in Sources */,
