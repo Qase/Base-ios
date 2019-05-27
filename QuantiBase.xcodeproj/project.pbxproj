@@ -78,7 +78,6 @@
 		63B0A8AD1F50785C00F94CDF /* QAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */; };
 		63C3388B1F474D1500DA8957 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3388A1F474D1500DA8957 /* TableModel.swift */; };
 		6C19992D223D64EC005511FC /* AuthorizedBaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */; };
-		6C19992F223D66CA005511FC /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C6221BF56700C95FCA /* RxBlocking.framework */; };
 		6C1F816D228C008100362D3F /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC740C42242446A00E8F899 /* AppVersion.swift */; };
 		6C1F816E228C00B300362D3F /* UserDefaultsStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D4A220CA8DE00C40C54 /* UserDefaultsStorable.swift */; };
 		6C1F817D228C06AD00362D3F /* Data+binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F817C228C06AD00362D3F /* Data+binary.swift */; };
@@ -324,7 +323,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C19992F223D66CA005511FC /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,10 +806,10 @@
 			projectRoot = "";
 			targets = (
 				630AF6571F44791E009CEA24 /* QuantiBase */,
+				D39AD276221BF2EE00C95FCA /* QuantiBase macOS */,
 				D3ACC8331F50CBD800CAC22F /* QuantiBaseTests */,
 				D32D97011F5449CF006A635E /* QuantiBaseExample */,
 				D32D97161F5449CF006A635E /* QuantiBaseExampleUITests */,
-				D39AD276221BF2EE00C95FCA /* QuantiBase macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -891,10 +889,6 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Action.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAtomic.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
