@@ -79,7 +79,6 @@
 		63C3388B1F474D1500DA8957 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3388A1F474D1500DA8957 /* TableModel.swift */; };
 		6C19992D223D64EC005511FC /* AuthorizedBaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6074B92236CFA5006C6B14 /* AuthorizedBaseApi.swift */; };
 		6C19992F223D66CA005511FC /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C6221BF56700C95FCA /* RxBlocking.framework */; };
-		6C199931223D66F1005511FC /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AD2C7221BF56700C95FCA /* Action.framework */; };
 		6C1F816D228C008100362D3F /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC740C42242446A00E8F899 /* AppVersion.swift */; };
 		6C1F816E228C00B300362D3F /* UserDefaultsStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D4A220CA8DE00C40C54 /* UserDefaultsStorable.swift */; };
 		6C1F817D228C06AD00362D3F /* Data+binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F817C228C06AD00362D3F /* Data+binary.swift */; };
@@ -289,7 +288,6 @@
 		D397CEB71F520E8700CCD70E /* Collection+reduce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+reduce.swift"; sourceTree = "<group>"; };
 		D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuantiBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39AD2C6221BF56700C95FCA /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
-		D39AD2C7221BF56700C95FCA /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/Mac/Action.framework; sourceTree = "<group>"; };
 		D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuantiBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3ACC8381F50CBD800CAC22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3ACC8401F50CC5B00CAC22F /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
@@ -326,7 +324,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C199931223D66F1005511FC /* Action.framework in Frameworks */,
 				6C19992F223D66CA005511FC /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,7 +425,6 @@
 				6CD4CBBC223DA00D00A6F42E /* RxTest.framework */,
 				5B1C1D69220DBAE700C40C54 /* RxCocoa.framework */,
 				5B1C1D67220DBAE200C40C54 /* RxSwift.framework */,
-				D39AD2C7221BF56700C95FCA /* Action.framework */,
 				D39AD2C6221BF56700C95FCA /* RxBlocking.framework */,
 				5B1C1D63220DBAD900C40C54 /* RxAtomic.framework */,
 				5B1C1D5F220DBAD300C40C54 /* Action.framework */,
