@@ -41,6 +41,8 @@
 		5B1C1D64220DBAD900C40C54 /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1C1D63220DBAD900C40C54 /* RxAtomic.framework */; };
 		5B1C1D68220DBAE200C40C54 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1C1D67220DBAE200C40C54 /* RxSwift.framework */; };
 		5B1C1D6A220DBAE700C40C54 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1C1D69220DBAE700C40C54 /* RxCocoa.framework */; };
+		5B43EB7E22AA6B6200DE3038 /* NSStatusItem+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B43EB7D22AA6B6200DE3038 /* NSStatusItem+rx.swift */; };
+		5B43EB8022AA6B9300DE3038 /* NSView+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B43EB7F22AA6B9300DE3038 /* NSView+rx.swift */; };
 		5B7BC4E81F72C5EE00C5046A /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC4E71F72C5EE00C5046A /* String+.swift */; };
 		5B7BC4EA1F72CCB200C5046A /* Collection+reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC4E91F72CCB200C5046A /* Collection+reduce.swift */; };
 		5BA6AAC4226F191700FBB047 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6AAC3226F191700FBB047 /* Data+.swift */; };
@@ -217,6 +219,8 @@
 		5B1C1D63220DBAD900C40C54 /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
 		5B1C1D67220DBAE200C40C54 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		5B1C1D69220DBAE700C40C54 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		5B43EB7D22AA6B6200DE3038 /* NSStatusItem+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSStatusItem+rx.swift"; sourceTree = "<group>"; };
+		5B43EB7F22AA6B9300DE3038 /* NSView+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+rx.swift"; sourceTree = "<group>"; };
 		5B7BC4E71F72C5EE00C5046A /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		5B7BC4E91F72CCB200C5046A /* Collection+reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+reduce.swift"; sourceTree = "<group>"; };
 		5BA6AAC3226F191700FBB047 /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
@@ -348,6 +352,8 @@
 				5B1A0E4E228DB32C00B649BF /* NSPopUpButton+rx.swift */,
 				5B1A0E4F228DB32C00B649BF /* NSTextField+rx.swift */,
 				5B1A0E50228DB32C00B649BF /* NSWindow+rx.swift */,
+				5B43EB7D22AA6B6200DE3038 /* NSStatusItem+rx.swift */,
+				5B43EB7F22AA6B9300DE3038 /* NSView+rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1016,6 +1022,7 @@
 				D39AD27E221BF2EE00C95FCA /* HTTPURLResponse+logDescription.swift in Sources */,
 				D39AD281221BF2EE00C95FCA /* URL+content.swift in Sources */,
 				D39AD284221BF2EE00C95FCA /* (null) in Sources */,
+				5B43EB7E22AA6B6200DE3038 /* NSStatusItem+rx.swift in Sources */,
 				6C1F8184228C06D700362D3F /* UInt16+binary.swift in Sources */,
 				5B1A0E26228AE83100B649BF /* Data+.swift in Sources */,
 				5B04BDD422955C3E001BC7C8 /* Dictionary+.swift in Sources */,
@@ -1031,6 +1038,7 @@
 				D39AD295221BF2EE00C95FCA /* URLRequest+logDescription.swift in Sources */,
 				D39AD299221BF2EE00C95FCA /* Queue.swift in Sources */,
 				D39AD29A221BF2EE00C95FCA /* LoremSwiftum.swift in Sources */,
+				5B43EB8022AA6B9300DE3038 /* NSView+rx.swift in Sources */,
 				6C1F816D228C008100362D3F /* AppVersion.swift in Sources */,
 				6C1F816E228C00B300362D3F /* UserDefaultsStorable.swift in Sources */,
 				D39AD29F221BF2EE00C95FCA /* Notified.swift in Sources */,

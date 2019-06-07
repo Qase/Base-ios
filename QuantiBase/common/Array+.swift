@@ -23,6 +23,24 @@ extension Array {
 	public func objects(at indexSet: IndexSet) -> [Element] {
 		return indexSet.compactMap { self.indices.contains($0) ? self[$0] : nil }
 	}
+
+    /// Replaces element in array at specified index with another element.
+    ///
+    /// - Parameters:
+    ///   - element: new element to replace the current one
+    ///   - index: where the element to be replaced is
+    /// - Returns: new array with replaced element
+    public func replaced(element: Element, at index: Int) -> Array {
+        return self[0..<index].array + [element] + self[index+1..<count].array
+    }
+
+    /// Removes element at specified index.
+    ///
+    /// - Parameter index: where the element to be removed is
+    /// - Returns: new array without deleted element
+    public func removed(at index: Int) -> Array {
+        return self[0..<index].array + self[index+1..<count].array
+    }
 }
 
 extension Array where Element: Equatable {

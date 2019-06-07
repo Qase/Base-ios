@@ -15,4 +15,12 @@ public extension Data {
     var string: String? {
         return String(data: self, encoding: .utf8)
     }
+
+    func decoded<T: Decodable>() -> Result<T, Error> {
+        do {
+            return try .success(JSONDecoder().decode(T.self, from: self))
+        } catch let error {
+            return .failure(error)
+        }
+    }
 }
