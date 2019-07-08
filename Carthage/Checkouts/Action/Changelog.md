@@ -4,10 +4,19 @@ Changelog
 
 Current master
 --------------
+- Added full support for Swift 5.0
+- Added full support for RxSwift 5.0
+- Remove RxAtomic references
+
+4.0.0
+-------
+- Add `completions` property to `CompletableAction`
+- Change `inputs` type to `AnyObserver<Input>`
+
 3.11.0
 -------
-- Introduction of  `underlyingError` observable which returns a `Swift.Error`  element type. 
-- Updated specs that were breaking in `Circle CI` pipeline 
+- Introduction of  `underlyingError` observable which returns a `Swift.Error`  element type.
+- Updated specs that were breaking in `Circle CI` pipeline
 
 3.10.2
 -------

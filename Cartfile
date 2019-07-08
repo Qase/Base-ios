@@ -1,5 +1,5 @@
 # RxSwift
-github "ReactiveX/RxSwift" ~> 4.0
+github "ReactiveX/RxSwift" ~> 5.0
 
 # RxAction
-github "RxSwiftCommunity/Action" ~> 3.7.0
+github "RxSwiftCommunity/Action" ~> 4.0.1
