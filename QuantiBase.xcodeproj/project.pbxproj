@@ -49,8 +49,6 @@
 		5B9FCB6322D3A20C0099A698 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5A22D3A20C0099A698 /* RxCocoa.framework */; };
 		5B9FCB6422D3A20C0099A698 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5B22D3A20C0099A698 /* RxSwift.framework */; };
 		5B9FCB6522D3A20C0099A698 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5B22D3A20C0099A698 /* RxSwift.framework */; };
-		5B9FCB6622D3A20C0099A698 /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5C22D3A20C0099A698 /* RxAtomic.framework */; };
-		5B9FCB6722D3A20C0099A698 /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5C22D3A20C0099A698 /* RxAtomic.framework */; };
 		5BA6AAC4226F191700FBB047 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6AAC3226F191700FBB047 /* Data+.swift */; };
 		5BA79E0B220DBCBF00C0F81D /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+.swift */; };
 		5BA79E0F220DBD0D00C0F81D /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0E220DBD0D00C0F81D /* BluetoothService.swift */; };
@@ -231,7 +229,6 @@
 		5B9FCB5922D3A20C0099A698 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		5B9FCB5A22D3A20C0099A698 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		5B9FCB5B22D3A20C0099A698 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		5B9FCB5C22D3A20C0099A698 /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
 		5B9FCB5D22D3A20C0099A698 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		5BA6AAC3226F191700FBB047 /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
 		5BA79E0A220DBCBF00C0F81D /* Observable+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+.swift"; sourceTree = "<group>"; };
@@ -313,7 +310,6 @@
 				5B9FCB6222D3A20C0099A698 /* RxCocoa.framework in Frameworks */,
 				5B9FCB5E22D3A20C0099A698 /* RxRelay.framework in Frameworks */,
 				5B9FCB5622D3A1F60099A698 /* Action.framework in Frameworks */,
-				5B9FCB6622D3A20C0099A698 /* RxAtomic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +336,6 @@
 				5B9FCB6322D3A20C0099A698 /* RxCocoa.framework in Frameworks */,
 				5B9FCB5F22D3A20C0099A698 /* RxRelay.framework in Frameworks */,
 				5B9FCB5722D3A1F60099A698 /* Action.framework in Frameworks */,
-				5B9FCB6722D3A20C0099A698 /* RxAtomic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +435,6 @@
 		638A2EE21F458CB100256FC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5B9FCB5C22D3A20C0099A698 /* RxAtomic.framework */,
 				5B9FCB5D22D3A20C0099A698 /* RxBlocking.framework */,
 				5B9FCB5A22D3A20C0099A698 /* RxCocoa.framework */,
 				5B9FCB5822D3A20B0099A698 /* RxRelay.framework */,
@@ -1171,7 +1165,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1228,7 +1222,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1341,7 +1335,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
