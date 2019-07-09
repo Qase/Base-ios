@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RxCocoa
+import RxRelay
 import RxSwift
 
 public typealias KeyboardFrame = CGRect
@@ -16,7 +16,7 @@ public typealias AnimationSpeed = Double
 public class KeyboardService {
 	public static let shared = KeyboardService()
 
-	private let isKeyboardVisibleVariable = Variable<Bool>(false)
+    private let isKeyboardVisibleVariable = BehaviorRelay<Bool>(value: false)
 	public var isKeyboardVisible: Bool {
 		return isKeyboardVisibleVariable.value
 	}
