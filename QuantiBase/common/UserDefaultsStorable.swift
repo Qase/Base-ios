@@ -23,12 +23,18 @@ public protocol UserDefaultsStorable {
 
 	var storableObject: StorableObject { get }
 
+    static var defaultStorageKey: String? { get }
+
 	func store(using userDefaultsBundle: UserDefaultsBundle) -> Bool
 	static func restore(using userDefaultsBundle: UserDefaultsBundle) -> StorableObject?
 	func remove(using userDefaultsBundle: UserDefaultsBundle)
 }
 
 extension UserDefaultsStorable {
+    public static var defaultStorageKey: String? {
+        return nil
+    }
+
 	public func store(using userDefaultsBundle: UserDefaultsBundle) -> Bool {
 		return userDefaultsBundle.storage.set(object: Wrapper(value: storableObject), forKey: userDefaultsBundle.key)
 	}
