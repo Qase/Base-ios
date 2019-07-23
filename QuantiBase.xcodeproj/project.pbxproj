@@ -64,6 +64,20 @@
 		5BC740C92243C54A00E8F899 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC740C82243C54A00E8F899 /* AppVersion.swift */; };
 		5BF8E9581F73E97F00B7334B /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
 		5BF8E9591F73E97F00B7334B /* QuantiBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5BFCDBD622E74F6100EB60A6 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFCDBD522E74F6100EB60A6 /* Overture.framework */; };
+		5BFCDBD722E74F6100EB60A6 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFCDBD522E74F6100EB60A6 /* Overture.framework */; };
+		5BFCDBDA22E750CC00EB60A6 /* PrecedenceGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBD922E750CC00EB60A6 /* PrecedenceGroups.swift */; };
+		5BFCDBDB22E750CC00EB60A6 /* PrecedenceGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBD922E750CC00EB60A6 /* PrecedenceGroups.swift */; };
+		5BFCDBDD22E750E800EB60A6 /* ForwardApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBDC22E750E800EB60A6 /* ForwardApplication.swift */; };
+		5BFCDBDE22E750E800EB60A6 /* ForwardApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBDC22E750E800EB60A6 /* ForwardApplication.swift */; };
+		5BFCDBE022E750FC00EB60A6 /* Composition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBDF22E750FC00EB60A6 /* Composition.swift */; };
+		5BFCDBE122E750FC00EB60A6 /* Composition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBDF22E750FC00EB60A6 /* Composition.swift */; };
+		5BFCDBE322E7511300EB60A6 /* EffectfulComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBE222E7511300EB60A6 /* EffectfulComposition.swift */; };
+		5BFCDBE422E7511300EB60A6 /* EffectfulComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBE222E7511300EB60A6 /* EffectfulComposition.swift */; };
+		5BFCDBE622E7512B00EB60A6 /* SingleTypeComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBE522E7512B00EB60A6 /* SingleTypeComposition.swift */; };
+		5BFCDBE722E7512B00EB60A6 /* SingleTypeComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBE522E7512B00EB60A6 /* SingleTypeComposition.swift */; };
+		5BFCDBE922E7514900EB60A6 /* KeyPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBE822E7514900EB60A6 /* KeyPaths.swift */; };
+		5BFCDBEA22E7514900EB60A6 /* KeyPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBE822E7514900EB60A6 /* KeyPaths.swift */; };
 		630AF65D1F44791E009CEA24 /* QuantiBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AF65B1F44791E009CEA24 /* QuantiBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6365991C1F45D2A300979BBA /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365991B1F45D2A300979BBA /* UIViewController+.swift */; };
 		6365991E1F45D46000979BBA /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365991D1F45D46000979BBA /* String+.swift */; };
@@ -244,6 +258,13 @@
 		5BC1EB0E1F71748100BA1081 /* Date+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		5BC740C42242446A00E8F899 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		5BC740C82243C54A00E8F899 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
+		5BFCDBD522E74F6100EB60A6 /* Overture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Overture.framework; path = Carthage/Build/iOS/Overture.framework; sourceTree = "<group>"; };
+		5BFCDBD922E750CC00EB60A6 /* PrecedenceGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecedenceGroups.swift; sourceTree = "<group>"; };
+		5BFCDBDC22E750E800EB60A6 /* ForwardApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardApplication.swift; sourceTree = "<group>"; };
+		5BFCDBDF22E750FC00EB60A6 /* Composition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composition.swift; sourceTree = "<group>"; };
+		5BFCDBE222E7511300EB60A6 /* EffectfulComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectfulComposition.swift; sourceTree = "<group>"; };
+		5BFCDBE522E7512B00EB60A6 /* SingleTypeComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTypeComposition.swift; sourceTree = "<group>"; };
+		5BFCDBE822E7514900EB60A6 /* KeyPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPaths.swift; sourceTree = "<group>"; };
 		630AF6581F44791E009CEA24 /* QuantiBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuantiBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		630AF65B1F44791E009CEA24 /* QuantiBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuantiBase.h; sourceTree = "<group>"; };
 		630AF65C1F44791E009CEA24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -307,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B9FCB6422D3A20C0099A698 /* RxSwift.framework in Frameworks */,
+				5BFCDBD622E74F6100EB60A6 /* Overture.framework in Frameworks */,
 				5B9FCB6222D3A20C0099A698 /* RxCocoa.framework in Frameworks */,
 				5B9FCB5E22D3A20C0099A698 /* RxRelay.framework in Frameworks */,
 				5B9FCB5622D3A1F60099A698 /* Action.framework in Frameworks */,
@@ -336,6 +358,7 @@
 				5B9FCB6322D3A20C0099A698 /* RxCocoa.framework in Frameworks */,
 				5B9FCB5F22D3A20C0099A698 /* RxRelay.framework in Frameworks */,
 				5B9FCB5722D3A1F60099A698 /* Action.framework in Frameworks */,
+				5BFCDBD722E74F6100EB60A6 /* Overture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +421,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5BFCDBD822E750A100EB60A6 /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				5BFCDBD922E750CC00EB60A6 /* PrecedenceGroups.swift */,
+				5BFCDBDC22E750E800EB60A6 /* ForwardApplication.swift */,
+				5BFCDBDF22E750FC00EB60A6 /* Composition.swift */,
+				5BFCDBE222E7511300EB60A6 /* EffectfulComposition.swift */,
+				5BFCDBE522E7512B00EB60A6 /* SingleTypeComposition.swift */,
+				5BFCDBE822E7514900EB60A6 /* KeyPaths.swift */,
+			);
+			name = Operators;
+			sourceTree = "<group>";
+		};
 		630AF64E1F44791E009CEA24 = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +471,7 @@
 		638A2EE21F458CB100256FC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BFCDBD522E74F6100EB60A6 /* Overture.framework */,
 				5B9FCB5D22D3A20C0099A698 /* RxBlocking.framework */,
 				5B9FCB5A22D3A20C0099A698 /* RxCocoa.framework */,
 				5B9FCB5822D3A20B0099A698 /* RxRelay.framework */,
@@ -475,6 +512,7 @@
 				5B1A0E23228AE6FD00B649BF /* UserCredentials.swift */,
 				5B1C1D4A220CA8DE00C40C54 /* UserDefaultsStorable.swift */,
 				5B1C1D4E220CA99D00C40C54 /* ViewModelBindable.swift */,
+				5BFCDBD822E750A100EB60A6 /* Operators */,
 				6C1F8177228C035E00362D3F /* 3rd party */,
 				638A2EE91F45954F00256FC3 /* Extensions */,
 				6C1F8173228C02E300362D3F /* HTTPNetworking */,
@@ -900,6 +938,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Action.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Overture.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -970,10 +1009,12 @@
 				D32D96FD1F544853006A635E /* LoremSwiftum.swift in Sources */,
 				5B1C1D4B220CA8DE00C40C54 /* UserDefaultsStorable.swift in Sources */,
 				6C1F819E228C089900362D3F /* ParagraphLabel.swift in Sources */,
+				5BFCDBE622E7512B00EB60A6 /* SingleTypeComposition.swift in Sources */,
 				6C1F8181228C06D700362D3F /* UInt8+binary.swift in Sources */,
 				6C1F819F228C089900362D3F /* ParagraphView.swift in Sources */,
 				6C1F817D228C06AD00362D3F /* Data+binary.swift in Sources */,
 				6C1F81A5228C1E9A00362D3F /* AppLifecycleService.swift in Sources */,
+				5BFCDBE322E7511300EB60A6 /* EffectfulComposition.swift in Sources */,
 				5BA79E11220DBD1200C0F81D /* KeyboardService.swift in Sources */,
 				636599431F46006300979BBA /* Notified.swift in Sources */,
 				6365992B1F45DA1A00979BBA /* UIView+.swift in Sources */,
@@ -981,6 +1022,7 @@
 				5B04BDD322955C3E001BC7C8 /* Dictionary+.swift in Sources */,
 				6365993C1F45FA9A00979BBA /* Reachability.m in Sources */,
 				5B1C1D41220CA41600C40C54 /* ArraySlice+.swift in Sources */,
+				5BFCDBE922E7514900EB60A6 /* KeyPaths.swift in Sources */,
 				6C6074BA2236CFA5006C6B14 /* AuthorizedBaseApi.swift in Sources */,
 				5BC740C52242446A00E8F899 /* AppVersion.swift in Sources */,
 				6C1F8194228C083F00362D3F /* BaseButton.swift in Sources */,
@@ -991,9 +1033,12 @@
 				63C3388B1F474D1500DA8957 /* TableModel.swift in Sources */,
 				5B1C1D29220C7B2600C40C54 /* UIBarButtonItem+activityViewController.swift in Sources */,
 				5B1C1D35220C812500C40C54 /* MultipleIndependentUiGesturing.swift in Sources */,
+				5BFCDBE022E750FC00EB60A6 /* Composition.swift in Sources */,
+				5BFCDBDD22E750E800EB60A6 /* ForwardApplication.swift in Sources */,
 				5B1A0E48228DB25A00B649BF /* ViewModelBindable+UIKit.swift in Sources */,
 				5BA79E1E220DBF9800C0F81D /* ApiError.swift in Sources */,
 				6365991C1F45D2A300979BBA /* UIViewController+.swift in Sources */,
+				5BFCDBDA22E750CC00EB60A6 /* PrecedenceGroups.swift in Sources */,
 				5BA79E14220DBF7200C0F81D /* BaseApi.swift in Sources */,
 				5BA79E0B220DBCBF00C0F81D /* Observable+.swift in Sources */,
 				636599311F45DC9200979BBA /* UIImage+.swift in Sources */,
@@ -1043,8 +1088,10 @@
 				D39AD291221BF2EE00C95FCA /* BinaryCodable.swift in Sources */,
 				D39AD292221BF2EE00C95FCA /* MultipleDelegating.swift in Sources */,
 				D39AD294221BF2EE00C95FCA /* BluetoothService.swift in Sources */,
+				5BFCDBE722E7512B00EB60A6 /* SingleTypeComposition.swift in Sources */,
 				D39AD295221BF2EE00C95FCA /* URLRequest+logDescription.swift in Sources */,
 				D39AD299221BF2EE00C95FCA /* Queue.swift in Sources */,
+				5BFCDBE122E750FC00EB60A6 /* Composition.swift in Sources */,
 				D39AD29A221BF2EE00C95FCA /* LoremSwiftum.swift in Sources */,
 				5B43EB8022AA6B9300DE3038 /* NSView+rx.swift in Sources */,
 				6C1F816D228C008100362D3F /* AppVersion.swift in Sources */,
@@ -1052,6 +1099,7 @@
 				D39AD29F221BF2EE00C95FCA /* Notified.swift in Sources */,
 				5B04BDD122955C0B001BC7C8 /* Double+.swift in Sources */,
 				6C1F8187228C06E800362D3F /* String+binary.swift in Sources */,
+				5BFCDBDB22E750CC00EB60A6 /* PrecedenceGroups.swift in Sources */,
 				5B1A0E56228DB32D00B649BF /* NSWindow+rx.swift in Sources */,
 				5B1A0E49228DB26E00B649BF /* ViewModelBindable.swift in Sources */,
 				D39AD2A3221BF2EE00C95FCA /* ArraySlice+.swift in Sources */,
@@ -1060,12 +1108,15 @@
 				6C1F8182228C06D700362D3F /* UInt8+binary.swift in Sources */,
 				D39AD2A9221BF2EE00C95FCA /* (null) in Sources */,
 				D39AD2AC221BF2EE00C95FCA /* ApiError.swift in Sources */,
+				5BFCDBEA22E7514900EB60A6 /* KeyPaths.swift in Sources */,
+				5BFCDBE422E7511300EB60A6 /* EffectfulComposition.swift in Sources */,
 				D39AD2AD221BF2EE00C95FCA /* (null) in Sources */,
 				D39AD2B0221BF2EE00C95FCA /* BaseApi.swift in Sources */,
 				5B1A0E53228DB32D00B649BF /* NSMenu+.swift in Sources */,
 				5B1A0E25228AE6FD00B649BF /* UserCredentials.swift in Sources */,
 				5B1A0E54228DB32D00B649BF /* NSPopUpButton+rx.swift in Sources */,
 				5B1A0E57228DB32D00B649BF /* NSImage+save.swift in Sources */,
+				5BFCDBDE22E750E800EB60A6 /* ForwardApplication.swift in Sources */,
 				6C19992D223D64EC005511FC /* AuthorizedBaseApi.swift in Sources */,
 				D39AD2B1221BF2EE00C95FCA /* Observable+.swift in Sources */,
 			);
