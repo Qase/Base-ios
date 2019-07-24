@@ -10,7 +10,17 @@
 
 ## QuantiBase
 
-Base-ios repository consists of useful extensions, general classes and protocols that we gather and use while working on our projects. The main goal is to create a central point of such snippets that can be reused within other projects. We constantly review and enrich the repository aiming to reach maximum reusability. We take full advantage of reactive programming features and incorporate it within our projects. For that purpose we use external libraries RxSwift, Action and RxDataSources as dependencies for the base-ios library.
+Base-ios repository consists of useful extensions, general classes and protocols that we gather and use while working on our projects. The main goal is to create a central point of such snippets that can be reused within other projects. We constantly review and enrich the repository aiming to reach maximum reusability. We take full advantage of functional programming with reactive layer within our projects. For that purpose we use external libraries and thus QuantiBase will require following: 
+- **Overture** (https://github.com/pointfreeco/swift-overture)   
+  A library providing helpful generic functions that enhance functional programming approach. 
+- **RxSwift** (https://github.com/ReactiveX/RxSwift.git)  
+A library providing reactive layer that enables to enhance reactive programming approach.
+- **Action** (https://github.com/RxSwiftCommunity/Action.git)  
+A library used with RxSwift to provide an abstraction on top of observables: actions.
+- **RxDataSources** (https://github.com/RxSwiftCommunity/RxDataSources.git)  
+A library used with RxSwift to provide reactive API for table and collection views.
+    
+
 
 ## Features
 - **Services**:
@@ -28,6 +38,13 @@ Base-ios repository consists of useful extensions, general classes and protocols
 - **MultipleDelegating protocol**: extending the highly used Delegate pattern that supports multiple delegates (will be soon obsolete since it is mostly replaces by reactive observables)
 - 3rd party:
     - **LoremSwiftum**: helpful class providing random strings of variable length
+    - **Overture operators**:
+    operators on top of existing functions introduced in Overture library
+        - `|>` for `with`
+        - `^` for get and `prop`
+        - `<>` for `concat`
+        - `>>>` and `<<<` for `pipe`
+        - `>=>` for `chain`
 - Useful subclasses of UIViewController & UIView
 - Binary extensions for basic data types
 - Other useful extensions for basic data types, reactive types and UIKit classes
