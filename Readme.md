@@ -10,7 +10,7 @@
 
 ## QuantiBase
 
-Base-ios repository consists of useful extensions, general classes and protocols that we gather and use while working on our projects. The main goal is to create a central point of such snippets that can be reused within other projects. We constantly review and enrich the repository aiming to reach maximum reusability. We take full advantage of functional programming with reactive layer within our projects. For that purpose we use external libraries and thus QuantiBase will require following: 
+Base-ios repository consists of useful extensions, general classes and protocols that we gather and use while working on our projects. The main goal is to create a central point of such snippets that can be reused across various projects. We constantly review and enrich the repository aiming to reach maximum reusability. We take full advantage of functional programming with reactive layer. For that purpose we use external libraries and thus QuantiBase will require following: 
 - **Overture** (https://github.com/pointfreeco/swift-overture)   
   A library providing helpful generic functions that enhance functional programming approach. 
 - **RxSwift** (https://github.com/ReactiveX/RxSwift.git)  
