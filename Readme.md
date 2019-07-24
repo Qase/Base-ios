@@ -13,11 +13,11 @@
 Base-ios repository consists of useful extensions, general classes and protocols that we gather and use while working on our projects. The main goal is to create a central point of such snippets that can be reused across various projects. We constantly review and enrich the repository aiming to reach maximum reusability. We take full advantage of functional programming with reactive layer. For that purpose we use external libraries and thus QuantiBase will require following: 
 - **Overture** (https://github.com/pointfreeco/swift-overture)   
   A library providing helpful generic functions that enhance functional programming approach. 
-- **RxSwift** (https://github.com/ReactiveX/RxSwift.git)  
+- **RxSwift** (https://github.com/ReactiveX/RxSwift)  
 A library providing reactive layer that enables to enhance reactive programming approach.
-- **Action** (https://github.com/RxSwiftCommunity/Action.git)  
+- **Action** (https://github.com/RxSwiftCommunity/Action)  
 A library used with RxSwift to provide an abstraction on top of observables: actions.
-- **RxDataSources** (https://github.com/RxSwiftCommunity/RxDataSources.git)  
+- **RxDataSources** (https://github.com/RxSwiftCommunity/RxDataSources)  
 A library used with RxSwift to provide reactive API for table and collection views.
     
 
