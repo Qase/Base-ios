@@ -12,16 +12,16 @@ precedencegroup ForwardApplication {
 }
 
 precedencegroup EffectfulComposition {
-    associativity: right
+    associativity: left
     higherThan: ForwardApplication
 }
 
 precedencegroup SingleTypeComposition {
-    associativity: right
+    associativity: left
     higherThan: EffectfulComposition
 }
 
 precedencegroup Composition {
-    associativity: right
+    associativity: left
     higherThan: SingleTypeComposition
 }
