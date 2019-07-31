@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Overture
 import RxCocoa
 import RxSwift
 
@@ -90,20 +91,55 @@ extension ApiFactory {
 	///   - baseUrl: Base URL of the request.
 	///   - pathComponent: Specific path compoment that gets appended to the base URL.
 	///   - method: HTTP method of the request.
+    ///   - cacheSettings: Cache policy + timeout settings needed for initialization of URLRequest
 	/// - Returns: URLRequest instance if the method succeeds to create it, nil otherwise.
-	public static func buildRequest(baseUrl: URL, pathComponent: String, method: HttpMethod) -> URLRequest? {
-		let url = baseUrl.appendingPathComponent(pathComponent)
+    public static func buildRequest(baseUrl: URL,
+                                    pathComponent: String,
+                                    method: HttpMethod,
+                                    cacheSettings: CacheSettings = ApiFactory.defaultCacheSettings) -> URLRequest? {
+        return baseUrl |>
+            add(pathComponent: pathComponent)
+            >>> newUrlRequest(with: cacheSettings)
+            >>> guaranteeHeaders
+            >>> with(method)
+            >>> withJsonContent
+//            >>> withCachePolicy(timeout: 60)
+    }
 
-		var urlRequest = URLRequest(url: url)
-		urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-		urlRequest.httpMethod = method.rawValue
+    public static let defaultCacheSettings: CacheSettings = (.useProtocolCachePolicy, 60)
 
-		// Handling caches, Etag in our case
-		urlRequest.cachePolicy = .useProtocolCachePolicy
-		urlRequest.timeoutInterval = 60
+    public typealias CacheSettings = (URLRequest.CachePolicy, TimeInterval)
 
-		return urlRequest
-	}
+    private static func add(pathComponent: String) -> (URL) -> URL {
+        return { $0.appendingPathComponent(pathComponent) }
+    }
+
+    private static func newUrlRequest(with cacheSettings: CacheSettings) -> (URL) -> URLRequest {
+        return { url in
+            URLRequest(url: url, cachePolicy: cacheSettings.0, timeoutInterval: cacheSettings.1)
+        }
+    }
+
+    private static var guaranteeHeaders: (URLRequest) -> URLRequest {
+        return { $0 |> over(\URLRequest.allHTTPHeaderFields, { $0 ?? [:] }) }
+    }
+
+    private static var withJsonContent: (URLRequest) -> URLRequest {
+        return { $0 |> set(^\URLRequest.allHTTPHeaderFields <<< map <<< ^\.["Content-Type"], "application/json") }
+    }
+
+    private static func with(_ method: HttpMethod) -> (URLRequest) -> URLRequest {
+        return { $0 |> set(\URLRequest.httpMethod, method.rawValue) }
+    }
+
+//    private static func withCachePolicy(timeout: Double) -> (URLRequest) -> URLRequest {
+//        // Handling caches, Etag in our case
+//        return { request in
+//            request |>
+//                set(^\URLRequest.cachePolicy, .useProtocolCachePolicy)
+//                <> set(^\URLRequest.timeoutInterval, timeout)
+//        }
+//    }
 }
 
 // MARK: - Set of static methods that enable sending requests and receiving appropriate responses on a specific API.
