@@ -97,8 +97,8 @@ extension ApiFactory {
                                     pathComponent: String,
                                     method: HttpMethod,
                                     cacheSettings: CacheSettings = ApiFactory.defaultCacheSettings) -> URLRequest? {
-        return baseUrl |>
-            add(pathComponent: pathComponent)
+        return baseUrl
+            |> add(pathComponent: pathComponent)
             >>> newUrlRequest(with: cacheSettings)
             >>> guaranteeHeaders
             >>> with(method)
