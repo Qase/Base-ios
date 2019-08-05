@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(*, deprecated, message: "Use methods set(encodable:forKey) and decodable(forKey:) on an instance of UserDefaults instead.")
 public struct UserDefaultsBundle {
 	let key: String
 	let storage: UserDefaults
@@ -18,6 +19,7 @@ public struct UserDefaultsBundle {
     }
 }
 
+@available(*, deprecated, message: "Use methods set(encodable:forKey) and decodable(forKey:) on an instance of UserDefaults instead.")
 public protocol UserDefaultsStorable {
 	associatedtype StorableObject: Codable
 
@@ -36,16 +38,16 @@ extension UserDefaultsStorable {
     }
 
 	public func store(using userDefaultsBundle: UserDefaultsBundle) -> Bool {
-		return userDefaultsBundle.storage.set(object: Wrapper(value: storableObject), forKey: userDefaultsBundle.key)
+        return userDefaultsBundle.storage.set(codable: storableObject, forKey: userDefaultsBundle.key)
 	}
 
 	public static func restore(using userDefaultsBundle: UserDefaultsBundle) -> StorableObject? {
-		guard let restored: Wrapper<StorableObject> = userDefaultsBundle.storage.object(forKey: userDefaultsBundle.key) else {
+		guard let restored: StorableObject = userDefaultsBundle.storage.codable(forKey: userDefaultsBundle.key) else {
 			print("\(#function) - failed to restore StorableObject instance from UserDefaults.")
 			return nil
 		}
 
-		return restored.value
+		return restored
 	}
 
 	public func remove(using userDefaultsBundle: UserDefaultsBundle) {
@@ -59,21 +61,22 @@ public struct Wrapper<T: Codable>: Codable {
 	public let value: T
 }
 
-// MARK: - Extension for UserDefaults providing functionality of storing / restoring data as JSON using JSONEncoder.
+// MARK: - Extension for UserDefaults providing functionality of storing / restoring Encoding / Decoding types as JSON using JSONEncoder.
 extension UserDefaults {
-	public func set<T: Codable>(object: T, forKey key: String) -> Bool {
+	public func set<T: Codable>(codable: T, forKey key: String) -> Bool {
 		do {
+            let wrapped = Wrapper(value: codable)
 			let jsonEncoder = JSONEncoder()
-			let data = try jsonEncoder.encode(object)
+            let data = try jsonEncoder.encode(wrapped)
 			self.set(data, forKey: key)
-			return true
+            return true
 		} catch let error {
 			print("\(#function) - error ocurred while encoding to JSON: \(error).")
 			return false
 		}
 	}
 
-	public func object<T: Codable>(forKey key: String) -> T? {
+	public func codable<T: Codable>(forKey key: String) -> T? {
 		do {
 			guard let data = self.data(forKey: key) else {
 				print("\(#function) - could not retrieve data from UserDefaults.")
@@ -81,7 +84,8 @@ extension UserDefaults {
 			}
 
 			let jsonDecoder = JSONDecoder()
-			return try jsonDecoder.decode(T.self, from: data)
+            let restored = try jsonDecoder.decode(Wrapper<T>.self, from: data)
+			return restored.value
 		} catch let error {
 			print("\(#function) - error ocurred while decoding from JSON: \(error).")
 			return nil

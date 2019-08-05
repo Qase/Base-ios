@@ -47,7 +47,7 @@ extension AppVersion: Comparable {
 	}
 }
 
-// MARK: - UserDefaultsStorable implementation
-extension AppVersion: UserDefaultsStorable {
-	public var storableObject: AppVersion { return self }
-}
+//// MARK: - UserDefaultsStorable implementation
+//extension AppVersion: UserDefaultsStorable {
+//    public var storableObject: AppVersion { return self }
+//}
