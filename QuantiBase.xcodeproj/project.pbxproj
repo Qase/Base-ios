@@ -39,8 +39,13 @@
 		5B1C1D54220D955800C40C54 /* BinaryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C1D53220D955800C40C54 /* BinaryCodable.swift */; };
 		5B43EB7E22AA6B6200DE3038 /* NSStatusItem+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B43EB7D22AA6B6200DE3038 /* NSStatusItem+rx.swift */; };
 		5B43EB8022AA6B9300DE3038 /* NSView+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B43EB7F22AA6B9300DE3038 /* NSView+rx.swift */; };
-		5B7BC4E81F72C5EE00C5046A /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC4E71F72C5EE00C5046A /* String+.swift */; };
-		5B7BC4EA1F72CCB200C5046A /* Collection+reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC4E91F72CCB200C5046A /* Collection+reduce.swift */; };
+		5B55D97722F85E0B002AB940 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55D97622F85E0B002AB940 /* UIImage+.swift */; };
+		5B55D97922F85F1F002AB940 /* TimeInterval+stringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55D97822F85F1F002AB940 /* TimeInterval+stringRepresentation.swift */; };
+		5B55D97B22F86C92002AB940 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55D97A22F86C92002AB940 /* Array+.swift */; };
+		5B55D97D22F86CC7002AB940 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55D97C22F86CC7002AB940 /* Date+.swift */; };
+		5B55D97F22F86CF4002AB940 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55D97E22F86CF4002AB940 /* String+.swift */; };
+		5B55D98122F86D30002AB940 /* Collection+reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55D98022F86D30002AB940 /* Collection+reduce.swift */; };
+		5B55D98322F86D57002AB940 /* AppVersion+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55D98222F86D57002AB940 /* AppVersion+.swift */; };
 		5B9FCB5622D3A1F60099A698 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5522D3A1F60099A698 /* Action.framework */; };
 		5B9FCB5722D3A1F60099A698 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5522D3A1F60099A698 /* Action.framework */; };
 		5B9FCB5E22D3A20C0099A698 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5822D3A20B0099A698 /* RxRelay.framework */; };
@@ -59,9 +64,7 @@
 		5BA79E1C220DBF9100C0F81D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E1B220DBF9100C0F81D /* HTTPMethod.swift */; };
 		5BA79E1E220DBF9800C0F81D /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E1D220DBF9800C0F81D /* ApiError.swift */; };
 		5BA79E20220DBFA200C0F81D /* HTTPHeaderFieldKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E1F220DBFA200C0F81D /* HTTPHeaderFieldKey.swift */; };
-		5BC1EB0F1F71748100BA1081 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1EB0E1F71748100BA1081 /* Date+.swift */; };
 		5BC740C52242446A00E8F899 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC740C42242446A00E8F899 /* AppVersion.swift */; };
-		5BC740C92243C54A00E8F899 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC740C82243C54A00E8F899 /* AppVersion.swift */; };
 		5BF8E9581F73E97F00B7334B /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
 		5BF8E9591F73E97F00B7334B /* QuantiBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5BFCDBD622E74F6100EB60A6 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFCDBD522E74F6100EB60A6 /* Overture.framework */; };
@@ -127,8 +130,6 @@
 		D32D97071F5449CF006A635E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D97061F5449CF006A635E /* MasterViewController.swift */; };
 		D32D970E1F5449CF006A635E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D32D970D1F5449CF006A635E /* Assets.xcassets */; };
 		D32D971C1F5449D0006A635E /* QuantiBaseExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D971B1F5449D0006A635E /* QuantiBaseExampleUITests.swift */; };
-		D397CEB41F520A7C00CCD70E /* TimeInterval+stringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB31F520A7C00CCD70E /* TimeInterval+stringRepresentation.swift */; };
-		D397CEB61F520E5100CCD70E /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB51F520E5100CCD70E /* Array+.swift */; };
 		D397CEB81F520E8700CCD70E /* Collection+reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397CEB71F520E8700CCD70E /* Collection+reduce.swift */; };
 		D39AD27A221BF2EE00C95FCA /* TimeInterval+stringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365991F1F45D5D300979BBA /* TimeInterval+stringRepresentation.swift */; };
 		D39AD27C221BF2EE00C95FCA /* HTTPHeaderFieldKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E1F220DBFA200C0F81D /* HTTPHeaderFieldKey.swift */; };
@@ -156,11 +157,16 @@
 		D39AD2B1221BF2EE00C95FCA /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+.swift */; };
 		D39AD2BE221BF2EE00C95FCA /* QAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */; };
 		D39AD2D0221C091800C95FCA /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E15220DBF7E00C0F81D /* ApiFactory.swift */; };
-		D3ACC8391F50CBD800CAC22F /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
-		D3ACC8411F50CC5B00CAC22F /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ACC8401F50CC5B00CAC22F /* UIImage+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5B55D97022F85CE8002AB940 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 630AF64F1F44791E009CEA24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D32D97011F5449CF006A635E;
+			remoteInfo = QuantiBaseExample;
+		};
 		5BF8E95A1F73E97F00B7334B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 630AF64F1F44791E009CEA24 /* Project object */;
@@ -174,13 +180,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = D32D97011F5449CF006A635E;
 			remoteInfo = QuantiBaseExample;
-		};
-		D3ACC83A1F50CBD800CAC22F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 630AF64F1F44791E009CEA24 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 630AF6571F44791E009CEA24;
-			remoteInfo = QuantiBase;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -236,8 +235,15 @@
 		5B1C1D53220D955800C40C54 /* BinaryCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryCodable.swift; sourceTree = "<group>"; };
 		5B43EB7D22AA6B6200DE3038 /* NSStatusItem+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSStatusItem+rx.swift"; sourceTree = "<group>"; };
 		5B43EB7F22AA6B9300DE3038 /* NSView+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+rx.swift"; sourceTree = "<group>"; };
-		5B7BC4E71F72C5EE00C5046A /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
-		5B7BC4E91F72CCB200C5046A /* Collection+reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+reduce.swift"; sourceTree = "<group>"; };
+		5B55D96B22F85CE8002AB940 /* QuantiBaseExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuantiBaseExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B55D96F22F85CE8002AB940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B55D97622F85E0B002AB940 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		5B55D97822F85F1F002AB940 /* TimeInterval+stringRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+stringRepresentation.swift"; sourceTree = "<group>"; };
+		5B55D97A22F86C92002AB940 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		5B55D97C22F86CC7002AB940 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		5B55D97E22F86CF4002AB940 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		5B55D98022F86D30002AB940 /* Collection+reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+reduce.swift"; sourceTree = "<group>"; };
+		5B55D98222F86D57002AB940 /* AppVersion+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppVersion+.swift"; sourceTree = "<group>"; };
 		5B9FCB5522D3A1F60099A698 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		5B9FCB5822D3A20B0099A698 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		5B9FCB5922D3A20C0099A698 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
@@ -255,9 +261,7 @@
 		5BA79E1B220DBF9100C0F81D /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		5BA79E1D220DBF9800C0F81D /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		5BA79E1F220DBFA200C0F81D /* HTTPHeaderFieldKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPHeaderFieldKey.swift; sourceTree = "<group>"; };
-		5BC1EB0E1F71748100BA1081 /* Date+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		5BC740C42242446A00E8F899 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
-		5BC740C82243C54A00E8F899 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		5BFCDBD522E74F6100EB60A6 /* Overture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Overture.framework; path = Carthage/Build/iOS/Overture.framework; sourceTree = "<group>"; };
 		5BFCDBD922E750CC00EB60A6 /* PrecedenceGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecedenceGroups.swift; sourceTree = "<group>"; };
 		5BFCDBDC22E750E800EB60A6 /* ForwardApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardApplication.swift; sourceTree = "<group>"; };
@@ -313,16 +317,18 @@
 		D32D97171F5449CF006A635E /* QuantiBaseExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuantiBaseExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32D971B1F5449D0006A635E /* QuantiBaseExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantiBaseExampleUITests.swift; sourceTree = "<group>"; };
 		D32D971D1F5449D0006A635E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D397CEB31F520A7C00CCD70E /* TimeInterval+stringRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+stringRepresentation.swift"; sourceTree = "<group>"; };
-		D397CEB51F520E5100CCD70E /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		D397CEB71F520E8700CCD70E /* Collection+reduce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+reduce.swift"; sourceTree = "<group>"; };
 		D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuantiBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuantiBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3ACC8381F50CBD800CAC22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3ACC8401F50CC5B00CAC22F /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5B55D96822F85CE8002AB940 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		630AF6541F44791E009CEA24 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,14 +368,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3ACC8311F50CBD800CAC22F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3ACC8391F50CBD800CAC22F /* QuantiBase.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -400,6 +398,37 @@
 				6C1F8180228C06D700362D3F /* UInt16+binary.swift */,
 			);
 			name = Binary;
+			sourceTree = "<group>";
+		};
+		5B55D96C22F85CE8002AB940 /* QuantiBaseExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B55D97622F85E0B002AB940 /* UIImage+.swift */,
+				5B55D97822F85F1F002AB940 /* TimeInterval+stringRepresentation.swift */,
+				5B55D97A22F86C92002AB940 /* Array+.swift */,
+				5B55D97C22F86CC7002AB940 /* Date+.swift */,
+				5B55D97E22F86CF4002AB940 /* String+.swift */,
+				5B55D98022F86D30002AB940 /* Collection+reduce.swift */,
+				5B55D98222F86D57002AB940 /* AppVersion+.swift */,
+				5B55D98422F86DB4002AB940 /* SupportingFiles */,
+			);
+			path = QuantiBaseExampleTests;
+			sourceTree = "<group>";
+		};
+		5B55D98422F86DB4002AB940 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5B55D96F22F85CE8002AB940 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		5B55D98522F86DF9002AB940 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D32D971D1F5449D0006A635E /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		5BC1EB0C1F7165F200BA1081 /* SupportingFiles */ = {
@@ -438,8 +467,8 @@
 			isa = PBXGroup;
 			children = (
 				630AF65A1F44791E009CEA24 /* QuantiBase */,
-				D3ACC8351F50CBD800CAC22F /* QuantiBaseTests */,
 				D32D97031F5449CF006A635E /* QuantiBaseExample */,
+				5B55D96C22F85CE8002AB940 /* QuantiBaseExampleTests */,
 				D32D971A1F5449D0006A635E /* QuantiBaseExampleUITests */,
 				630AF6591F44791E009CEA24 /* Products */,
 				638A2EE21F458CB100256FC3 /* Frameworks */,
@@ -450,10 +479,10 @@
 			isa = PBXGroup;
 			children = (
 				630AF6581F44791E009CEA24 /* QuantiBase.framework */,
-				D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */,
 				D32D97021F5449CF006A635E /* QuantiBaseExample.app */,
 				D32D97171F5449CF006A635E /* QuantiBaseExampleUITests.xctest */,
 				D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */,
+				5B55D96B22F85CE8002AB940 /* QuantiBaseExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -669,25 +698,10 @@
 		D32D971A1F5449D0006A635E /* QuantiBaseExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D32D971D1F5449D0006A635E /* Info.plist */,
 				D32D971B1F5449D0006A635E /* QuantiBaseExampleUITests.swift */,
+				5B55D98522F86DF9002AB940 /* SupportingFiles */,
 			);
 			path = QuantiBaseExampleUITests;
-			sourceTree = "<group>";
-		};
-		D3ACC8351F50CBD800CAC22F /* QuantiBaseTests */ = {
-			isa = PBXGroup;
-			children = (
-				D3ACC8381F50CBD800CAC22F /* Info.plist */,
-				D3ACC8401F50CC5B00CAC22F /* UIImage+.swift */,
-				D397CEB31F520A7C00CCD70E /* TimeInterval+stringRepresentation.swift */,
-				D397CEB51F520E5100CCD70E /* Array+.swift */,
-				5BC1EB0E1F71748100BA1081 /* Date+.swift */,
-				5B7BC4E71F72C5EE00C5046A /* String+.swift */,
-				5B7BC4E91F72CCB200C5046A /* Collection+reduce.swift */,
-				5BC740C82243C54A00E8F899 /* AppVersion.swift */,
-			);
-			path = QuantiBaseTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -712,6 +726,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5B55D96A22F85CE8002AB940 /* QuantiBaseExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B55D97522F85CE8002AB940 /* Build configuration list for PBXNativeTarget "QuantiBaseExampleTests" */;
+			buildPhases = (
+				5B55D96722F85CE8002AB940 /* Sources */,
+				5B55D96822F85CE8002AB940 /* Frameworks */,
+				5B55D96922F85CE8002AB940 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B55D97122F85CE8002AB940 /* PBXTargetDependency */,
+			);
+			name = QuantiBaseExampleTests;
+			productName = QuantiBaseExampleTests;
+			productReference = 5B55D96B22F85CE8002AB940 /* QuantiBaseExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		630AF6571F44791E009CEA24 /* QuantiBase */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 630AF6601F44791F009CEA24 /* Build configuration list for PBXNativeTarget "QuantiBase" */;
@@ -721,7 +753,6 @@
 				630AF6541F44791E009CEA24 /* Frameworks */,
 				630AF6551F44791E009CEA24 /* Headers */,
 				630AF6561F44791E009CEA24 /* Resources */,
-				5B9FCB6A22D3A4AB0099A698 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -740,6 +771,7 @@
 				D32D96FF1F5449CF006A635E /* Frameworks */,
 				D32D97001F5449CF006A635E /* Resources */,
 				5BF8E95C1F73E97F00B7334B /* Embed Frameworks */,
+				5B55D98622F86F79002AB940 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -789,34 +821,23 @@
 			productReference = D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D3ACC8331F50CBD800CAC22F /* QuantiBaseTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D3ACC83F1F50CBD800CAC22F /* Build configuration list for PBXNativeTarget "QuantiBaseTests" */;
-			buildPhases = (
-				D3ACC8301F50CBD800CAC22F /* Sources */,
-				D3ACC8311F50CBD800CAC22F /* Frameworks */,
-				D3ACC8321F50CBD800CAC22F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D3ACC83B1F50CBD800CAC22F /* PBXTargetDependency */,
-			);
-			name = QuantiBaseTests;
-			productName = QuantiBaseTests;
-			productReference = D3ACC8341F50CBD800CAC22F /* QuantiBaseTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		630AF64F1F44791E009CEA24 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "David Nemec";
 				TargetAttributes = {
+					5B55D96A22F85CE8002AB940 = {
+						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = NN96S264YG;
+						LastSwiftMigration = 1030;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D32D97011F5449CF006A635E;
+					};
 					630AF6571F44791E009CEA24 = {
 						CreatedOnToolsVersion = 8.3.3;
 						LastSwiftMigration = 0900;
@@ -837,12 +858,6 @@
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
-					D3ACC8331F50CBD800CAC22F = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = X9BLYWRC6A;
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 630AF6521F44791E009CEA24 /* Build configuration list for PBXProject "QuantiBase" */;
@@ -860,14 +875,21 @@
 			targets = (
 				630AF6571F44791E009CEA24 /* QuantiBase */,
 				D39AD276221BF2EE00C95FCA /* QuantiBase macOS */,
-				D3ACC8331F50CBD800CAC22F /* QuantiBaseTests */,
-				D32D97161F5449CF006A635E /* QuantiBaseExampleUITests */,
 				D32D97011F5449CF006A635E /* QuantiBaseExample */,
+				5B55D96A22F85CE8002AB940 /* QuantiBaseExampleTests */,
+				D32D97161F5449CF006A635E /* QuantiBaseExampleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5B55D96922F85CE8002AB940 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		630AF6561F44791E009CEA24 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -899,34 +921,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3ACC8321F50CBD800CAC22F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5B9BCD9622118CED00ED940C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		5B9FCB6A22D3A4AB0099A698 /* ShellScript */ = {
+		5B55D98622F86F79002AB940 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -948,6 +946,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
 		};
+		5B9BCD9622118CED00ED940C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		D39AD277221BF2EE00C95FCA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -968,6 +983,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5B55D96722F85CE8002AB940 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B55D97B22F86C92002AB940 /* Array+.swift in Sources */,
+				5B55D97722F85E0B002AB940 /* UIImage+.swift in Sources */,
+				5B55D97F22F86CF4002AB940 /* String+.swift in Sources */,
+				5B55D98322F86D57002AB940 /* AppVersion+.swift in Sources */,
+				5B55D98122F86D30002AB940 /* Collection+reduce.swift in Sources */,
+				5B55D97922F85F1F002AB940 /* TimeInterval+stringRepresentation.swift in Sources */,
+				5B55D97D22F86CC7002AB940 /* Date+.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		630AF6531F44791E009CEA24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1122,23 +1151,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3ACC8301F50CBD800CAC22F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D397CEB41F520A7C00CCD70E /* TimeInterval+stringRepresentation.swift in Sources */,
-				5BC1EB0F1F71748100BA1081 /* Date+.swift in Sources */,
-				5B7BC4EA1F72CCB200C5046A /* Collection+reduce.swift in Sources */,
-				5B7BC4E81F72C5EE00C5046A /* String+.swift in Sources */,
-				D3ACC8411F50CC5B00CAC22F /* UIImage+.swift in Sources */,
-				D397CEB61F520E5100CCD70E /* Array+.swift in Sources */,
-				5BC740C92243C54A00E8F899 /* AppVersion.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5B55D97122F85CE8002AB940 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D32D97011F5449CF006A635E /* QuantiBaseExample */;
+			targetProxy = 5B55D97022F85CE8002AB940 /* PBXContainerItemProxy */;
+		};
 		5BF8E95B1F73E97F00B7334B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 630AF6571F44791E009CEA24 /* QuantiBase */;
@@ -1149,14 +1169,83 @@
 			target = D32D97011F5449CF006A635E /* QuantiBaseExample */;
 			targetProxy = D32D97181F5449CF006A635E /* PBXContainerItemProxy */;
 		};
-		D3ACC83B1F50CBD800CAC22F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 630AF6571F44791E009CEA24 /* QuantiBase */;
-			targetProxy = D3ACC83A1F50CBD800CAC22F /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		5B55D97222F85CE8002AB940 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NN96S264YG;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = QuantiBaseExampleTests/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.troupmar.QuantiBaseExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuantiBaseExample.app/QuantiBaseExample";
+			};
+			name = Debug;
+		};
+		5B55D97322F85CE8002AB940 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NN96S264YG;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = QuantiBaseExampleTests/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.troupmar.QuantiBaseExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuantiBaseExample.app/QuantiBaseExample";
+			};
+			name = Release;
+		};
+		5B55D97422F85CE8002AB940 /* Release-Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NN96S264YG;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = QuantiBaseExampleTests/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.troupmar.QuantiBaseExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuantiBaseExample.app/QuantiBaseExample";
+			};
+			name = "Release-Adhoc";
+		};
 		630AF65E1F44791E009CEA24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1470,7 +1559,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = QuantiBaseExampleUITests/Info.plist;
+				INFOPLIST_FILE = QuantiBaseExampleUITests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1485,7 +1574,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = QuantiBaseExampleUITests/Info.plist;
+				INFOPLIST_FILE = QuantiBaseExampleUITests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1500,7 +1589,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = QuantiBaseExampleUITests/Info.plist;
+				INFOPLIST_FILE = QuantiBaseExampleUITests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1604,45 +1693,19 @@
 			};
 			name = "Release-Adhoc";
 		};
-		D3ACC83C1F50CBD800CAC22F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = QuantiBaseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		D3ACC83D1F50CBD800CAC22F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = QuantiBaseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		D3ACC83E1F50CBD800CAC22F /* Release-Adhoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = QuantiBaseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = "Release-Adhoc";
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5B55D97522F85CE8002AB940 /* Build configuration list for PBXNativeTarget "QuantiBaseExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B55D97222F85CE8002AB940 /* Debug */,
+				5B55D97322F85CE8002AB940 /* Release */,
+				5B55D97422F85CE8002AB940 /* Release-Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		630AF6521F44791E009CEA24 /* Build configuration list for PBXProject "QuantiBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1689,16 +1752,6 @@
 				D39AD2C1221BF2EE00C95FCA /* Debug */,
 				D39AD2C2221BF2EE00C95FCA /* Release */,
 				D39AD2C3221BF2EE00C95FCA /* Release-Adhoc */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D3ACC83F1F50CBD800CAC22F /* Build configuration list for PBXNativeTarget "QuantiBaseTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D3ACC83C1F50CBD800CAC22F /* Debug */,
-				D3ACC83D1F50CBD800CAC22F /* Release */,
-				D3ACC83E1F50CBD800CAC22F /* Release-Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

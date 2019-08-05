@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D3ACC8331F50CBD800CAC22F"
-               BuildableName = "QuantiBaseTests.xctest"
-               BlueprintName = "QuantiBaseTests"
+               BlueprintIdentifier = "5B55D96A22F85CE8002AB940"
+               BuildableName = "QuantiBaseExampleTests.xctest"
+               BlueprintName = "QuantiBaseExampleTests"
                ReferencedContainer = "container:QuantiBase.xcodeproj">
             </BuildableReference>
          </TestableReference>
