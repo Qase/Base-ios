@@ -46,14 +46,15 @@
 		5B55D97F22F86CF4002AB940 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55D97E22F86CF4002AB940 /* String+.swift */; };
 		5B55D98122F86D30002AB940 /* Collection+reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55D98022F86D30002AB940 /* Collection+reduce.swift */; };
 		5B55D98322F86D57002AB940 /* AppVersion+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55D98222F86D57002AB940 /* AppVersion+.swift */; };
+		5B6D90CD234CE1E5002EF5C1 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90CC234CE1E5002EF5C1 /* Action.framework */; };
+		5B6D90CF234CE208002EF5C1 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90CE234CE208002EF5C1 /* Overture.framework */; };
+		5B6D90D1234CE21A002EF5C1 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90D0234CE21A002EF5C1 /* RxCocoa.framework */; };
+		5B6D90D3234CE231002EF5C1 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90D2234CE231002EF5C1 /* RxRelay.framework */; };
+		5B6D90D5234CE253002EF5C1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90D4234CE253002EF5C1 /* RxSwift.framework */; };
 		5B9FCB5622D3A1F60099A698 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5522D3A1F60099A698 /* Action.framework */; };
-		5B9FCB5722D3A1F60099A698 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5522D3A1F60099A698 /* Action.framework */; };
 		5B9FCB5E22D3A20C0099A698 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5822D3A20B0099A698 /* RxRelay.framework */; };
-		5B9FCB5F22D3A20C0099A698 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5822D3A20B0099A698 /* RxRelay.framework */; };
 		5B9FCB6222D3A20C0099A698 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5A22D3A20C0099A698 /* RxCocoa.framework */; };
-		5B9FCB6322D3A20C0099A698 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5A22D3A20C0099A698 /* RxCocoa.framework */; };
 		5B9FCB6422D3A20C0099A698 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5B22D3A20C0099A698 /* RxSwift.framework */; };
-		5B9FCB6522D3A20C0099A698 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5B22D3A20C0099A698 /* RxSwift.framework */; };
 		5BA6AAC4226F191700FBB047 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6AAC3226F191700FBB047 /* Data+.swift */; };
 		5BA79E0B220DBCBF00C0F81D /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+.swift */; };
 		5BA79E0F220DBD0D00C0F81D /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0E220DBD0D00C0F81D /* BluetoothService.swift */; };
@@ -68,7 +69,6 @@
 		5BF8E9581F73E97F00B7334B /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
 		5BF8E9591F73E97F00B7334B /* QuantiBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5BFCDBD622E74F6100EB60A6 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFCDBD522E74F6100EB60A6 /* Overture.framework */; };
-		5BFCDBD722E74F6100EB60A6 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFCDBD522E74F6100EB60A6 /* Overture.framework */; };
 		5BFCDBDA22E750CC00EB60A6 /* PrecedenceGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBD922E750CC00EB60A6 /* PrecedenceGroups.swift */; };
 		5BFCDBDB22E750CC00EB60A6 /* PrecedenceGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBD922E750CC00EB60A6 /* PrecedenceGroups.swift */; };
 		5BFCDBDD22E750E800EB60A6 /* ForwardApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBDC22E750E800EB60A6 /* ForwardApplication.swift */; };
@@ -244,6 +244,11 @@
 		5B55D97E22F86CF4002AB940 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		5B55D98022F86D30002AB940 /* Collection+reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+reduce.swift"; sourceTree = "<group>"; };
 		5B55D98222F86D57002AB940 /* AppVersion+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppVersion+.swift"; sourceTree = "<group>"; };
+		5B6D90CC234CE1E5002EF5C1 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/Mac/Action.framework; sourceTree = "<group>"; };
+		5B6D90CE234CE208002EF5C1 /* Overture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Overture.framework; path = Carthage/Build/Mac/Overture.framework; sourceTree = "<group>"; };
+		5B6D90D0234CE21A002EF5C1 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
+		5B6D90D2234CE231002EF5C1 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/Mac/RxRelay.framework; sourceTree = "<group>"; };
+		5B6D90D4234CE253002EF5C1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
 		5B9FCB5522D3A1F60099A698 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		5B9FCB5822D3A20B0099A698 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		5B9FCB5922D3A20C0099A698 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
@@ -360,11 +365,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B9FCB6522D3A20C0099A698 /* RxSwift.framework in Frameworks */,
-				5B9FCB6322D3A20C0099A698 /* RxCocoa.framework in Frameworks */,
-				5B9FCB5F22D3A20C0099A698 /* RxRelay.framework in Frameworks */,
-				5B9FCB5722D3A1F60099A698 /* Action.framework in Frameworks */,
-				5BFCDBD722E74F6100EB60A6 /* Overture.framework in Frameworks */,
+				5B6D90D5234CE253002EF5C1 /* RxSwift.framework in Frameworks */,
+				5B6D90D3234CE231002EF5C1 /* RxRelay.framework in Frameworks */,
+				5B6D90D1234CE21A002EF5C1 /* RxCocoa.framework in Frameworks */,
+				5B6D90CF234CE208002EF5C1 /* Overture.framework in Frameworks */,
+				5B6D90CD234CE1E5002EF5C1 /* Action.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,12 +506,17 @@
 			isa = PBXGroup;
 			children = (
 				5BFCDBD522E74F6100EB60A6 /* Overture.framework */,
+				5B6D90CE234CE208002EF5C1 /* Overture.framework */,
+				5B6D90D0234CE21A002EF5C1 /* RxCocoa.framework */,
 				5B9FCB5D22D3A20C0099A698 /* RxBlocking.framework */,
 				5B9FCB5A22D3A20C0099A698 /* RxCocoa.framework */,
+				5B6D90D2234CE231002EF5C1 /* RxRelay.framework */,
 				5B9FCB5822D3A20B0099A698 /* RxRelay.framework */,
 				5B9FCB5B22D3A20C0099A698 /* RxSwift.framework */,
-				5B9FCB5922D3A20C0099A698 /* RxTest.framework */,
+				5B6D90D4234CE253002EF5C1 /* RxSwift.framework */,
+				5B6D90CC234CE1E5002EF5C1 /* Action.framework */,
 				5B9FCB5522D3A1F60099A698 /* Action.framework */,
+				5B9FCB5922D3A20C0099A698 /* RxTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
