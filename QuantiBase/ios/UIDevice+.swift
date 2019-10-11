@@ -119,14 +119,4 @@ extension UIDevice {
 	public static var isiPad: Bool {
 		return UIDevice.current.userInterfaceIdiom == .pad
 	}
-
-    public static var isHapticsSupported: Bool {
-        let feedback = UIImpactFeedbackGenerator(style: .heavy)
-        feedback.prepare()
-        var string = feedback.debugDescription
-        string.removeLast()
-        let number = string.suffix(1)
-
-        return number == "1"
-    }
 }
