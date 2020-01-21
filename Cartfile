@@ -6,3 +6,9 @@ github "RxSwiftCommunity/Action" ~> 4.0.1
 
 # Overture
 github "pointfreeco/swift-overture" ~> 0.5
+
+# RxDataSources
+github "RxSwiftCommunity/RxDataSources" ~> 4.0
+
+# Snapkit
+github "SnapKit/SnapKit" ~> 4.0.1

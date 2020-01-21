@@ -12,6 +12,7 @@ import QuantiBase
 enum RowsIdentifiers: String {
     case webViewController = "WebViewController"
     case paragraphViewController = "ParagraphViewController"
+    case screenshotsGalleryViewController = "ScreenshotsGalleryViewController"
 }
 
 class MasterViewController: UIViewController {
@@ -55,11 +56,13 @@ class MasterViewController: UIViewController {
 
 		let webViewControllerRow = TableRow(identifier: RowsIdentifiers.webViewController.rawValue, type: UITableViewCell.self)
 		let paragraphViewControllerRow = TableRow(identifier: RowsIdentifiers.paragraphViewController.rawValue, type: UITableViewCell.self)
+        let garagraphViewControllerRow = TableRow(identifier: RowsIdentifiers.screenshotsGalleryViewController.rawValue, type: UITableViewCell.self)
 
 		tableModel.add(section: viewControllersSection)
 
 		viewControllersSection.add(row: webViewControllerRow)
 		viewControllersSection.add(row: paragraphViewControllerRow)
+        viewControllersSection.add(row: garagraphViewControllerRow)
 
         tableModel.registerCells(for: self.tableView)
 	}
@@ -98,6 +101,8 @@ extension MasterViewController: UITableViewDelegate {
                 presentWebViewController()
             case .paragraphViewController:
                 presentParagraphViewController()
+            case .screenshotsGalleryViewController:
+                presentScreenshotGalleryViewController()
             }
         }
     }
@@ -128,5 +133,12 @@ extension MasterViewController: UITableViewDelegate {
 
         navigationController?.pushViewController(paragraphViewController, animated: true)
 
+    }
+
+    func presentScreenshotGalleryViewController() {
+        let screenshotsGalleryViewController = ScreenshotsGalleryViewController()
+        let screenshotsGalleryNavigationViewController = UINavigationController(rootViewController: screenshotsGalleryViewController)
+        screenshotsGalleryNavigationViewController.modalPresentationStyle = .fullScreen
+        present(screenshotsGalleryNavigationViewController, animated: true, completion: nil)
     }
 }
