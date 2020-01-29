@@ -25,4 +25,3 @@ extension PHAsset {
         return thumbnail
     }
 }
-

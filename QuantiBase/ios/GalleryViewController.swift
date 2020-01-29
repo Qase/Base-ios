@@ -39,6 +39,14 @@ public class ScreenshotsGalleryViewController: UIViewController {
     private var closeBarButton = UIBarButtonItem(title: "close_button".localized, style: .plain, target: nil, action: nil)
     private let selectBarButton = UIBarButtonItem(title: "select".localized, style: .plain, target: nil, action: nil)
     private var collectionView: PanSelectableCollectionView!
+    private let noScreenshotsLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .textGrey
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.text = "no_screenshots".localized
+        label.textAlignment = .center
+        return label
+    }()
 
     private var galleryPhotos = BehaviorRelay<[PHAsset]?>(value: [])
     private let galleryPhotosSubject = PublishSubject<[GalleryScreenshots]>()
@@ -99,7 +107,8 @@ public class ScreenshotsGalleryViewController: UIViewController {
         collectionView.maxSelectedItems = 5
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { $0.edges.equalToSuperview() }
-
+        view.addSubview(noScreenshotsLabel)
+        noScreenshotsLabel.snp.makeConstraints { $0.edges.equalToSuperview() }
         self.collectionView = collectionView
     }
 
@@ -123,6 +132,11 @@ public class ScreenshotsGalleryViewController: UIViewController {
 
         areScreenshotsSelected
             .bind(to: selectBarButton.rx.isEnabled)
+            .disposed(by: bag)
+
+        galleryPhotosSubject.asObservable()
+            .map { !($0.first?.items.isEmpty ?? false) }
+            .bind(to: noScreenshotsLabel.rx.isHidden)
             .disposed(by: bag)
 
         let dataSource = RxCollectionViewSectionedAnimatedDataSource<GalleryScreenshots>(
