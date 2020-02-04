@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Reachability.h"
-
 //! Project version number for QuantiBase.
 FOUNDATION_EXPORT double QuantiBaseVersionNumber;
 

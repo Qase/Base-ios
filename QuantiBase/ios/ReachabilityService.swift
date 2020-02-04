@@ -26,39 +26,74 @@ public class ReachabilityService {
 		return _connectivityChanged.asObservable()
 	}
 
-    private let reachability = Reachability.forInternetConnection()
+    private let reachability = try? Reachability()
 
     public var connectivityState: ConnectivityState {
-        guard let reachability = Reachability.forInternetConnection() else {
+        guard let reachability = self.reachability else {
             return .notReachable
         }
 
-        switch reachability.currentReachabilityStatus() {
-        case .NotReachable:
+        print(reachability.connection)
+
+        switch reachability.connection {
+        case .unavailable, .none:
             return .notReachable
-        case .ReachableViaWiFi:
+        case .wifi:
             return .reachableViaWifi
-        case .ReachableViaWWAN:
-            switch CTTelephonyNetworkInfo().currentRadioAccessTechnology {
-            case CTRadioAccessTechnologyGPRS?,
-                 CTRadioAccessTechnologyEdge?,
-                 CTRadioAccessTechnologyCDMA1x?:
-                return .reachableViaWWAN2G
-            case CTRadioAccessTechnologyWCDMA?,
-                 CTRadioAccessTechnologyHSDPA?,
-                 CTRadioAccessTechnologyHSUPA?,
-                 CTRadioAccessTechnologyCDMAEVDORev0?,
-                 CTRadioAccessTechnologyCDMAEVDORevA?,
-                 CTRadioAccessTechnologyCDMAEVDORevB?,
-                 CTRadioAccessTechnologyeHRPD?:
-                return .reachableViaWWAN3G
-            case CTRadioAccessTechnologyLTE?:
-                return .reachableViaWWAN4G
-            default:
-                return .notReachable
+        case .cellular:
+
+            if #available(iOS 12.0, *) {
+
+                var connectionTypeToTechDict: [ConnectivityState: [String]] = [:]
+                connectionTypeToTechDict[.reachableViaWWAN4G] = [CTRadioAccessTechnologyLTE]
+                connectionTypeToTechDict[.reachableViaWWAN3G] = [CTRadioAccessTechnologyWCDMA,
+                                                                 CTRadioAccessTechnologyHSDPA,
+                                                                 CTRadioAccessTechnologyHSUPA,
+                                                                 CTRadioAccessTechnologyCDMAEVDORev0,
+                                                                 CTRadioAccessTechnologyCDMAEVDORevA,
+                                                                 CTRadioAccessTechnologyCDMAEVDORevB,
+                                                                 CTRadioAccessTechnologyeHRPD]
+                connectionTypeToTechDict[.reachableViaWWAN2G] = [CTRadioAccessTechnologyGPRS,
+                                                                 CTRadioAccessTechnologyEdge,
+                                                                 CTRadioAccessTechnologyCDMA1x]
+
+                let telephonyArrayContainsTech = { (telephonyParameters: [String: String], techsToSearch: [String]) -> Bool in
+                    telephonyParameters.map { $0.value }.contains(where: techsToSearch.contains)
+                }
+
+                let telephonyParameters = CTTelephonyNetworkInfo().serviceCurrentRadioAccessTechnology ?? [:]
+
+                if telephonyArrayContainsTech(telephonyParameters, connectionTypeToTechDict[.reachableViaWWAN4G] ?? []) {
+                    return .reachableViaWWAN4G
+                } else if telephonyArrayContainsTech(telephonyParameters, connectionTypeToTechDict[.reachableViaWWAN3G] ?? []) {
+                    return .reachableViaWWAN3G
+                } else if telephonyArrayContainsTech(telephonyParameters, connectionTypeToTechDict[.reachableViaWWAN2G] ?? []) {
+                    return .reachableViaWWAN2G
+                } else {
+                    return .notReachable
+                }
+
+            } else {
+                // Fallback to version before iOS 12
+                switch CTTelephonyNetworkInfo().currentRadioAccessTechnology {
+                case CTRadioAccessTechnologyGPRS?,
+                     CTRadioAccessTechnologyEdge?,
+                     CTRadioAccessTechnologyCDMA1x?:
+                    return .reachableViaWWAN2G
+                case CTRadioAccessTechnologyWCDMA?,
+                     CTRadioAccessTechnologyHSDPA?,
+                     CTRadioAccessTechnologyHSUPA?,
+                     CTRadioAccessTechnologyCDMAEVDORev0?,
+                     CTRadioAccessTechnologyCDMAEVDORevA?,
+                     CTRadioAccessTechnologyCDMAEVDORevB?,
+                     CTRadioAccessTechnologyeHRPD?:
+                    return .reachableViaWWAN3G
+                case CTRadioAccessTechnologyLTE?:
+                    return .reachableViaWWAN4G
+                default:
+                    return .notReachable
+                }
             }
-        @unknown default:
-            fatalError("\(#function) Given case is not covered!")
         }
     }
 
@@ -69,7 +104,7 @@ public class ReachabilityService {
 	private let bag = DisposeBag()
 
     private init() {
-        reachability?.startNotifier()
+        try? reachability?.startNotifier()
 
 		let center = NotificationCenter.default
 
