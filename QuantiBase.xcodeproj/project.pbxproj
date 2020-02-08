@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55DEB7C123E86229009AC5DC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DEB7C023E86229009AC5DC /* Reachability.swift */; };
 		5B04BDD022955C0B001BC7C8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04BDCF22955C0B001BC7C8 /* Double+.swift */; };
 		5B04BDD122955C0B001BC7C8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04BDCF22955C0B001BC7C8 /* Double+.swift */; };
 		5B04BDD322955C3E001BC7C8 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04BDD222955C3E001BC7C8 /* Dictionary+.swift */; };
@@ -90,8 +91,6 @@
 		636599311F45DC9200979BBA /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599301F45DC9200979BBA /* UIImage+.swift */; };
 		636599331F45DCB500979BBA /* UIDevice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599321F45DCB500979BBA /* UIDevice+.swift */; };
 		636599351F45DCDF00979BBA /* CGFloat+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599341F45DCDF00979BBA /* CGFloat+.swift */; };
-		6365993C1F45FA9A00979BBA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6365993A1F45FA9A00979BBA /* Reachability.m */; };
-		6365993D1F45FA9A00979BBA /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 6365993B1F45FA9A00979BBA /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6365993F1F45FAA000979BBA /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365993E1F45FAA000979BBA /* ReachabilityService.swift */; };
 		636599411F45FFE500979BBA /* MultipleDelegating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599401F45FFE500979BBA /* MultipleDelegating.swift */; };
 		636599431F46006300979BBA /* Notified.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636599421F46006300979BBA /* Notified.swift */; };
@@ -231,6 +230,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		55DEB7C023E86229009AC5DC /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		5B04BDCF22955C0B001BC7C8 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		5B04BDD222955C3E001BC7C8 /* Dictionary+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 		5B1A0E23228AE6FD00B649BF /* UserCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
@@ -310,8 +310,6 @@
 		636599301F45DC9200979BBA /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		636599321F45DCB500979BBA /* UIDevice+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+.swift"; sourceTree = "<group>"; };
 		636599341F45DCDF00979BBA /* CGFloat+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+.swift"; sourceTree = "<group>"; };
-		6365993A1F45FA9A00979BBA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		6365993B1F45FA9A00979BBA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		6365993E1F45FAA000979BBA /* ReachabilityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		636599401F45FFE500979BBA /* MultipleDelegating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleDelegating.swift; sourceTree = "<group>"; };
 		636599421F46006300979BBA /* Notified.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notified.swift; sourceTree = "<group>"; };
@@ -660,9 +658,8 @@
 		6C1F8176228C032100362D3F /* ReachabilityService */ = {
 			isa = PBXGroup;
 			children = (
-				6365993A1F45FA9A00979BBA /* Reachability.m */,
-				6365993B1F45FA9A00979BBA /* Reachability.h */,
 				6365993E1F45FAA000979BBA /* ReachabilityService.swift */,
+				55DEB7C023E86229009AC5DC /* Reachability.swift */,
 			);
 			name = ReachabilityService;
 			sourceTree = "<group>";
@@ -786,7 +783,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				630AF65D1F44791E009CEA24 /* QuantiBase.h in Headers */,
-				6365993D1F45FA9A00979BBA /* Reachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1131,8 +1127,8 @@
 				6365992B1F45DA1A00979BBA /* UIView+.swift in Sources */,
 				5B1C1D4D220CA91000C40C54 /* UIScreen+.swift in Sources */,
 				5B04BDD322955C3E001BC7C8 /* Dictionary+.swift in Sources */,
-				6365993C1F45FA9A00979BBA /* Reachability.m in Sources */,
 				5B1C1D41220CA41600C40C54 /* ArraySlice+.swift in Sources */,
+				55DEB7C123E86229009AC5DC /* Reachability.swift in Sources */,
 				5BFCDBE922E7514900EB60A6 /* KeyPaths.swift in Sources */,
 				6C6074BA2236CFA5006C6B14 /* AuthorizedBaseApi.swift in Sources */,
 				6C6B744B23719587007CC064 /* UINavigationItem+reactive.swift in Sources */,
