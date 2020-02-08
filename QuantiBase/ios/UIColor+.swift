@@ -50,3 +50,9 @@ extension UIColor {
 		return self.adjust(by: -1 * abs(percentage))
 	}
 }
+
+extension UIColor {
+    public class var textGrey: UIColor {
+        return UIColor(red: 164/255.0, green: 164/255.0, blue: 167/255.0, alpha: 1)
+    }
+}
