@@ -137,15 +137,11 @@
 		9CD8E65F23D72B6000F90737 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E65C23D72B6000F90737 /* Differentiator.framework */; };
 		9CD8E66223D72C8400F90737 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E66123D72C8400F90737 /* GalleryViewController.swift */; };
 		9CD8E66623D72DD700F90737 /* PanSelectableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E66523D72DD700F90737 /* PanSelectableCollectionView.swift */; };
-		9CD8E66723D72DD700F90737 /* PanSelectableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E66523D72DD700F90737 /* PanSelectableCollectionView.swift */; };
 		9CD8E66A23D73C0000F90737 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E66923D73C0000F90737 /* UICollectionView+.swift */; };
-		9CD8E66B23D73C0000F90737 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E66923D73C0000F90737 /* UICollectionView+.swift */; };
-		9CD8E66C23D73C0000F90737 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E66923D73C0000F90737 /* UICollectionView+.swift */; };
-		9CD8E66E23D73EC700F90737 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E66D23D73EC700F90737 /* SnapKit.framework */; };
+		9CD8E66E23D73EC700F90737 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E66D23D73EC700F90737 /* SnapKit.framework */; platformFilter = ios; };
 		9CD8E66F23D73ECC00F90737 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E66D23D73EC700F90737 /* SnapKit.framework */; };
 		9CD8E67023D73ECC00F90737 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E66D23D73EC700F90737 /* SnapKit.framework */; };
 		9CD8E67223D73F7100F90737 /* CallLogSnapshotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E67123D73F7100F90737 /* CallLogSnapshotCollectionViewCell.swift */; };
-		9CD8E67323D73F7A00F90737 /* CallLogSnapshotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E67123D73F7100F90737 /* CallLogSnapshotCollectionViewCell.swift */; };
 		9CD8E67523D73FE600F90737 /* PHAsset+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E67423D73FE600F90737 /* PHAsset+.swift */; };
 		D32D96FD1F544853006A635E /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D96FC1F544853006A635E /* LoremSwiftum.swift */; };
 		D32D97051F5449CF006A635E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D97041F5449CF006A635E /* AppDelegate.swift */; };
@@ -1160,7 +1156,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D32D97071F5449CF006A635E /* MasterViewController.swift in Sources */,
-				9CD8E66C23D73C0000F90737 /* UICollectionView+.swift in Sources */,
 				D32D97051F5449CF006A635E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1181,7 +1176,6 @@
 				5B1A0E55228DB32D00B649BF /* NSTextField+rx.swift in Sources */,
 				D39AD27A221BF2EE00C95FCA /* TimeInterval+stringRepresentation.swift in Sources */,
 				D39AD27C221BF2EE00C95FCA /* HTTPHeaderFieldKey.swift in Sources */,
-				9CD8E67323D73F7A00F90737 /* CallLogSnapshotCollectionViewCell.swift in Sources */,
 				6C1F818A228C070500362D3F /* ArrayUInt8+binary.swift in Sources */,
 				5B1A0E58228DB32D00B649BF /* NSPopUpButton+.swift in Sources */,
 				D39AD27E221BF2EE00C95FCA /* HTTPURLResponse+logDescription.swift in Sources */,
@@ -1203,10 +1197,8 @@
 				5BFCDBE722E7512B00EB60A6 /* SingleTypeComposition.swift in Sources */,
 				D39AD295221BF2EE00C95FCA /* URLRequest+logDescription.swift in Sources */,
 				D39AD299221BF2EE00C95FCA /* Queue.swift in Sources */,
-				9CD8E66B23D73C0000F90737 /* UICollectionView+.swift in Sources */,
 				5BFCDBE122E750FC00EB60A6 /* Composition.swift in Sources */,
 				D39AD29A221BF2EE00C95FCA /* LoremSwiftum.swift in Sources */,
-				9CD8E66723D72DD700F90737 /* PanSelectableCollectionView.swift in Sources */,
 				5B43EB8022AA6B9300DE3038 /* NSView+rx.swift in Sources */,
 				6C1F816D228C008100362D3F /* AppVersion.swift in Sources */,
 				6C1F816E228C00B300362D3F /* UserDefaultsStorable.swift in Sources */,

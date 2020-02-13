@@ -41,8 +41,8 @@ public extension Notification.Name {
 
 public class Reachability {
 
-    public typealias NetworkReachable = (Reachability) -> ()
-    public typealias NetworkUnreachable = (Reachability) -> ()
+    public typealias NetworkReachable = (Reachability) -> Void
+    public typealias NetworkUnreachable = (Reachability) -> Void
 
     @available(*, unavailable, renamed: "Connection")
     public enum NetworkStatus: CustomStringConvertible {
@@ -262,7 +262,6 @@ fileprivate extension Reachability {
             self.flags = flags
         }
     }
-
 
     func notifyReachabilityChanged() {
         let notify = { [weak self] in
