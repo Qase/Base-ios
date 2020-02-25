@@ -70,7 +70,7 @@ extension WebViewController: UIWebViewDelegate {
     }
 
 	public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
-        return true
+        true
     }
 
     public func webViewDidStartLoad(_ webView: UIWebView) {

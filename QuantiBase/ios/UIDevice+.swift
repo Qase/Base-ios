@@ -91,7 +91,7 @@ public enum ResolutionGroup: String {
     case lr1024x1366 = "r2048x2732"
 
     public static func from(_ size: CGSize) -> ResolutionGroup? {
-        return ResolutionGroup(rawValue: "r\(size.width)x\(size.height)")
+        ResolutionGroup(rawValue: "r\(size.width)x\(size.height)")
     }
 }
 
@@ -109,14 +109,14 @@ extension UIDevice {
     }
 
 	public static var isSimulator: Bool {
-		return TARGET_OS_SIMULATOR != 0
+		TARGET_OS_SIMULATOR != 0
 	}
 
 	public static var isiPhone: Bool {
-		return UIDevice.current.userInterfaceIdiom == .phone
+		UIDevice.current.userInterfaceIdiom == .phone
 	}
 
 	public static var isiPad: Bool {
-		return UIDevice.current.userInterfaceIdiom == .pad
+		UIDevice.current.userInterfaceIdiom == .pad
 	}
 }

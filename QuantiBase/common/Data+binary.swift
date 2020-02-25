@@ -11,7 +11,7 @@ import Foundation
 extension Data {
 	/// Returns [UInt8] representation of self
 	public var byteArray: [UInt8] {
-		return [UInt8](self)
+		[UInt8](self)
 	}
 
 	/// Returns UInt8 on given position (due to the fact that Data can be represented as [UInt8]).
@@ -32,7 +32,7 @@ extension Data {
 	/// - Parameter position: of the first and following second byte to complete and retrieve as UInt16
 	/// - Returns: single UInt16
 	public func uInt16(onPosition position: Int) -> UInt16? {
-		return [self.uInt8(onPosition: position), self.uInt8(onPosition: position + 1)].compactMap { $0 }.uInt16
+		[self.uInt8(onPosition: position), self.uInt8(onPosition: position + 1)].compactMap { $0 }.uInt16
 	}
 
 	/// Returns UInt16 on given position - due to the fact that Data can be represented as [UInt8] (little-endian).
@@ -40,7 +40,7 @@ extension Data {
 	/// - Parameter position: of the first and following second byte to complete and retrieve as UInt16
 	/// - Returns: single UInt16
 	public func littleEndianUInt16(onPosition position: Int) -> UInt16? {
-		return [self.uInt8(onPosition: position + 1), self.uInt8(onPosition: position)].compactMap { $0 }.uInt16
+		[self.uInt8(onPosition: position + 1), self.uInt8(onPosition: position)].compactMap { $0 }.uInt16
 	}
 
 	/// Method to retrieve Data instance with random data of given length.

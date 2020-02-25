@@ -27,7 +27,7 @@ public protocol MultipleDelegating: class {
 extension MultipleDelegating {
 	/// Delegates without its weak wrapping.
 	public var unwrappedDelegates: [GenericDelegateType] {
-		return delegates.map { $0.value.delegate as? GenericDelegateType }.compactMap { $0 }
+		delegates.map { $0.value.delegate as? GenericDelegateType }.compactMap { $0 }
 	}
 
     /// Method to add delegate of Connectivity Manager.

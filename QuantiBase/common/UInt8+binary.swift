@@ -11,7 +11,7 @@ import Foundation
 extension UInt8 {
 	// Returns Data representation of self.
 	public var data: Data {
-		return [self].data
+		[self].data
 	}
 
 }

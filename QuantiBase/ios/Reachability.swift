@@ -84,12 +84,12 @@ public class Reachability {
 
     @available(*, deprecated, renamed: "connection.description")
     public var currentReachabilityString: String {
-        return "\(connection)"
+        "\(connection)"
     }
 
     @available(*, unavailable, renamed: "connection")
     public var currentReachabilityStatus: Connection {
-        return connection
+        connection
     }
 
     public var connection: Connection {
@@ -230,7 +230,7 @@ public extension Reachability {
     // MARK: - *** Connection test methods ***
     @available(*, deprecated, message: "Please use `connection != .none`")
     var isReachable: Bool {
-        return connection != .unavailable
+        connection != .unavailable
     }
 
     @available(*, deprecated, message: "Please use `connection == .cellular`")
@@ -241,11 +241,11 @@ public extension Reachability {
 
    @available(*, deprecated, message: "Please use `connection == .wifi`")
     var isReachableViaWiFi: Bool {
-        return connection == .wifi
+        connection == .wifi
     }
 
     var description: String {
-        return flags?.description ?? "unavailable flags"
+        flags?.description ?? "unavailable flags"
     }
 }
 
@@ -314,34 +314,34 @@ extension SCNetworkReachabilityFlags {
         #endif
     }
     var isReachableFlagSet: Bool {
-        return contains(.reachable)
+        contains(.reachable)
     }
     var isConnectionRequiredFlagSet: Bool {
-        return contains(.connectionRequired)
+        contains(.connectionRequired)
     }
     var isInterventionRequiredFlagSet: Bool {
-        return contains(.interventionRequired)
+        contains(.interventionRequired)
     }
     var isConnectionOnTrafficFlagSet: Bool {
-        return contains(.connectionOnTraffic)
+        contains(.connectionOnTraffic)
     }
     var isConnectionOnDemandFlagSet: Bool {
-        return contains(.connectionOnDemand)
+        contains(.connectionOnDemand)
     }
     var isConnectionOnTrafficOrDemandFlagSet: Bool {
-        return !intersection([.connectionOnTraffic, .connectionOnDemand]).isEmpty
+        !intersection([.connectionOnTraffic, .connectionOnDemand]).isEmpty
     }
     var isTransientConnectionFlagSet: Bool {
-        return contains(.transientConnection)
+        contains(.transientConnection)
     }
     var isLocalAddressFlagSet: Bool {
-        return contains(.isLocalAddress)
+        contains(.isLocalAddress)
     }
     var isDirectFlagSet: Bool {
-        return contains(.isDirect)
+        contains(.isDirect)
     }
     var isConnectionRequiredAndTransientFlagSet: Bool {
-        return intersection([.connectionRequired, .transientConnection]) == [.connectionRequired, .transientConnection]
+        intersection([.connectionRequired, .transientConnection]) == [.connectionRequired, .transientConnection]
     }
 
     var description: String {

@@ -67,15 +67,15 @@ public class TableModel {
     }
 
     public var sectionCount: Int {
-        return sections.count
+        sections.count
     }
 
     public func titleForHeader(in section: Int) -> String {
-        return sections[section].name
+        sections[section].name
     }
 
     public func rows(in section: Int) -> Int {
-        return sections[section].rows.reduce(0, { $0 + $1.size })
+        sections[section].rows.reduce(0, { $0 + $1.size })
     }
 
     public func cell(with identifier: String) -> TableRow? {
@@ -88,7 +88,7 @@ public class TableModel {
     }
 
     public func cellType(on indexPath: IndexPath) -> UITableViewCell.Type {
-        return self.row(on: indexPath)?.type ?? UITableViewCell.self
+        self.row(on: indexPath)?.type ?? UITableViewCell.self
     }
 
     public func cellIdentifier(on indexPath: IndexPath) -> String {
@@ -102,7 +102,7 @@ public class TableModel {
     }
 
     public func row(on indexPath: IndexPath) -> TableRow? {
-        return sections[indexPath.section].rows[absoluteRowIndex(on: indexPath)]
+        sections[indexPath.section].rows[absoluteRowIndex(on: indexPath)]
     }
 
     public func relativeRowIndex(on indexPath: IndexPath) -> Int {

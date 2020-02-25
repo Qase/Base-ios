@@ -34,11 +34,11 @@ public protocol UserDefaultsStorable {
 
 extension UserDefaultsStorable {
     public static var defaultStorageKey: String? {
-        return nil
+        nil
     }
 
 	public func store(using userDefaultsBundle: UserDefaultsBundle) -> Bool {
-        return userDefaultsBundle.storage.set(codable: storableObject, forKey: userDefaultsBundle.key)
+        userDefaultsBundle.storage.set(codable: storableObject, forKey: userDefaultsBundle.key)
 	}
 
 	public static func restore(using userDefaultsBundle: UserDefaultsBundle) -> StorableObject? {

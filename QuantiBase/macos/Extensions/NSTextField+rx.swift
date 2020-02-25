@@ -14,7 +14,7 @@ extension Reactive where Base: NSTextField {
 
     /// Reactive wrapper for `textColor` property`.
     public var textColor: ControlProperty<NSColor?> {
-        return self.base.rx.controlProperty(getter: { (base) in
+        self.base.rx.controlProperty(getter: { (base) in
             base.textColor
         }, setter: { (base, color) in
             base.textColor = color
@@ -23,14 +23,14 @@ extension Reactive where Base: NSTextField {
 
     /// Reactive wrapper for `delegate` message.
     public var didBeginEditing: ControlEvent<()> {
-        return ControlEvent<()>(events: self.delegate
+        ControlEvent<()>(events: self.delegate
             .methodInvoked(#selector(NSTextFieldDelegate.controlTextDidBeginEditing(_:)))
             .map { _ in ()})
     }
 
     /// Reactive wrapper for `delegate` message.
     public var didEndEditing: ControlEvent<()> {
-        return ControlEvent<()>(events: self.delegate
+        ControlEvent<()>(events: self.delegate
             .methodInvoked(#selector(NSTextFieldDelegate.controlTextDidEndEditing(_:)))
             .map { _ in ()})
     }

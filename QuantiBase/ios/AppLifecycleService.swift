@@ -14,37 +14,37 @@ public class AppLifecycleService {
 
 	private let _willEnterForeground = PublishSubject<Notification>()
 	public var willEnterForeground: Observable<Notification> {
-		return _willEnterForeground.asObservable()
+		_willEnterForeground.asObservable()
 	}
 
 	private let _didEnterBackground = PublishSubject<Notification>()
 	public var didEnterBackground: Observable<Notification> {
-		return _didEnterBackground.asObservable()
+		_didEnterBackground.asObservable()
 	}
 
 	private let _didFinishLaunching = PublishSubject<Notification>()
 	public var didFinishLaunching: Observable<Notification> {
-		return _didFinishLaunching.asObservable()
+		_didFinishLaunching.asObservable()
 	}
 
 	private let _didBecomeActive = PublishSubject<Notification>()
 	public var didBecomeActive: Observable<Notification> {
-		return _didBecomeActive.asObservable()
+		_didBecomeActive.asObservable()
 	}
 
 	private let _willResignActive = PublishSubject<Notification>()
 	public var willResignActive: Observable<Notification> {
-		return _willResignActive.asObservable()
+		_willResignActive.asObservable()
 	}
 
 	private let _didReceiveMemoryWarning = PublishSubject<Notification>()
 	public var didReceiveMemoryWarning: Observable<Notification> {
-		return _didReceiveMemoryWarning.asObservable()
+		_didReceiveMemoryWarning.asObservable()
 	}
 
 	private let _willTerminate = PublishSubject<Notification>()
 	public var willTerminate: Observable<Notification> {
-		return _willTerminate.asObservable()
+		_willTerminate.asObservable()
 	}
 
 	private let bag = DisposeBag()

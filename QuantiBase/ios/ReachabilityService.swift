@@ -23,7 +23,7 @@ public class ReachabilityService {
 
 	private let _connectivityChanged = PublishSubject<ConnectivityState>()
 	public var connectivityChanged: Observable<ConnectivityState> {
-		return _connectivityChanged.asObservable()
+		_connectivityChanged.asObservable()
 	}
 
     private let reachability = try? Reachability()
@@ -50,7 +50,7 @@ public class ReachabilityService {
     }
 
 	public var isConnected: Bool {
-		return connectivityState == .notReachable ? false : true
+		connectivityState == .notReachable ? false : true
 	}
 
 	private let bag = DisposeBag()

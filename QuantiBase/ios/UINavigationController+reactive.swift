@@ -12,7 +12,7 @@ import RxCocoa
 
 extension Reactive where Base: UIViewController {
     public var toolbarItems: Binder<[UIBarButtonItem]?> {
-        return Binder(self.base) { base, buttonItems in
+        Binder(self.base) { base, buttonItems in
             base.toolbarItems = buttonItems
         }
     }

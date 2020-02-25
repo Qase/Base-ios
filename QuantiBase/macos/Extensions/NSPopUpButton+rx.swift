@@ -14,7 +14,7 @@ extension Reactive where Base: NSPopUpButton {
 
     /// Reactive wrapper for `selectedTag` property`.
     public var selectedTag: ControlProperty<Int> {
-        return self.base.rx.controlProperty(getter: { base in
+        self.base.rx.controlProperty(getter: { base in
             base.selectedTag()
         }, setter: { (base, state) in
             base.selectItem(withTag: state)
@@ -23,7 +23,7 @@ extension Reactive where Base: NSPopUpButton {
 
     /// Reactive wrapper for `selectedItem` property`.
     public var selectedItem: ControlProperty<NSMenuItem?> {
-        return self.base.rx.controlProperty(getter: { base -> NSMenuItem? in
+        self.base.rx.controlProperty(getter: { base -> NSMenuItem? in
             base.selectedItem
         }, setter: {base, item in
             base.select(item)

@@ -11,9 +11,9 @@ import Overture
 prefix operator ^
 
 public prefix func ^ <Root, Value>(kp: KeyPath<Root, Value>) -> (Root) -> Value {
-    return get(kp)
+    get(kp)
 }
 
 public prefix func ^ <Root, Value>(kp: WritableKeyPath<Root, Value>) -> (@escaping (Value) -> Value) -> (Root) -> Root {
-    return prop(kp)
+    prop(kp)
 }

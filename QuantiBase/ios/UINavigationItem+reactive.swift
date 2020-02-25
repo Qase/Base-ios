@@ -13,31 +13,31 @@ import RxCocoa
 extension Reactive where Base: UINavigationItem {
 
     public var title: Binder<String?> {
-        return Binder(self.base) { base, title in
+        Binder(self.base) { base, title in
             base.title = title
         }
     }
 
     public var leftBarButtonItem: Binder<UIBarButtonItem?> {
-        return Binder(self.base) { base, buttonItem in
+        Binder(self.base) { base, buttonItem in
             base.leftBarButtonItem = buttonItem
         }
     }
 
     public var rightBarButtonItem: Binder<UIBarButtonItem?> {
-        return Binder(self.base) { base, buttonItem in
+        Binder(self.base) { base, buttonItem in
             base.rightBarButtonItem = buttonItem
         }
     }
 
     public var leftBarButtonItems: Binder<[UIBarButtonItem]?> {
-        return Binder(self.base) { base, buttonItems in
+        Binder(self.base) { base, buttonItems in
             base.leftBarButtonItems = buttonItems
         }
     }
 
     public var rightBarButtonItems: Binder<[UIBarButtonItem]?> {
-        return Binder(self.base) { base, buttonItems in
+        Binder(self.base) { base, buttonItems in
             base.rightBarButtonItems = buttonItems
         }
     }

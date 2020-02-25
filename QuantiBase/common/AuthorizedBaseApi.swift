@@ -27,7 +27,7 @@ open class AuthorizedBaseApi: BaseApi {
     private let urlCredential: URLCredential
 
     private let _sessionEventsSubject = PublishSubject<SessionDataEvents>()
-    public var sessionEvents: Observable<SessionDataEvents> { return _sessionEventsSubject.asObservable() }
+    public var sessionEvents: Observable<SessionDataEvents> { _sessionEventsSubject.asObservable() }
 
     // MARK: - Initializers
 

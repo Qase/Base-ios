@@ -4,7 +4,7 @@ import Foundation
 public final class Lorem {
     /// Generates a single word.
     public static var word: String {
-        return allWords.random
+        allWords.random
     }
 
     /// Generates multiple words whose count is defined by the given value.
@@ -12,7 +12,7 @@ public final class Lorem {
     /// - Parameter count: The number of words to generate.
     /// - Returns: The generated words joined by a space character.
     public static func words(_ count: Int) -> String {
-        return compose({ word },
+        compose({ word },
                        count: count,
                        joinBy: .space)
     }
@@ -34,7 +34,7 @@ public final class Lorem {
     /// - Parameter count: The number of sentences to generate.
     /// - Returns: The generated sentences joined by a space character.
     public static func sentences(_ count: Int) -> String {
-        return compose({ sentence },
+        compose({ sentence },
                        count: count,
                        joinBy: .space)
     }
@@ -54,7 +54,7 @@ public final class Lorem {
     /// - Parameter count: The number of paragraphs to generate.
     /// - Returns: The generated paragraphs joined by a space character.
     public static func paragraphs(_ count: Int) -> String {
-        return compose({ paragraph },
+        compose({ paragraph },
                        count: count,
                        joinBy: .newLine)
     }
@@ -72,27 +72,27 @@ public final class Lorem {
 
     /// Generates a first name.
     public static var firstName: String {
-        return firstNames.random
+        firstNames.random
     }
 
     /// Generates a last name.
     public static var lastName: String {
-        return lastNames.random
+        lastNames.random
     }
 
     /// Generates a full name.
     public static var fullName: String {
-        return "\(firstName) \(lastName))"
+        "\(firstName) \(lastName))"
     }
 
     /// Generates an email address.
     public static var emailAddress: String {
-        return "\(firstName)\(emailDelimiters.random)\(lastName)@\(emailDomains.random)".lowercased()
+        "\(firstName)\(emailDelimiters.random)\(lastName)@\(emailDomains.random)".lowercased()
     }
 
     /// Generates a URL.
     public static var url: String {
-        return "\(urlScheme)://\(urlDomains.random)"
+        "\(urlScheme)://\(urlDomains.random)"
     }
 
     /// Generates a random tweet which is shorter than 140 characters.

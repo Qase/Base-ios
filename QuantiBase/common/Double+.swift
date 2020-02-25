@@ -16,6 +16,6 @@ public extension Double {
     /// - Parameter places: number of places to be rounded to
     /// - Returns: String representation of self
     func string(roundedToPlaces places: Int) -> String {
-        return String(format: "%.\(places)f", self)
+        String(format: "%.\(places)f", self)
     }
 }

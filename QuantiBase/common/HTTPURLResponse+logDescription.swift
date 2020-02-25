@@ -10,6 +10,6 @@ import Foundation
 
 extension HTTPURLResponse {
 	public var logDescription: String {
-		return "Response: {url: \(url?.description ?? "nil"), statusCode: \(statusCode), headersFields: \(allHeaderFields)}"
+		"Response: {url: \(url?.description ?? "nil"), statusCode: \(statusCode), headersFields: \(allHeaderFields)}"
 	}
 }
