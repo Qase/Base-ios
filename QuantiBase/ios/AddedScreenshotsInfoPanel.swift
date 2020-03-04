@@ -11,27 +11,32 @@ import UIKit
 class AddedScreenshotsInfoPanel: UIView {
     var countOfScreenshots: UILabel = {
         let label = UILabel()
-        label.text = "Number of added screnshots: 0 (max. 5)"
         label.font = UIFont.systemFont(ofSize: 14.0)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    var countOfScreenshotsMessage: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14.0)
+        label.text = "\("max".localizeWithFormat(arguments: "5"))"
         label.textAlignment = .center
         return label
     }()
     
     var sizeOfScreenshots: UILabel = {
         let label = UILabel()
-        label.text = "Size of added screnshots: 0 b (max. 10 Mb)"
         label.font = UIFont.systemFont(ofSize: 14.0)
         label.textAlignment = .center
         return label
     }()
     
-    private let stackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.alignment = .center
-        stackView.spacing = 10.0
-        return stackView
+    var sizeOfScreenshotsMessage: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14.0)
+        label.text = "\("max".localizeWithFormat(arguments: "10 Mb"))"
+        label.textAlignment = .center
+        return label
     }()
     
     required init?(coder aDecoder: NSCoder) {
@@ -55,13 +60,23 @@ class AddedScreenshotsInfoPanel: UIView {
         layer.shadowOffset = CGSize.zero
         layer.shadowRadius = 5
         
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .center
+        stackView.spacing = 10.0
+
         addSubview(stackView)
         stackView.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-20)
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-10)
+            make.top.equalToSuperview().offset(10)
         }
         
-        [sizeOfScreenshots, countOfScreenshots].forEach {
+        [sizeOfScreenshots,
+         sizeOfScreenshotsMessage,
+         countOfScreenshots,
+         countOfScreenshotsMessage].forEach {
             stackView.addArrangedSubview($0)
             $0.snp.makeConstraints { make in
                 make.trailing.equalToSuperview()

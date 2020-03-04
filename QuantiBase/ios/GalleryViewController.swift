@@ -26,7 +26,18 @@ public class ScreenshotsGalleryViewController: UIViewController {
         label.textAlignment = .center
         return label
     }()
-    private let addedScreenshotsInfoPanel = AddedScreenshotsInfoPanel()
+    private let addedScreenshotsInfoPanel: AddedScreenshotsInfoPanel = {
+        let addedScreenshotsInfoPanel = AddedScreenshotsInfoPanel()
+        guard let fileLogger: FileLogger = LogManager.shared.logger(),
+        let archivedLogFilesSize = fileLogger.archivedLogFilesSize else {
+            return addedScreenshotsInfoPanel
+        }
+        let readableUnit = UnitsConverter(bytes: Int64(archivedLogFilesSize)).getReadableUnit()
+        let message = "size_of_added_screenshots".localizeWithFormat(arguments: readableUnit)
+        addedScreenshotsInfoPanel.sizeOfScreenshots.text = message
+        addedScreenshotsInfoPanel.countOfScreenshots.text = "number_of_added_screenshots".localizeWithFormat(arguments: "0")
+        return addedScreenshotsInfoPanel
+    }()
 
     private let totalArchiveSize = BehaviorRelay<Int>(value: 0)
     private let screenshots = BehaviorRelay<[Screenshot]>(value: [])
@@ -60,9 +71,6 @@ public class ScreenshotsGalleryViewController: UIViewController {
     }()
 
     private let bag = DisposeBag()
-
-    private let maxNumberOfScreenshots = 5
-    private let maxSizeOfArchive = 10
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -103,16 +111,8 @@ public class ScreenshotsGalleryViewController: UIViewController {
         view.addSubview(addedScreenshotsInfoPanel)
         addedScreenshotsInfoPanel.snp.makeConstraints { make in
             make.trailing.bottom.leading.equalToSuperview()
-            make.height.width.equalTo(100)
+            make.height.width.equalTo(120)
         }
-
-        guard let fileLogger: FileLogger = LogManager.shared.logger(),
-        let archivedLogFilesSize = fileLogger.archivedLogFilesSize else {
-            return
-        }
-        let readableUnit = UnitsConverter(bytes: Int64(archivedLogFilesSize)).getReadableUnit()
-        let message = "Size of archived report: \(readableUnit) (max. 10 Mb)"
-        addedScreenshotsInfoPanel.sizeOfScreenshots.text = message
     }
 
     private func setupBinding() {
@@ -168,9 +168,9 @@ public class ScreenshotsGalleryViewController: UIViewController {
         selectedScreenshotsSize
             .map {
                 let readableUnit = UnitsConverter(bytes: Int64($0)).getReadableUnit()
-                return "Size of archived report: \(readableUnit) (max. 10 Mb)"
+                return "size_of_added_screenshots".localizeWithFormat(arguments: readableUnit)
             }
-            .bind(to: addedScreenshotsInfoPanel.countOfScreenshots.rx.text)
+            .bind(to: addedScreenshotsInfoPanel.sizeOfScreenshots.rx.text)
             .disposed(by: bag)
 
         selectedScreenshotsSize
@@ -179,8 +179,8 @@ public class ScreenshotsGalleryViewController: UIViewController {
 
         collectionView.rx.selectedIndexPaths.asObservable()
             .compactMap {$0?.count}
-            .map { "Number of added screnshots: \($0) (max. 5)" }
-            .bind(to: addedScreenshotsInfoPanel.sizeOfScreenshots.rx.text)
+            .map { "number_of_added_screenshots".localizeWithFormat(arguments: String($0)) }
+            .bind(to: addedScreenshotsInfoPanel.countOfScreenshots.rx.text)
             .disposed(by: bag)
 
         galleryScreenshotsAssetsObservable
@@ -219,8 +219,10 @@ public class ScreenshotsGalleryViewController: UIViewController {
     }
 
     private func presentSizeError() {
-        let alert = UIAlertController(title: "Error", message: "Total archive size is too big", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: nil,
+                                      message: "error_archive_size".localizeWithFormat(arguments: "\(String(Constants.maxSizeOfArchive)) Mb"),
+                                      preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "close".localized, style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }
@@ -231,7 +233,7 @@ extension ScreenshotsGalleryViewController: UICollectionViewDelegate {
             let convertedScreenshotSize = fileLogger.getArchivedFileSize(fileUrl: screenshots.value[indexPath.row].url) else {
             return false
         }
-        let doesTheSizeFit = UnitsConverter(bytes: Int64(convertedScreenshotSize + totalArchiveSize.value)).isLessThan(mB: maxSizeOfArchive)
+        let doesTheSizeFit = UnitsConverter(bytes: Int64(convertedScreenshotSize + totalArchiveSize.value)).isLessThan(mB: Constants.maxSizeOfArchive)
 
         if !doesTheSizeFit {
             presentSizeError()
@@ -239,7 +241,7 @@ extension ScreenshotsGalleryViewController: UICollectionViewDelegate {
         }
 
         if let selectedItemsCount = collectionView.indexPathsForSelectedItems?.count {
-            return selectedItemsCount < maxNumberOfScreenshots
+            return selectedItemsCount < Constants.maxNumberOfScreenshots
         }
         return true
     }

@@ -134,4 +134,8 @@ extension String {
     public var localized: String {
         NSLocalizedString(self, comment: self)
     }
+
+    public func localizeWithFormat(arguments: CVarArg...) -> String {
+       String(format: self.localized, arguments: arguments)
+    }
 }
