@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import WebKit
 
 open class WebViewController: UIViewController {
     fileprivate var url: URL
-    fileprivate let webView = UIWebView()
+    fileprivate let webView = WKWebView()
 	let activityIndicator = UIActivityIndicatorView(style: .gray)
 
     public init(withURL url: URL) {
@@ -26,7 +27,8 @@ open class WebViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
 
-        webView.delegate = self
+        webView.navigationDelegate = self
+//            .delegate = self
 
         view.addSubview(webView)
 
@@ -42,7 +44,7 @@ open class WebViewController: UIViewController {
         activityIndicator.centerYAnchor.constraint(equalTo: webView.centerYAnchor).isActive = true
 
         activityIndicator.startAnimating()
-        webView.loadRequest(URLRequest(url: url))
+        webView.load(URLRequest(url: url))
     }
 
     /// Override default implementation in case of HIPMC-631
@@ -64,21 +66,21 @@ open class WebViewController: UIViewController {
     }
 }
 
-extension WebViewController: UIWebViewDelegate {
-    public func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+extension WebViewController: WKNavigationDelegate {
+    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         print("Webview fail with error \(error)")
     }
 
-	public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
-        return true
+    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        print("Webview fail with error \(error)")
     }
 
-    public func webViewDidStartLoad(_ webView: UIWebView) {
-        print("Webview started Loading: \(String(describing: webView.request))")
-    }
-
-    public func webViewDidFinishLoad(_ webView: UIWebView) {
-        print("Webview did finish load: \(String(describing: webView.request))")
+    public func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        print("Webview did finish load: \(String(describing: webView.url))")
         activityIndicator.stopAnimating()
+    }
+
+    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        print("Webview started Loading: \(String(describing: webView.url))")
     }
 }
