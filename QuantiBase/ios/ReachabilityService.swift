@@ -41,11 +41,7 @@ public class ReachabilityService {
         case .wifi:
             return .reachableViaWifi
         case .cellular:
-            if #available(iOS 12.0, *) {
-                return connectivityStateForCellular()
-            } else {
-                return connectivityStateForCellularLegacy()
-            }
+            return connectivityStateForCellular()
         }
     }
 
@@ -95,28 +91,6 @@ public class ReachabilityService {
         } else if telephonyArrayContainsTech(telephonyParameters, connectionTypeToTechDict[.reachableViaWWAN2G] ?? []) {
             return .reachableViaWWAN2G
         } else {
-            return .notReachable
-        }
-    }
-
-    private func connectivityStateForCellularLegacy() -> ConnectivityState {
-        // Fallback to version before iOS 12
-        switch CTTelephonyNetworkInfo().currentRadioAccessTechnology {
-        case CTRadioAccessTechnologyGPRS?,
-             CTRadioAccessTechnologyEdge?,
-             CTRadioAccessTechnologyCDMA1x?:
-            return .reachableViaWWAN2G
-        case CTRadioAccessTechnologyWCDMA?,
-             CTRadioAccessTechnologyHSDPA?,
-             CTRadioAccessTechnologyHSUPA?,
-             CTRadioAccessTechnologyCDMAEVDORev0?,
-             CTRadioAccessTechnologyCDMAEVDORevA?,
-             CTRadioAccessTechnologyCDMAEVDORevB?,
-             CTRadioAccessTechnologyeHRPD?:
-            return .reachableViaWWAN3G
-        case CTRadioAccessTechnologyLTE?:
-            return .reachableViaWWAN4G
-        default:
             return .notReachable
         }
     }
