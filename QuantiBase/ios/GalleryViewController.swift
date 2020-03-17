@@ -26,19 +26,22 @@ public class ScreenshotsGalleryViewController: UIViewController {
         label.textAlignment = .center
         return label
     }()
-    private let addedScreenshotsInfoPanel: AddedScreenshotsInfoPanel = {
+    private lazy var addedScreenshotsInfoPanel: AddedScreenshotsInfoPanel = {
         let addedScreenshotsInfoPanel = AddedScreenshotsInfoPanel()
-        guard let fileLogger: FileLogger = LogManager.shared.logger(),
-        let archivedLogFilesSize = fileLogger.archivedLogFilesSize else {
-            return addedScreenshotsInfoPanel
-        }
-        let readableUnit = UnitsConverter(bytes: Int64(archivedLogFilesSize)).getReadableUnit()
+        let readableUnit = UnitsConverter(bytes: Int64(originalArchiveSize)).getReadableUnit()
         let message = "size_of_added_screenshots".localizeWithFormat(arguments: readableUnit)
         addedScreenshotsInfoPanel.sizeOfScreenshots.text = message
         addedScreenshotsInfoPanel.countOfScreenshots.text = "number_of_added_screenshots".localizeWithFormat(arguments: "0")
         return addedScreenshotsInfoPanel
     }()
 
+    private let originalArchiveSize: Int = {
+        if let fileLogger: FileLogger = LogManager.shared.logger(),
+            let archivedLogFilesSize = fileLogger.archivedLogFilesSize {
+            return archivedLogFilesSize
+        }
+        return 0
+    }()
     private let totalArchiveSize = BehaviorRelay<Int>(value: 0)
     private let screenshots = BehaviorRelay<[Screenshot]>(value: [])
     public let selectedScreenshotsSubject = PublishSubject<[Screenshot]>()
@@ -133,13 +136,9 @@ public class ScreenshotsGalleryViewController: UIViewController {
                 self?.screenshots.value[$0.row] }
             }
             .map { screenshots -> Int in
-                guard let fileLogger: FileLogger = LogManager.shared.logger() else {
-                    return 0
-                }
-                let totalSize = (fileLogger.archivedLogFilesSize ?? 0) + screenshots.compactMap {
-                    fileLogger.getArchivedFileSize(fileUrl: $0.url)
-                }
-                .reduce(.zero, +)
+                let totalSize = self.originalArchiveSize + screenshots
+                    .compactMap { $0.url.fileSize }
+                    .reduce(.zero, +)
 
                 return totalSize
             }
@@ -229,8 +228,7 @@ public class ScreenshotsGalleryViewController: UIViewController {
 
 extension ScreenshotsGalleryViewController: UICollectionViewDelegate {
     public func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        guard let fileLogger: FileLogger = LogManager.shared.logger(),
-            let convertedScreenshotSize = fileLogger.getArchivedFileSize(fileUrl: screenshots.value[indexPath.row].url) else {
+        guard let convertedScreenshotSize = screenshots.value[indexPath.row].url.fileSize else {
             return false
         }
         let doesTheSizeFit = UnitsConverter(bytes: Int64(convertedScreenshotSize + totalArchiveSize.value)).isLessThan(mB: Constants.maxSizeOfArchive)
