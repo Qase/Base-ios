@@ -12,6 +12,6 @@ import RxCocoa
 
 extension Reactive where Base: NSView {
     public var menu: Binder<NSMenu> {
-        return Binder(self.base) { $0.menu = $1 }
+        Binder(self.base) { $0.menu = $1 }
     }
 }

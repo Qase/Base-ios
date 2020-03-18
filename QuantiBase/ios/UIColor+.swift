@@ -39,20 +39,20 @@ extension UIColor {
 	}
 
 	public var highlighted: UIColor {
-		return self.darker() ?? .black
+		self.darker() ?? .black
 	}
 
 	public func lighter(by percentage: CGFloat = 30.0) -> UIColor? {
-		return self.adjust(by: abs(percentage))
+		self.adjust(by: abs(percentage))
 	}
 
 	public func darker(by percentage: CGFloat = 30.0) -> UIColor? {
-		return self.adjust(by: -1 * abs(percentage))
+		self.adjust(by: -1 * abs(percentage))
 	}
 }
 
 extension UIColor {
     public class var textGrey: UIColor {
-        return UIColor(red: 164/255.0, green: 164/255.0, blue: 167/255.0, alpha: 1)
+        UIColor(red: 164/255.0, green: 164/255.0, blue: 167/255.0, alpha: 1)
     }
 }

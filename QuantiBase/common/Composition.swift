@@ -14,19 +14,19 @@ infix operator <<<: Composition
 /// Forward composition of functions
 
 public func >>> <A, B, C>(f: @escaping (A) -> B, g: @escaping (B) -> C) -> (A) -> C {
-    return pipe(f, g)
+    pipe(f, g)
 }
 
 public func >>> <A, B, C>(f: @escaping (A) throws -> B, g: @escaping (B) throws -> C) -> (A) throws -> C {
-    return pipe(f, g)
+    pipe(f, g)
 }
 
 /// Backward composition of functions
 
 public func <<< <A, B, C>(g: @escaping (B) -> C, f: @escaping (A) -> B) -> (A) -> C {
-    return pipe(f, g)
+    pipe(f, g)
 }
 
 public func <<< <A, B, C>(g: @escaping (B) throws -> C, f: @escaping (A) throws -> B) -> (A) throws -> C {
-    return pipe(f, g)
+    pipe(f, g)
 }

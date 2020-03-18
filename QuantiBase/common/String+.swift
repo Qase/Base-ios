@@ -17,7 +17,7 @@ extension String {
     ///   - replacement: replacement
     /// - Returns: final string
     public func replace(_ string: String, replacement: String) -> String {
-        return self.replacingOccurrences(of: string, with: replacement, options: .literal, range: nil)
+        self.replacingOccurrences(of: string, with: replacement, options: .literal, range: nil)
     }
 
     /// Subscript to get char on specific index: "Hello"[1] -> "e"
@@ -52,7 +52,7 @@ extension String {
     ///
     /// - returns: String within Data instance
     public var data: Data? {
-        return self.data(using: .utf8)
+        self.data(using: .utf8)
     }
 
 	/// Method to get String.Index instance from Int.
@@ -60,7 +60,7 @@ extension String {
 	/// - Parameter intIndex: index value represented as Int.
 	/// - Returns: index value represented as String.Index.
 	public func index(at intIndex: Int) -> String.Index {
-		return index(self.startIndex, offsetBy: intIndex)
+		index(self.startIndex, offsetBy: intIndex)
 	}
 
 	/// Method to return a number of occurences of given substring within the string.
@@ -68,14 +68,14 @@ extension String {
 	/// - Parameter substring: to be found
 	/// - Returns: number of substring's occurences
 	public func numberOfOcurrences(ofSubstring substring: String) -> Int {
-		return indices(ofSubstring: substring).count
+		indices(ofSubstring: substring).count
 	}
 
     /// Method to return an index of character if found in String instance.
     ///
     /// - returns: Position of character if found, nil otherwise.
     public func firstIndex(of char: Character) -> Int? {
-		return indices(ofSubstring: String(char)).first
+		indices(ofSubstring: String(char)).first
     }
 
 	/// Method to return an array of indices of all occurences of given substring.
@@ -127,11 +127,15 @@ extension String {
     ///     - "hello world".capitalized = "Hello World"
     ///     - "hello world".firstLetterCapitalized = "Hello world"
     public var firstLetterCapitalized: String {
-        return prefix(1).uppercased() + self.dropFirst()
+        prefix(1).uppercased() + self.dropFirst()
     }
 
     /// Wrapper around NSLocalizedString(_:comment)
     public var localized: String {
-        return NSLocalizedString(self, comment: self)
+        NSLocalizedString(self, comment: self)
+    }
+
+    public func localizeWithFormat(arguments: CVarArg...) -> String {
+       String(format: self.localized, arguments: arguments)
     }
 }

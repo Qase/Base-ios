@@ -19,11 +19,11 @@ public struct Queue<T> {
     fileprivate var head = 0
 
     public var isEmpty: Bool {
-        return count == 0
+        count == 0
     }
 
     public var count: Int {
-        return array.count - head
+        array.count - head
     }
 
     public mutating func enqueue(_ element: T) {

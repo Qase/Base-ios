@@ -14,14 +14,14 @@ extension Reactive where Base: NSWindow {
 
     /// Bindable sink for `title` property`.
     public var title: Binder<String> {
-        return Binder(self.base) { base, value in
+        Binder(self.base) { base, value in
             base.title = value
         }
     }
 
     /// Bindable sink for `level` property`.
     public var level: Binder<NSWindow.Level> {
-        return Binder(self.base) { base, value in
+        Binder(self.base) { base, value in
             base.level = value
         }
     }

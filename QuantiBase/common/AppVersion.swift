@@ -37,17 +37,17 @@ public struct AppVersion: Codable {
 // MARK: - Comparable implementation
 extension AppVersion: Comparable {
 	public static func < (lhs: AppVersion, rhs: AppVersion) -> Bool {
-		return  (lhs.major < rhs.major) ||
+		(lhs.major < rhs.major) ||
 			(lhs.major == rhs.major && lhs.minor < rhs.minor) ||
 			(lhs.major == rhs.major && lhs.minor == rhs.minor && lhs.bug < rhs.bug)
 	}
 
 	public static func == (lhs: AppVersion, rhs: AppVersion) -> Bool {
-		return lhs.major == rhs.major && lhs.minor == rhs.minor && lhs.bug == rhs.bug
+		lhs.major == rhs.major && lhs.minor == rhs.minor && lhs.bug == rhs.bug
 	}
 }
 
-//// MARK: - UserDefaultsStorable implementation
+// MARK: - UserDefaultsStorable implementation
 //extension AppVersion: UserDefaultsStorable {
 //    public var storableObject: AppVersion { return self }
 //}

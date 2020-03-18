@@ -10,18 +10,18 @@ import UIKit
 
 extension UIScreen {
 	public static var isHorizontalCompact: Bool {
-		return UIScreen.main.traitCollection.horizontalSizeClass == .compact
+		UIScreen.main.traitCollection.horizontalSizeClass == .compact
 	}
 
 	public static var isHorizontalRegular: Bool {
-		return UIScreen.main.traitCollection.horizontalSizeClass == .regular
+		UIScreen.main.traitCollection.horizontalSizeClass == .regular
 	}
 
 	public static var isVerticalCompact: Bool {
-		return UIScreen.main.traitCollection.verticalSizeClass == .compact
+		UIScreen.main.traitCollection.verticalSizeClass == .compact
 	}
 
 	public static var isVerticalRegular: Bool {
-		return UIScreen.main.traitCollection.verticalSizeClass == .regular
+		UIScreen.main.traitCollection.verticalSizeClass == .regular
 	}
 }

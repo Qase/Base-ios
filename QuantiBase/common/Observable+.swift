@@ -14,13 +14,13 @@ public protocol OptionalType {
 }
 
 extension Optional: OptionalType {
-    public var optional: Wrapped? { return self }
+    public var optional: Wrapped? { self }
 }
 
 // Unfortunately the extra type annotations are required, otherwise the compiler gives an incomprehensible error.
 extension Observable where Element: OptionalType {
     public func filterNil() -> Observable<Element.Wrapped> {
-        return flatMap { value in
+        flatMap { value in
             value.optional.map { Observable<Element.Wrapped>.just($0) } ?? Observable<Element.Wrapped>.empty()
         }
     }
@@ -28,6 +28,6 @@ extension Observable where Element: OptionalType {
 
 extension Observable where Element == Bool {
     public func not() -> Observable<Bool> {
-        return self.map { !$0 }
+        self.map { !$0 }
     }
 }

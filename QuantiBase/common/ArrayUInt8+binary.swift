@@ -12,7 +12,7 @@ extension Array where Element == UInt8 {
 
 	/// Returns Data representation of self.
 	public var data: Data {
-		return Data(self)
+		Data(self)
 	}
 
 	/// Converts self = [UInt8] consisting of 2xUInt8 to UInt16 (native big-endian).
@@ -27,11 +27,11 @@ extension Array where Element == UInt8 {
 
 	/// Converts self = [UInt8] consisting of 2xUInt8 to UInt16 (little-endian).
 	public var littleEndianUInt16: UInt16? {
-		return self.reversed().uInt16
+		self.reversed().uInt16
 	}
 
 	/// Converts self to String.
 	public var string: String? {
-		return String(bytes: self, encoding: .utf8)
+		String(bytes: self, encoding: .utf8)
 	}
 }

@@ -18,35 +18,35 @@ public class KeyboardService {
 
     private let isKeyboardVisibleVariable = BehaviorRelay<Bool>(value: false)
 	public var isKeyboardVisible: Bool {
-		return isKeyboardVisibleVariable.value
+		isKeyboardVisibleVariable.value
 	}
 	public var isKeyboardVisibleObservable: Observable<Bool> {
-		return isKeyboardVisibleVariable.asObservable()
+		isKeyboardVisibleVariable.asObservable()
 	}
 
 	private let _didRequestKeyboard = PublishSubject<Void>()
 	public var didRequestKeyboard: Observable<Void> {
-		return _didRequestKeyboard.asObservable()
+		_didRequestKeyboard.asObservable()
 	}
 
 	private let _keyboardWillShow = PublishSubject<(KeyboardFrame, AnimationSpeed)>()
 	public var keyboardWillShow: Observable<(KeyboardFrame, AnimationSpeed)> {
-		return _keyboardWillShow.asObservable()
+		_keyboardWillShow.asObservable()
 	}
 
 	private let _keyboardDidShow = PublishSubject<Void>()
 	public var keyboardDidShow: Observable<Void> {
-		return _keyboardDidShow.asObservable()
+		_keyboardDidShow.asObservable()
 	}
 
 	private let _keyboardWillHide = PublishSubject<(KeyboardFrame, AnimationSpeed)>()
 	public var keyboardWillHide: Observable<(KeyboardFrame, AnimationSpeed)> {
-		return _keyboardWillHide.asObservable()
+		_keyboardWillHide.asObservable()
 	}
 
 	private let _keyboardDidHide = PublishSubject<Void>()
 	public var keyboardDidHide: Observable<Void> {
-		return _keyboardDidHide.asObservable()
+		_keyboardDidHide.asObservable()
 	}
 
 	private let bag = DisposeBag()

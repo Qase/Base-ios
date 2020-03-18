@@ -12,7 +12,7 @@ import RxSwift
 
 open class BaseApi: NSObject {
     public var _session: URLSession {
-        return URLSession(configuration: URLSessionConfiguration.default)
+        URLSession(configuration: URLSessionConfiguration.default)
     }
 
     public lazy var session: URLSession = {_session}()

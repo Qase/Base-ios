@@ -13,29 +13,29 @@ infix operator <>: SingleTypeComposition
 /// Forward composition of functions that take and return the same type
 
 public func <> <A>(f: @escaping (A) -> A, g: @escaping (A) -> A) -> ((A) -> A) {
-    return concat(f, g)
+    concat(f, g)
 }
 
 public func <> <A>(f: @escaping (A) throws -> A, g: @escaping (A) throws -> A) -> ((A) throws -> A) {
-    return concat(f, g)
+    concat(f, g)
 }
 
 /// Concatenation of mutable functions that mutate the same type.
 
 public func <> <A>(f: @escaping (inout A) -> Void, g: @escaping (inout A) -> Void) -> ((inout A) -> Void) {
-    return concat(f, g)
+    concat(f, g)
 }
 
 public func <> <A>(f: @escaping (inout A) throws -> Void, g: @escaping (inout A) throws -> Void) -> ((inout A) throws -> Void) {
-    return concat(f, g)
+    concat(f, g)
 }
 
 /// Concatenation of reference-mutable functions that mutate the same type.
 
 public func <> <A: AnyObject>(_ f: @escaping (A) -> Void, _ g: @escaping (A) -> Void) -> (A) -> Void {
-    return concat(f, g)
+    concat(f, g)
 }
 
 public func <> <A: AnyObject>(_ f: @escaping (A) throws -> Void, _ g: @escaping (A) throws -> Void) -> (A) throws -> Void {
-    return concat(f, g)
+    concat(f, g)
 }

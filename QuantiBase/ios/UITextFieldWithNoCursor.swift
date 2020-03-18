@@ -10,6 +10,6 @@ import UIKit
 
 open class UITextFieldWithNoCursor: UITextField {
 	override open func caretRect(for position: UITextPosition) -> CGRect {
-		return CGRect.zero
+		CGRect.zero
 	}
 }

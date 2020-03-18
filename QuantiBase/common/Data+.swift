@@ -13,7 +13,7 @@ public extension Data {
     ///
     /// - returns: Data within String instance
     var string: String? {
-        return String(data: self, encoding: .utf8)
+        String(data: self, encoding: .utf8)
     }
 
     func decoded<T: Decodable>() -> Result<T, Error> {

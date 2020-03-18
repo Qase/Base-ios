@@ -22,7 +22,7 @@ open class CustomActivityIndicatorView: UIView {
 
 	private let _appearanceDidChange = PublishSubject<AppearanceStatus>()
 	public var appearanceDidChange: Observable<AppearanceStatus> {
-		return _appearanceDidChange.asObservable()
+		_appearanceDidChange.asObservable()
 	}
 
 	public override init(frame: CGRect) {

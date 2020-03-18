@@ -11,6 +11,6 @@ import Foundation
 extension ArraySlice {
 	// Converts self (ArraySlice) to Array instance.
 	public var array: [Element] {
-		return Array(self)
+		Array(self)
 	}
 }

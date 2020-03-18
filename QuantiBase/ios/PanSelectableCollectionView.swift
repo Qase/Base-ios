@@ -9,20 +9,20 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import QuantiLogger
 
 public class PanSelectableCollectionView: UICollectionView {
     private let bag = DisposeBag()
     public let canPanRelay = BehaviorRelay(value: false)
-    var canPan: Bool { return canPanRelay.value }
+    var canPan: Bool { canPanRelay.value }
     var maxSelectedItems: Int?
-
+    
+    let totalSize = BehaviorRelay<Int>(value: 0)
     private let panGesturePublisher = PublishRelay<UIPanGestureRecognizer>()
-
     private var selectedIndexSet = IndexSet([])
 
     public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
-        delegate = self
         let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPanToSelectCells))
         panRecognizer.delegate = self
         addGestureRecognizer(panRecognizer)
@@ -141,15 +141,6 @@ public class PanSelectableCollectionView: UICollectionView {
 
 extension PanSelectableCollectionView: UIGestureRecognizerDelegate {
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
-    }
-}
-
-extension PanSelectableCollectionView: UICollectionViewDelegate {
-    public func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        if let maxSelectedItems = maxSelectedItems, let selectedItemsCount = indexPathsForSelectedItems?.count {
-            return selectedItemsCount < maxSelectedItems
-        }
-        return true
+        true
     }
 }

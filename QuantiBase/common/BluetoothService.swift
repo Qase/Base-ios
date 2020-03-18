@@ -20,11 +20,11 @@ public class BluetoothService: NSObject {
 	}()
 
 	public var state: CBManagerState {
-		return bluetoothManager.state
+		bluetoothManager.state
 	}
 
 	public var isBluetoothOn: Bool {
-		return bluetoothManager.state == .poweredOn
+		bluetoothManager.state == .poweredOn
 	}
 
 	private let bluetoothManager = CBPeripheralManager()
