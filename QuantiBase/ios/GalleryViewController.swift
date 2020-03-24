@@ -53,20 +53,21 @@ public class ScreenshotsGalleryViewController: UIViewController {
     private lazy var screenshotsItems: Observable<[GalleryScreenshots]> = {
         galleryScreenshotsAssetsObservable
             .flatMap { screenshots -> Observable<[Screenshot]> in
-                screenshots.map { asset -> Observable<Screenshot> in
-                    let data = asset.getAssetThubnail().jpegData(compressionQuality: 0.5)
-                    let uploadKeyName = (asset.creationDate ?? Date()).asString()
-                    let uploadFileURL = NSURL.fileURL(withPath: NSTemporaryDirectory() + uploadKeyName)
-                    if FileManager.default.fileExists(atPath: uploadFileURL.absoluteString) {
+                Observable.combineLatest(
+                    screenshots.map { asset -> Observable<Screenshot> in
+                        let data = asset.getAssetThubnail().jpegData(compressionQuality: 0.5)
+                        let uploadKeyName = (asset.creationDate ?? Date()).asString()
+                        let uploadFileURL = NSURL.fileURL(withPath: NSTemporaryDirectory() + uploadKeyName)
+                        if FileManager.default.fileExists(atPath: uploadFileURL.absoluteString) {
+                            do {
+                                try FileManager.default.removeItem(at: uploadFileURL)
+                            } catch { }
+                        }
                         do {
-                            try FileManager.default.removeItem(at: uploadFileURL)
+                            try data?.write(to: uploadFileURL)
                         } catch { }
-                    }
-                    do {
-                        try data?.write(to: uploadFileURL)
-                    } catch { }
-                    return Observable.just(Screenshot(asset: asset, url: uploadFileURL))
-                }
+                        return Observable.just(Screenshot(asset: asset, url: uploadFileURL))
+                    }) { $0 }
             }
             .map { [weak self] items -> [GalleryScreenshots] in
                 self?.screenshots.accept(items)
