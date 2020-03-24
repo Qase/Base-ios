@@ -53,19 +53,20 @@ public class ScreenshotsGalleryViewController: UIViewController {
     private lazy var screenshotsItems: Observable<[GalleryScreenshots]> = {
         galleryScreenshotsAssetsObservable
             .flatMap { screenshots -> Observable<[Screenshot]> in
-                Observable.combineLatest(
-                    screenshots.map { asset -> Observable<Screenshot> in
-                        Observable.create { observable in
-                            asset.requestContentEditingInput(with: PHContentEditingInputRequestOptions(),
-                                                             completionHandler: { (contentEditingInput, _) in
-                                if let strURL = contentEditingInput?.fullSizeImageURL {
-                                    observable.onNext(Screenshot(asset: asset, url: strURL))
-                                }
-                            })
-                            return Disposables.create()
-                        }
+                screenshots.map { asset -> Observable<Screenshot> in
+                    let data = asset.getAssetThubnail().jpegData(compressionQuality: 0.5)
+                    let uploadKeyName = (asset.creationDate ?? Date()).asString()
+                    let uploadFileURL = NSURL.fileURL(withPath: NSTemporaryDirectory() + uploadKeyName)
+                    if FileManager.default.fileExists(atPath: uploadFileURL.absoluteString) {
+                        do {
+                            try FileManager.default.removeItem(at: uploadFileURL)
+                        } catch { }
                     }
-                ) { $0 }
+                    do {
+                        try data?.write(to: uploadFileURL)
+                    } catch { }
+                    return Observable.just(Screenshot(asset: asset, url: uploadFileURL))
+                }
             }
             .map { [weak self] items -> [GalleryScreenshots] in
                 self?.screenshots.accept(items)
@@ -125,7 +126,6 @@ public class ScreenshotsGalleryViewController: UIViewController {
                     return UICollectionViewCell()
                 }
                 cell.isSelected = false
-                cell.contentView.backgroundColor = .red
                 cell.snapshot = screenshot.asset.getAssetThubnail()
                 cell.imageUrl = screenshot.url
                 return cell
