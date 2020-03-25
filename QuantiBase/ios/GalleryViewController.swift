@@ -54,17 +54,18 @@ public class ScreenshotsGalleryViewController: UIViewController {
         galleryScreenshotsAssetsObservable
             .flatMap { screenshots -> Observable<[Screenshot]> in
                 Observable.combineLatest(
-                    screenshots.map { asset -> Observable<Screenshot> in
-                        let data = asset.getAssetThubnail().jpegData(compressionQuality: 0.5)
-                        let uploadKeyName = (asset.creationDate ?? Date()).asString()
-                        let uploadFileURL = NSURL.fileURL(withPath: NSTemporaryDirectory() + uploadKeyName)
+                    self.images.map { asset -> Observable<Screenshot> in
+                        var imageData = asset.pngData()
+//                        let data = asset.getAssetThubnail().jpegData(compressionQuality: 0.5)
+                        let uploadKeyName = asset.accessibilityIdentifier
+                        let uploadFileURL = NSURL.fileURL(withPath: NSTemporaryDirectory() + (uploadKeyName ?? "123"))
                         if FileManager.default.fileExists(atPath: uploadFileURL.absoluteString) {
                             do {
                                 try FileManager.default.removeItem(at: uploadFileURL)
                             } catch { }
                         }
                         do {
-                            try data?.write(to: uploadFileURL)
+                            try imageData?.write(to: uploadFileURL)
                         } catch { }
                         return Observable.just(Screenshot(asset: asset, url: uploadFileURL))
                     }) { $0 }
@@ -74,6 +75,8 @@ public class ScreenshotsGalleryViewController: UIViewController {
                 return [GalleryScreenshots(header: "gallery", items: items)]
             }
     }()
+    
+    var images = [UIImage]()
 
     private let bag = DisposeBag()
 
@@ -127,7 +130,7 @@ public class ScreenshotsGalleryViewController: UIViewController {
                     return UICollectionViewCell()
                 }
                 cell.isSelected = false
-                cell.snapshot = screenshot.asset.getAssetThubnail()
+                cell.snapshot = screenshot.asset
                 cell.imageUrl = screenshot.url
                 return cell
         })
@@ -202,7 +205,28 @@ public class ScreenshotsGalleryViewController: UIViewController {
         PHPhotoLibrary.requestAuthorization { (status) in
             switch status {
             case .authorized:
+                let manager = PHImageManager.default
+                let requestOptions = PHImageRequestOptions()
+                requestOptions.isSynchronous = false
+                requestOptions.deliveryMode = .highQualityFormat
+                
                 let fetchOptions = PHFetchOptions()
+                
+                let results: PHFetchResult = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+                if results.count > 0 {
+                    for i in 0..<results.count {
+                        let asset = results.object(at: i)
+                        let size = CGSize(width: 75, height: 150)
+                        manager().requestImage(for: asset, targetSize: size, contentMode: .aspectFill, options: requestOptions) { (image, _) in
+                            if let image = image {
+                                self.images.append(image)
+                            } else {
+                                print("error asset to image")
+                            }
+                        }
+                    }
+                }
+                    
                 let allGalleryPhotos: PHFetchResult<PHAsset>? = PHAsset.fetchAssets(with: .image, options: fetchOptions)
                 guard let photosCount = allGalleryPhotos?.count, photosCount > 0 else {
                     return

@@ -1,0 +1,283 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target x86_64-apple-macos10.12 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name QuantiLoggerMac
+import Cocoa
+import Compression
+import CoreFoundation
+import Foundation
+@_exported import QuantiLoggerMac
+import RxCocoa
+import RxSwift
+import Swift
+import os
+public struct Entry : Swift.Equatable {
+  public enum EntryType : Swift.Int {
+    case file
+    case directory
+    case symlink
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public func path(using encoding: Swift.String.Encoding) -> Swift.String
+  public var path: Swift.String {
+    get
+  }
+  public var fileAttributes: [Foundation.FileAttributeKey : Any] {
+    get
+  }
+  public var checksum: QuantiLoggerMac.CRC32 {
+    get
+  }
+  public var type: QuantiLoggerMac.Entry.EntryType {
+    get
+  }
+  public var compressedSize: Swift.Int {
+    get
+  }
+  public var uncompressedSize: Swift.Int {
+    get
+  }
+  public static func == (lhs: QuantiLoggerMac.Entry, rhs: QuantiLoggerMac.Entry) -> Swift.Bool
+}
+public class WebLogger : QuantiLoggerMac.Logging {
+  public static let defaultServerUrl: Swift.String
+  public init(serverUrl: Swift.String = WebLogger.defaultServerUrl, apiPath: Swift.String = "/api/v1", sessionName: Swift.String = UUID().uuidString, sizeOfBatch: Swift.Int = 5, timeSpan: RxSwift.RxTimeInterval = .seconds(4))
+  open func configure()
+  public var levels: [QuantiLoggerMac.Level]
+  open func log(_ message: Swift.String, onLevel level: QuantiLoggerMac.Level)
+  @objc deinit
+}
+public enum ApplicationCallbackType : Swift.String, Swift.CaseIterable {
+  case didBecomeActiveNotification
+  case didChangeOcclusionStateNotification
+  case didChangeScreenParametersNotification
+  case didFinishLaunchingNotification
+  case didFinishRestoringWindowsNotification
+  case didHideNotification
+  case didResignActiveNotification
+  case didUnhideNotification
+  case willBecomeActiveNotification
+  case willFinishLaunchingNotification
+  case willHideNotification
+  case willResignActiveNotification
+  case willTerminateNotification
+  case willUnhideNotification
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+  public typealias AllCases = [QuantiLoggerMac.ApplicationCallbackType]
+  public static var allCases: [QuantiLoggerMac.ApplicationCallbackType] {
+    get
+  }
+}
+public protocol Logging {
+  var levels: [QuantiLoggerMac.Level] { get set }
+  func configure()
+  func log(_ message: Swift.String, onLevel level: QuantiLoggerMac.Level)
+}
+extension Logging {
+  public func configure()
+  public func messageHeader(forLevel level: QuantiLoggerMac.Level) -> Swift.String
+}
+extension Date {
+  public func toFullDateTimeString() -> Swift.String
+  public func toFullDateString() -> Swift.String
+}
+public typealias CRC32 = Swift.UInt32
+public typealias Consumer = (Foundation.Data) throws -> Swift.Void
+public typealias Provider = (Swift.Int, Swift.Int) throws -> Foundation.Data
+public let crcTable: [Swift.UInt32]
+extension Data {
+  public func crc32(checksum: QuantiLoggerMac.CRC32) -> QuantiLoggerMac.CRC32
+}
+public class ConsoleLogger : QuantiLoggerMac.Logging {
+  public var levels: [QuantiLoggerMac.Level]
+  public init()
+  public func log(_ message: Swift.String, onLevel level: QuantiLoggerMac.Level)
+  @objc deinit
+}
+public class SystemLogger : QuantiLoggerMac.Logging {
+  public init(subsystem: Swift.String, category: Swift.String)
+  public var levels: [QuantiLoggerMac.Level]
+  public func log(_ message: Swift.String, onLevel level: QuantiLoggerMac.Level)
+  @objc deinit
+}
+public class FileLogger : QuantiLoggerMac.Logging {
+  public var numOfLogFiles: Swift.Int {
+    get
+    set
+  }
+  public func getArchivedFileSize(fileUrl: Foundation.URL) -> Swift.Int?
+  public var archivedLogFilesSize: Swift.Int? {
+    get
+  }
+  public var archivedLogFilesUrl: Foundation.URL? {
+    get
+  }
+  public var archivedLogFiles: QuantiLoggerMac.Archive? {
+    get
+  }
+  public var levels: [QuantiLoggerMac.Level]
+  public init()
+  public func log(_ message: Swift.String, onLevel level: QuantiLoggerMac.Level)
+  public func deleteAllLogFiles()
+  @objc deinit
+}
+extension FileManager {
+  public func zipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, shouldKeepParent: Swift.Bool = true, compressionMethod: QuantiLoggerMac.CompressionMethod = .none, progress: Foundation.Progress? = nil) throws
+  public func unzipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, progress: Foundation.Progress? = nil, preferredEncoding: Swift.String.Encoding? = nil) throws
+}
+extension URL {
+  public func isContained(in parentDirectoryURL: Foundation.URL) -> Swift.Bool
+}
+public let defaultReadChunkSize: Swift.UInt32
+public let defaultWriteChunkSize: Swift.UInt32
+public let defaultFilePermissions: Swift.UInt16
+public let defaultDirectoryPermissions: Swift.UInt16
+public enum CompressionMethod : Swift.UInt16 {
+  case none
+  case deflate
+  public typealias RawValue = Swift.UInt16
+  public var rawValue: Swift.UInt16 {
+    get
+  }
+  public init?(rawValue: Swift.UInt16)
+}
+final public class Archive : Swift.Sequence {
+  public enum ArchiveError : Swift.Error {
+    case unreadableArchive
+    case unwritableArchive
+    case invalidEntryPath
+    case invalidCompressionMethod
+    case invalidStartOfCentralDirectoryOffset
+    case missingEndOfCentralDirectoryRecord
+    case cancelledOperation
+    public static func == (a: QuantiLoggerMac.Archive.ArchiveError, b: QuantiLoggerMac.Archive.ArchiveError) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public enum AccessMode : Swift.UInt {
+    case create
+    case read
+    case update
+    public typealias RawValue = Swift.UInt
+    public init?(rawValue: Swift.UInt)
+    public var rawValue: Swift.UInt {
+      get
+    }
+  }
+  final public let url: Foundation.URL
+  final public let accessMode: QuantiLoggerMac.Archive.AccessMode
+  public init?(url: Foundation.URL, accessMode mode: QuantiLoggerMac.Archive.AccessMode, preferredEncoding: Swift.String.Encoding? = nil)
+  @objc deinit
+  final public func makeIterator() -> Swift.AnyIterator<QuantiLoggerMac.Entry>
+  final public subscript(path: Swift.String) -> QuantiLoggerMac.Entry? {
+    get
+  }
+  public typealias Element = QuantiLoggerMac.Entry
+  public typealias Iterator = Swift.AnyIterator<QuantiLoggerMac.Entry>
+}
+extension Archive {
+  final public func totalUnitCountForRemoving(_ entry: QuantiLoggerMac.Entry) -> Swift.Int64
+  final public func totalUnitCountForReading(_ entry: QuantiLoggerMac.Entry) -> Swift.Int64
+  final public func totalUnitCountForAddingItem(at url: Foundation.URL) -> Swift.Int64
+}
+public func QLog(_ message: Swift.String, onLevel level: QuantiLoggerMac.Level, inFile file: Swift.String = #file, inFunction function: Swift.String = #function, onLine line: Swift.Int = #line)
+public enum LoggingConcurrencyMode {
+  case syncSerial
+  case asyncSerial
+  case syncConcurrent
+  public static func == (a: QuantiLoggerMac.LoggingConcurrencyMode, b: QuantiLoggerMac.LoggingConcurrencyMode) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public class LogManager {
+  public static let shared: QuantiLoggerMac.LogManager
+  public var loggingConcurrencyMode: QuantiLoggerMac.LoggingConcurrencyMode
+  public func logger<T>() -> T? where T : QuantiLoggerMac.Logging
+  @discardableResult
+  public func add<T>(_ logger: T) -> Swift.Bool where T : QuantiLoggerMac.Logging
+  public func remove<T>(_ logger: T) where T : QuantiLoggerMac.Logging
+  public func removeAllLoggers()
+  public func deleteAllLogFiles()
+  public func setApplicationCallbackLogger(with callbacks: [QuantiLoggerMac.ApplicationCallbackType]?, onLevel level: QuantiLoggerMac.Level)
+  public func setApplicationCallbackLogger(with callbacks: [QuantiLoggerMac.ApplicationCallbackType]?)
+  public func setApplicationCallbackLogger(onLevel level: QuantiLoggerMac.Level)
+  public func logMetaInformation(_ dataToLog: [QuantiLoggerMac.MetaInformationType] = [], onLevel level: QuantiLoggerMac.Level)
+  @objc deinit
+}
+extension Archive {
+  final public func addEntry(with path: Swift.String, relativeTo baseURL: Foundation.URL, compressionMethod: QuantiLoggerMac.CompressionMethod = .none, bufferSize: Swift.UInt32 = defaultWriteChunkSize, progress: Foundation.Progress? = nil) throws
+  final public func addEntry(with path: Swift.String, type: QuantiLoggerMac.Entry.EntryType, uncompressedSize: Swift.UInt32, modificationDate: Foundation.Date = Date(), permissions: Swift.UInt16? = nil, compressionMethod: QuantiLoggerMac.CompressionMethod = .none, bufferSize: Swift.UInt32 = defaultWriteChunkSize, progress: Foundation.Progress? = nil, provider: (Swift.Int, Swift.Int) throws -> Foundation.Data) throws
+  final public func remove(_ entry: QuantiLoggerMac.Entry, bufferSize: Swift.UInt32 = defaultReadChunkSize, progress: Foundation.Progress? = nil) throws
+}
+extension Archive {
+  final public func extract(_ entry: QuantiLoggerMac.Entry, to url: Foundation.URL, bufferSize: Swift.UInt32 = defaultReadChunkSize, progress: Foundation.Progress? = nil) throws -> QuantiLoggerMac.CRC32
+  final public func extract(_ entry: QuantiLoggerMac.Entry, bufferSize: Swift.UInt32 = defaultReadChunkSize, progress: Foundation.Progress? = nil, consumer: (Foundation.Data) throws -> Swift.Void) throws -> QuantiLoggerMac.CRC32
+}
+public enum Level : Swift.String {
+  case error
+  case warn
+  case info
+  case debug
+  case verbose
+  case system
+  case process
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+}
+public struct QuantiLoggerConstants {
+  public struct FileLoggerTableViewDatasource {
+    public static let fileLoggerTableViewCellIdentifier: Swift.String
+  }
+}
+public enum MetaInformationType : Swift.String {
+  case identifier
+  case compiler
+  case version
+  case buildNumber
+  case modelType
+  case currentOSVersion
+  case upTime
+  case language
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct LogFileRecord {
+}
+extension QuantiLoggerMac.Entry.EntryType : Swift.Equatable {}
+extension QuantiLoggerMac.Entry.EntryType : Swift.Hashable {}
+extension QuantiLoggerMac.Entry.EntryType : Swift.RawRepresentable {}
+extension QuantiLoggerMac.ApplicationCallbackType : Swift.Equatable {}
+extension QuantiLoggerMac.ApplicationCallbackType : Swift.Hashable {}
+extension QuantiLoggerMac.ApplicationCallbackType : Swift.RawRepresentable {}
+extension QuantiLoggerMac.CompressionMethod : Swift.Equatable {}
+extension QuantiLoggerMac.CompressionMethod : Swift.Hashable {}
+extension QuantiLoggerMac.CompressionMethod : Swift.RawRepresentable {}
+extension QuantiLoggerMac.Archive.ArchiveError : Swift.Equatable {}
+extension QuantiLoggerMac.Archive.ArchiveError : Swift.Hashable {}
+extension QuantiLoggerMac.Archive.AccessMode : Swift.Equatable {}
+extension QuantiLoggerMac.Archive.AccessMode : Swift.Hashable {}
+extension QuantiLoggerMac.Archive.AccessMode : Swift.RawRepresentable {}
+extension QuantiLoggerMac.LoggingConcurrencyMode : Swift.Equatable {}
+extension QuantiLoggerMac.LoggingConcurrencyMode : Swift.Hashable {}
+extension QuantiLoggerMac.Level : Swift.Hashable {}
+extension QuantiLoggerMac.Level : Swift.RawRepresentable {}
+extension QuantiLoggerMac.MetaInformationType : Swift.Equatable {}
+extension QuantiLoggerMac.MetaInformationType : Swift.Hashable {}
+extension QuantiLoggerMac.MetaInformationType : Swift.RawRepresentable {}
