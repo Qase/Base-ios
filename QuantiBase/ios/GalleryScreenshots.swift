@@ -27,7 +27,7 @@ extension GalleryScreenshots: AnimatableSectionModelType {
 }
 
 public struct Screenshot {
-    let asset: UIImage
+    let image: UIImage
     public let url: URL
 }
 

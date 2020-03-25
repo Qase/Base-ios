@@ -32,9 +32,11 @@ public class ScreenshotsGalleryViewController: UIViewController {
         let message = "size_of_added_screenshots".localizeWithFormat(arguments: readableUnit)
         addedScreenshotsInfoPanel.sizeOfScreenshots.text = message
         addedScreenshotsInfoPanel.countOfScreenshots.text = "number_of_added_screenshots".localizeWithFormat(arguments: "0")
+        addedScreenshotsInfoPanel.isHidden = true
         return addedScreenshotsInfoPanel
     }()
-
+    private let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    private let loadingState = BehaviorRelay<Bool>(value: false)
     private let originalArchiveSize: Int = {
         if let fileLogger: FileLogger = LogManager.shared.logger(),
             let archivedLogFilesSize = fileLogger.archivedLogFilesSize {
@@ -45,38 +47,40 @@ public class ScreenshotsGalleryViewController: UIViewController {
     private let totalArchiveSize = BehaviorRelay<Int>(value: 0)
     private let screenshots = BehaviorRelay<[Screenshot]>(value: [])
     public let selectedScreenshotsSubject = PublishSubject<[Screenshot]>()
-    private var galleryScreenshotsAssets = BehaviorRelay<[PHAsset]>(value: [])
-    private lazy var galleryScreenshotsAssetsObservable: Observable<[PHAsset]> = {
-        galleryScreenshotsAssets.asObservable()
+    private var galleryScreenshotsImages = BehaviorRelay<[UIImage]>(value: [])
+    private lazy var galleryScreenshotsImagesObservable: Observable<[UIImage]> = {
+        galleryScreenshotsImages.asObservable()
     }()
 
     private lazy var screenshotsItems: Observable<[GalleryScreenshots]> = {
-        galleryScreenshotsAssetsObservable
+        galleryScreenshotsImagesObservable
             .flatMap { screenshots -> Observable<[Screenshot]> in
                 Observable.combineLatest(
-                    self.images.map { asset -> Observable<Screenshot> in
-                        var imageData = asset.pngData()
-//                        let data = asset.getAssetThubnail().jpegData(compressionQuality: 0.5)
-                        let uploadKeyName = asset.accessibilityIdentifier
-                        let uploadFileURL = NSURL.fileURL(withPath: NSTemporaryDirectory() + (uploadKeyName ?? "123"))
+                    screenshots.map { image -> Observable<Screenshot> in
+                        var imageData = image.pngData()
+                        let uploadKeyName = image.accessibilityIdentifier
+                        let uploadFileURL = NSURL.fileURL(withPath: NSTemporaryDirectory() + ((uploadKeyName ?? String.random()) + ".png"))
                         if FileManager.default.fileExists(atPath: uploadFileURL.absoluteString) {
                             do {
                                 try FileManager.default.removeItem(at: uploadFileURL)
-                            } catch { }
+                            } catch {
+                                QLog("Error deleting file for screenshot", onLevel: .error)
+                            }
                         }
                         do {
                             try imageData?.write(to: uploadFileURL)
-                        } catch { }
-                        return Observable.just(Screenshot(asset: asset, url: uploadFileURL))
+                        } catch {
+                            QLog("Error rewriting file for screenshot", onLevel: .error)
+                        }
+                        return Observable.just(Screenshot(image: image, url: uploadFileURL))
                     }) { $0 }
             }
             .map { [weak self] items -> [GalleryScreenshots] in
                 self?.screenshots.accept(items)
+                self?.loadingState.accept(false)
                 return [GalleryScreenshots(header: "gallery", items: items)]
             }
     }()
-    
-    var images = [UIImage]()
 
     private let bag = DisposeBag()
 
@@ -109,12 +113,21 @@ public class ScreenshotsGalleryViewController: UIViewController {
         collectionView.maxSelectedItems = 5
 
         view.addSubview(collectionView)
-        collectionView.snp.makeConstraints { $0.edges.equalToSuperview() }
+        collectionView.snp.makeConstraints { make in
+            make.leading.trailing.top.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-120)
+        }
         collectionView.delegate = self
         self.collectionView = collectionView
 
         view.addSubview(noScreenshotsLabel)
         noScreenshotsLabel.snp.makeConstraints { $0.edges.equalToSuperview() }
+
+        view.addSubview(activityIndicator)
+        activityIndicator.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-50)
+        }
 
         view.addSubview(addedScreenshotsInfoPanel)
         addedScreenshotsInfoPanel.snp.makeConstraints { make in
@@ -130,7 +143,7 @@ public class ScreenshotsGalleryViewController: UIViewController {
                     return UICollectionViewCell()
                 }
                 cell.isSelected = false
-                cell.snapshot = screenshot.asset
+                cell.snapshot = screenshot.image.resized(toSize: CGSize(width: 75, height: 150))
                 cell.imageUrl = screenshot.url
                 return cell
         })
@@ -147,9 +160,34 @@ public class ScreenshotsGalleryViewController: UIViewController {
                 return totalSize
             }
 
+        loadingState
+            .asObservable()
+            .bind(to: activityIndicator.rx.isAnimating)
+            .disposed(by: bag)
+
+        loadingState
+            .asObservable()
+            .map { !$0 }
+            .bind(to: activityIndicator.rx.isHidden)
+            .disposed(by: bag)
+
         closeBarButton.rx.tap
-            .do(onNext: { [weak self] in self?.dismiss(animated: true, completion: nil) })
+            .do(onNext: { [weak self] in
+                self?.dismiss(animated: true, completion: nil)
+            })
             .subscribe()
+            .disposed(by: bag)
+
+        screenshots
+            .asObservable()
+            .map { !$0.isEmpty }
+            .bind(to: noScreenshotsLabel.rx.isHidden)
+            .disposed(by: bag)
+
+        screenshots
+            .asObservable()
+            .map { $0.isEmpty }
+            .bind(to: addedScreenshotsInfoPanel.rx.isHidden)
             .disposed(by: bag)
 
         selectBarButton.rx.tap
@@ -186,56 +224,30 @@ public class ScreenshotsGalleryViewController: UIViewController {
             .bind(to: addedScreenshotsInfoPanel.countOfScreenshots.rx.text)
             .disposed(by: bag)
 
-        galleryScreenshotsAssetsObservable
-            .map { !$0.isEmpty }
-            .bind(to: noScreenshotsLabel.rx.isHidden)
-            .disposed(by: bag)
-
-        galleryScreenshotsAssetsObservable
-            .map { ($0.isEmpty) }
-            .bind(to: addedScreenshotsInfoPanel.rx.isHidden)
-            .disposed(by: bag)
-
         screenshotsItems
             .bind(to: collectionView.rx.items(dataSource: dataSource))
             .disposed(by: bag)
     }
 
     private func fetchGaleryScreenshots() {
+        loadingState.accept(true)
+        noScreenshotsLabel.isHidden = true
         PHPhotoLibrary.requestAuthorization { (status) in
             switch status {
             case .authorized:
-                let manager = PHImageManager.default
-                let requestOptions = PHImageRequestOptions()
-                requestOptions.isSynchronous = false
-                requestOptions.deliveryMode = .highQualityFormat
-                
                 let fetchOptions = PHFetchOptions()
-                
-                let results: PHFetchResult = PHAsset.fetchAssets(with: .image, options: fetchOptions)
-                if results.count > 0 {
-                    for i in 0..<results.count {
-                        let asset = results.object(at: i)
-                        let size = CGSize(width: 75, height: 150)
-                        manager().requestImage(for: asset, targetSize: size, contentMode: .aspectFill, options: requestOptions) { (image, _) in
-                            if let image = image {
-                                self.images.append(image)
-                            } else {
-                                print("error asset to image")
-                            }
-                        }
-                    }
-                }
-                    
-                let allGalleryPhotos: PHFetchResult<PHAsset>? = PHAsset.fetchAssets(with: .image, options: fetchOptions)
-                guard let photosCount = allGalleryPhotos?.count, photosCount > 0 else {
+                let fetchResult: PHFetchResult = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+                guard fetchResult.count > 0 else {
                     return
                 }
-                let screenshots = allGalleryPhotos?.objects(at: IndexSet(0...photosCount - 1))
+
+                let allGalleryScreenshots = fetchResult.objects(at: IndexSet(0...fetchResult.count - 1))
                     .filter { $0.mediaSubtypes == .photoScreenshot }
-                if let screenshots = screenshots {
-                    self.galleryScreenshotsAssets.accept(screenshots)
-                }
+                    .compactMap { asset in
+                        asset.getAssetThubnail()
+                    }
+
+                self.galleryScreenshotsImages.accept(allGalleryScreenshots)
             default:
                 break
             }
