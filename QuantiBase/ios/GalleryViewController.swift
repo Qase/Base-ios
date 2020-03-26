@@ -44,39 +44,22 @@ public class ScreenshotsGalleryViewController: UIViewController {
         }
         return 0
     }()
-    private let totalArchiveSize = BehaviorRelay<Int>(value: 0)
-    private let screenshots = BehaviorRelay<[Screenshot]>(value: [])
-    public let selectedScreenshotsSubject = PublishSubject<[Screenshot]>()
-    private var galleryScreenshotsImages = BehaviorRelay<[UIImage]>(value: [])
-    private lazy var galleryScreenshotsImagesObservable: Observable<[UIImage]> = {
-        galleryScreenshotsImages.asObservable()
+    private lazy var totalArchiveSize: BehaviorRelay<Int> = {
+        let totalArchiveSize = BehaviorRelay<Int>(value: originalArchiveSize)
+        return totalArchiveSize
+    }()
+    public let selectedScreenshotsSubject = PublishSubject<[URL]>()
+    private var galleryScreenshotsAssets = BehaviorRelay<[PHAsset]>(value: [])
+    private lazy var galleryScreenshotsAssetsObservable: Observable<[PHAsset]> = {
+        galleryScreenshotsAssets.asObservable()
     }()
 
     private lazy var screenshotsItems: Observable<[GalleryScreenshots]> = {
-        galleryScreenshotsImagesObservable
-            .flatMap { screenshots -> Observable<[Screenshot]> in
-                Observable.combineLatest(
-                    screenshots.map { image -> Observable<Screenshot> in
-                        var imageData = image.pngData()
-                        let uploadKeyName = image.accessibilityIdentifier
-                        let uploadFileURL = NSURL.fileURL(withPath: NSTemporaryDirectory() + ((uploadKeyName ?? String.random()) + ".png"))
-                        if FileManager.default.fileExists(atPath: uploadFileURL.absoluteString) {
-                            do {
-                                try FileManager.default.removeItem(at: uploadFileURL)
-                            } catch {
-                                QLog("Error deleting file for screenshot", onLevel: .error)
-                            }
-                        }
-                        do {
-                            try imageData?.write(to: uploadFileURL)
-                        } catch {
-                            QLog("Error rewriting file for screenshot", onLevel: .error)
-                        }
-                        return Observable.just(Screenshot(image: image, url: uploadFileURL))
-                    }) { $0 }
+        galleryScreenshotsAssetsObservable
+            .map { assets in
+                assets.map { Screenshot(asset: $0) }
             }
             .map { [weak self] items -> [GalleryScreenshots] in
-                self?.screenshots.accept(items)
                 self?.loadingState.accept(false)
                 return [GalleryScreenshots(header: "gallery", items: items)]
             }
@@ -143,22 +126,9 @@ public class ScreenshotsGalleryViewController: UIViewController {
                     return UICollectionViewCell()
                 }
                 cell.isSelected = false
-                cell.snapshot = screenshot.image.resized(toSize: CGSize(width: 75, height: 150))
-                cell.imageUrl = screenshot.url
+                cell.snapshot = screenshot.asset.getAssetThubnail()
                 return cell
         })
-
-        let selectedScreenshotsSize = collectionView.rx.selectedIndexPaths.asObservable()
-            .compactMap { $0?.compactMap { [weak self] in
-                self?.screenshots.value[$0.row] }
-            }
-            .map { screenshots -> Int in
-                let totalSize = self.originalArchiveSize + screenshots
-                    .compactMap { $0.url.fileSize }
-                    .reduce(.zero, +)
-
-                return totalSize
-            }
 
         loadingState
             .asObservable()
@@ -178,13 +148,13 @@ public class ScreenshotsGalleryViewController: UIViewController {
             .subscribe()
             .disposed(by: bag)
 
-        screenshots
+        galleryScreenshotsAssets
             .asObservable()
             .map { !$0.isEmpty }
             .bind(to: noScreenshotsLabel.rx.isHidden)
             .disposed(by: bag)
 
-        screenshots
+        galleryScreenshotsAssets
             .asObservable()
             .map { $0.isEmpty }
             .bind(to: addedScreenshotsInfoPanel.rx.isHidden)
@@ -193,7 +163,9 @@ public class ScreenshotsGalleryViewController: UIViewController {
         selectBarButton.rx.tap
             .do(onNext: { [weak self] in
                 if let selectedScreenshots = self?.collectionView.indexPathsForSelectedItems?
-                    .compactMap({ self?.screenshots.value[$0.row] }) {
+                    .compactMap({ self?.galleryScreenshotsAssets.value[$0.row] })
+                    .map({ $0.url })
+                    .compactMap({ $0 }) {
                     self?.selectedScreenshotsSubject.onNext(selectedScreenshots)
                 }
                 self?.dismiss(animated: true, completion: nil)
@@ -206,16 +178,13 @@ public class ScreenshotsGalleryViewController: UIViewController {
             .bind(to: selectBarButton.rx.isEnabled)
             .disposed(by: bag)
 
-        selectedScreenshotsSize
+        totalArchiveSize
+            .asObservable()
             .map {
                 let readableUnit = UnitsConverter(bytes: Int64($0)).getReadableUnit()
                 return "size_of_added_screenshots".localizeWithFormat(arguments: readableUnit)
             }
             .bind(to: addedScreenshotsInfoPanel.sizeOfScreenshots.rx.text)
-            .disposed(by: bag)
-
-        selectedScreenshotsSize
-            .bind(to: totalArchiveSize)
             .disposed(by: bag)
 
         collectionView.rx.selectedIndexPaths.asObservable()
@@ -243,11 +212,8 @@ public class ScreenshotsGalleryViewController: UIViewController {
 
                 let allGalleryScreenshots = fetchResult.objects(at: IndexSet(0...fetchResult.count - 1))
                     .filter { $0.mediaSubtypes == .photoScreenshot }
-                    .compactMap { asset in
-                        asset.getAssetThubnail()
-                    }
 
-                self.galleryScreenshotsImages.accept(allGalleryScreenshots)
+                self.galleryScreenshotsAssets.accept(allGalleryScreenshots)
             default:
                 break
             }
@@ -265,7 +231,7 @@ public class ScreenshotsGalleryViewController: UIViewController {
 
 extension ScreenshotsGalleryViewController: UICollectionViewDelegate {
     public func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        guard let convertedScreenshotSize = screenshots.value[indexPath.row].url.fileSize else {
+        guard let convertedScreenshotSize = galleryScreenshotsAssets.value[indexPath.row].size else {
             return false
         }
         let doesTheSizeFit = UnitsConverter(bytes: Int64(convertedScreenshotSize + totalArchiveSize.value)).isLessThan(mB: Constants.maxSizeOfArchive)
@@ -275,9 +241,20 @@ extension ScreenshotsGalleryViewController: UICollectionViewDelegate {
             return false
         }
 
-        if let selectedItemsCount = collectionView.indexPathsForSelectedItems?.count {
-            return selectedItemsCount < Constants.maxNumberOfScreenshots
+        if let selectedItemsCount = collectionView.indexPathsForSelectedItems?.count,
+            selectedItemsCount > Constants.maxNumberOfScreenshots {
+            return false
         }
+
+        totalArchiveSize.accept(totalArchiveSize.value + convertedScreenshotSize)
         return true
     }
+
+    public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        guard let convertedScreenshotSize = galleryScreenshotsAssets.value[indexPath.row].size else {
+            return
+        }
+        totalArchiveSize.accept(totalArchiveSize.value - convertedScreenshotSize)
+    }
+
 }

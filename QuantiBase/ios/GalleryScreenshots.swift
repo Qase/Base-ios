@@ -27,18 +27,17 @@ extension GalleryScreenshots: AnimatableSectionModelType {
 }
 
 public struct Screenshot {
-    let image: UIImage
-    public let url: URL
+    let asset: PHAsset
 }
 
 extension Screenshot: Equatable {
     public static func == (lhs: Screenshot, rhs: Screenshot) -> Bool {
-        lhs.url == rhs.url
+        lhs.identity == rhs.identity
     }
 }
 
 extension Screenshot: IdentifiableType {
     public typealias Identity = String
 
-    public var identity: String { url.path }
+    public var identity: String { asset.description }
 }

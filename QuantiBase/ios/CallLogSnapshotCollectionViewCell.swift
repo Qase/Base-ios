@@ -17,7 +17,6 @@ public class CallLogSnapshotCollectionViewCell: UICollectionViewCell {
             snapshotImageView.image = snapshot
         }
     }
-    var imageUrl: URL? = nil
 
     private let checkIcon = UIImageView(image: #imageLiteral(resourceName: "selected"))
 
