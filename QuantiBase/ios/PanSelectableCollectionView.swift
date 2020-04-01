@@ -16,7 +16,7 @@ public class PanSelectableCollectionView: UICollectionView {
     public let canPanRelay = BehaviorRelay(value: false)
     var canPan: Bool { canPanRelay.value }
     var maxSelectedItems: Int?
-    
+
     let totalSize = BehaviorRelay<Int>(value: 0)
     private let panGesturePublisher = PublishRelay<UIPanGestureRecognizer>()
     private var selectedIndexSet = IndexSet([])

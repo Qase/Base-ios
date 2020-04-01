@@ -11,13 +11,13 @@ import SnapKit
 
 public class CallLogSnapshotCollectionViewCell: UICollectionViewCell {
     private let snapshotImageView = UIImageView()
-    
+
     public var snapshot: UIImage? {
         didSet {
             snapshotImageView.image = snapshot
         }
     }
-    var imageUrl: URL? = nil
+    var imageUrl: URL?
 
     private let checkIcon = UIImageView(image: #imageLiteral(resourceName: "selected"))
 

@@ -15,7 +15,7 @@ class AddedScreenshotsInfoPanel: UIView {
         label.textAlignment = .center
         return label
     }()
-    
+
     var countOfScreenshotsMessage: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14.0)
@@ -23,14 +23,14 @@ class AddedScreenshotsInfoPanel: UIView {
         label.textAlignment = .center
         return label
     }()
-    
+
     var sizeOfScreenshots: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14.0)
         label.textAlignment = .center
         return label
     }()
-    
+
     var sizeOfScreenshotsMessage: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14.0)
@@ -38,7 +38,7 @@ class AddedScreenshotsInfoPanel: UIView {
         label.textAlignment = .center
         return label
     }()
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
@@ -59,7 +59,7 @@ class AddedScreenshotsInfoPanel: UIView {
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize.zero
         layer.shadowRadius = 5
-        
+
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
@@ -72,7 +72,7 @@ class AddedScreenshotsInfoPanel: UIView {
             make.bottom.equalToSuperview().offset(-10)
             make.top.equalToSuperview().offset(10)
         }
-        
+
         [sizeOfScreenshots,
          sizeOfScreenshotsMessage,
          countOfScreenshots,

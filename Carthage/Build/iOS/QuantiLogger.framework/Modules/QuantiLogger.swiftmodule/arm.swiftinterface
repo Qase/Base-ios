@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.2 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
 // swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name QuantiLogger
 import Compression
 import CoreFoundation
@@ -203,7 +203,7 @@ public enum LoggingConcurrencyMode {
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
-public class LogManager {
+@_hasMissingDesignatedInitializers public class LogManager {
   public static let shared: QuantiLogger.LogManager
   public var loggingConcurrencyMode: QuantiLogger.LoggingConcurrencyMode
   public func logger<T>() -> T? where T : QuantiLogger.Logging
@@ -218,7 +218,7 @@ public class LogManager {
   public func logMetaInformation(_ dataToLog: [QuantiLogger.MetaInformationType] = [], onLevel level: QuantiLogger.Level)
   @objc deinit
 }
-@objc open class FileLoggerTableViewDatasource : ObjectiveC.NSObject, UIKit.UITableViewDataSource {
+@objc @_inheritsConvenienceInitializers open class FileLoggerTableViewDatasource : ObjectiveC.NSObject, UIKit.UITableViewDataSource {
   public var logFilesRecords: [QuantiLogger.LogFileRecord]
   @objc override dynamic public init()
   open func gettingCell(_ tableView: UIKit.UITableView, forRowAt indexPath: Foundation.IndexPath, withLogFileRecord: QuantiLogger.LogFileRecord) -> UIKit.UITableViewCell
@@ -273,11 +273,11 @@ public enum MetaInformationType : Swift.String {
 @objc public class LogFilesViaMailViewController : MessageUI.MFMailComposeViewController {
   public init(withRecipients recipients: [Swift.String])
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
   @available(iOS 5.0, *)
   @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
   @objc override dynamic public init(rootViewController: UIKit.UIViewController)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc deinit
 }
 public struct LogFileRecord {
 }
@@ -297,6 +297,7 @@ extension QuantiLogger.Archive.AccessMode : Swift.Hashable {}
 extension QuantiLogger.Archive.AccessMode : Swift.RawRepresentable {}
 extension QuantiLogger.LoggingConcurrencyMode : Swift.Equatable {}
 extension QuantiLogger.LoggingConcurrencyMode : Swift.Hashable {}
+extension QuantiLogger.Level : Swift.Equatable {}
 extension QuantiLogger.Level : Swift.Hashable {}
 extension QuantiLogger.Level : Swift.RawRepresentable {}
 extension QuantiLogger.MetaInformationType : Swift.Equatable {}

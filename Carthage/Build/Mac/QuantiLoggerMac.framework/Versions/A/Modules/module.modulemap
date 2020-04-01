@@ -1,0 +1,11 @@
+framework module QuantiLoggerMac {
+  umbrella header "QuantiLoggerMac.h"
+
+  export *
+  module * { export * }
+}
+
+module QuantiLoggerMac.Swift {
+    header "QuantiLoggerMac-Swift.h"
+    requires objc
+}
