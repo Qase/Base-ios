@@ -88,10 +88,6 @@ public class FileLogger : QuantiLogger.Logging {
     get
     set
   }
-  public func getArchivedFileSize(fileUrl: Foundation.URL) -> Swift.Int?
-  public var archivedLogFilesSize: Swift.Int? {
-    get
-  }
   public var archivedLogFilesUrl: Foundation.URL? {
     get
   }
