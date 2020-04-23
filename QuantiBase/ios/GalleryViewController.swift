@@ -242,7 +242,7 @@ extension ScreenshotsGalleryViewController: UICollectionViewDelegate {
         }
 
         if let selectedItemsCount = collectionView.indexPathsForSelectedItems?.count,
-            selectedItemsCount > Constants.maxNumberOfScreenshots {
+            selectedItemsCount >= Constants.maxNumberOfScreenshots {
             return false
         }
 
