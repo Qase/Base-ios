@@ -121,23 +121,13 @@
 		6C6B744B23719587007CC064 /* UINavigationItem+reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B744A23719587007CC064 /* UINavigationItem+reactive.swift */; };
 		6C6B744D2371BBF1007CC064 /* UINavigationController+reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B744C2371BBF1007CC064 /* UINavigationController+reactive.swift */; };
 		6CEC1EC02434E54700CE45BD /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90CC234CE1E5002EF5C1 /* Action.framework */; };
-		6CEC1EC12434E54700CE45BD /* Action.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90CC234CE1E5002EF5C1 /* Action.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6CEC1EC22434E54700CE45BD /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90CE234CE208002EF5C1 /* Overture.framework */; };
-		6CEC1EC32434E54700CE45BD /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90CE234CE208002EF5C1 /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6CEC1EC42434E54700CE45BD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90D0234CE21A002EF5C1 /* RxCocoa.framework */; };
-		6CEC1EC52434E54700CE45BD /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90D0234CE21A002EF5C1 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6CEC1EC62434E54700CE45BD /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90D2234CE231002EF5C1 /* RxRelay.framework */; };
-		6CEC1EC72434E54700CE45BD /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90D2234CE231002EF5C1 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6CEC1EC82434E54700CE45BD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90D4234CE253002EF5C1 /* RxSwift.framework */; };
-		6CEC1EC92434E54700CE45BD /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90D4234CE253002EF5C1 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6CEC1ED02434E54800CE45BD /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEC1ECB2434E54800CE45BD /* RxBlocking.framework */; };
-		6CEC1ED12434E54800CE45BD /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEC1ECB2434E54800CE45BD /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6CEC1ED22434E54800CE45BD /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEC1ECC2434E54800CE45BD /* SnapKit.framework */; };
-		6CEC1ED32434E54800CE45BD /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEC1ECC2434E54800CE45BD /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6CEC1ED42434E54800CE45BD /* QuantiLoggerMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEC1ECD2434E54800CE45BD /* QuantiLoggerMac.framework */; };
-		6CEC1ED52434E54800CE45BD /* QuantiLoggerMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEC1ECD2434E54800CE45BD /* QuantiLoggerMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6CEC1ED62434E54800CE45BD /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEC1ECE2434E54800CE45BD /* RxTest.framework */; };
-		6CEC1ED72434E54800CE45BD /* RxTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEC1ECE2434E54800CE45BD /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9C0178CF240411D40095AA2E /* AddedScreenshotsInfoPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0178CE240411D40095AA2E /* AddedScreenshotsInfoPanel.swift */; };
 		9C0178D124041EF80095AA2E /* UnitsConverterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0178D024041EF80095AA2E /* UnitsConverterService.swift */; };
 		9C10EBE1240FDDFC0022AAE9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C10EBE0240FDDFC0022AAE9 /* Constants.swift */; };
@@ -228,25 +218,6 @@
 			files = (
 			);
 			name = "Copy Files";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6CEC1ECA2434E54700CE45BD /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				6CEC1ED52434E54800CE45BD /* QuantiLoggerMac.framework in Embed Frameworks */,
-				6CEC1EC92434E54700CE45BD /* RxSwift.framework in Embed Frameworks */,
-				6CEC1ED72434E54800CE45BD /* RxTest.framework in Embed Frameworks */,
-				6CEC1EC72434E54700CE45BD /* RxRelay.framework in Embed Frameworks */,
-				6CEC1EC52434E54700CE45BD /* RxCocoa.framework in Embed Frameworks */,
-				6CEC1ED32434E54800CE45BD /* SnapKit.framework in Embed Frameworks */,
-				6CEC1EC32434E54700CE45BD /* Overture.framework in Embed Frameworks */,
-				6CEC1EC12434E54700CE45BD /* Action.framework in Embed Frameworks */,
-				6CEC1ED12434E54800CE45BD /* RxBlocking.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9CD8E65B23D72B3200F90737 /* Embed Frameworks */ = {
@@ -455,7 +426,6 @@
 			files = (
 				6CEC1ED42434E54800CE45BD /* QuantiLoggerMac.framework in Frameworks */,
 				6CEC1EC82434E54700CE45BD /* RxSwift.framework in Frameworks */,
-				6CEC1ED62434E54800CE45BD /* RxTest.framework in Frameworks */,
 				6CEC1EC62434E54700CE45BD /* RxRelay.framework in Frameworks */,
 				6CEC1EC42434E54700CE45BD /* RxCocoa.framework in Frameworks */,
 				6CEC1ED22434E54800CE45BD /* SnapKit.framework in Frameworks */,
@@ -950,7 +920,6 @@
 				D39AD2BA221BF2EE00C95FCA /* Headers */,
 				D39AD2BD221BF2EE00C95FCA /* Resources */,
 				6C0E33E0224387100093DC12 /* Copy Files */,
-				6CEC1ECA2434E54700CE45BD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
