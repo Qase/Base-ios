@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -52,10 +52,10 @@
 		5B6D90D1234CE21A002EF5C1 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90D0234CE21A002EF5C1 /* RxCocoa.framework */; };
 		5B6D90D3234CE231002EF5C1 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90D2234CE231002EF5C1 /* RxRelay.framework */; };
 		5B6D90D5234CE253002EF5C1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D90D4234CE253002EF5C1 /* RxSwift.framework */; };
-		5B9FCB5622D3A1F60099A698 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5522D3A1F60099A698 /* Action.framework */; platformFilter = ios; };
-		5B9FCB5E22D3A20C0099A698 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5822D3A20B0099A698 /* RxRelay.framework */; platformFilter = ios; };
-		5B9FCB6222D3A20C0099A698 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5A22D3A20C0099A698 /* RxCocoa.framework */; platformFilter = ios; };
-		5B9FCB6422D3A20C0099A698 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5B22D3A20C0099A698 /* RxSwift.framework */; platformFilter = ios; };
+		5B9FCB5622D3A1F60099A698 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5522D3A1F60099A698 /* Action.framework */; };
+		5B9FCB5E22D3A20C0099A698 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5822D3A20B0099A698 /* RxRelay.framework */; };
+		5B9FCB6222D3A20C0099A698 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5A22D3A20C0099A698 /* RxCocoa.framework */; };
+		5B9FCB6422D3A20C0099A698 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5B22D3A20C0099A698 /* RxSwift.framework */; };
 		5BA6AAC4226F191700FBB047 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6AAC3226F191700FBB047 /* Data+.swift */; };
 		5BA79E0B220DBCBF00C0F81D /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+.swift */; };
 		5BA79E0F220DBD0D00C0F81D /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0E220DBD0D00C0F81D /* BluetoothService.swift */; };
@@ -143,7 +143,7 @@
 		9CD8E66223D72C8400F90737 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E66123D72C8400F90737 /* GalleryViewController.swift */; };
 		9CD8E66623D72DD700F90737 /* PanSelectableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E66523D72DD700F90737 /* PanSelectableCollectionView.swift */; };
 		9CD8E66A23D73C0000F90737 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E66923D73C0000F90737 /* UICollectionView+.swift */; };
-		9CD8E66E23D73EC700F90737 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E66D23D73EC700F90737 /* SnapKit.framework */; platformFilter = ios; };
+		9CD8E66E23D73EC700F90737 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E66D23D73EC700F90737 /* SnapKit.framework */; };
 		9CD8E66F23D73ECC00F90737 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E66D23D73EC700F90737 /* SnapKit.framework */; };
 		9CD8E67023D73ECC00F90737 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E66D23D73EC700F90737 /* SnapKit.framework */; };
 		9CD8E67223D73F7100F90737 /* CallLogSnapshotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E67123D73F7100F90737 /* CallLogSnapshotCollectionViewCell.swift */; };
@@ -1302,11 +1302,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = QuantiBaseExampleTests/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.troupmar.QuantiBaseExampleTests;
@@ -1332,11 +1328,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = QuantiBaseExampleTests/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.troupmar.QuantiBaseExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1360,11 +1352,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = QuantiBaseExampleTests/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.troupmar.QuantiBaseExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1488,8 +1476,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1516,11 +1503,7 @@
 				INFOPLIST_FILE = QuantiBase/ios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1549,11 +1532,7 @@
 				INFOPLIST_FILE = QuantiBase/ios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1612,8 +1591,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1640,11 +1618,7 @@
 				INFOPLIST_FILE = QuantiBase/ios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1666,10 +1640,7 @@
 				);
 				INFOPLIST_FILE = QuantiBaseExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBaseExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -1689,10 +1660,7 @@
 				);
 				INFOPLIST_FILE = QuantiBaseExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBaseExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -1712,10 +1680,7 @@
 				);
 				INFOPLIST_FILE = QuantiBaseExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBaseExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -1730,11 +1695,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuantiBaseExampleUITests/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -1750,11 +1711,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuantiBaseExampleUITests/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -1770,11 +1727,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuantiBaseExampleUITests/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.quanti.QuantiBaseExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -1803,11 +1756,7 @@
 				INFOPLIST_FILE = QuantiBase/ios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBase;
 				PRODUCT_NAME = QuantiBase;
@@ -1840,11 +1789,7 @@
 				INFOPLIST_FILE = QuantiBase/ios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBase;
 				PRODUCT_NAME = QuantiBase;
@@ -1876,11 +1821,7 @@
 				INFOPLIST_FILE = QuantiBase/ios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBase;
 				PRODUCT_NAME = QuantiBase;
