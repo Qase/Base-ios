@@ -12,7 +12,7 @@ import Photos
 import QuantiLogger
 
 extension PHAsset {
-    func getAssetThubnail(size: CGSize = CGSize(width: 360, height: 480)) -> UIImage {
+    func getAssetThubnail(size: CGSize = CGSize(width: 240, height: 352)) -> UIImage {
         let manager = PHImageManager.default()
         let option = PHImageRequestOptions()
         option.deliveryMode = .highQualityFormat
