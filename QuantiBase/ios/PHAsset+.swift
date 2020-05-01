@@ -12,7 +12,7 @@ import Photos
 import QuantiLogger
 
 extension PHAsset {
-    func getAssetThubnail(size: CGSize = CGSize(width: 50, height: 100)) -> UIImage {
+    func getAssetThubnail(size: CGSize = CGSize(width: 360, height: 480)) -> UIImage {
         let manager = PHImageManager.default()
         let option = PHImageRequestOptions()
         option.deliveryMode = .highQualityFormat
@@ -62,8 +62,8 @@ extension PHAsset {
             QLog("Error rewriting file for screenshot", onLevel: .error)
             return nil
         }
-        
+
         return uploadFileURL
     }
-    
+
 }
