@@ -6,6 +6,8 @@
 //  Copyright © 2017 David Nemec. All rights reserved.
 //
 
+import QuantiLogger
+
 extension UIViewController {
     /// Disable / enable tabBar if present
     ///
@@ -84,4 +86,13 @@ extension UIViewController {
         UINavigationController(rootViewController: self)
     }
 
+    /// Method to present ActivityController with logs
+    public func exportLogs() {
+        guard let fileLogger: FileLogger = LogManager.shared.logger(),
+            let archivedLogFilesUrl = fileLogger.archivedLogFilesUrl else {
+                return
+        }
+        let activityVC = UIActivityViewController(activityItems: [archivedLogFilesUrl], applicationActivities: nil)
+        present(activityVC, animated: true)
+    }
 }
