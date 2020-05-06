@@ -14,4 +14,4 @@ github "RxSwiftCommunity/RxDataSources" ~> 4.0
 github "SnapKit/SnapKit" ~> 4.0.1
 
 # QuantiLogger
-github "Qase/QuantiLogger" "FEAT/HIPMC-1355_"
+github "Qase/QuantiLogger" "master"
