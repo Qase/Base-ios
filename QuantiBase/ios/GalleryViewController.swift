@@ -39,8 +39,7 @@ public class ScreenshotsGalleryViewController: UIViewController {
     private let loadingState = BehaviorRelay<Bool>(value: false)
     private let originalArchiveSize: Int = {
         guard let fileLogger: FileLogger = LogManager.shared.logger(),
-            let resources = try? fileLogger.archivedLogFilesUrl?.resourceValues(forKeys: [.fileSizeKey]),
-            let fileSize = resources.fileSize else {
+            let fileSize = fileLogger.archivedLogFilesUrl?.fileSize else {
             return 0
         }
         return fileSize
