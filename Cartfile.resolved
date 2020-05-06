@@ -1,6 +1,6 @@
-github "Qase/QuantiLogger" "c9bad2a045137c20b81980d08490613b5174dc81"
+github "Qase/QuantiLogger" "c33fd6d35c5ef6e256bedb919e18283e523a5af0"
 github "ReactiveX/RxSwift" "5.1.1"
-github "RxSwiftCommunity/Action" "4.0.1"
+github "RxSwiftCommunity/Action" "4.1.0"
 github "RxSwiftCommunity/RxDataSources" "4.0.1"
 github "SnapKit/SnapKit" "4.2.0"
 github "pointfreeco/swift-overture" "0.5.0"

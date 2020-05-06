@@ -38,11 +38,12 @@ public class ScreenshotsGalleryViewController: UIViewController {
     private let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     private let loadingState = BehaviorRelay<Bool>(value: false)
     private let originalArchiveSize: Int = {
-        if let fileLogger: FileLogger = LogManager.shared.logger(),
-            let archivedLogFilesSize = fileLogger.archivedLogFilesSize {
-            return archivedLogFilesSize
+        guard let fileLogger: FileLogger = LogManager.shared.logger(),
+            let resources = try? fileLogger.archivedLogFilesUrl?.resourceValues(forKeys: [.fileSizeKey]),
+            let fileSize = resources.fileSize else {
+            return 0
         }
-        return 0
+        return fileSize
     }()
     private lazy var totalArchiveSize: BehaviorRelay<Int> = {
         let totalArchiveSize = BehaviorRelay<Int>(value: originalArchiveSize)

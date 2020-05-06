@@ -88,9 +88,6 @@ public class FileLogger : QuantiLogger.Logging {
     get
     set
   }
-  public var archivedLogFilesSize: Swift.Int? {
-    get
-  }
   public var archivedLogFilesUrl: Foundation.URL? {
     get
   }
