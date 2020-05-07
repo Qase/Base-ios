@@ -181,7 +181,6 @@
 		D39AD2B1221BF2EE00C95FCA /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+.swift */; };
 		D39AD2BE221BF2EE00C95FCA /* QAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */; };
 		D39AD2D0221C091800C95FCA /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E15220DBF7E00C0F81D /* ApiFactory.swift */; };
-		FF2C2F142464140E00399D9D /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E65C23D72B6000F90737 /* Differentiator.framework */; };
 		FF2C2F182464142E00399D9D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C2F172464142E00399D9D /* SnapKit.framework */; };
 		FF2C2F1B2464144100399D9D /* QuantiLoggerMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C2F1A2464144100399D9D /* QuantiLoggerMac.framework */; };
 /* End PBXBuildFile section */
@@ -426,7 +425,6 @@
 				FF2C2F1B2464144100399D9D /* QuantiLoggerMac.framework in Frameworks */,
 				5B6D90D5234CE253002EF5C1 /* RxSwift.framework in Frameworks */,
 				5B6D90D3234CE231002EF5C1 /* RxRelay.framework in Frameworks */,
-				FF2C2F142464140E00399D9D /* Differentiator.framework in Frameworks */,
 				5B6D90D1234CE21A002EF5C1 /* RxCocoa.framework in Frameworks */,
 				5B6D90CF234CE208002EF5C1 /* Overture.framework in Frameworks */,
 				5B6D90CD234CE1E5002EF5C1 /* Action.framework in Frameworks */,

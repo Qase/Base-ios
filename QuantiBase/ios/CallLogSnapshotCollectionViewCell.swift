@@ -11,7 +11,7 @@ import SnapKit
 
 public class CallLogSnapshotCollectionViewCell: UICollectionViewCell {
     private let snapshotImageView = UIImageView()
-    
+
     public var snapshot: UIImage? {
         didSet {
             snapshotImageView.image = snapshot
