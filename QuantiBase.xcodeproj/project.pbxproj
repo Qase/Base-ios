@@ -183,6 +183,7 @@
 		D39AD2D0221C091800C95FCA /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E15220DBF7E00C0F81D /* ApiFactory.swift */; };
 		FF2C2F182464142E00399D9D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C2F172464142E00399D9D /* SnapKit.framework */; };
 		FF2C2F1B2464144100399D9D /* QuantiLoggerMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C2F1A2464144100399D9D /* QuantiLoggerMac.framework */; };
+		FFC0C2322464181D00D9A154 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC0C2312464181D00D9A154 /* RxBlocking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -370,6 +371,7 @@
 		D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuantiBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2C2F172464142E00399D9D /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/Mac/SnapKit.framework; sourceTree = "<group>"; };
 		FF2C2F1A2464144100399D9D /* QuantiLoggerMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuantiLoggerMac.framework; path = Carthage/Build/Mac/QuantiLoggerMac.framework; sourceTree = "<group>"; };
+		FFC0C2312464181D00D9A154 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -425,6 +427,7 @@
 				FF2C2F1B2464144100399D9D /* QuantiLoggerMac.framework in Frameworks */,
 				5B6D90D5234CE253002EF5C1 /* RxSwift.framework in Frameworks */,
 				5B6D90D3234CE231002EF5C1 /* RxRelay.framework in Frameworks */,
+				FFC0C2322464181D00D9A154 /* RxBlocking.framework in Frameworks */,
 				5B6D90D1234CE21A002EF5C1 /* RxCocoa.framework in Frameworks */,
 				5B6D90CF234CE208002EF5C1 /* Overture.framework in Frameworks */,
 				5B6D90CD234CE1E5002EF5C1 /* Action.framework in Frameworks */,
@@ -565,6 +568,7 @@
 		638A2EE21F458CB100256FC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFC0C2312464181D00D9A154 /* RxBlocking.framework */,
 				FF2C2F1A2464144100399D9D /* QuantiLoggerMac.framework */,
 				FF2C2F172464142E00399D9D /* SnapKit.framework */,
 				9CF7D7312403F66A00760442 /* QuantiLogger.framework */,
