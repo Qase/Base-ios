@@ -11,7 +11,7 @@ github "pointfreeco/swift-overture" ~> 0.5
 github "RxSwiftCommunity/RxDataSources" ~> 4.0
 
 # Snapkit
-github "SnapKit/SnapKit" ~> 4.0.1
+github "SnapKit/SnapKit" ~> 5.0
 
 # QuantiLogger
-github "Qase/QuantiLogger" "master"
+github "Qase/QuantiLogger" "FEAT/swift-5.2"

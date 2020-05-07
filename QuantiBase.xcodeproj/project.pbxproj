@@ -67,7 +67,7 @@
 		5BA79E1E220DBF9800C0F81D /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E1D220DBF9800C0F81D /* ApiError.swift */; };
 		5BA79E20220DBFA200C0F81D /* HTTPHeaderFieldKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E1F220DBFA200C0F81D /* HTTPHeaderFieldKey.swift */; };
 		5BC740C52242446A00E8F899 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC740C42242446A00E8F899 /* AppVersion.swift */; };
-		5BFCDBD622E74F6100EB60A6 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFCDBD522E74F6100EB60A6 /* Overture.framework */; };
+		5BFCDBD622E74F6100EB60A6 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFCDBD522E74F6100EB60A6 /* Overture.framework */; platformFilter = ios; };
 		5BFCDBDA22E750CC00EB60A6 /* PrecedenceGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBD922E750CC00EB60A6 /* PrecedenceGroups.swift */; };
 		5BFCDBDB22E750CC00EB60A6 /* PrecedenceGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBD922E750CC00EB60A6 /* PrecedenceGroups.swift */; };
 		5BFCDBDD22E750E800EB60A6 /* ForwardApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCDBDC22E750E800EB60A6 /* ForwardApplication.swift */; };
@@ -131,26 +131,23 @@
 		9C567062242BC37600BB1660 /* String+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C567061242BC37600BB1660 /* String+random.swift */; };
 		9C6585282420CF4400E5575E /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6585272420CF4400E5575E /* URL+.swift */; };
 		9CB8506C2405E372004AAC23 /* GalleryScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8506B2405E372004AAC23 /* GalleryScreenshots.swift */; };
-		9CD8E64A23D728CD00F90737 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E64923D728CD00F90737 /* RxDataSources.framework */; };
+		9CD8E64A23D728CD00F90737 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E64923D728CD00F90737 /* RxDataSources.framework */; platformFilter = ios; };
 		9CD8E64D23D7299300F90737 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E64923D728CD00F90737 /* RxDataSources.framework */; };
 		9CD8E65323D72A1100F90737 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5A22D3A20C0099A698 /* RxCocoa.framework */; };
 		9CD8E65523D72A1200F90737 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5822D3A20B0099A698 /* RxRelay.framework */; };
 		9CD8E65723D72A1400F90737 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9FCB5B22D3A20C0099A698 /* RxSwift.framework */; };
 		9CD8E65923D72B3200F90737 /* QuantiBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; };
 		9CD8E65A23D72B3200F90737 /* QuantiBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 630AF6581F44791E009CEA24 /* QuantiBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9CD8E65D23D72B6000F90737 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E65C23D72B6000F90737 /* Differentiator.framework */; };
-		9CD8E65E23D72B6000F90737 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E65C23D72B6000F90737 /* Differentiator.framework */; };
+		9CD8E65D23D72B6000F90737 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E65C23D72B6000F90737 /* Differentiator.framework */; platformFilter = ios; };
 		9CD8E65F23D72B6000F90737 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E65C23D72B6000F90737 /* Differentiator.framework */; };
 		9CD8E66223D72C8400F90737 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E66123D72C8400F90737 /* GalleryViewController.swift */; };
 		9CD8E66623D72DD700F90737 /* PanSelectableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E66523D72DD700F90737 /* PanSelectableCollectionView.swift */; };
 		9CD8E66A23D73C0000F90737 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E66923D73C0000F90737 /* UICollectionView+.swift */; };
 		9CD8E66E23D73EC700F90737 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E66D23D73EC700F90737 /* SnapKit.framework */; platformFilter = ios; };
-		9CD8E66F23D73ECC00F90737 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E66D23D73EC700F90737 /* SnapKit.framework */; };
 		9CD8E67023D73ECC00F90737 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E66D23D73EC700F90737 /* SnapKit.framework */; };
 		9CD8E67223D73F7100F90737 /* CallLogSnapshotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E67123D73F7100F90737 /* CallLogSnapshotCollectionViewCell.swift */; };
 		9CD8E67523D73FE600F90737 /* PHAsset+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E67423D73FE600F90737 /* PHAsset+.swift */; };
-		9CF7D7322403F66A00760442 /* QuantiLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF7D7312403F66A00760442 /* QuantiLogger.framework */; };
-		9CF7D7352403F66E00760442 /* QuantiLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF7D7312403F66A00760442 /* QuantiLogger.framework */; };
+		9CF7D7322403F66A00760442 /* QuantiLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF7D7312403F66A00760442 /* QuantiLogger.framework */; platformFilter = ios; };
 		9CF7D7362403F66E00760442 /* QuantiLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF7D7312403F66A00760442 /* QuantiLogger.framework */; };
 		D32D96FD1F544853006A635E /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D96FC1F544853006A635E /* LoremSwiftum.swift */; };
 		D32D97051F5449CF006A635E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D97041F5449CF006A635E /* AppDelegate.swift */; };
@@ -184,6 +181,9 @@
 		D39AD2B1221BF2EE00C95FCA /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E0A220DBCBF00C0F81D /* Observable+.swift */; };
 		D39AD2BE221BF2EE00C95FCA /* QAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */; };
 		D39AD2D0221C091800C95FCA /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E15220DBF7E00C0F81D /* ApiFactory.swift */; };
+		FF2C2F142464140E00399D9D /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E65C23D72B6000F90737 /* Differentiator.framework */; };
+		FF2C2F182464142E00399D9D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C2F172464142E00399D9D /* SnapKit.framework */; };
+		FF2C2F1B2464144100399D9D /* QuantiLoggerMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C2F1A2464144100399D9D /* QuantiLoggerMac.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -369,6 +369,8 @@
 		D32D971D1F5449D0006A635E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D397CEB71F520E8700CCD70E /* Collection+reduce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+reduce.swift"; sourceTree = "<group>"; };
 		D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuantiBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2C2F172464142E00399D9D /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/Mac/SnapKit.framework; sourceTree = "<group>"; };
+		FF2C2F1A2464144100399D9D /* QuantiLoggerMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuantiLoggerMac.framework; path = Carthage/Build/Mac/QuantiLoggerMac.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,14 +423,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CD8E65E23D72B6000F90737 /* Differentiator.framework in Frameworks */,
+				FF2C2F1B2464144100399D9D /* QuantiLoggerMac.framework in Frameworks */,
 				5B6D90D5234CE253002EF5C1 /* RxSwift.framework in Frameworks */,
 				5B6D90D3234CE231002EF5C1 /* RxRelay.framework in Frameworks */,
-				9CD8E66F23D73ECC00F90737 /* SnapKit.framework in Frameworks */,
-				9CF7D7352403F66E00760442 /* QuantiLogger.framework in Frameworks */,
+				FF2C2F142464140E00399D9D /* Differentiator.framework in Frameworks */,
 				5B6D90D1234CE21A002EF5C1 /* RxCocoa.framework in Frameworks */,
 				5B6D90CF234CE208002EF5C1 /* Overture.framework in Frameworks */,
 				5B6D90CD234CE1E5002EF5C1 /* Action.framework in Frameworks */,
+				FF2C2F182464142E00399D9D /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +567,8 @@
 		638A2EE21F458CB100256FC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF2C2F1A2464144100399D9D /* QuantiLoggerMac.framework */,
+				FF2C2F172464142E00399D9D /* SnapKit.framework */,
 				9CF7D7312403F66A00760442 /* QuantiLogger.framework */,
 				9CD8E66D23D73EC700F90737 /* SnapKit.framework */,
 				9CD8E65C23D72B6000F90737 /* Differentiator.framework */,

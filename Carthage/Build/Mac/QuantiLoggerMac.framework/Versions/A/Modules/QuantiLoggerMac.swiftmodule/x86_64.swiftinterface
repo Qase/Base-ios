@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
 // swift-module-flags: -target x86_64-apple-macos10.12 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name QuantiLoggerMac
 import Cocoa
 import Compression
@@ -84,10 +84,6 @@ extension Logging {
   public func configure()
   public func messageHeader(forLevel level: QuantiLoggerMac.Level) -> Swift.String
 }
-extension Date {
-  public func toFullDateTimeString() -> Swift.String
-  public func toFullDateString() -> Swift.String
-}
 public typealias CRC32 = Swift.UInt32
 public typealias Consumer = (Foundation.Data) throws -> Swift.Void
 public typealias Provider = (Swift.Int, Swift.Int) throws -> Foundation.Data
@@ -107,14 +103,14 @@ public class SystemLogger : QuantiLoggerMac.Logging {
   public func log(_ message: Swift.String, onLevel level: QuantiLoggerMac.Level)
   @objc deinit
 }
+extension Date {
+  public func toFullDateTimeString() -> Swift.String
+  public func toFullDateString() -> Swift.String
+}
 public class FileLogger : QuantiLoggerMac.Logging {
   public var numOfLogFiles: Swift.Int {
     get
     set
-  }
-  public func getArchivedFileSize(fileUrl: Foundation.URL) -> Swift.Int?
-  public var archivedLogFilesSize: Swift.Int? {
-    get
   }
   public var archivedLogFilesUrl: Foundation.URL? {
     get
@@ -200,7 +196,7 @@ public enum LoggingConcurrencyMode {
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
-public class LogManager {
+@_hasMissingDesignatedInitializers public class LogManager {
   public static let shared: QuantiLoggerMac.LogManager
   public var loggingConcurrencyMode: QuantiLoggerMac.LoggingConcurrencyMode
   public func logger<T>() -> T? where T : QuantiLoggerMac.Logging
@@ -276,6 +272,7 @@ extension QuantiLoggerMac.Archive.AccessMode : Swift.Hashable {}
 extension QuantiLoggerMac.Archive.AccessMode : Swift.RawRepresentable {}
 extension QuantiLoggerMac.LoggingConcurrencyMode : Swift.Equatable {}
 extension QuantiLoggerMac.LoggingConcurrencyMode : Swift.Hashable {}
+extension QuantiLoggerMac.Level : Swift.Equatable {}
 extension QuantiLoggerMac.Level : Swift.Hashable {}
 extension QuantiLoggerMac.Level : Swift.RawRepresentable {}
 extension QuantiLoggerMac.MetaInformationType : Swift.Equatable {}
