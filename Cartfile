@@ -2,7 +2,7 @@
 github "ReactiveX/RxSwift" ~> 5.0
 
 # RxAction
-github "RxSwiftCommunity/Action" ~> 4.0.1
+github "RxSwiftCommunity/Action" "master"
 
 # Overture
 github "pointfreeco/swift-overture" ~> 0.5
