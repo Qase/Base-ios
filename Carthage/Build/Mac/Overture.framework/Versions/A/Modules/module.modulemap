@@ -1,4 +1,0 @@
-framework module Overture {
-  header "Overture-Swift.h"
-  requires objc
-}
