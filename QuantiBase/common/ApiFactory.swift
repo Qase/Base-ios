@@ -134,6 +134,8 @@ extension ApiFactory {
 						return .error(ApiError.unauthorized(data))
 					case 404:
 						return .error(ApiError.notFound(data))
+                    case 409:
+                        return .error(ApiError.conflict(data))
 					case 500..<600:
 						return .error(ApiError.serverFailure(data))
 					default:

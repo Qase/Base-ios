@@ -17,6 +17,8 @@ public enum ApiError: Error {
 	case unauthorized(Data)
 	// 404
 	case notFound(Data)
+    // 409
+    case conflict(Data)
 	// 5xx
 	case serverFailure(Data)
 	// any other status code
@@ -30,6 +32,7 @@ public enum ApiError: Error {
 			 (.notFound, .notFound),
 			 (.serverFailure, .serverFailure),
 			 (.unspecified, .unspecified),
+             (.conflict, .conflict),
 			 (.parsingJsonFailure, .parsingJsonFailure):
 			return true
 		default:
@@ -45,6 +48,8 @@ public enum ApiError: Error {
 			return a == b
 		case (.notFound(let a), .notFound(let b)):
 			return a == b
+        case (.conflict(let a), .conflict(let b)):
+            return a == b
 		case (.serverFailure(let a), .serverFailure(let b)):
 			return a == b
 		case (.unspecified(let a), .unspecified(let b)):
