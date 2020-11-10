@@ -16,6 +16,7 @@ public enum ConnectivityState {
     case reachableViaWWAN2G
     case reachableViaWWAN3G
     case reachableViaWWAN4G
+    case reachableViaWWAN5G
 }
 
 public class ReachabilityService {
@@ -66,6 +67,11 @@ public class ReachabilityService {
     @available(iOS 12.0, *)
     private func connectivityStateForCellular() -> ConnectivityState {
         var connectionTypeToTechDict: [ConnectivityState: [String]] = [:]
+        if #available(iOS 14.0, *) {
+            connectionTypeToTechDict[.reachableViaWWAN5G] = [CTRadioAccessTechnologyNRNSA,
+                                                             CTRadioAccessTechnologyNR]
+        }
+
         connectionTypeToTechDict[.reachableViaWWAN4G] = [CTRadioAccessTechnologyLTE]
         connectionTypeToTechDict[.reachableViaWWAN3G] = [CTRadioAccessTechnologyWCDMA,
                                                          CTRadioAccessTechnologyHSDPA,
@@ -84,7 +90,9 @@ public class ReachabilityService {
 
         let telephonyParameters = CTTelephonyNetworkInfo().serviceCurrentRadioAccessTechnology ?? [:]
 
-        if telephonyArrayContainsTech(telephonyParameters, connectionTypeToTechDict[.reachableViaWWAN4G] ?? []) {
+        if telephonyArrayContainsTech(telephonyParameters, connectionTypeToTechDict[.reachableViaWWAN5G] ?? []) {
+            return .reachableViaWWAN5G
+        } else if telephonyArrayContainsTech(telephonyParameters, connectionTypeToTechDict[.reachableViaWWAN4G] ?? []) {
             return .reachableViaWWAN4G
         } else if telephonyArrayContainsTech(telephonyParameters, connectionTypeToTechDict[.reachableViaWWAN3G] ?? []) {
             return .reachableViaWWAN3G
