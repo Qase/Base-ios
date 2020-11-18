@@ -1,5 +1,5 @@
 # RxSwift
-github "ReactiveX/RxSwift" ~> 5.0
+github "ReactiveX/RxSwift" "6.0.0-rc.1"
 
 # RxAction
 github "RxSwiftCommunity/Action" "master"
@@ -14,4 +14,4 @@ github "RxSwiftCommunity/RxDataSources" ~> 4.0
 github "SnapKit/SnapKit" ~> 5.0
 
 # QuantiLogger
-github "Qase/QuantiLogger" "FEAT/swift-5.2"
+github "Qase/QuantiLogger" "FEAT/swift-5.3.1"
