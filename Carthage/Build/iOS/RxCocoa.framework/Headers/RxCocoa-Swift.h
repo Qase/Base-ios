@@ -251,6 +251,17 @@ SWIFT_CLASS("_TtC7RxCocoa13ControlTarget")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 @class UICollectionView;
 @class UICollectionViewCell;
 
@@ -512,6 +523,17 @@ SWIFT_CLASS("_TtC7RxCocoa13ControlTarget")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -807,6 +829,17 @@ SWIFT_CLASS("_TtC7RxCocoa13ControlTarget")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 @class UICollectionView;
 @class UICollectionViewCell;
 
@@ -1068,6 +1101,17 @@ SWIFT_CLASS("_TtC7RxCocoa13ControlTarget")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+
+
+
+
+
+
+
+
+
 
 
 
