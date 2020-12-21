@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RxCocoa
+//import RxCocoa
 import RxSwift
 
 /// A class that provides static methods that make API request/response communication easier.
