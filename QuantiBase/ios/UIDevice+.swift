@@ -5,6 +5,7 @@
 //  Created by Martin Troup on 10.02.17.
 //  Copyright © 2017 quanti. All rights reserved.
 //
+#if canImport(UIKit)
 
 import UIKit
 
@@ -120,3 +121,4 @@ extension UIDevice {
 		UIDevice.current.userInterfaceIdiom == .pad
 	}
 }
+#endif

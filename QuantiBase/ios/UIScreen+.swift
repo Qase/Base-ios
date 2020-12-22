@@ -5,6 +5,7 @@
 //  Created by Martin Troup on 03/06/2018.
 //  Copyright © 2018 ciggytime.com. All rights reserved.
 //
+#if canImport(UIKit)
 
 import UIKit
 
@@ -25,3 +26,4 @@ extension UIScreen {
 		UIScreen.main.traitCollection.verticalSizeClass == .regular
 	}
 }
+#endif

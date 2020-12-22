@@ -6,6 +6,8 @@
 //  Copyright © 2016 quanti. All rights reserved.
 //
 
+#if os(iOS)
+
 import Foundation
 import CoreTelephony
 import RxSwift
@@ -99,3 +101,4 @@ public class ReachabilityService {
         reachability?.stopNotifier()
     }
 }
+#endif

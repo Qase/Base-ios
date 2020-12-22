@@ -6,8 +6,11 @@
 //  Copyright © 2020 David Nemec. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import Foundation
 import SnapKit
+import UIKit
 
 public class CallLogSnapshotCollectionViewCell: UICollectionViewCell {
     private let snapshotImageView = UIImageView()
@@ -49,3 +52,4 @@ public class CallLogSnapshotCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
+#endif

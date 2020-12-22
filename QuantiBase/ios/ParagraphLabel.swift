@@ -6,7 +6,10 @@
 //  Copyright © 2017 quanti. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import Foundation
+import UIKit
 
 open class ParagrafLabel: UILabel {
     public required init(coder aDecoder: NSCoder) {
@@ -24,3 +27,4 @@ open class ParagrafLabel: UILabel {
         self.textAlignment = .justified
     }
 }
+#endif

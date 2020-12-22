@@ -6,6 +6,8 @@
 //  Copyright © 2017 quanti. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 extension CGFloat {
@@ -32,3 +34,4 @@ extension CGFloat {
 		self * CGFloat(Double.pi) / 180.0
 	}
 }
+#endif

@@ -6,6 +6,8 @@
 //  Copyright © 2018 quanti. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 import RxSwift
 
@@ -87,3 +89,5 @@ open class CustomActivityIndicatorView: UIView {
 		changeAppearance(to: .hidden, animated: animated)
 	}
 }
+
+#endif

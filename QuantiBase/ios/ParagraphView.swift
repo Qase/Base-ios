@@ -5,6 +5,7 @@
 //  Created by Jakub Prusa on 8/9/17.
 //  Copyright © 2017 quanti. All rights reserved.
 //
+#if canImport(UIKit)
 
 import UIKit
 
@@ -52,3 +53,4 @@ open class ParagraphView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+#endif

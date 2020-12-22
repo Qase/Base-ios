@@ -6,10 +6,11 @@
 //  Copyright © 2020 David Nemec. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 import RxSwift
 import RxCocoa
-import QuantiLogger
 
 public class PanSelectableCollectionView: UICollectionView {
     private let bag = DisposeBag()
@@ -144,3 +145,4 @@ extension PanSelectableCollectionView: UIGestureRecognizerDelegate {
         true
     }
 }
+#endif

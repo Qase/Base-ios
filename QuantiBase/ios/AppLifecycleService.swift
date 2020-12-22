@@ -6,6 +6,8 @@
 //  Copyright © 2019 Quanti. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 import RxSwift
 
@@ -81,3 +83,4 @@ public class AppLifecycleService {
 			.disposed(by: bag)
 	}
 }
+#endif

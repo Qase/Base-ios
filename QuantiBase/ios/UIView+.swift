@@ -5,6 +5,7 @@
 //  Created by Martin Troup on 05.10.16.
 //  Copyright © 2016 Martin Troup. All rights reserved.
 //
+#if canImport(UIKit)
 
 import UIKit
 
@@ -65,3 +66,4 @@ extension UIView {
         self.layer.addSublayer(gradientLayer)
     }
 }
+#endif

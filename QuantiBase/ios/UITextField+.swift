@@ -5,8 +5,10 @@
 //  Created by Martin Troup on 07/02/2019.
 //  Copyright © 2019 David Nemec. All rights reserved.
 //
+#if canImport(UIKit)
 
 import Foundation
+import UIKit
 
 extension UITextField {
 	/// Get current cursor position within UITextField.
@@ -44,3 +46,4 @@ extension UITextField {
 		layer.shadowRadius = 0.0
 	}
 }
+#endif

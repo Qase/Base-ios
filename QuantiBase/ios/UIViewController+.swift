@@ -5,6 +5,9 @@
 //  Created by David Nemec on 17/08/2017.
 //  Copyright © 2017 David Nemec. All rights reserved.
 //
+#if canImport(UIKit)
+
+import UIKit
 
 extension UIViewController {
     /// Disable / enable tabBar if present
@@ -85,3 +88,4 @@ extension UIViewController {
     }
 
 }
+#endif

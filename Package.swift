@@ -14,8 +14,11 @@ let package = Package(
             targets: ["QuantiBase"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", .exact("6.0.0-rc.2")),
-        .package(name: "Overture", url: "https://github.com/pointfreeco/swift-overture.git", from: "0.5.0")
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.0.0")),
+        .package(name: "Overture", url: "https://github.com/pointfreeco/swift-overture.git", from: "0.5.0"),
+        .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.1")),
+        .package(url: "https://github.com/RxSwiftCommunity/RxDataSources.git", from: "4.0.0"),
+        .package(url: "https://github.com/Qase/QuantiLogger.git", .branch("FEAT/SPM"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -24,10 +27,17 @@ let package = Package(
             name: "QuantiBase",
             dependencies: [.product(name: "RxSwift", package: "RxSwift"),
                            .product(name: "RxCocoa", package: "RxSwift"),
-                           "Overture"],
+                           "Overture",
+                           "SnapKit",
+                           "RxDataSources",
+                           "QuantiLogger"
+            ],
             path: "QuantiBase",
             exclude: ["macos/Info.plist", "ios/Info.plist", "ios/QAssets.xcassets"],
-            sources: ["common", "macos", "ios"]
-            )
+            sources: ["common", "ios", "macos"]
+            ),
+        .testTarget(name: "QuantiBaseTests",
+                    dependencies: [.target(name: "QuantiBase")],
+                    path: "QuantiBaseTests")
     ]
 )

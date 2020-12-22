@@ -6,6 +6,8 @@
 //  Copyright © 2020 David Nemec. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 class AddedScreenshotsInfoPanel: UIView {
@@ -85,3 +87,4 @@ class AddedScreenshotsInfoPanel: UIView {
         }
     }
 }
+#endif

@@ -6,6 +6,8 @@
 //  Copyright © 2016 quanti. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 open class BaseButton: UIButton {
@@ -97,3 +99,4 @@ open class BaseButton: UIButton {
     }
 
 }
+#endif

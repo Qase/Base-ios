@@ -5,6 +5,7 @@
 //  Created by Martin Troup on 22/06/2017.
 //  Copyright © 2017 quanti. All rights reserved.
 //
+#if canImport(UIKit)
 
 import UIKit
 
@@ -49,3 +50,4 @@ extension MultipleIndependentUiPressGesturing {
         }
     }
 }
+#endif

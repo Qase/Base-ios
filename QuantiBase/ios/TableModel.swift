@@ -6,6 +6,8 @@
 //  Copyright © 2016 quanti. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 public class TableRow {
@@ -131,3 +133,4 @@ public class TableModel {
         return ret
     }
 }
+#endif

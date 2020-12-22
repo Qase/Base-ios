@@ -6,6 +6,8 @@
 //  Copyright © 2019 David Nemec. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 public struct AnimationFactory {
@@ -64,3 +66,4 @@ public struct AnimationFactory {
 		return animation
 	}
 }
+#endif

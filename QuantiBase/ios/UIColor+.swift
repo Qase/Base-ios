@@ -5,6 +5,7 @@
 //  Created by David Nemec on 17/08/2017.
 //  Copyright © 2017 David Nemec. All rights reserved.
 //
+#if canImport(UIKit)
 
 import UIKit
 
@@ -56,3 +57,4 @@ extension UIColor {
         UIColor(red: 164/255.0, green: 164/255.0, blue: 167/255.0, alpha: 1)
     }
 }
+#endif

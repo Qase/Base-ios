@@ -6,6 +6,8 @@
 //  Copyright © 2020 David Nemec. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 import RxSwift
 import RxCocoa
@@ -261,3 +263,4 @@ extension ScreenshotsGalleryViewController: UICollectionViewDelegate {
     }
 
 }
+#endif

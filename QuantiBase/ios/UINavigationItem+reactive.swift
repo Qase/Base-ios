@@ -5,6 +5,7 @@
 //  Created by Dagy Tran on 05/11/2019.
 //  Copyright © 2019 David Nemec. All rights reserved.
 //
+#if canImport(UIKit)
 
 import UIKit
 import RxSwift
@@ -42,3 +43,4 @@ extension Reactive where Base: UINavigationItem {
         }
     }
 }
+#endif

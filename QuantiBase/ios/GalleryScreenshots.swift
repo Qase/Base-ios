@@ -6,6 +6,8 @@
 //  Copyright © 2020 David Nemec. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import Foundation
 import RxDataSources
 import Photos
@@ -41,3 +43,4 @@ extension Screenshot: IdentifiableType {
 
     public var identity: String { asset.description }
 }
+#endif

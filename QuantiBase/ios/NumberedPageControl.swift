@@ -5,6 +5,7 @@
 //  Created by Martin Troup on 16/04/2018.
 //  Copyright © 2018 quanti. All rights reserved.
 //
+#if canImport(UIKit)
 
 import UIKit
 
@@ -85,3 +86,4 @@ open class NumberedPageControl: UIControl {
 		label.text = "\(currentPage+1)/\(numberOfPages)"
 	}
 }
+#endif

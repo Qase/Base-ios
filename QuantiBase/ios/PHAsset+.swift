@@ -5,6 +5,7 @@
 //  Created by George Ivannikov on 1/21/20.
 //  Copyright © 2020 David Nemec. All rights reserved.
 //
+#if canImport(UIKit)
 
 import Foundation
 import UIKit
@@ -67,3 +68,4 @@ extension PHAsset {
     }
 
 }
+#endif

@@ -5,6 +5,7 @@
 //  Created by Jakub Prusa on 29.11.16.
 //  Copyright © 2016 quanti. All rights reserved.
 //
+#if canImport(UIKit)
 
 import UIKit
 
@@ -46,3 +47,4 @@ extension UIImage {
 		return newImage
 	}
 }
+#endif

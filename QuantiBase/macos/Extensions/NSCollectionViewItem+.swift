@@ -6,6 +6,8 @@
 //  Copyright © 2019 David Nemec. All rights reserved.
 //
 
+#if os(macOS)
+
 import Cocoa
 
 extension NSCollectionViewItem {
@@ -13,3 +15,4 @@ extension NSCollectionViewItem {
         NSUserInterfaceItemIdentifier(String(describing: self))
     }
 }
+#endif

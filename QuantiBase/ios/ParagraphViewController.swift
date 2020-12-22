@@ -5,6 +5,7 @@
 //  Created by Jakub Prusa on 8/9/17.
 //  Copyright © 2017 quanti. All rights reserved.
 //
+#if canImport(UIKit)
 
 import UIKit
 
@@ -45,3 +46,4 @@ open class ParagraphViewController: UIViewController {
     }
 
 }
+#endif

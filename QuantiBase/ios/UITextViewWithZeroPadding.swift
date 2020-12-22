@@ -5,6 +5,7 @@
 //  Created by Martin Troup on 14/03/2019.
 //  Copyright © 2019 Quanti. All rights reserved.
 //
+#if canImport(UIKit)
 
 import UIKit
 
@@ -16,3 +17,4 @@ open class UITextViewWithZeroPadding: UITextView {
 		textContainer.lineFragmentPadding = 0
 	}
 }
+#endif

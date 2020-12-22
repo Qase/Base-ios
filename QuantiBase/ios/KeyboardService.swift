@@ -6,6 +6,8 @@
 //  Copyright © 2019 ciggytime.com. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 import RxRelay
 import RxSwift
@@ -103,3 +105,4 @@ public class KeyboardService {
 		_didRequestKeyboard.onNext(())
 	}
 }
+#endif
