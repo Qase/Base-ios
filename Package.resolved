@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "QuantiLogger",
-        "repositoryURL": "https://github.com/Qase/QuantiLogger.git",
-        "state": {
-          "branch": "FEAT/SPM",
-          "revision": "f386cd4e9c6610b8c1ac494f4ae7f1a4d411f2bc",
-          "version": null
-        }
-      },
-      {
         "package": "RxDataSources",
         "repositoryURL": "https://github.com/RxSwiftCommunity/RxDataSources.git",
         "state": {
