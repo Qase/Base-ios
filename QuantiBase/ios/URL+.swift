@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import QuantiLogger
 
 extension URL {
     var fileSize: Int? {
@@ -17,7 +16,6 @@ extension URL {
 
             return fileSize
         } catch {
-            QLog("File size recognition error", onLevel: .error)
             return nil
         }
     }

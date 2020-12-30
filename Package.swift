@@ -14,11 +14,10 @@ let package = Package(
             targets: ["QuantiBase"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.0.0")),
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.1.1")),
         .package(name: "Overture", url: "https://github.com/pointfreeco/swift-overture.git", from: "0.5.0"),
         .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.1")),
         .package(url: "https://github.com/RxSwiftCommunity/RxDataSources.git", from: "4.0.0"),
-        .package(url: "https://github.com/Qase/QuantiLogger.git", .branch("FEAT/SPM"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -30,7 +29,6 @@ let package = Package(
                            "Overture",
                            "SnapKit",
                            "RxDataSources",
-                           "QuantiLogger"
             ],
             path: "QuantiBase",
             exclude: ["macos/Info.plist", "ios/Info.plist", "ios/QAssets.xcassets"],
