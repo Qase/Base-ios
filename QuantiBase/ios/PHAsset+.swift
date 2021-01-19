@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import Photos
-import QuantiLogger
 
 extension PHAsset {
     func getAssetThubnail(size: CGSize = CGSize(width: 240, height: 352)) -> UIImage {
@@ -36,7 +35,6 @@ extension PHAsset {
         do {
             try FileManager.default.removeItem(at: uploadFileURL)
         } catch {
-            QLog("Error deleting file for screenshot", onLevel: .error)
             return nil
         }
 
@@ -52,14 +50,12 @@ extension PHAsset {
             do {
                 try FileManager.default.removeItem(at: uploadFileURL)
             } catch {
-                QLog("Error deleting file for screenshot", onLevel: .error)
                 return nil
             }
         }
         do {
             try imageData?.write(to: uploadFileURL)
         } catch {
-            QLog("Error rewriting file for screenshot", onLevel: .error)
             return nil
         }
 

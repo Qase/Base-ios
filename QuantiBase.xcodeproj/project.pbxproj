@@ -148,8 +148,6 @@
 		9CD8E67023D73ECC00F90737 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD8E66D23D73EC700F90737 /* SnapKit.framework */; };
 		9CD8E67223D73F7100F90737 /* CallLogSnapshotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E67123D73F7100F90737 /* CallLogSnapshotCollectionViewCell.swift */; };
 		9CD8E67523D73FE600F90737 /* PHAsset+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8E67423D73FE600F90737 /* PHAsset+.swift */; };
-		9CF7D7322403F66A00760442 /* QuantiLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF7D7312403F66A00760442 /* QuantiLogger.framework */; platformFilter = ios; };
-		9CF7D7362403F66E00760442 /* QuantiLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF7D7312403F66A00760442 /* QuantiLogger.framework */; };
 		CB725AFE256668F0001AA738 /* SystemLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C577395252F486200D6E77F /* SystemLogger.swift */; };
 		CB725B0425666906001AA738 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB725B0325666906001AA738 /* Logging.swift */; };
 		CB725B092566690D001AA738 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB725B0325666906001AA738 /* Logging.swift */; };
@@ -186,7 +184,6 @@
 		D39AD2BE221BF2EE00C95FCA /* QAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B0A8AC1F50785C00F94CDF /* QAssets.xcassets */; };
 		D39AD2D0221C091800C95FCA /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA79E15220DBF7E00C0F81D /* ApiFactory.swift */; };
 		FF2C2F182464142E00399D9D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C2F172464142E00399D9D /* SnapKit.framework */; };
-		FF2C2F1B2464144100399D9D /* QuantiLoggerMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C2F1A2464144100399D9D /* QuantiLoggerMac.framework */; };
 		FFC0C2322464181D00D9A154 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC0C2312464181D00D9A154 /* RxBlocking.framework */; };
 /* End PBXBuildFile section */
 
@@ -400,7 +397,6 @@
 				5B9FCB5E22D3A20C0099A698 /* RxRelay.framework in Frameworks */,
 				5B9FCB5622D3A1F60099A698 /* Action.framework in Frameworks */,
 				9CD8E66E23D73EC700F90737 /* SnapKit.framework in Frameworks */,
-				9CF7D7322403F66A00760442 /* QuantiLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +408,6 @@
 				9CD8E65723D72A1400F90737 /* RxSwift.framework in Frameworks */,
 				9CD8E65923D72B3200F90737 /* QuantiBase.framework in Frameworks */,
 				9CD8E67023D73ECC00F90737 /* SnapKit.framework in Frameworks */,
-				9CF7D7362403F66E00760442 /* QuantiLogger.framework in Frameworks */,
 				9CD8E64D23D7299300F90737 /* RxDataSources.framework in Frameworks */,
 				9CD8E65323D72A1100F90737 /* RxCocoa.framework in Frameworks */,
 				9CD8E65523D72A1200F90737 /* RxRelay.framework in Frameworks */,
@@ -430,7 +425,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF2C2F1B2464144100399D9D /* QuantiLoggerMac.framework in Frameworks */,
 				5B6D90D5234CE253002EF5C1 /* RxSwift.framework in Frameworks */,
 				5B6D90D3234CE231002EF5C1 /* RxRelay.framework in Frameworks */,
 				FFC0C2322464181D00D9A154 /* RxBlocking.framework in Frameworks */,

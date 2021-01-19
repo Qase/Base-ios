@@ -12,9 +12,19 @@ import RxCocoa
 import RxDataSources
 import Photos
 import SnapKit
-import QuantiLogger
 
 public class ScreenshotsGalleryViewController: UIViewController {
+
+    private var originalArchiveSize: Int
+    public init(originalArchiveSize: Int?) {
+        self.originalArchiveSize = originalArchiveSize ?? 0
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     private var closeBarButton = UIBarButtonItem(title: "close_button".localized, style: .plain, target: nil, action: nil)
     private let selectBarButton = UIBarButtonItem(title: "select".localized, style: .plain, target: nil, action: nil)
     private var collectionView: PanSelectableCollectionView!
@@ -37,13 +47,6 @@ public class ScreenshotsGalleryViewController: UIViewController {
     }()
     private let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     private let loadingState = BehaviorRelay<Bool>(value: false)
-    private let originalArchiveSize: Int = {
-        guard let fileLogger: FileLogger = LogManager.shared.logger(),
-            let fileSize = fileLogger.archivedLogFilesUrl?.fileSize else {
-            return 0
-        }
-        return fileSize
-    }()
     private lazy var totalArchiveSize: BehaviorRelay<Int> = {
         let totalArchiveSize = BehaviorRelay<Int>(value: originalArchiveSize)
         return totalArchiveSize

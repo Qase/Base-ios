@@ -7,17 +7,15 @@
 //
 
 import Foundation
-import QuantiLogger
 
 extension URL {
-    var fileSize: Int? {
+    public var fileSize: Int? {
         do {
             let resources = try self.resourceValues(forKeys: [.fileSizeKey])
             let fileSize = resources.fileSize
 
             return fileSize
         } catch {
-            QLog("File size recognition error", onLevel: .error)
             return nil
         }
     }
