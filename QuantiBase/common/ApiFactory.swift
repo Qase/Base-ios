@@ -28,19 +28,19 @@ extension ApiFactory {
 		let urlRequest = buildRequest(baseUrl: baseUrl, pathComponent: pathComponent, method: method)
 
 		guard var _urlRequest = urlRequest else {
-			print("\(#function) - urlRequest is nil.")
+            QuantiBaseEnv.current.logger.log("\(#function) - urlRequest is nil.", onLevel: .error)
 			return nil
 		}
 
 		guard let _url = _urlRequest.url else {
-			print("\(#function) - could not get url property from urlRequest.")
+            QuantiBaseEnv.current.logger.log("\(#function) - could not get url property from urlRequest.", onLevel: .error)
 			return nil
 		}
 
 		let urlComponents = URLComponents(url: _url, resolvingAgainstBaseURL: true)
 
 		guard var _urlComponents = urlComponents else {
-			print("\(#function) - could not construct urlComponents based on url.")
+            QuantiBaseEnv.current.logger.log("\(#function) - could not construct urlComponents based on url.", onLevel: .error)
 			return nil
 		}
 
@@ -79,7 +79,7 @@ extension ApiFactory {
             let jsonData = try JSONEncoder().encode(encodable)
             return buildRequest(baseUrl: baseUrl, pathComponent: pathComponent, method: method, withJsonBody: jsonData)
         } catch let error {
-            print("\(#function) - failed to encode Encodable instance to JSON: \(error).")
+            QuantiBaseEnv.current.logger.log("\(#function) - failed to encode Encodable instance to JSON: \(error).", onLevel: .error)
             return nil
         }
     }
@@ -115,13 +115,13 @@ extension ApiFactory {
 	///   - session: Session in which the request should be sent.
 	/// - Returns: Data instance if received as a part of HTTP body, nil if not, ApiError instance otherwise.
 	public static func data(`for` request: URLRequest, `in` session: URLSession) -> Observable<Data> {
-		print("\(#function) - \(request.logDescription)")
+        QuantiBaseEnv.current.logger.log("\(#function) - \(request.logDescription)", onLevel: .info)
 
 		return session.rx.response(request: request)
 			.do(onNext: { (response, data) in
-				print("\(#function) - \(response.logDescription) + data: \(data)")
+                QuantiBaseEnv.current.logger.log("\(#function) - \(response.logDescription) + data: \(data)", onLevel: .info)
 			}, onError: { (error) in
-				print("\(#function) - error occured: \(error).")
+                QuantiBaseEnv.current.logger.log("\(#function) - error occured: \(error).", onLevel: .error)
 			})
 			.flatMap { (response, data) -> Observable<Data> in
 				Observable.deferred {

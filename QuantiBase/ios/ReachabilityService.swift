@@ -34,7 +34,7 @@ public class ReachabilityService {
             return .notReachable
         }
 
-        print(reachability.connection)
+        QuantiBaseEnv.current.logger.log("Reachability: \(reachability.connection)", onLevel: .info)
 
         switch reachability.connection {
         case .unavailable, .none:

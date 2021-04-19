@@ -14,7 +14,7 @@ extension UIBarButtonItem {
 	/// - Parameter activityViewController: to be binded to the bar button item
 	public func assign(_ activityViewController: UIActivityViewController) {
 		guard let targetView = self.value(forKey: "view") as? UIView else {
-			print("\(#function) - cannot cast UIBarButtonItem to View while trying to set it as a targetView for UIActivityViewController.")
+            QuantiBaseEnv.current.logger.log("\(#function) - cannot cast UIBarButtonItem to View while trying to set it as a targetView for UIActivityViewController.", onLevel: .error)
 			return
 		}
 

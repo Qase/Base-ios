@@ -39,7 +39,7 @@ public class BluetoothService: NSObject {
 // MARK: - CBPeripheralManagerDelegate implementation
 extension BluetoothService: CBPeripheralManagerDelegate {
 	public func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
-		print("\(#function) - called from BluetoothService with new state: \(peripheral.state)")
+        QuantiBaseEnv.current.logger.log("\(#function) - called from BluetoothService with new state: \(peripheral.state)", onLevel: .info)
 
 		_stateObservable.onNext(peripheral.state)
 	}

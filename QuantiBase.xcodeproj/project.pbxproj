@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55B3975D262E3B75004997D2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B3975C262E3B75004997D2 /* Environment.swift */; };
 		55DEB7C123E86229009AC5DC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DEB7C023E86229009AC5DC /* Reachability.swift */; };
 		5B04BDD022955C0B001BC7C8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04BDCF22955C0B001BC7C8 /* Double+.swift */; };
 		5B04BDD122955C0B001BC7C8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04BDCF22955C0B001BC7C8 /* Double+.swift */; };
@@ -235,6 +236,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		55B3975C262E3B75004997D2 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		55DEB7C023E86229009AC5DC /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		5B04BDCF22955C0B001BC7C8 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		5B04BDD222955C3E001BC7C8 /* Dictionary+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
@@ -626,6 +628,7 @@
 				638A2EE91F45954F00256FC3 /* Extensions */,
 				6C1F8173228C02E300362D3F /* HTTPNetworking */,
 				6C1F8174228C02FF00362D3F /* Services */,
+				55B3975C262E3B75004997D2 /* Environment.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -1197,6 +1200,7 @@
 				5BA79E0B220DBCBF00C0F81D /* Observable+.swift in Sources */,
 				9C567062242BC37600BB1660 /* String+random.swift in Sources */,
 				636599311F45DC9200979BBA /* UIImage+.swift in Sources */,
+				55B3975D262E3B75004997D2 /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

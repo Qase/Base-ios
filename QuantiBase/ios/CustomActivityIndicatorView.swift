@@ -71,7 +71,7 @@ open class CustomActivityIndicatorView: UIView {
 
 	public func show(animated: Bool = true) {
 		guard alpha == 0 else {
-			print("\(#function) - customActivityIndicatorView is already shown.")
+            QuantiBaseEnv.current.logger.log("\(#function) - customActivityIndicatorView is already shown.", onLevel: .debug)
 			return
 		}
 
@@ -80,7 +80,7 @@ open class CustomActivityIndicatorView: UIView {
 
 	public func hide(animated: Bool = true) {
 		guard alpha == 1 else {
-			print("\(#function) - customActivityIndicatorView is already hidden.")
+            QuantiBaseEnv.current.logger.log("\(#function) - customActivityIndicatorView is already hidden.", onLevel: .debug)
 			return
 		}
 

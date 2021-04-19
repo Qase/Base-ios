@@ -20,7 +20,7 @@ open class BaseApi: NSObject {
 
 	public required init?(url: String) {
 		guard let _url = URL(string: url) else {
-			print("\(#function) - could not create an URL instance out of provided URL string.")
+            QuantiBaseEnv.current.logger.log("\(#function) - could not create an URL instance out of provided URL string.", onLevel: .error)
 			return nil
 		}
 

@@ -15,7 +15,7 @@ extension URL {
 			let archiveData = try Data(contentsOf: self)
 			return archiveData.base64EncodedString(options: Data.Base64EncodingOptions.init(rawValue: 0))
 		} catch let error {
-			print("\(#function) - failed to get Data instance from logFilesArchive with \(error).")
+            QuantiBaseEnv.current.logger.log("\(#function) - failed to get Data instance from logFilesArchive with \(error).", onLevel: .error)
 			return nil
 		}
 	}

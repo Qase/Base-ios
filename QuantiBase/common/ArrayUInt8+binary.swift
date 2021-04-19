@@ -18,7 +18,7 @@ extension Array where Element == UInt8 {
 	/// Converts self = [UInt8] consisting of 2xUInt8 to UInt16 (native big-endian).
 	public var uInt16: UInt16? {
 		guard self.count == 2 else {
-			print("\(#function) - [UInt8] must consist, exactly, of 2xUInt8 so it can be converted to single UInt16.")
+            QuantiBaseEnv.current.logger.log("\(#function) - [UInt8] must consist, exactly, of 2xUInt8 so it can be converted to single UInt16.", onLevel: .error)
 			return nil
 		}
 

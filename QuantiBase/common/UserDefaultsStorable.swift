@@ -43,7 +43,7 @@ extension UserDefaultsStorable {
 
 	public static func restore(using userDefaultsBundle: UserDefaultsBundle) -> StorableObject? {
 		guard let restored: StorableObject = userDefaultsBundle.storage.codable(forKey: userDefaultsBundle.key) else {
-			print("\(#function) - failed to restore StorableObject instance from UserDefaults.")
+            QuantiBaseEnv.current.logger.log("\(#function) - failed to restore StorableObject instance from UserDefaults.", onLevel: .error)
 			return nil
 		}
 
@@ -71,7 +71,7 @@ extension UserDefaults {
 			self.set(data, forKey: key)
             return true
 		} catch let error {
-			print("\(#function) - error ocurred while encoding to JSON: \(error).")
+            QuantiBaseEnv.current.logger.log("\(#function) - error ocurred while encoding to JSON: \(error).", onLevel: .error)
 			return false
 		}
 	}
@@ -79,7 +79,7 @@ extension UserDefaults {
 	public func codable<T: Codable>(forKey key: String) -> T? {
 		do {
 			guard let data = self.data(forKey: key) else {
-				print("\(#function) - could not retrieve data from UserDefaults.")
+                QuantiBaseEnv.current.logger.log("\(#function) - could not retrieve data from UserDefaults.", onLevel: .error)
 				return nil
 			}
 
@@ -87,7 +87,7 @@ extension UserDefaults {
             let restored = try jsonDecoder.decode(Wrapper<T>.self, from: data)
 			return restored.value
 		} catch let error {
-			print("\(#function) - error ocurred while decoding from JSON: \(error).")
+            QuantiBaseEnv.current.logger.log("\(#function) - error ocurred while decoding from JSON: \(error).", onLevel: .error)
 			return nil
 		}
 	}

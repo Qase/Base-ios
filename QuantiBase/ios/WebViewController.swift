@@ -68,19 +68,19 @@ open class WebViewController: UIViewController {
 
 extension WebViewController: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        print("Webview fail with error \(error)")
+        QuantiBaseEnv.current.logger.log("Webview fail with error \(error)", onLevel: .error)
     }
 
     public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        print("Webview fail with error \(error)")
+        QuantiBaseEnv.current.logger.log("Webview fail with error \(error)", onLevel: .error)
     }
 
     public func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        print("Webview did finish load: \(String(describing: webView.url))")
+        QuantiBaseEnv.current.logger.log("Webview did finish load: \(String(describing: webView.url))", onLevel: .info)
         activityIndicator.stopAnimating()
     }
 
     public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        print("Webview started Loading: \(String(describing: webView.url))")
+        QuantiBaseEnv.current.logger.log("Webview started Loading: \(String(describing: webView.url))", onLevel: .info)
     }
 }

@@ -20,7 +20,7 @@ extension Data {
 	/// - Returns: single UInt8
 	public func uInt8(onPosition position: Int) -> UInt8? {
 		guard position > 0, position < self.byteArray.count else {
-			print("\(#function) - invalid position.")
+            QuantiBaseEnv.current.logger.log("\(#function) - invalid position.", onLevel: .error)
 			return nil
 		}
 
