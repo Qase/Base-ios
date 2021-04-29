@@ -67,8 +67,7 @@ public class ReachabilityService {
     @available(iOS 12.0, *)
     private func connectivityStateForCellular() -> ConnectivityState {
         var connectionTypeToTechDict: [ConnectivityState: [String]] = [:]
-        if #available(iOS 14.0, *) {
-            let x = CTRadioAccessTechnologyNRNSA
+        if #available(iOS 14.1, *) {
             connectionTypeToTechDict[.reachableViaWWAN5G] = [CTRadioAccessTechnologyNRNSA,
                                                              CTRadioAccessTechnologyNR]
         }

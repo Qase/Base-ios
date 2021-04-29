@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import QuantiLogger
 
 public class PanSelectableCollectionView: UICollectionView {
     private let bag = DisposeBag()
