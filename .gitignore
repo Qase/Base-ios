@@ -44,11 +44,11 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
-Carthage/Build/*
-!Carthage/Build/iOS
-!Carthage/Build/iOS/*
-!Carthage/Build/Mac
-!Carthage/Build/Mac/*
+# Carthage/Build/*
+# !Carthage/Build/iOS
+# !Carthage/Build/iOS/*
+# !Carthage/Build/Mac
+# !Carthage/Build/Mac/*
 
 Carthage/Checkouts
 *.bcsymbolmap

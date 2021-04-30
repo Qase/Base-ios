@@ -1,0 +1,19 @@
+{
+  "commitish" : "0.5.0",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)",
+      "hash" : "64bb6953197fd02237961a9589b7c81a824f3fd09dd878a0f6943d80a1c1152f",
+      "name" : "Overture",
+      "container" : "Overture.xcframework",
+      "identifier" : "ios-arm64_i386_x86_64-simulator"
+    },
+    {
+      "swiftToolchainVersion" : "5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)",
+      "hash" : "628a103bb3fcf589dfd65be25bc0b3e0362ea8e22890f8f21519cb6a6276931f",
+      "name" : "Overture",
+      "container" : "Overture.xcframework",
+      "identifier" : "ios-arm64_armv7"
+    }
+  ]
+}

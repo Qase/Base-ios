@@ -1,0 +1,33 @@
+{
+  "commitish" : "5.0.1",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)",
+      "hash" : "819dee8a7a568bb46efa9ff649c93aad8a2c95372c60de37782333b653e8c1ec",
+      "name" : "Differentiator",
+      "container" : "Differentiator.xcframework",
+      "identifier" : "ios-arm64_x86_64-simulator"
+    },
+    {
+      "swiftToolchainVersion" : "5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)",
+      "hash" : "6e18154f64eebec70b8d886dc765ecde5d9274e0f293fb0a1a7e868610215fca",
+      "name" : "Differentiator",
+      "container" : "Differentiator.xcframework",
+      "identifier" : "ios-arm64"
+    },
+    {
+      "swiftToolchainVersion" : "5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)",
+      "hash" : "c04ccb22e2fe54b04dafa1bae4d2c7e05c7c45733530b944e8a4e68e5e51c854",
+      "name" : "RxDataSources",
+      "container" : "RxDataSources.xcframework",
+      "identifier" : "ios-arm64_x86_64-simulator"
+    },
+    {
+      "swiftToolchainVersion" : "5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)",
+      "hash" : "fda823545f1743e8022ebb9176576a69ab7d3be018fdc3afbdb16efa8e26188e",
+      "name" : "RxDataSources",
+      "container" : "RxDataSources.xcframework",
+      "identifier" : "ios-arm64"
+    }
+  ]
+}
