@@ -136,7 +136,7 @@ extension MasterViewController: UITableViewDelegate {
     }
 
     func presentScreenshotGalleryViewController() {
-        let screenshotsGalleryViewController = ScreenshotsGalleryViewController()
+        let screenshotsGalleryViewController = ScreenshotsGalleryViewController(originalArchiveSize: 0)
         let screenshotsGalleryNavigationViewController = UINavigationController(rootViewController: screenshotsGalleryViewController)
         screenshotsGalleryNavigationViewController.modalPresentationStyle = .fullScreen
         present(screenshotsGalleryNavigationViewController, animated: true, completion: nil)
