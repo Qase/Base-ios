@@ -351,7 +351,7 @@
 		D32D971B1F5449D0006A635E /* QuantiBaseExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantiBaseExampleUITests.swift; sourceTree = "<group>"; };
 		D32D971D1F5449D0006A635E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D397CEB71F520E8700CCD70E /* Collection+reduce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+reduce.swift"; sourceTree = "<group>"; };
-		D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuantiBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39AD2C4221BF2EE00C95FCA /* QuantiBaseMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuantiBaseMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -511,7 +511,7 @@
 				630AF6581F44791E009CEA24 /* QuantiBase.framework */,
 				D32D97021F5449CF006A635E /* QuantiBaseExample.app */,
 				D32D97171F5449CF006A635E /* QuantiBaseExampleUITests.xctest */,
-				D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */,
+				D39AD2C4221BF2EE00C95FCA /* QuantiBaseMac.framework */,
 				5B55D96B22F85CE8002AB940 /* QuantiBaseExampleTests.xctest */,
 			);
 			name = Products;
@@ -881,7 +881,7 @@
 			);
 			name = "QuantiBase macOS";
 			productName = QuantiBase;
-			productReference = D39AD2C4221BF2EE00C95FCA /* QuantiBase.framework */;
+			productReference = D39AD2C4221BF2EE00C95FCA /* QuantiBaseMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1780,7 +1780,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBase;
-				PRODUCT_NAME = QuantiBase;
+				PRODUCT_NAME = QuantiBaseMac;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1817,7 +1817,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBase;
-				PRODUCT_NAME = QuantiBase;
+				PRODUCT_NAME = QuantiBaseMac;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1853,7 +1853,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanti.QuantiBase;
-				PRODUCT_NAME = QuantiBase;
+				PRODUCT_NAME = QuantiBaseMac;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
