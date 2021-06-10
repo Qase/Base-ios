@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UnitsConverter {
+public struct UnitsConverter {
     private let bytes: Int64
 
     private var kilobytes: Double {
@@ -23,11 +23,11 @@ struct UnitsConverter {
       megabytes / 1_024
     }
 
-    init(bytes: Int64) {
+    public init(bytes: Int64) {
       self.bytes = bytes
     }
 
-    func getReadableUnit() -> String {
+    public func getReadableUnit() -> String {
       switch bytes {
       case 0..<1_024:
         return "\(bytes) b"
@@ -42,7 +42,7 @@ struct UnitsConverter {
       }
     }
 
-    func isLessThan(mB megaBytes: Int) -> Bool {
+    public func isLessThan(mB megaBytes: Int) -> Bool {
       (bytes / 1_024) / 1_024 < megaBytes
     }
 }

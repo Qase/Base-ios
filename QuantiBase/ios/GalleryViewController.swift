@@ -228,7 +228,7 @@ public class ScreenshotsGalleryViewController: UIViewController {
 
     private func presentSizeError() {
         let alert = UIAlertController(title: nil,
-                                      message: "error_archive_size".localizeWithFormat(arguments: "\(String(Constants.maxSizeOfArchive)) Mb"),
+                                      message: "error_archive_size".localizeWithFormat(arguments: "\(String(BaseConstants.maxSizeOfArchive)) Mb"),
                                       preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "close".localized, style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -240,7 +240,7 @@ extension ScreenshotsGalleryViewController: UICollectionViewDelegate {
         guard let convertedScreenshotSize = galleryScreenshotsAssets.value[indexPath.row].size else {
             return false
         }
-        let doesTheSizeFit = UnitsConverter(bytes: Int64(convertedScreenshotSize + totalArchiveSize.value)).isLessThan(mB: Constants.maxSizeOfArchive)
+        let doesTheSizeFit = UnitsConverter(bytes: Int64(convertedScreenshotSize + totalArchiveSize.value)).isLessThan(mB: BaseConstants.maxSizeOfArchive)
 
         if !doesTheSizeFit {
             presentSizeError()
@@ -248,7 +248,7 @@ extension ScreenshotsGalleryViewController: UICollectionViewDelegate {
         }
 
         if let selectedItemsCount = collectionView.indexPathsForSelectedItems?.count,
-            selectedItemsCount >= Constants.maxNumberOfScreenshots {
+            selectedItemsCount >= BaseConstants.maxNumberOfScreenshots {
             return false
         }
 
