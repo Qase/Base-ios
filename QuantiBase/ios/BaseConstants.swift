@@ -10,5 +10,5 @@ import Foundation
 
 public struct BaseConstants {
     public static let maxNumberOfScreenshots = 5
-    public static let maxSizeOfArchive = 10
+    public static let maxSizeOfArchive = 7
 }
