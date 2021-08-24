@@ -15,7 +15,7 @@ extension Double {
     ///
     /// - Parameter format: desired format
     /// - Returns: format NSTimeInterval as String
-    public func format(_ format: String = "hh:mm:ss:sss") -> String {
+    public func format(_ format: String = "hh:mm:ss,SSS") -> String {
         let ms      = Int(self.truncatingRemainder(dividingBy: 1.0) * 1000)
         let asInt   = NSInteger(self)
         let s       = asInt % 60
@@ -25,7 +25,7 @@ extension Double {
         var value   = format
         value       = value.replace("hh", replacement: String(format: "%0.2d", h))
         value       = value.replace("mm", replacement: String(format: "%0.2d", m))
-        value       = value.replace("sss", replacement: String(format: "%0.3d", ms))
+        value       = value.replace("SSS", replacement: String(format: "%0.3d", ms))
         value       = value.replace("ss", replacement: String(format: "%0.2d", s))
         return value
     }

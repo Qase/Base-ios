@@ -101,7 +101,7 @@ extension String {
 	///
 	/// - Parameter format: format of Date
 	/// - Returns: Date instance
-	public func asDate(withFormat format: String = "yyyy-MM-dd hh:mm:ss:sss") -> Date? {
+	public func asDate(withFormat format: String = "yyyy-MM-dd hh:mm:ss,SSS") -> Date? {
 		let formatter = DateFormatter()
 		formatter.dateFormat = format
 		//formatter.locale = Locale(identifier: "en_US")

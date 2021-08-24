@@ -21,7 +21,7 @@ extension Date {
     ///
     /// - Parameter format: Format of the Date instance to be represented in
     /// - Returns: String representation of Date instance in format set in parameter
-    public func asString(_ format: String = "yyyy-MM-dd hh:mm:ss:sss") -> String {
+    public func asString(_ format: String = "dd-MM-yyyy HH:mm:ss,SSS") -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
 
