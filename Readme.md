@@ -8,9 +8,10 @@
 [![Maintainer: troupmar](https://img.shields.io/badge/Maintainer-troupmar-blue.svg)](mailto:martin.troup@quanti.cz)
 [![Qase: base-ios](https://img.shields.io/badge/Qase-base_ios-ff69b4.svg)](https://github.com/Qase/base-ios)
 
-## QuantiBase
+**⚠️ QuantiBase is deprecated. Quanti does not build on 3rd party Rx libraries, but uses Combine / async-await instead.\
+Please use and further maintain [Core](https://github.com/Qase/swift-core) instead. ⚠️**
 
-⚠️ QuantiBase is deprecated. Quanti does not build on 3rd party Rx libraries, but uses Combine / async-await instead. Please use and further maintain [Core](https://github.com/Qase/swift-core) instead. ⚠️
+## QuantiBase
 
 Base-ios repository consists of useful extensions, general classes and protocols that we gather and use while working on our projects. The main goal is to create a central point of such snippets that can be reused across various projects. We constantly review and enrich the repository aiming to reach maximum reusability. We take full advantage of functional programming with reactive layer. For that purpose we use external libraries and thus QuantiBase will require following: 
 - **Overture** (https://github.com/pointfreeco/swift-overture)   
